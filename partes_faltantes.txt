@@ -1,0 +1,32 @@
+- dedicatoria
+- agradecimentos
+  - financiamente pelo cnpq
+- resumo
+  - palavras chaves
+
+- sumario
+- lista de figuras
+- lista de tabelas
+- lista de quadros
+
+- introducao
+- referencial teórico
+- metodologia
+
+- resultados
+  - analise exploratoria(boxplot, barras e correlograma)
+  - modelagem
+    - mostrar a arquitetura da rede neural utilizada
+    - falar dos outros modelos estimados
+    - pegar o melhor modelo de redes neurias
+  - modelo de regressao logistica
+  - interpretação do modelo usando shap
+    - mostrar o grafico de dependencia entre valor da variável com resultado do modelo variando ela
+    - mostrar 2 gráficos de shap especificos de 2 observações(pra mau pagador e pra bom pagador)
+    - mostrar o gráfico com todos as amostras de shap(shap.plots.beeswarm)
+    - mostrar o gráfico de força pra apenas uma observação
+    - mostrar o gráfico de força para todas as observações
+  - fazer um benchmark entre modelo logistico e rede neural
+- conclusao
+- referencias
+- anexo

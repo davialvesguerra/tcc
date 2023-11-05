@@ -1,0 +1,116 @@
+\subsection*{Análise descritiva}
+\subsection*{Modelagem da rede neural}
+\subsubsection*{Arquitetura}
+\subsubsection*{Variações da arquitetura}
+\subsubsection*{Melhor modelo de redes neurais}
+
+\subsection*{Modelagem da regressão logística}
+
+\subsection*{Interpretação de rede neural}
+
+\subsection*{Benchmark entre redes neurais e regressão logística}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rr}
+  \hline
+ & correlação \\ 
+  \hline
+emp\_length\_int & -0.02 \\ 
+  annual\_inc & -0.03 \\ 
+  annual\_inc.1 & -0.03 \\ 
+  loan\_amount & 0.00 \\ 
+  interest\_rate & 0.18 \\ 
+  dti & 0.01 \\ 
+  total\_pymnt & -0.04 \\ 
+  total\_rec\_prncp & -0.10 \\ 
+  recoveries & 0.39 \\ 
+  duracao\_emprestimo\_dias & 0.01 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rr}
+  \hline
+ & contingência \\ 
+  \hline
+home\_ownership & 0.04 \\ 
+  income\_category & 0.04 \\ 
+  application\_type & 0.01 \\ 
+  purpose & 0.06 \\ 
+  interest\_payments & 0.14 \\ 
+  grade & 0.15 \\ 
+  installment & 0.36 \\ 
+  region & 0.01 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+
+% boxplot
+\begin{figure}
+  \centering
+  \subImagem{imagens/resultados/loan_amount.jpg}{Valor e classificação do emprestimo}
+  \vspace{.5cm}
+  \subImagem{imagens/resultados/emp_length_int.jpg}{WSIR residuals.}
+  \vspace{.5cm}
+  \subImagem{imagens/resultados/recoveries.jpg}{WSIR predictions in the covariate space.}
+ \subImagem{imagens/resultados/annual_inc.jpg}{WSIR residuals.}
+  
+  \label{fig:enter-label}
+  \caption{aloalo}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \subImagem{imagens/resultados/interest_rate.jpg}{Total de tipos de empréstimo.}
+  \vspace{.5cm}
+  \subImagem{imagens/resultados/dti.jpg}{WSIR residuals.}
+  \vspace{.5cm}
+  \subImagem{imagens/resultados/total_pymnt.jpg}{WSIR predictions in the covariate space.}
+ \subImagem{imagens/resultados/installment.jpg}{WSIR residuals.}
+  
+  \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \subImagem{imagens/resultados/total_rec_prncp.jpg}{Total de tipos de empréstimo.}
+  \vspace{.5cm}
+  \subImagem{imagens/resultados/duracao_emprestimo_dias.jpg}{WSIR residuals.}
+  \vspace{.5cm}
+
+  \label{fig:enter-label}
+\end{figure}
+
+% barras
+\begin{figure}
+    \centering
+    \subImagem{imagens/resultados/home_ownership.pdf}{Total de tipos de empréstimo.}
+    \vspace{.5cm}
+    \subImagem{imagens/resultados/income_category.pdf}{WSIR residuals.}
+    \vspace{.5cm}
+    \subImagem{imagens/resultados/term.pdf}{WSIR predictions in the covariate space.}
+   \subImagem{imagens/resultados/application_type.pdf}{WSIR residuals.}  
+    \subImagemSemLegenda{imagens/resultados/legenda.pdf}
+    
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \subImagem{imagens/resultados/purpose.pdf}{Total de tipos de empréstimo.}
+  \vspace{.5cm}
+  \subImagem{imagens/resultados/grade.pdf}{WSIR residuals.}
+  \vspace{.5cm}
+  \subImagem{imagens/resultados/interest_payments.pdf}{WSIR predictions in the covariate space.}
+ \subImagem{imagens/resultados/region.pdf}{WSIR residuals.}
+  \subImagemSemLegenda{imagens/resultados/legenda.pdf}
+
+  \label{fig:enter-label}
+\end{figure}
+
+
+\newpage

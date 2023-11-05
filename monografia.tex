@@ -1,0 +1,164 @@
+\documentclass[12pt, a4paper, twoside]{article}
+\usepackage[left = 3cm, top = 3cm, right = 2cm, bottom = 2cm]{geometry}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\numberwithin{equation}{subsection} %subsection
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{titletoc,titlesec}
+\usepackage{setspace}
+\usepackage{indentfirst}
+%\usepackage{natbib}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+%\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[alf]{abntex2cite}
+\usepackage{multirow} % https://www.ctan.org/pkg/multirow
+\usepackage{float} % https://www.ctan.org/pkg/float
+\usepackage{booktabs} % https://www.ctan.org/pkg/booktabs
+\usepackage{enumitem} % https://www.ctan.org/pkg/enumitem
+\usepackage{quoting} % https://www.ctan.org/pkg/quoting
+\usepackage{epigraph}
+\usepackage{anyfontsize}
+\usepackage{caption}
+\usepackage{adjustbox}
+\usepackage{bm}
+\usepackage{natbib}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage[newcommands]{ragged2e}
+\usepackage{graphicx,caption}
+\captionsetup{%
+    justification=Justified,%
+}
+\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
+%\usepackage[style=abnt]{biblatex}
+%\bibliographystyle{plainnat}
+
+% 
+% \bibliography{ref.bib}
+\raggedbottom % https://latexref.xyz/_005craggedbottom.html
+
+\usepackage{funcoes} % Inclua o pacote customizado
+
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{lema}[teo]{Lema}
+\newtheorem{cor}[teo]{Corolário}
+\newtheorem{prop}[teo]{Proposição}
+\newtheorem{defi}{Definição}
+\newtheorem{exem}{Exemplo}
+
+\newcommand{\titulo}{Interpretação de redes neurais}
+\newcommand{\autor}{Davi Guerra Alves}
+\newcommand{\orientador}{ Thais Carvalho Valadares Rodrigues }
+\newcommand{\coorientador}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+%\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{16pt}
+%C - Centro, L - Esquerda, R - Direita, O - impar, E - par
+\fancyhead[RO, LE]{\thepage}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+
+\titlecontents{section}[0cm]{}{\bf\thecontentslabel\ }{}{\titlerule*[.75pc]{.}\contentspage}
+\titlecontents{subsection}[0.75cm]{}{\thecontentslabel\ }{}{\titlerule*[.75pc]{.}\contentspage}
+
+\setcounter{secnumdepth}{3}
+%\setcounter{tocdepth}{3}
+
+\DeclareCaptionFormat{myformat}{ \centering \fontsize{10}{12}\selectfont#1#2#3}
+\captionsetup{format=myformat}
+
+\begin{document}
+
+
+\include{estrutura/capa}
+\include{estrutura/rosto}
+
+\pagenumbering{arabic}
+\setcounter{page}{2}
+\onehalfspacing
+
+
+
+
+\setlength{\parindent}{1.5cm}
+\setlength{\parskip}{0.2cm}
+\setlength{\intextsep}{0.5cm}
+
+\titlespacing*{\section}{0cm}{0cm}{0.5cm}
+\titlespacing*{\subsection}{0cm}{0.5cm}{0.5cm}
+\titlespacing*{\subsubsection}{0cm}{0.5cm}{0.5cm}
+\titlespacing*{\paragraph}{0cm}{0.5cm}{0.5cm}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titlespacing*{\paragraph}
+%{0pt}{3.25ex plus ex minus .2ex}{1.5ex plus .2ex}
+
+
+
+\pagenumbering{arabic}
+\setcounter{page}{3}
+
+\fancyhead[RE, LO]{\nouppercase{\emph\leftmark}}
+%\fancyfoot[C]{Departamento de Estatística}
+\listoftables
+
+\newpage
+\section{\textbf{Dedicatória}}
+\newpage
+
+\section{\textbf{Agradecimentos}}
+\newpage
+
+\section{\textbf{Resumo}}
+\newpage
+
+
+%Sumário
+\tableofcontents
+\newpage
+
+\section{\textbf{Lista de figuras}}
+\newpage
+
+\section{\textbf{Lista de tabelas}}
+\newpage
+
+\section{\textbf{Lista de quadros}}
+\newpage
+
+\section{\textbf{Introdução}}
+\input{estrutura/introducao}
+\newpage
+
+
+\section{\textbf{Referencial teórico}}
+\input{estrutura/metodologia}
+\newpage
+
+\section{\textbf{Metodologia}}
+\newpage
+
+\section{\textbf{Resultados}}
+\input{estrutura/resultados}
+\newpage
+
+% \section*{\textbf{Referências}}
+% \input{ref.tex}
+
+\section{\textbf{Conclusão}}
+\newpage
+
+\bibliography{ref.bib}
+\bibliographystyle{abntex2-alf}
+
+\section{\textbf{Anexo}}
+\newpage
+
+\end{document}

@@ -1,85 +1,64 @@
 
+ \subsection{Regressão logística}
+ A regressão logística é um método estatístico utilizado para modelar a probabilidade de uma variável 
+dependente categórica. É comumente utilizada para problemas de classificação binária, onde a variável
+dependente possui apenas duas categorias, como sim/não, positivo/negativo, 0/1.
 
-\subsection{Conjunto de dados}
+A regressão logística é baseada na combinação linear entre as variáveis explicativas e os coeficientes lineares, cuja fórmula é:
 
-O conjunto de dados utilizado envolverá informações do mercado financeiro, tendo como análise principal o banco de dados \textit{Loan Data for Dummy Bank}, que contém informações de um tipo de empréstimo chamado \textit{peer-to-peer lending}, onde pessoas que possuem um montante financeiro para aplicações, encontram empresas que precisam de dinheiro. Nesse conjunto de dados existem algumas variáveis que podem ser alvo de predições, como é o caso das variáveis \textit{loan condition cat}, que categoriza se o empréstimo é vantajoso ou não para o banco e também a variável \textit{interest rate}, que indica uma taxa de risco que banco define para um determinado empréstimo. Para explicar essas variáveis existem algumas variáveis explicativas que podem ser úteis como: \textit{installment}, que é o valor da parcela mensal do empréstimo, \textit{recoveries}, valor total de recuperações feitas pelo banco após um empréstimo ter sido inadimplente, \textit{region}, região geográfica do país onde o tomador do empréstimo reside e dentre outras.
+\begin{equation}
+Y = \beta_0 + X_{1}\beta_1 + X_{2}\beta_2 + \ldots +X_{k}\beta_k ,
+\end{equation}
+ 
+ onde cada variável explicativa $(X_1, X_2, ..., X_k)$ tem um parâmetro $\beta$ correspondente, influenciando o resultado de $Y$.
 
-Há a tentativa de utilizar dados do Banco do Brasil, mas o mesmo está em processo de liberação.
+O cálculo da regressão logística é baseado na probabilidade do $Y$ ser igual a 1 $(P(Y=1))$, logo para se realizar 
+esse cálculo, é passado uma função logística no $Y$, cuja forma é dada por:
 
- \subsection{Regressão linear}
+\begin{equation}
+  P(Y=1) = \frac{1}{1 + e^{-(\beta_0 + X_{1}\beta_1 + X_{2}\beta_2 + \ldots +X_{k}\beta_k)}}
+\end{equation}
 
-O modelo de regressão linear é um modelo estatístico que relaciona uma variável dependente (ou variável resposta) com uma ou mais variáveis independentes (ou variáveis explicativas). Quando essa relação envolve apenas duas variáveis, variável resposta e variável explicativa, o modelo é chamado de modelo de regressão simples, e quando envolve a relação entre uma variável dependente e múltiplas variáveis independentes, é chamado de modelo de regressão múltipla \cite{neter1996applied}.
+A estimação dos coeficientes $(b_0, b_1, b_2, ..., b_k)$  na regressão logística é geralmente realizada por meio 
+do método da máxima verossimilhança. O objetivo é encontrar os valores dos coeficientes que maximizam a função de
+ verossimilhança, representando a probabilidade de observar os dados observados dado o modelo.
+ 
+A função de verossimilhança $(L)$ para a regressão logística é dada pelo produto das probabilidades condicionais
+de observar os eventos(valores da variável dependente) dados os valores das variáveis independentes. Para facilitar o cálculo, 
+geralmente trabalhamos com o logaritmo natural da função de verossimilhança, conhecido como log-verossimilhança($l$).
 
-Para o modelo de regressão simples, temos a seguinte fórmula:
-\begin{equation}y_i = \beta_0 + x_i\beta_1 + \varepsilon_i, \end{equation}
+A log-verossimilhança para a regressão logística é:
 
-\hspace{-1.5cm}onde $\beta_0$ é chamado de intercepto, $\beta_1$ é o coeficiente linear, $x_i$ é a entrada da variável explicativa e $\epsilon_i$ é o erro para cada estimação de $y_i$.
+\begin{equation}
+  l(\beta) = \sum_{i=1}^{n} [y_i \beta^T x_i - \log(1 + e^{\beta^T x_i})]
+\end{equation}
 
-Já para o modelo de regressão múltipla, temos o seguinte resultado:
-\begin{equation}y_i = \beta_0 + x_{i1}\beta_1 + x_{i2}\beta_2 + ... +x_{ik}\beta_k + \varepsilon_i, \end{equation}
-
-\hspace{-1.5cm}onde para cada variável explicativa existe um parâmetro $\beta$ fazendo sua ponderação no resultado de $y_i$.
-
-A forma matricial do cálculo de todos os $y_{is}$, sendo $i = {1,...n}$, dada da seguinte maneira:
-
-\begin{equation}Y= X\beta + \varepsilon,\end{equation}
-onde Y é um vetor coluna com os n valores de $y_i$, X é uma matriz com as k variáveis explicativas, e $\varepsilon$ é um vetor de dimensão n dos erro, ou seja, 
-
-\begin{equation}\begin{bmatrix}y_{1}
-\\ y_{2}
-\\\vdots 
-\\ y_{n}
-\end{bmatrix} = \begin{bmatrix}
-1 & x_{11} & x_{12} & \cdots  & x_{1k}\\ 
-1 & x_{21} & x_{22} & \cdots  & x_{2k}\\ 
-\vdots  & \vdots &  \vdots  & \ddots & \vdots \\
-1 & x_{n1} & x_{n2} & \cdots  & x_{nk}
-\end{bmatrix} \begin{bmatrix}\beta _{0}
-\\ \beta _{1}
-\\  \vdots 
-\\ \beta _{k}
-\end{bmatrix} + \begin{bmatrix}\varepsilon _{0}
-\\ \varepsilon _{1}
-\\  \vdots 
-\\ \varepsilon _{n}
-\end{bmatrix}.\end{equation}
-
-Para fazer a estimativa dos parâmetros, é utilizado o método dos mínimos quadrados ordinários(MQO), que busca minimizar as distâncias quadradas entre a variável dependente observada e a variável prevista pelo modelo. Essa estimação é representada por $S(\beta)$ e pode ser descrita da seguinte maneira:
-
-\begin{equation}S (\beta) = \sum_{i=1}^{N} (y_i - x'\beta)^2 = (Y - X\beta)' (Y - X\beta).
-\label{eq:mqo_regress}
-\end{equation} 
-
-Minimizando a Equação \ref{eq:mqo_regress}, temos que o estimador para $\beta$ é calculado por:
-
-\begin{equation}  \hat{\beta }=\left ( {X}'X \right )^{-1}XY.\end{equation} 
-
-
-Dado o estimador $\hat{\beta }$, podemos estimar $E(y_i)$ como $\hat{y}_i = x_i \hat{\beta }$ consequentemente a estimativa de $\epsilon_i$ é dada por $\hat{\epsilon_i} = \hat{y_i} - x_i \hat{\beta }$, este é chamado de resíduo. 
-
-Para se utilizar uma regressão linear é preciso observar algumas suposições:
-
-\begin{enumerate}
-    \item Os erros $\varepsilon_i$ seguem uma distribuição Normal, com variância constante $\sigma^2$, sendo representada por: $\varepsilon_i \sim N(0, \sigma^2)$.
-    \item  As variáveis aleatórias $\varepsilon_1,\varepsilon_2, ..., \varepsilon_n $  são independentes;
-    \item As variáveis explicativas $X_1,X_2, ..., X_n $ são não correlacionadas – hipótese de ausência de multicolinearidade entre as variáveis explicativas;
-    \item A relação entre a média da variável resposta e as covariáveis é linear.
-\end{enumerate}
-
-O modelo respeitando as suposições apresenta as seguintes propriedades.
 
 \begin{itemize}
-    \item O estimador MQO de $\beta$ é não viesado: 
-    \begin{equation}E[\hat{\beta}|X] = \beta. \end{equation}
-
-    \item O estimador MQO é (multivariado) normalmente distribuído: 
-    \begin{equation}\hat{\beta}|X\sim N(\beta,V[\hat{\beta}|X]),\end{equation}
-    com variância $V[\hat{\beta}|X] = \sigma^2(X'X)^{-1}$, sob a hipótese de homocedasticidade e $V[\hat{\beta}|X] =\sigma^2(X'X)^{-1}$ $X'\Omega X(X'X)^{-1}$, considerando heterocedasticidade conhecida, onde $\Omega$ é a matriz de variância-covariância dos erros. Sob homocedasticidade, a variância V pode ser estimada não viesadamente como \begin{equation}\hat{V}(\hat{\beta}|X) = \hat{\sigma^2}(X'X)^{-1}, \end{equation} com \begin{equation}\hat{\sigma^2} = \frac{\hat{\epsilon}'\hat{\epsilon} }{n - k - 1}.\end{equation}
+  \item  $N$é o número total de observações.
+  \item  $y_i$ é a variável dependente binária da i-ésima observação (0 ou 1).
+  \item $p_i$ é a probabilidade predita de $Y=1$ para a i-ésima observação, dada pela função logística.
 \end{itemize}
 
+A ideia é encontrar os valores de $(b_0, b_1, b_2, ..., b_k)$ que maximizam essa função. Isso geralmente é feito usando métodos computacionais, 
+como o algoritmo de otimização Newton-Raphson ou o Gradiente Descendente.
 
+Um ponto a ser destacado é a função log odds ou logíto. Ela é uma função que calcula o log da 
+razão do evento ser acontecer e dele não acontecer, cuja formulação é dada por:
 
-\subsection{Redes Neurais Artificiais}
+\begin{equation}
+  \text{logit}(P(Y=1)) = \log \left( \frac{P(Y=1)}{1 - P(Y=1)} \right)
+\end{equation}
+
+Onde esse resultado nada mais é do que $\beta_0 + X_{1}\beta_1 + X_{2}\beta_2 + \ldots +X_{k}\beta_k$. 
+
+Portanto, a utilizade de se analisar o log-odds é justamente um ponte entre olhar coeficiente e a probabilidade final, 
+pois um coeficiente positivo indica que o aumento na variável está associado a um aumento nas log-odds 
+(e, portanto, na probabilidade), enquanto um coeficiente negativo está associado a uma diminuição nas log-odds (e na probabilidade).
+
+% TODO: falar da odds e odds ratio
+
+\subsection{Redes neurais artificiais}
 
 Redes Neurais Artificiais (ou \textit{Deep Learning}) é uma técnica preditiva presente no campo de Inteligência Artificial. As redes neurais tem sido amplamente utilizadas devido ao seu alto poder preditivo e também à flexibilidade de se aplicar esse método em diversos contextos, permitindo ser um modelo com menos restrições que os modelos tradicionais estatísticos.
 

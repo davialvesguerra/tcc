@@ -1,6 +1,6 @@
 - dedicatoria
 - agradecimentos
-  - financiamente pelo cnpq
+  - financiamento pelo cnpq
 - resumo
   - palavras chaves
 
@@ -11,16 +11,26 @@
 
 - introducao
 - referencial teórico
-- metodologia
+  - reg logistica(modelo e interpretação)
+  - redes neurais
+  - shap
+  - metódos de avaliação(f1 score, matriz confusão)
+- metodologia(materias e métodos)
+  - banco de dados(origem dados, característica dos dados, )
+  - métodos(referencial teorico aplicado no projeto
+      (e.g regressão logistica aplicada no emprestimo, 
+        redes neurais(qual modelo usar, arquitetura)))
+      (intuito de interpretar o modelo(coefs, teste), tanto tradicional quanto para redes neurais(shap))
+      (fazer a contextualização)
 
 - resultados
   - analise exploratoria(boxplot, barras e correlograma)
-  - modelagem
-    - mostrar a arquitetura da rede neural utilizada
+  - regressao logistica e interpretação
+  - redes neurais
     - falar dos outros modelos estimados
-    - pegar o melhor modelo de redes neurias
-  - modelo de regressao logistica
+    - pegar o melhor modelo de redes neurais
   - interpretação do modelo usando shap
+    - mostrar gráfico da média dos shap vs regressao logistica
     - mostrar o grafico de dependencia entre valor da variável com resultado do modelo variando ela
     - mostrar 2 gráficos de shap especificos de 2 observações(pra mau pagador e pra bom pagador)
     - mostrar o gráfico com todos as amostras de shap(shap.plots.beeswarm)

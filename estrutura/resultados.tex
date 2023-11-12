@@ -1,12 +1,44 @@
 \subsection*{Análise descritiva}
-\subsection*{Modelagem da rede neural}
-\subsubsection*{Arquitetura}
-\subsubsection*{Variações da arquitetura}
-\subsubsection*{Melhor modelo de redes neurais}
 
 \subsection*{Modelagem da regressão logística}
+Falar do modelo utilizado, a normalização dos dados, os resultados
+métricas de avaliação e interpretação dos coeficientes
+
+\subsection*{Modelagem da rede neural}
+Falar sobre Arquitetura inicial, suas variações junto com os 
+resultados avaliativos e por fim falar qual modelo foi utilizado
+e porque
 
 \subsection*{Interpretação de rede neural}
+
+- mostrar gráfico da média dos shap vs regressao logistica
+\imagem{imagens/shap/media_shap.png}{Média absoluta dos valores de shap}
+
+- mostrar o grafico de dependencia entre valor da variável com resultado do modelo variando ela
+\imagem{imagens/shap/depend_var_res_shap.png}{Relação entre a variável X com o resultado modelo quando a mesma varia}
+
+- mostrar 2 gráficos de shap especificos de 2 observações(pra mau pagador e pra bom pagador)
+\begin{figure}
+  \centering
+  \subImagem{imagens/shap/shap_plot_0.png}{Valor e classificação do emprestimo}
+  \vspace{.5cm}
+  \subImagem{imagens/shap/shap_plot_1.png}{WSIR residuals.}
+  \vspace{.5cm}
+  \subImagem{imagens/shap/shap_plot_2.png}{WSIR predictions in the covariate space.}
+ \subImagem{imagens/shap/shap_plot_3.png}{WSIR residuals}
+  
+  \label{fig:enter-label}
+  \caption{aloalo}
+\end{figure}
+
+- mostrar o gráfico com todos as amostras de shap(shap.plots.beeswarm)
+\imagem{imagens/shap/shap_geral.png}{Valores de shap para as 80 observações utilizadas}
+
+
+- mostrar o gráfico de força pra apenas uma observaçã
+\imagem{imagens/shap/force_plot.png}{Gráfico de força em uma observação}
+
+- mostrar o gráfico de força para todas as observações
 
 \subsection*{Benchmark entre redes neurais e regressão logística}
 
@@ -52,12 +84,12 @@ home\_ownership & 0.04 \\
 % boxplot
 \begin{figure}
   \centering
-  \subImagem{imagens/resultados/loan_amount.jpg}{Valor e classificação do emprestimo}
+  \subImagem{imagens/exploratoria/loan_amount.jpg}{Valor e classificação do emprestimo}
   \vspace{.5cm}
-  \subImagem{imagens/resultados/emp_length_int.jpg}{WSIR residuals.}
+  \subImagem{imagens/exploratoria/emp_length_int.jpg}{WSIR residuals.}
   \vspace{.5cm}
-  \subImagem{imagens/resultados/recoveries.jpg}{WSIR predictions in the covariate space.}
- \subImagem{imagens/resultados/annual_inc.jpg}{WSIR residuals.}
+  \subImagem{imagens/exploratoria/recoveries.jpg}{WSIR predictions in the covariate space.}
+ \subImagem{imagens/exploratoria/annual_inc.jpg}{WSIR residuals.}
   
   \label{fig:enter-label}
   \caption{aloalo}
@@ -65,21 +97,21 @@ home\_ownership & 0.04 \\
 
 \begin{figure}
   \centering
-  \subImagem{imagens/resultados/interest_rate.jpg}{Total de tipos de empréstimo.}
+  \subImagem{imagens/exploratoria/interest_rate.jpg}{Total de tipos de empréstimo.}
   \vspace{.5cm}
-  \subImagem{imagens/resultados/dti.jpg}{WSIR residuals.}
+  \subImagem{imagens/exploratoria/dti.jpg}{WSIR residuals.}
   \vspace{.5cm}
-  \subImagem{imagens/resultados/total_pymnt.jpg}{WSIR predictions in the covariate space.}
- \subImagem{imagens/resultados/installment.jpg}{WSIR residuals.}
+  \subImagem{imagens/exploratoria/total_pymnt.jpg}{WSIR predictions in the covariate space.}
+ \subImagem{imagens/exploratoria/installment.jpg}{WSIR residuals.}
   
   \label{fig:enter-label}
 \end{figure}
 
 \begin{figure}
   \centering
-  \subImagem{imagens/resultados/total_rec_prncp.jpg}{Total de tipos de empréstimo.}
+  \subImagem{imagens/exploratoria/total_rec_prncp.jpg}{Total de tipos de empréstimo.}
   \vspace{.5cm}
-  \subImagem{imagens/resultados/duracao_emprestimo_dias.jpg}{WSIR residuals.}
+  \subImagem{imagens/exploratoria/duracao_emprestimo_dias.jpg}{WSIR residuals.}
   \vspace{.5cm}
 
   \label{fig:enter-label}
@@ -88,26 +120,26 @@ home\_ownership & 0.04 \\
 % barras
 \begin{figure}
     \centering
-    \subImagem{imagens/resultados/home_ownership.pdf}{Total de tipos de empréstimo.}
+    \subImagem{imagens/exploratoria/home_ownership.pdf}{Total de tipos de empréstimo.}
     \vspace{.5cm}
-    \subImagem{imagens/resultados/income_category.pdf}{WSIR residuals.}
+    \subImagem{imagens/exploratoria/income_category.pdf}{WSIR residuals.}
     \vspace{.5cm}
-    \subImagem{imagens/resultados/term.pdf}{WSIR predictions in the covariate space.}
-   \subImagem{imagens/resultados/application_type.pdf}{WSIR residuals.}  
-    \subImagemSemLegenda{imagens/resultados/legenda.pdf}
+    \subImagem{imagens/exploratoria/term.pdf}{WSIR predictions in the covariate space.}
+   \subImagem{imagens/exploratoria/application_type.pdf}{WSIR residuals.}  
+    \subImagemSemLegenda{imagens/exploratoria/legenda.pdf}
     
     \label{fig:enter-label}
 \end{figure}
 
 \begin{figure}
   \centering
-  \subImagem{imagens/resultados/purpose.pdf}{Total de tipos de empréstimo.}
+  \subImagem{imagens/exploratoria/purpose.pdf}{Total de tipos de empréstimo.}
   \vspace{.5cm}
-  \subImagem{imagens/resultados/grade.pdf}{WSIR residuals.}
+  \subImagem{imagens/exploratoria/grade.pdf}{WSIR residuals.}
   \vspace{.5cm}
-  \subImagem{imagens/resultados/interest_payments.pdf}{WSIR predictions in the covariate space.}
- \subImagem{imagens/resultados/region.pdf}{WSIR residuals.}
-  \subImagemSemLegenda{imagens/resultados/legenda.pdf}
+  \subImagem{imagens/exploratoria/interest_payments.pdf}{WSIR predictions in the covariate space.}
+ \subImagem{imagens/exploratoria/region.pdf}{WSIR residuals.}
+  \subImagemSemLegenda{imagens/exploratoria/legenda.pdf}
 
   \label{fig:enter-label}
 \end{figure}

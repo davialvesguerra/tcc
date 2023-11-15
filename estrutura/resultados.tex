@@ -1,8 +1,175 @@
 \subsection*{Análise descritiva}
 
+% boxplot
+\begin{figure}[H]
+  \centering
+  \subImagem{imagens/exploratoria/loan_amount.jpg}{Valor e classificação do emprestimo}
+  \vspace{.5cm}
+  \subImagem{imagens/exploratoria/emp_length_int.jpg}{WSIR residuals.}
+  \vspace{.5cm}
+  \subImagem{imagens/exploratoria/recoveries.jpg}{WSIR predictions in the covariate space.}
+ \subImagem{imagens/exploratoria/annual_inc.jpg}{WSIR residuals.}
+  
+  \label{fig:enter-label}
+  \caption{aloalo}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \subImagem{imagens/exploratoria/interest_rate.jpg}{Total de tipos de empréstimo.}
+  \vspace{.5cm}
+  \subImagem{imagens/exploratoria/dti.jpg}{WSIR residuals.}
+  \vspace{.5cm}
+  \subImagem{imagens/exploratoria/total_pymnt.jpg}{WSIR predictions in the covariate space.}
+ \subImagem{imagens/exploratoria/installment.jpg}{WSIR residuals.}
+  
+  \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \subImagem{imagens/exploratoria/total_rec_prncp.jpg}{Total de tipos de empréstimo.}
+  \vspace{.5cm}
+  \subImagem{imagens/exploratoria/duracao_emprestimo_dias.jpg}{WSIR residuals.}
+  \vspace{.5cm}
+
+  \label{fig:enter-label}
+\end{figure}
+
+% barras
+\begin{figure}[H]
+    \centering
+    \subImagem{imagens/exploratoria/home_ownership.pdf}{Total de tipos de empréstimo.}
+    \vspace{.5cm}
+    \subImagem{imagens/exploratoria/income_category.pdf}{WSIR residuals.}
+    \vspace{.5cm}
+    \subImagem{imagens/exploratoria/term.pdf}{WSIR predictions in the covariate space.}
+   \subImagem{imagens/exploratoria/application_type.pdf}{WSIR residuals.}  
+    \subImagemSemLegenda{imagens/exploratoria/legenda.pdf}
+    
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \subImagem{imagens/exploratoria/purpose.pdf}{Total de tipos de empréstimo.}
+  \vspace{.5cm}
+  \subImagem{imagens/exploratoria/grade.pdf}{WSIR residuals.}
+  \vspace{.5cm}
+  \subImagem{imagens/exploratoria/interest_payments.pdf}{WSIR predictions in the covariate space.}
+ \subImagem{imagens/exploratoria/region.pdf}{WSIR residuals.}
+  \subImagemSemLegenda{imagens/exploratoria/legenda.pdf}
+
+  \label{fig:enter-label}
+\end{figure}
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{rr}
+    \hline
+   & correlação \\ 
+    \hline
+  emp\_length\_int & -0.02 \\ 
+    annual\_inc & -0.03 \\ 
+    annual\_inc.1 & -0.03 \\ 
+    loan\_amount & 0.00 \\ 
+    interest\_rate & 0.18 \\ 
+    dti & 0.01 \\ 
+    total\_pymnt & -0.04 \\ 
+    total\_rec\_prncp & -0.10 \\ 
+    recoveries & 0.39 \\ 
+    duracao\_emprestimo\_dias & 0.01 \\ 
+     \hline
+  \end{tabular}
+  \end{table}
+  
+  \begin{table}[H]
+  \centering
+  \begin{tabular}{rr}
+    \hline
+   & contingência \\ 
+    \hline
+  home\_ownership & 0.04 \\ 
+    income\_category & 0.04 \\ 
+    application\_type & 0.01 \\ 
+    purpose & 0.06 \\ 
+    interest\_payments & 0.14 \\ 
+    grade & 0.15 \\ 
+    installment & 0.36 \\ 
+    region & 0.01 \\ 
+     \hline
+  \end{tabular}
+\end{table}
+
 \subsection*{Modelagem da regressão logística}
 Falar do modelo utilizado, a normalização dos dados, os resultados
 métricas de avaliação e interpretação dos coeficientes
+
+\centering
+\begin{tabular}{lrr}
+  \toprule
+                     vars &      coef &  coef\_abs \\
+  \midrule
+        pagamento\_liquido & -4.732918 &  4.732918 \\
+          pagamento\_bruto &  3.320726 &  3.320726 \\
+           tipo\_aplicacao & -1.847862 &  1.847862 \\
+               taxa\_juros &  1.412508 &  1.412508 \\
+    quantidade\_emprestimo & -1.406307 &  1.406307 \\
+                     grau & -1.048970 &  1.048970 \\
+         pagamentos\_juros & -0.461923 &  0.461923 \\
+                    prazo & -0.203298 &  0.203298 \\
+              renda\_anual & -0.195781 &  0.195781 \\
+                      dti & -0.150502 &  0.150502 \\
+          categoria\_renda & -0.111152 &  0.111152 \\
+       duracao\_emprestimo & -0.060571 &  0.060571 \\
+                   regiao &  0.037780 &  0.037780 \\
+  duracao\_emprestimo\_dias &  0.032603 &  0.032603 \\
+         propriedade\_casa &  0.019351 &  0.019351 \\
+               finalidade &  0.018647 &  0.018647 \\
+                  parcela &  0.005679 &  0.005679 \\
+  \bottomrule
+\end{tabular}
+
+\centering
+\begin{tabular}{lcccccc}
+  & \textbf{coef} & \textbf{std err} & \textbf{z} & \textbf{P$> |$z$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
+\midrule
+\textbf{duracao\_emprestimo}       &      -0.0606  &        0.005     &   -12.360  &         0.000        &       -0.070    &       -0.051     \\
+\textbf{propriedade\_casa}         &       0.0194  &        0.003     &     7.241  &         0.000        &        0.014    &        0.025     \\
+\textbf{categoria\_renda}          &      -0.1112  &        0.015     &    -7.218  &         0.000        &       -0.141    &       -0.081     \\
+\textbf{renda\_anual}              &      -0.1958  &        0.010     &   -20.148  &         0.000        &       -0.215    &       -0.177     \\
+\textbf{quantidade\_emprestimo}    &      -1.4063  &        0.039     &   -36.171  &         0.000        &       -1.483    &       -1.330     \\
+\textbf{prazo}                     &      -0.2033  &        0.028     &    -7.359  &         0.000        &       -0.257    &       -0.149     \\
+\textbf{tipo\_aplicacao}           &      -1.8479  &        0.106     &   -17.427  &         0.000        &       -2.056    &       -1.640     \\
+\textbf{finalidade}                &       0.0186  &        0.002     &     9.529  &         0.000        &        0.015    &        0.022     \\
+\textbf{pagamentos\_juros}         &      -0.4619  &        0.016     &   -29.243  &         0.000        &       -0.493    &       -0.431     \\
+\textbf{taxa\_juros}               &       1.4125  &        0.020     &    72.213  &         0.000        &        1.374    &        1.451     \\
+\textbf{grau}                      &      -1.0490  &        0.014     &   -76.099  &         0.000        &       -1.076    &       -1.022     \\
+\textbf{dti}                       &      -0.1505  &        0.011     &   -13.463  &         0.000        &       -0.172    &       -0.129     \\
+\textbf{pagamento\_bruto}          &       3.3207  &        0.028     &   118.072  &         0.000        &        3.266    &        3.376     \\
+\textbf{pagamento\_liquido}        &      -4.7329  &        0.034     &  -138.111  &         0.000        &       -4.800    &       -4.666     \\
+\textbf{parcela}                   &       0.0057  &        0.000     &    40.149  &         0.000        &        0.005    &        0.006     \\
+\textbf{regiao}                    &       0.0378  &        0.003     &    11.203  &         0.000        &        0.031    &        0.044     \\
+\textbf{duracao\_emprestimo\_dias} &       0.0326  &        0.009     &     3.704  &         0.000        &        0.015    &        0.050     \\
+\bottomrule
+\end{tabular}
+
+\centering
+\begin{tabular}{lrrrr}
+  \hline
+                &   precision &    recall &   f1-score &       support \\
+  \hline
+   0            &    0.928081 & 0.995603  &   0.960657 & 163990        \\
+   1            &    0.536334 & 0.0618419 &   0.110897 &  13486        \\
+   accuracy     &    0.924649 & 0.924649  &   0.924649 &      0.924649 \\
+   macro avg    &    0.732208 & 0.528723  &   0.535777 & 177476        \\
+   weighted avg &    0.898313 & 0.924649  &   0.896086 & 177476        \\
+  \hline
+\end{tabular}
+
+\imagem{imagens/resultados/report_model_logistico.png}{Matrix de confusão do modelo logístico}
+
 
 \subsection*{Modelagem da rede neural}
 Falar sobre Arquitetura inicial, suas variações junto com os 
@@ -18,7 +185,7 @@ e porque
 \imagem{imagens/shap/depend_var_res_shap.png}{Relação entre a variável X com o resultado modelo quando a mesma varia}
 
 - mostrar 2 gráficos de shap especificos de 2 observações(pra mau pagador e pra bom pagador)
-\begin{figure}
+\begin{figure}[H]
   \centering
   \subImagem{imagens/shap/shap_plot_0.png}{Valor e classificação do emprestimo}
   \vspace{.5cm}
@@ -42,107 +209,8 @@ e porque
 
 \subsection*{Benchmark entre redes neurais e regressão logística}
 
-\begin{table}[ht]
-\centering
-\begin{tabular}{rr}
-  \hline
- & correlação \\ 
-  \hline
-emp\_length\_int & -0.02 \\ 
-  annual\_inc & -0.03 \\ 
-  annual\_inc.1 & -0.03 \\ 
-  loan\_amount & 0.00 \\ 
-  interest\_rate & 0.18 \\ 
-  dti & 0.01 \\ 
-  total\_pymnt & -0.04 \\ 
-  total\_rec\_prncp & -0.10 \\ 
-  recoveries & 0.39 \\ 
-  duracao\_emprestimo\_dias & 0.01 \\ 
-   \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{rr}
-  \hline
- & contingência \\ 
-  \hline
-home\_ownership & 0.04 \\ 
-  income\_category & 0.04 \\ 
-  application\_type & 0.01 \\ 
-  purpose & 0.06 \\ 
-  interest\_payments & 0.14 \\ 
-  grade & 0.15 \\ 
-  installment & 0.36 \\ 
-  region & 0.01 \\ 
-   \hline
-\end{tabular}
-\end{table}
 
 
-% boxplot
-\begin{figure}
-  \centering
-  \subImagem{imagens/exploratoria/loan_amount.jpg}{Valor e classificação do emprestimo}
-  \vspace{.5cm}
-  \subImagem{imagens/exploratoria/emp_length_int.jpg}{WSIR residuals.}
-  \vspace{.5cm}
-  \subImagem{imagens/exploratoria/recoveries.jpg}{WSIR predictions in the covariate space.}
- \subImagem{imagens/exploratoria/annual_inc.jpg}{WSIR residuals.}
-  
-  \label{fig:enter-label}
-  \caption{aloalo}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \subImagem{imagens/exploratoria/interest_rate.jpg}{Total de tipos de empréstimo.}
-  \vspace{.5cm}
-  \subImagem{imagens/exploratoria/dti.jpg}{WSIR residuals.}
-  \vspace{.5cm}
-  \subImagem{imagens/exploratoria/total_pymnt.jpg}{WSIR predictions in the covariate space.}
- \subImagem{imagens/exploratoria/installment.jpg}{WSIR residuals.}
-  
-  \label{fig:enter-label}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \subImagem{imagens/exploratoria/total_rec_prncp.jpg}{Total de tipos de empréstimo.}
-  \vspace{.5cm}
-  \subImagem{imagens/exploratoria/duracao_emprestimo_dias.jpg}{WSIR residuals.}
-  \vspace{.5cm}
-
-  \label{fig:enter-label}
-\end{figure}
-
-% barras
-\begin{figure}
-    \centering
-    \subImagem{imagens/exploratoria/home_ownership.pdf}{Total de tipos de empréstimo.}
-    \vspace{.5cm}
-    \subImagem{imagens/exploratoria/income_category.pdf}{WSIR residuals.}
-    \vspace{.5cm}
-    \subImagem{imagens/exploratoria/term.pdf}{WSIR predictions in the covariate space.}
-   \subImagem{imagens/exploratoria/application_type.pdf}{WSIR residuals.}  
-    \subImagemSemLegenda{imagens/exploratoria/legenda.pdf}
-    
-    \label{fig:enter-label}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \subImagem{imagens/exploratoria/purpose.pdf}{Total de tipos de empréstimo.}
-  \vspace{.5cm}
-  \subImagem{imagens/exploratoria/grade.pdf}{WSIR residuals.}
-  \vspace{.5cm}
-  \subImagem{imagens/exploratoria/interest_payments.pdf}{WSIR predictions in the covariate space.}
- \subImagem{imagens/exploratoria/region.pdf}{WSIR residuals.}
-  \subImagemSemLegenda{imagens/exploratoria/legenda.pdf}
-
-  \label{fig:enter-label}
-\end{figure}
 
 
 \newpage

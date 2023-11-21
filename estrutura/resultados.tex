@@ -1,5 +1,7 @@
 \subsection*{Análise descritiva}
 
+% TODO: mostrar tabela com % dos categorias da variável resposta
+
 % boxplot
 \begin{figure}[H]
   \centering
@@ -15,20 +17,34 @@
   
 \end{figure}
 
+O comportamento da variável resposta nas Figuras 1(a) e 1(c) demonstrou semelhanças, onde, em ambos os casos,
+não foi evidenciada uma clara diferença entre o valor do empréstimo e o valor da parcela em relação às
+categorias da variável resposta. A Figura 1(b) também apresenta um comportamento semelhante entre as classes
+"Empréstimo ruim" e "Empréstimo bom", mas com um detalhe: a mediana do tempo de trabalho dos clientes rotulados 
+como "Empréstimo ruim" foi inferior em comparação ao outro caso. Por fim, a Figura 1(d) indica que clientes 
+com uma renda anual elevada tendem a ser categorizados como "Empréstimo bom".
+
+
 \begin{figure}[H]
   \centering
-  \subImagem{imagens/exploratoria/taxa_juros.jpg}{Taxa de juros do empréstimo.}
+  \subImagem{imagens/exploratoria/taxa_juros.jpg}{Taxa de juros do empréstimo}
   \vspace{.5cm}
-  \subImagem{imagens/exploratoria/dti.jpg}{Razão entre a dívida e o salário do cliente.}
+  \subImagem{imagens/exploratoria/dti.jpg}{Razão entre a dívida e o salário do cliente}
   \vspace{.5cm}
-  \subImagem{imagens/exploratoria/pagamento_bruto.jpg}{Valor bruto do emprétimo pago.}
- \subImagem{imagens/exploratoria/pagamento_liquido.jpg}{Valor líquido do emprétimo pago.}
+  \subImagem{imagens/exploratoria/pagamento_bruto.jpg}{Valor bruto do emprétimo pago}
+ \subImagem{imagens/exploratoria/pagamento_liquido.jpg}{Valor líquido do emprétimo pago}
  \caption{Variáveis explicativas em relação à condição do empréstimo}
   
  \label{fig:exp_boxplot2}
 \end{figure}
 
+A Figura 2(a) evidencia uma relação significativa entre taxas de juros elevadas e empréstimos 
+considerados ruins. A Figura 2(b) complementa a informação fornecida pela Figura 1(d),
+indicando que clientes com renda mais elevada tendem a cumprir adequadamente com seus pagamentos.
+As Figuras 2(c) e 2(d) seguem padrões semelhantes, sugerindo que clientes que quitaram a 
+maior parte do empréstimo são frequentemente rotulados como bons pagadores.
 
+%TODO: tentar mostrar os valores absolutos no gráfico de barras
 % barras
 \begin{figure}[H]
     \centering
@@ -44,6 +60,17 @@
     \caption{Variáveis explicativas em relação à condição do empréstimo}
 \end{figure}
 
+
+A Figura 3(a) ilustra que as categorias da variável "Finalidade" seguem a proporção natural da condição do empréstimo,
+conforme indicado na Tabela de Condição do Empréstimo. Na Figura 3(b), as categorias "Alta" e "Média"
+exibem proporções menores de empréstimos ruins em comparação com a categoria "Baixa", que apresenta uma proporção de quase 10\% 
+de empréstimos ruins. A Figura 3(c) revela um padrão de "cascata", indicando que à medida que o risco do 
+empréstimo aumenta, a proporção de empréstimos ruins nas últimas categorias também aumenta, 
+sendo a categoria G a mais afetada, com quase 25\% de empréstimos classificados como ruins. 
+Na Figura 3(d), a categoria "Empréstimo conjunto" não registrou observações de empréstimos ruins, 
+concentrando a maioria desses empréstimos na categoria "Empréstimo individual".
+
+
 \begin{figure}[H]
   \centering
   \subImagem{imagens/exploratoria/pagamentos_juros.pdf}{Tipo de juros aplicado no empréstimo}
@@ -58,6 +85,11 @@
   \caption{Variáveis explicativas em relação à condição do empréstimo}
 \end{figure}
 
+Na Figura 4(a), o gráfico evidencia que empréstimos obtidos sob juros compostos possuem uma proporção 
+mais elevada de rotulações ruins em comparação com empréstimos sob juros simples. As Figuras 4(b) e 4(c)
+destacam uma proporção natural refletida pela distribuição das categorias da variável resposta, 
+conforme apresentado na Tabela xxxx. Já a Figura 4(d) revela uma proporção mais significativa
+de empréstimos ruins quando estes tendem a demorar mais para serem pagos.
 
 \begin{table}[H]
   \centering

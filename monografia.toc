@@ -1,0 +1,8 @@
+\babel@toc {brazilian}{}\relax 
+\contentsline {section}{\numberline {1}\textbf {Metodologia}}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Conjunto de dados}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Métodos}{6}{subsection.1.2}%
+\contentsline {section}{\numberline {2}\textbf {Resultados}}{7}{section.2}%
+\contentsline {section}{\numberline {3}\textbf {Conclusão}}{16}{section.3}%
+\contentsline {section}{\numberline {4}\textbf {Anexo}}{17}{section.4}%
+\contentsfinish 

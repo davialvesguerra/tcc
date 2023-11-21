@@ -3,170 +3,152 @@
 % boxplot
 \begin{figure}[H]
   \centering
-  \subImagem{imagens/exploratoria/loan_amount.jpg}{Valor e classificação do emprestimo}
+  \subImagem{imagens/exploratoria/quantidade_emprestimo.jpg}{Valor do empréstimo}
   \vspace{.5cm}
-  \subImagem{imagens/exploratoria/emp_length_int.jpg}{WSIR residuals.}
+  \subImagem{imagens/exploratoria/duracao_emprestimo.jpg}{Tempo de emprego (em anos)}
   \vspace{.5cm}
-  \subImagem{imagens/exploratoria/recoveries.jpg}{WSIR predictions in the covariate space.}
- \subImagem{imagens/exploratoria/annual_inc.jpg}{WSIR residuals.}
+  \subImagem{imagens/exploratoria/parcela.jpg}{Valor da parcela do emprésitmo}
+ \subImagem{imagens/exploratoria/renda_anual.jpg}{Renda anual (em dólar)}
   
-  \label{fig:enter-label}
-  \caption{aloalo}
+  \label{fig:exp_boxplot1}
+  \caption{Variáveis explicativas em relação à condição do empréstimo}
+  
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \subImagem{imagens/exploratoria/interest_rate.jpg}{Total de tipos de empréstimo.}
+  \subImagem{imagens/exploratoria/taxa_juros.jpg}{Taxa de juros do empréstimo.}
   \vspace{.5cm}
-  \subImagem{imagens/exploratoria/dti.jpg}{WSIR residuals.}
+  \subImagem{imagens/exploratoria/dti.jpg}{Razão entre a dívida e o salário do cliente.}
   \vspace{.5cm}
-  \subImagem{imagens/exploratoria/total_pymnt.jpg}{WSIR predictions in the covariate space.}
- \subImagem{imagens/exploratoria/installment.jpg}{WSIR residuals.}
+  \subImagem{imagens/exploratoria/pagamento_bruto.jpg}{Valor bruto do emprétimo pago.}
+ \subImagem{imagens/exploratoria/pagamento_liquido.jpg}{Valor líquido do emprétimo pago.}
+ \caption{Variáveis explicativas em relação à condição do empréstimo}
   
-  \label{fig:enter-label}
+ \label{fig:exp_boxplot2}
 \end{figure}
 
-\begin{figure}[H]
-  \centering
-  \subImagem{imagens/exploratoria/total_rec_prncp.jpg}{Total de tipos de empréstimo.}
-  \vspace{.5cm}
-  \subImagem{imagens/exploratoria/duracao_emprestimo_dias.jpg}{WSIR residuals.}
-  \vspace{.5cm}
-
-  \label{fig:enter-label}
-\end{figure}
 
 % barras
 \begin{figure}[H]
     \centering
-    \subImagem{imagens/exploratoria/home_ownership.pdf}{Total de tipos de empréstimo.}
+    \subImagem{imagens/exploratoria/finalidade.pdf}{Finalidade do empréstimo}
     \vspace{.5cm}
-    \subImagem{imagens/exploratoria/income_category.pdf}{WSIR residuals.}
+    \subImagem{imagens/exploratoria/categoria_renda.pdf}{Renda categorizada}
     \vspace{.5cm}
-    \subImagem{imagens/exploratoria/term.pdf}{WSIR predictions in the covariate space.}
-   \subImagem{imagens/exploratoria/application_type.pdf}{WSIR residuals.}  
+    \subImagem{imagens/exploratoria/grau.pdf}{Risco do empréstimo}
+    \subImagem{imagens/exploratoria/tipo_aplicacao.pdf}{Tipo de aplicação do empréstimo}  
     \subImagemSemLegenda{imagens/exploratoria/legenda.pdf}
     
-    \label{fig:enter-label}
+    \label{fig:exp_bar1}
+    \caption{Variáveis explicativas em relação à condição do empréstimo}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \subImagem{imagens/exploratoria/purpose.pdf}{Total de tipos de empréstimo.}
+  \subImagem{imagens/exploratoria/pagamentos_juros.pdf}{Tipo de juros aplicado no empréstimo}
   \vspace{.5cm}
-  \subImagem{imagens/exploratoria/grade.pdf}{WSIR residuals.}
+  \subImagem{imagens/exploratoria/regiao.pdf}{Região que o tomador do empréstimo vive}
   \vspace{.5cm}
-  \subImagem{imagens/exploratoria/interest_payments.pdf}{WSIR predictions in the covariate space.}
- \subImagem{imagens/exploratoria/region.pdf}{WSIR residuals.}
+  \subImagem{imagens/exploratoria/propriedade_casa.pdf}{Tipo de propriedade do tomador do empréstimo}
+ \subImagem{imagens/exploratoria/prazo.pdf}{Duração do empréstimo em meses (36 ou 60 meses)}
   \subImagemSemLegenda{imagens/exploratoria/legenda.pdf}
 
-  \label{fig:enter-label}
+  \label{fig:exp_bar2}
+  \caption{Variáveis explicativas em relação à condição do empréstimo}
 \end{figure}
 
 
 \begin{table}[H]
   \centering
-  \begin{tabular}{rr}
+  \begin{tabular}{lc}
     \hline
-   & correlação \\ 
+    \textbf{Covariáveis} & \mbox{\textbf{Coeficiente de correlação}} \\ 
     \hline
-  emp\_length\_int & -0.02 \\ 
-    annual\_inc & -0.03 \\ 
-    annual\_inc.1 & -0.03 \\ 
-    loan\_amount & 0.00 \\ 
-    interest\_rate & 0.18 \\ 
-    dti & 0.01 \\ 
-    total\_pymnt & -0.04 \\ 
-    total\_rec\_prncp & -0.10 \\ 
-    recoveries & 0.39 \\ 
-    duracao\_emprestimo\_dias & 0.01 \\ 
-     \hline
+    Tempo de trabalho & -0.02 \\ 
+    Renda anual & -0.03 \\ 
+    Valor do empréstimo & 0.00 \\ 
+    Taxa de juros & 0.18 \\ 
+    DTI & 0.01 \\ 
+    Valor bruto pago & -0.04 \\ 
+    Valor liquido pago & -0.10 \\ 
+    Parcela & -0.01 \\ 
+    \hline
   \end{tabular}
+  \caption{Valores do coeficiente de Pearson entre as covariáveis e a variável resposta}
+  \label{tab:coef_corr}
   \end{table}
   
-  \begin{table}[H]
+\begin{table}[H]
   \centering
-  \begin{tabular}{rr}
+  \begin{tabular}{lc}
     \hline
-   & contingência \\ 
+    \textbf{Covariáveis} & \mbox{\textbf{Coeficiente de contingência}} \\ 
     \hline
-  home\_ownership & 0.04 \\ 
-    income\_category & 0.04 \\ 
-    application\_type & 0.01 \\ 
-    purpose & 0.06 \\ 
-    interest\_payments & 0.14 \\ 
-    grade & 0.15 \\ 
-    installment & 0.36 \\ 
-    region & 0.01 \\ 
+    Tipo de residência & 0.04 \\ 
+    Tipo de aplicação & 0.01 \\ 
+    Finalidade & 0.03 \\ 
+    Tipo de juros & 0.14 \\ 
+    Risco & 0.15 \\ 
+    Região & 0.01 \\ 
      \hline
   \end{tabular}
+  \caption{Valores do coeficiente de contingência entre as covariáveis e a variável resposta}
+  \label{tab:coef_cont}
 \end{table}
 
 \subsection*{Modelagem da regressão logística}
 Falar do modelo utilizado, a normalização dos dados, os resultados
 métricas de avaliação e interpretação dos coeficientes
 
+
+\begin{table}[H]
 \centering
-\begin{tabular}{lrr}
+\begin{tabular}{lcc}
   \toprule
-                     vars &      coef &  coef\_abs \\
+    \textbf{Covariáveis} & \textbf{Coeficientes} &  \textbf{Erro padrão} \\
   \midrule
-        pagamento\_liquido & -4.732918 &  4.732918 \\
-          pagamento\_bruto &  3.320726 &  3.320726 \\
-           tipo\_aplicacao & -1.847862 &  1.847862 \\
-               taxa\_juros &  1.412508 &  1.412508 \\
-    quantidade\_emprestimo & -1.406307 &  1.406307 \\
-                     grau & -1.048970 &  1.048970 \\
-         pagamentos\_juros & -0.461923 &  0.461923 \\
-                    prazo & -0.203298 &  0.203298 \\
-              renda\_anual & -0.195781 &  0.195781 \\
-                      dti & -0.150502 &  0.150502 \\
-          categoria\_renda & -0.111152 &  0.111152 \\
-       duracao\_emprestimo & -0.060571 &  0.060571 \\
-                   regiao &  0.037780 &  0.037780 \\
-  duracao\_emprestimo\_dias &  0.032603 &  0.032603 \\
-         propriedade\_casa &  0.019351 &  0.019351 \\
-               finalidade &  0.018647 &  0.018647 \\
-                  parcela &  0.005679 &  0.005679 \\
+        Valor líquido pago & -4.733 &  0.034 \\
+        Valor bruto pago &  3.321 &  0.028 \\
+        Tipo de aplicação & -1.848 &  0.106 \\
+        Taxa de juros &  1.412 &  1.412 \\
+        Valor do empréstimo & -1.406 &  0.039 \\
+        Risco & -1.049 &  0.014 \\
+        Tipo de juros & -0.462 &  -0.462  \\
+        Prazo & -0.203 &  0.028 \\
+        Renda anual & -0.195 &  0.010 \\
+        DTI & -0.151 &  0.011 \\
+        Categoria renda & -0.111 &  0.015 \\
+        Duração do empréstimo & -0.061 &  0.009 \\
+        Região &  0.0378 &  0.003\\
+        Duração do empréstimo em dias &  0.033 &  0.009 \\
+        Tipo de residência &  0.019 &  0.003 \\
+        Finalidade &  0.019 &  0.002  \\
+        Parcela &  0.005 &  0.000  \\
   \bottomrule
 \end{tabular}
+\caption{Estimativa dos coeficientes do modelo logístico e o erro padrão associado}
+\label{tab:result_model_logist}
+\end{table}
 
+\begin{table}[H]
 \centering
-\begin{tabular}{lcccccc}
-  & \textbf{coef} & \textbf{std err} & \textbf{z} & \textbf{P$> |$z$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
-\midrule
-\textbf{duracao\_emprestimo}       &      -0.0606  &        0.005     &   -12.360  &         0.000        &       -0.070    &       -0.051     \\
-\textbf{propriedade\_casa}         &       0.0194  &        0.003     &     7.241  &         0.000        &        0.014    &        0.025     \\
-\textbf{categoria\_renda}          &      -0.1112  &        0.015     &    -7.218  &         0.000        &       -0.141    &       -0.081     \\
-\textbf{renda\_anual}              &      -0.1958  &        0.010     &   -20.148  &         0.000        &       -0.215    &       -0.177     \\
-\textbf{quantidade\_emprestimo}    &      -1.4063  &        0.039     &   -36.171  &         0.000        &       -1.483    &       -1.330     \\
-\textbf{prazo}                     &      -0.2033  &        0.028     &    -7.359  &         0.000        &       -0.257    &       -0.149     \\
-\textbf{tipo\_aplicacao}           &      -1.8479  &        0.106     &   -17.427  &         0.000        &       -2.056    &       -1.640     \\
-\textbf{finalidade}                &       0.0186  &        0.002     &     9.529  &         0.000        &        0.015    &        0.022     \\
-\textbf{pagamentos\_juros}         &      -0.4619  &        0.016     &   -29.243  &         0.000        &       -0.493    &       -0.431     \\
-\textbf{taxa\_juros}               &       1.4125  &        0.020     &    72.213  &         0.000        &        1.374    &        1.451     \\
-\textbf{grau}                      &      -1.0490  &        0.014     &   -76.099  &         0.000        &       -1.076    &       -1.022     \\
-\textbf{dti}                       &      -0.1505  &        0.011     &   -13.463  &         0.000        &       -0.172    &       -0.129     \\
-\textbf{pagamento\_bruto}          &       3.3207  &        0.028     &   118.072  &         0.000        &        3.266    &        3.376     \\
-\textbf{pagamento\_liquido}        &      -4.7329  &        0.034     &  -138.111  &         0.000        &       -4.800    &       -4.666     \\
-\textbf{parcela}                   &       0.0057  &        0.000     &    40.149  &         0.000        &        0.005    &        0.006     \\
-\textbf{regiao}                    &       0.0378  &        0.003     &    11.203  &         0.000        &        0.031    &        0.044     \\
-\textbf{duracao\_emprestimo\_dias} &       0.0326  &        0.009     &     3.704  &         0.000        &        0.015    &        0.050     \\
-\bottomrule
-\end{tabular}
-
-\centering
-\begin{tabular}{lrrrr}
+\begin{tabular}{lcccc}
   \hline
-                &   precision &    recall &   f1-score &       support \\
+                &    \textbf{Precisão} & \textbf{Recall}    &   \textbf{F1-Score} &  \textbf{Tamanho da amostra} \\
   \hline
    0            &    0.928081 & 0.995603  &   0.960657 & 163990        \\
-   1            &    0.536334 & 0.0618419 &   0.110897 &  13486        \\
-   accuracy     &    0.924649 & 0.924649  &   0.924649 &      0.924649 \\
-   macro avg    &    0.732208 & 0.528723  &   0.535777 & 177476        \\
-   weighted avg &    0.898313 & 0.924649  &   0.896086 & 177476        \\
+   1            &    0.536334 & 0.0618419 &   0.110897 & 13486        \\
+   Média macro    &    0.732208 & 0.528723  &   0.535777 & 177476        \\
+   Média ponderada &    0.898313 & 0.924649  &   0.896086 & 177476        \\
+   \hline
+   Acurácia     &             &           &   0.924649 &  \\
+
   \hline
 \end{tabular}
+\label{tab:report_logist_model}
+\caption{Report do modelo logístico}
+\end{table}
 
 \imagem{imagens/resultados/report_model_logistico.png}{Matrix de confusão do modelo logístico}
 
@@ -210,7 +192,28 @@ e porque
 \subsection*{Benchmark entre redes neurais e regressão logística}
 
 
-
-
-
 \newpage
+
+% \centering
+% \begin{tabular}{lcccccc}
+%   & \textbf{coef} & \textbf{std err} & \textbf{z} & \textbf{P$> |$z$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
+% \midrule
+% \textbf{duracao\_emprestimo}       &      -0.0606  &        0.005     &   -12.360  &         0.000        &       -0.070    &       -0.051     \\
+% \textbf{propriedade\_casa}         &       0.0194  &        0.003     &     7.241  &         0.000        &        0.014    &        0.025     \\
+% \textbf{categoria\_renda}          &      -0.1112  &        0.015     &    -7.218  &         0.000        &       -0.141    &       -0.081     \\
+% \textbf{renda\_anual}              &      -0.1958  &        0.010     &   -20.148  &         0.000        &       -0.215    &       -0.177     \\
+% \textbf{quantidade\_emprestimo}    &      -1.4063  &        0.039     &   -36.171  &         0.000        &       -1.483    &       -1.330     \\
+% \textbf{prazo}                     &      -0.2033  &        0.028     &    -7.359  &         0.000        &       -0.257    &       -0.149     \\
+% \textbf{tipo\_aplicacao}           &      -1.8479  &        0.106     &   -17.427  &         0.000        &       -2.056    &       -1.640     \\
+% \textbf{finalidade}                &       0.0186  &        0.002     &     9.529  &         0.000        &        0.015    &        0.022     \\
+% \textbf{pagamentos\_juros}         &      -0.4619  &        0.016     &   -29.243  &         0.000        &       -0.493    &       -0.431     \\
+% \textbf{taxa\_juros}               &       1.4125  &        0.020     &    72.213  &         0.000        &        1.374    &        1.451     \\
+% \textbf{grau}                      &      -1.0490  &        0.014     &   -76.099  &         0.000        &       -1.076    &       -1.022     \\
+% \textbf{dti}                       &      -0.1505  &        0.011     &   -13.463  &         0.000        &       -0.172    &       -0.129     \\
+% \textbf{pagamento\_bruto}          &       3.3207  &        0.028     &   118.072  &         0.000        &        3.266    &        3.376     \\
+% \textbf{pagamento\_liquido}        &      -4.7329  &        0.034     &  -138.111  &         0.000        &       -4.800    &       -4.666     \\
+% \textbf{parcela}                   &       0.0057  &        0.000     &    40.149  &         0.000        &        0.005    &        0.006     \\
+% \textbf{regiao}                    &       0.0378  &        0.003     &    11.203  &         0.000        &        0.031    &        0.044     \\
+% \textbf{duracao\_emprestimo\_dias} &       0.0326  &        0.009     &     3.704  &         0.000        &        0.015    &        0.050     \\
+% \bottomrule
+% \end{tabular}

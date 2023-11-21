@@ -4,29 +4,30 @@ Regressão Logística e Redes Neurais, serão empregados para investigar as rela
 A implementação desses modelos será realizada utilizando tanto a linguagem de programação R quanto Python,
 permitindo uma abordagem comparativa e uma compreensão abrangente das nuances de cada implementação.
 Além disso, a técnica SHAP (\textit{Shapley Additive Explanations}) será integrada para proporcionar
-uma interpretação aprofundada dos modelos, ampliando a transparência nas decisões preditivas. 
-Essa abordagem multidimensional busca fornecer insights valiosos sobre o comportamento do conjunto de dados, 
-enriquecendo a compreensão dos resultados obtidos com diferentes técnicas de modelagem.
+uma interpretação aprofundada do modelo de redes neurais, ampliando a transparência nas decisões preditivas. 
+
 
 
 \subsection{Conjunto de dados}
 
-O banco de dados "Loan Data for Dummy" é uma base de dados do Kaggle, projetada para simular informações relacionadas 
+O banco de dados \textit{"Loan Data for Dummy"} é uma base de dados do Kaggle, projetada para simular informações relacionadas 
 a operações de empréstimos. Desenvolvido para fins educacionais e de pesquisa, esse conjunto tem sua origem de um modelo de 
 banco \textit{"peer to peer"} sediado na Irlanda, no qual o banco disponibiliza recursos a potenciais clientes, 
 obtendo lucros com base no risco que assume. 
 Os dados disponíveis no Kaggle representam uma versão fictícia de uma situação real, com a maior parte dos dados manipulados
 ou criados sinteticamente para preservar as informações dos clientes originais.
 
-A variável que será foco do estudo é a "loan condition". Essa variável oferece insights cruciais,
-uma vez que reflete a condição do empréstimo, desempenhando um papel central na análise. Através dessa variável, é 
-possível discernir se um empréstimo foi classificado como "bom" ou "mau", proporcionando uma avaliação da qualidade e 
-risco associados a cada transação. No contexto deste conjunto de dados, presume-se que a "loan condition" seja uma variável binária,
+A variável que será foco do estudo é a "Condição do empréstimo". Através dessa variável, é 
+possível discernir se um empréstimo foi classificado como "bom" ou "ruim", proporcionando uma avaliação da qualidade e 
+risco associados a cada transação. No contexto deste conjunto de dados, presume-se que a "Condição do empréstimo" seja uma variável binária,
 onde, por exemplo, "0" poderia indicar um empréstimo em boas condições e "1" indicaria o contrário.
 A compreensão aprofundada dessa variável é essencial para a construção e interpretação adequada dos modelos subsequentes, 
 como a regressão logística e redes neurais, permitindo uma análise mais precisa e informada do risco associado aos empréstimos.
 
-Para se avaliar a variável "loan condition" foi utilizada algumas variáveis presentes na base de dados, como:
+\subsubsection{Variáveis}
+
+A base de dados é composta por 30 variáveis, incluindo a variável resposta, e existem 887379 observações.
+Para se avaliar a variável "Condição do empréstimo" foi utilizada algumas variáveis presentes na base de dados, como:
 
 \begin{enumerate}
   \item \textbf{Tempo de emprego}: Representa o tempo de emprego do solicitante expresso numericamente. Um valor de 5 indicaria que o indivíduo está empregado há 5 anos.
@@ -40,13 +41,51 @@ Para se avaliar a variável "loan condition" foi utilizada algumas variáveis pr
   \item \textbf{Taxa de juros}: Representa a taxa de juros associada ao empréstimo, geralmente expressa como uma porcentagem, como 10.
   \item \textbf{Grau}: Refere-se à classificação de risco do tomador de empréstimo atribuída pela instituição financeira, como A, B, C, etc.
   \item \textbf{DTI}: Significa "Debt-to-Income" (Dívida-para-Renda) e representa a proporção entre as dívidas mensais e a renda mensal do requerente, proporcionando uma medida da capacidade de pagamento.
-  \item \textbf{pagamento\_bruto}: Representa o valor total pago, incluindo o principal e os juros, ao final do empréstimo.
-  \item \textbf{pagamento\_liquido}: Indica o total de principal (quantia inicial do empréstimo) recuperado até o momento.
+  \item \textbf{Valor bruto pago}: Representa o valor total pago, incluindo o principal e os juros, ao final do empréstimo.
+  \item \textbf{Valor líquido pago}: Indica o total de principal (quantia inicial do empréstimo) recuperado até o momento.
   \item \textbf{Valor recuperado}: Representa o valor recuperado em caso de inadimplência ou perda.
   \item \textbf{Parcelas}: Refere-se à parcela mensal que o requerente do empréstimo deve pagar, incluindo tanto o principal quanto os juros.
   \item \textbf{Região}: Indica a região geográfica associada ao requerente do empréstimo.
 \end{enumerate}
 
+
+
+\subsubsection{Limpeza dos dados}
+
+Para diminuir a complexidade da base de dados, as variáveis passaram por 3 critérios de avaliação antes de serem utilizadas
+nos modelos:
+
+\begin{enumerate}
+  \item Identificação de variáveis que não impactariam o resultado do modelo;
+  \item Comparação de variáveis que gerem a mesma informação;
+  \item Extração de variáveis presentes em apenas uma das categorias da variável resposta.
+\end{enumerate}
+
+O item 1. destaca-se a variável "ID" como independente da variável resposta, 
+atuando unicamente como identificador do cliente, sem exercer influência no resultado final do modelo.
+
+O item 2. se refere à situação da base de dados em que o autor realizou uma rotulação numérica de variáveis 
+já categorizadas, como por exemplo: 
+Tipo de juros e Tipo de juros Cat, onde na primeira variável tem as opções "Juros simples" e "Juro compostos" e na segunda variável
+o autor associa os números "1" e "2" respectivamente a essas variáveis.
+
+O item 3. esclarece variáveis que desempenham funções em apenas uma das categorias da variável resposta. Como é o caso da 
+variável "Recuperações totais" onde a mesma é presente apenas no caso do cliente ter sido inadimplente, se relacionando
+com a categoria "Empréstimo ruim" da variável resposta. Para o caso de "Empréstimo bom" os valores da variável estão zerados.
+
+Com isso a base de dados ficou da seguinte maneira:
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l|c}
+  \hline
+  \textbf{Base de dados} & \textbf{Número de Colunas} \\ \hline
+  Antes da extração & 30 \\ 
+  Depois da extração & 19 \\ \hline
+  \end{tabular}
+  \caption{Número de colunas antes e depois da preparação dos dados}
+  \label{table:columns_before_after}
+\end{table}
 
 % TODO: fazer fluxograma para o modelo logístico
 % TODO: fazer fluxograma para a rede neural

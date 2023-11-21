@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.9)  20 NOV 2023 22:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.9)  21 NOV 2023 08:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -962,28 +962,23 @@ No file monografia.toc.
 [3
 
 
-] (./estrutura/metodologia.tex [4] [5]
-Overfull \hbox (1.06128pt too wide) in paragraph at lines 62--64
-[]\OT1/cmr/m/n/12 Detalhar o porqu^e de se in-ter-pre-tar os mo-de-los e as ma-nei-ras que ^^Se feito isso(testes,
- []
-
-) [6] (./estrutura/resultados.tex
-<imagens/exploratoria/quantidade_emprestimo.jpg, id=58, 1872.9975pt x 1255.69125pt>
+] (./estrutura/resultados.tex
+<imagens/exploratoria/quantidade_emprestimo.jpg, id=26, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/quantidade_emprestimo.jpg Graphic file (type jpg)
 <use imagens/exploratoria/quantidade_emprestimo.jpg>
 Package pdftex.def Info: imagens/exploratoria/quantidade_emprestimo.jpg  used on input line 6.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/duracao_emprestimo.jpg, id=59, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/duracao_emprestimo.jpg, id=27, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/duracao_emprestimo.jpg Graphic file (type jpg)
 <use imagens/exploratoria/duracao_emprestimo.jpg>
 Package pdftex.def Info: imagens/exploratoria/duracao_emprestimo.jpg  used on input line 8.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/parcela.jpg, id=60, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/parcela.jpg, id=28, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/parcela.jpg Graphic file (type jpg)
 <use imagens/exploratoria/parcela.jpg>
 Package pdftex.def Info: imagens/exploratoria/parcela.jpg  used on input line 10.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/renda_anual.jpg, id=61, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/renda_anual.jpg, id=29, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/renda_anual.jpg Graphic file (type jpg)
 <use imagens/exploratoria/renda_anual.jpg>
 Package pdftex.def Info: imagens/exploratoria/renda_anual.jpg  used on input line 11.
@@ -993,12 +988,12 @@ Underfull \hbox (badness 3250) in paragraph at lines 14--14
  []\OT1/cmr/m/n/10 Figura 1: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
  []
 
-<imagens/exploratoria/taxa_juros.jpg, id=62, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/taxa_juros.jpg, id=30, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/taxa_juros.jpg Graphic file (type jpg)
 <use imagens/exploratoria/taxa_juros.jpg>
 Package pdftex.def Info: imagens/exploratoria/taxa_juros.jpg  used on input line 20.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/dti.jpg, id=63, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/dti.jpg, id=31, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/dti.jpg Graphic file (type jpg)
 <use imagens/exploratoria/dti.jpg>
 Package pdftex.def Info: imagens/exploratoria/dti.jpg  used on input line 22.
@@ -1008,12 +1003,12 @@ Underfull \hbox (badness 1360) in paragraph at lines 22--22
  \OT1/cmr/m/n/10 e o sal^^Sario do cli-ente.| 
  []
 
-<imagens/exploratoria/pagamento_bruto.jpg, id=64, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/pagamento_bruto.jpg, id=32, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/pagamento_bruto.jpg Graphic file (type jpg)
 <use imagens/exploratoria/pagamento_bruto.jpg>
 Package pdftex.def Info: imagens/exploratoria/pagamento_bruto.jpg  used on input line 24.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/pagamento_liquido.jpg, id=65, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/pagamento_liquido.jpg, id=33, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/pagamento_liquido.jpg Graphic file (type jpg)
 <use imagens/exploratoria/pagamento_liquido.jpg>
 Package pdftex.def Info: imagens/exploratoria/pagamento_liquido.jpg  used on input line 25.
@@ -1023,28 +1018,28 @@ Underfull \hbox (badness 3250) in paragraph at lines 26--26
  []\OT1/cmr/m/n/10 Figura 2: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
  []
 
-[7 <./imagens/exploratoria/quantidade_emprestimo.jpg> <./imagens/exploratoria/duracao_emprestimo.jpg> <./imagens/exploratoria/parcela.jpg> <./imagens/exploratoria/renda_anual.jpg>]
-<imagens/exploratoria/finalidade.pdf, id=73, 448.67625pt x 301.125pt>
+[4 <./imagens/exploratoria/quantidade_emprestimo.jpg> <./imagens/exploratoria/duracao_emprestimo.jpg> <./imagens/exploratoria/parcela.jpg> <./imagens/exploratoria/renda_anual.jpg>]
+<imagens/exploratoria/finalidade.pdf, id=41, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/finalidade.pdf Graphic file (type pdf)
 <use imagens/exploratoria/finalidade.pdf>
 Package pdftex.def Info: imagens/exploratoria/finalidade.pdf  used on input line 35.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/categoria_renda.pdf, id=74, 448.67625pt x 301.125pt>
+<imagens/exploratoria/categoria_renda.pdf, id=42, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/categoria_renda.pdf Graphic file (type pdf)
 <use imagens/exploratoria/categoria_renda.pdf>
 Package pdftex.def Info: imagens/exploratoria/categoria_renda.pdf  used on input line 37.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/grau.pdf, id=75, 448.67625pt x 301.125pt>
+<imagens/exploratoria/grau.pdf, id=43, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/grau.pdf Graphic file (type pdf)
 <use imagens/exploratoria/grau.pdf>
 Package pdftex.def Info: imagens/exploratoria/grau.pdf  used on input line 39.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/tipo_aplicacao.pdf, id=76, 448.67625pt x 301.125pt>
+<imagens/exploratoria/tipo_aplicacao.pdf, id=44, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/tipo_aplicacao.pdf Graphic file (type pdf)
 <use imagens/exploratoria/tipo_aplicacao.pdf>
 Package pdftex.def Info: imagens/exploratoria/tipo_aplicacao.pdf  used on input line 40.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/legenda.pdf, id=77, 312.16624pt x 38.1425pt>
+<imagens/exploratoria/legenda.pdf, id=45, 312.16624pt x 38.1425pt>
 File: imagens/exploratoria/legenda.pdf Graphic file (type pdf)
 <use imagens/exploratoria/legenda.pdf>
 Package pdftex.def Info: imagens/exploratoria/legenda.pdf  used on input line 42.
@@ -1059,23 +1054,23 @@ Underfull \hbox (badness 3250) in paragraph at lines 44--44
  []\OT1/cmr/m/n/10 Figura 3: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
  []
 
-[8 <./imagens/exploratoria/taxa_juros.jpg> <./imagens/exploratoria/dti.jpg> <./imagens/exploratoria/pagamento_bruto.jpg> <./imagens/exploratoria/pagamento_liquido.jpg>]
-<imagens/exploratoria/pagamentos_juros.pdf, id=83, 448.67625pt x 301.125pt>
+[5 <./imagens/exploratoria/taxa_juros.jpg> <./imagens/exploratoria/dti.jpg> <./imagens/exploratoria/pagamento_bruto.jpg> <./imagens/exploratoria/pagamento_liquido.jpg>]
+<imagens/exploratoria/pagamentos_juros.pdf, id=51, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/pagamentos_juros.pdf Graphic file (type pdf)
 <use imagens/exploratoria/pagamentos_juros.pdf>
 Package pdftex.def Info: imagens/exploratoria/pagamentos_juros.pdf  used on input line 49.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/regiao.pdf, id=84, 448.67625pt x 301.125pt>
+<imagens/exploratoria/regiao.pdf, id=52, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/regiao.pdf Graphic file (type pdf)
 <use imagens/exploratoria/regiao.pdf>
 Package pdftex.def Info: imagens/exploratoria/regiao.pdf  used on input line 51.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/propriedade_casa.pdf, id=85, 448.67625pt x 301.125pt>
+<imagens/exploratoria/propriedade_casa.pdf, id=53, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/propriedade_casa.pdf Graphic file (type pdf)
 <use imagens/exploratoria/propriedade_casa.pdf>
 Package pdftex.def Info: imagens/exploratoria/propriedade_casa.pdf  used on input line 53.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/prazo.pdf, id=86, 448.67625pt x 301.125pt>
+<imagens/exploratoria/prazo.pdf, id=54, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/prazo.pdf Graphic file (type pdf)
 <use imagens/exploratoria/prazo.pdf>
 Package pdftex.def Info: imagens/exploratoria/prazo.pdf  used on input line 54.
@@ -1094,7 +1089,7 @@ Underfull \hbox (badness 3250) in paragraph at lines 58--58
  []\OT1/cmr/m/n/10 Figura 4: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
  []
 
-[9 <./imagens/exploratoria/finalidade.pdf> <./imagens/exploratoria/categoria_renda.pdf> <./imagens/exploratoria/grau.pdf> <./imagens/exploratoria/tipo_aplicacao.pdf> <./imagens/exploratoria/legenda.pdf>]
+[6 <./imagens/exploratoria/finalidade.pdf> <./imagens/exploratoria/categoria_renda.pdf> <./imagens/exploratoria/grau.pdf> <./imagens/exploratoria/tipo_aplicacao.pdf> <./imagens/exploratoria/legenda.pdf>]
 Underfull \hbox (badness 5331) in paragraph at lines 64--78
  [][] 
  []
@@ -1104,7 +1099,7 @@ Underfull \hbox (badness 5260) in paragraph at lines 84--96
  [][] 
  []
 
-[10 <./imagens/exploratoria/pagamentos_juros.pdf> <./imagens/exploratoria/regiao.pdf> <./imagens/exploratoria/propriedade_casa.pdf> <./imagens/exploratoria/prazo.pdf>]
+[7 <./imagens/exploratoria/pagamentos_juros.pdf> <./imagens/exploratoria/regiao.pdf> <./imagens/exploratoria/propriedade_casa.pdf> <./imagens/exploratoria/prazo.pdf>]
 Underfull \hbox (badness 1337) in paragraph at lines 107--130
  [][] 
  []
@@ -1114,8 +1109,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--150
  []\OT1/cmr/m/n/10 Tabela 4: |Re-port do mo-delo log^^S^^Pstico| 
  []
 
-[11]
-<imagens/resultados/report_model_logistico.png, id=149, 462.528pt x 346.896pt>
+[8]
+<imagens/resultados/report_model_logistico.png, id=118, 462.528pt x 346.896pt>
 File: imagens/resultados/report_model_logistico.png Graphic file (type png)
 <use imagens/resultados/report_model_logistico.png>
 Package pdftex.def Info: imagens/resultados/report_model_logistico.png  used on input line 153.
@@ -1125,7 +1120,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--153
  []\OT1/cmr/m/n/10 Figura 5: |Ma-trix de con-fus~ao do mo-delo log^^S^^Pstico| 
  []
 
-<imagens/shap/media_shap.png, id=151, 640.3122pt x 410.4936pt>
+<imagens/shap/media_shap.png, id=120, 640.3122pt x 410.4936pt>
 File: imagens/shap/media_shap.png Graphic file (type png)
 <use imagens/shap/media_shap.png>
 Package pdftex.def Info: imagens/shap/media_shap.png  used on input line 164.
@@ -1135,18 +1130,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--164
  []\OT1/cmr/m/n/10 Figura 6: |M^^Sedia ab-so-luta dos va-lo-res de shap| 
  []
 
-[12 <./imagens/resultados/report_model_logistico.png>]
-<imagens/shap/depend_var_res_shap.png, id=160, 430.7292pt x 331.7193pt>
+[9 <./imagens/resultados/report_model_logistico.png>]
+<imagens/shap/depend_var_res_shap.png, id=128, 430.7292pt x 331.7193pt>
 File: imagens/shap/depend_var_res_shap.png Graphic file (type png)
 <use imagens/shap/depend_var_res_shap.png>
 Package pdftex.def Info: imagens/shap/depend_var_res_shap.png  used on input line 167.
 (pdftex.def)             Requested size: 364.19667pt x 280.48473pt.
-<imagens/shap/shap_plot_0.png, id=161, 688.7331pt x 433.62pt>
+<imagens/shap/shap_plot_0.png, id=129, 688.7331pt x 433.62pt>
 File: imagens/shap/shap_plot_0.png Graphic file (type png)
 <use imagens/shap/shap_plot_0.png>
 Package pdftex.def Info: imagens/shap/shap_plot_0.png  used on input line 172.
 (pdftex.def)             Requested size: 204.85846pt x 128.97543pt.
-<imagens/shap/shap_plot_1.png, id=162, 684.3969pt x 433.62pt>
+<imagens/shap/shap_plot_1.png, id=130, 684.3969pt x 433.62pt>
 File: imagens/shap/shap_plot_1.png Graphic file (type png)
 <use imagens/shap/shap_plot_1.png>
 Package pdftex.def Info: imagens/shap/shap_plot_1.png  used on input line 174.
@@ -1156,12 +1151,12 @@ Underfull \hbox (badness 1412) in paragraph at lines 174--174
  [] \OT1/cmr/m/n/10 (b) |WSIR re-si-du-als.| 
  []
 
-<imagens/shap/shap_plot_2.png, id=163, 684.3969pt x 433.62pt>
+<imagens/shap/shap_plot_2.png, id=131, 684.3969pt x 433.62pt>
 File: imagens/shap/shap_plot_2.png Graphic file (type png)
 <use imagens/shap/shap_plot_2.png>
 Package pdftex.def Info: imagens/shap/shap_plot_2.png  used on input line 176.
 (pdftex.def)             Requested size: 204.85846pt x 129.78926pt.
-<imagens/shap/shap_plot_3.png, id=164, 675.7245pt x 433.62pt>
+<imagens/shap/shap_plot_3.png, id=132, 675.7245pt x 433.62pt>
 File: imagens/shap/shap_plot_3.png Graphic file (type png)
 <use imagens/shap/shap_plot_3.png>
 Package pdftex.def Info: imagens/shap/shap_plot_3.png  used on input line 177.
@@ -1176,8 +1171,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--180
  []\OT1/cmr/m/n/10 Figura 8: |alo-alo| 
  []
 
-[13 <./imagens/shap/media_shap.png> <./imagens/shap/depend_var_res_shap.png>]
-<imagens/shap/shap_geral.png, id=174, 635.2533pt x 359.1819pt>
+[10 <./imagens/shap/media_shap.png> <./imagens/shap/depend_var_res_shap.png>]
+<imagens/shap/shap_geral.png, id=141, 635.2533pt x 359.1819pt>
 File: imagens/shap/shap_geral.png Graphic file (type png)
 <use imagens/shap/shap_geral.png>
 Package pdftex.def Info: imagens/shap/shap_geral.png  used on input line 184.
@@ -1187,7 +1182,7 @@ Underfull \hbox (badness 7151) in paragraph at lines 184--184
  []\OT1/cmr/m/n/10 Figura 9: |Va-lo-res de shap para as 80 ob-serva^^Xc~oes uti-li-za-das| 
  []
 
-<imagens/shap/force_plot.png, id=175, 1445.4pt x 216.81pt>
+<imagens/shap/force_plot.png, id=142, 1445.4pt x 216.81pt>
 File: imagens/shap/force_plot.png Graphic file (type png)
 <use imagens/shap/force_plot.png>
 Package pdftex.def Info: imagens/shap/force_plot.png  used on input line 188.
@@ -1197,9 +1192,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--188
  []\OT1/cmr/m/n/10 Figura 10: |Gr^^Safico de for^^Xca em uma ob-serva^^Xc~ao| 
  []
 
-[14 <./imagens/shap/shap_plot_0.png> <./imagens/shap/shap_plot_1.png> <./imagens/shap/shap_plot_2.png> <./imagens/shap/shap_plot_3.png> <./imagens/shap/shap_geral.png>] [15 <./imagens/shap/force_plot.png>]) [16]
+[11 <./imagens/shap/shap_plot_0.png> <./imagens/shap/shap_plot_1.png> <./imagens/shap/shap_plot_2.png> <./imagens/shap/shap_plot_3.png> <./imagens/shap/shap_geral.png>] [12 <./imagens/shap/force_plot.png>]) [13]
 No file monografia.bbl.
-[17] (./monografia.aux (./estrutura/capa.aux) (./estrutura/rosto.aux))
+[14] (./monografia.aux (./estrutura/capa.aux) (./estrutura/rosto.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -1215,21 +1210,21 @@ Package rerunfilecheck Warning: File `monografia.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `monografia.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  6F2923D8E1B7A77EE96E927D979AF678;593.
+(rerunfilecheck)             After:  715AB0DB3D2857715381857D91FAEC23;252.
  ) 
 Here is how much of TeX's memory you used:
- 28125 strings out of 474934
- 528423 string characters out of 5763815
+ 28065 strings out of 474934
+ 527508 string characters out of 5763815
  1933801 words of memory out of 5000000
- 49081 multiletter control sequences out of 15000+600000
+ 49046 multiletter control sequences out of 15000+600000
  567700 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,89p,437b,681s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,89p,437b,683s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on monografia.pdf (17 pages, 2635075 bytes).
+Output written on monografia.pdf (14 pages, 2621268 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
- 55 named destinations out of 1000 (max. 500000)
+ 203 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
  148 words of extra memory for PDF output out of 10000 (max. 10000000)
 

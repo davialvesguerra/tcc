@@ -1,6 +1,27 @@
-\subsection*{Análise descritiva}
+\subsection{Análise descritiva}
 
-% TODO: mostrar tabela com % dos categorias da variável resposta
+\subsubsection{Condição do empréstimo}
+
+A variável "Condição do empréstimo" é a variável reposta desse estudo, como foi definido anteriormente.
+Com isso temos o seguinte comportamento dessa variável:
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lcc}
+    \hline
+    \textbf{Condição do empréstimo} & \textbf{Número de observações} & \textbf{Frequência relativa} \\ \hline
+    Empréstimo bom  & 819950 & 92,4\% \\
+    Empréstimo ruim & 67429  & 7,59\% \\ \hline
+  \end{tabular}
+  \caption{Número de observação em cada categoria da variável resposta}
+  \label{tab:freq_var_res}
+\end{table}
+
+A Tabela \ref{tab:freq_var_res} mostra a distribuição da variável "Condição do empréstimo". Uma variável composta majoritariamente 
+por observações do tipo "Empréstimo bom", onde a mesma está presente em mais de 90\% das observações na base de dados, mostrando
+que a cada 12 empréstimos rotulados como "bons", existe 1 rotulado como "ruim". 
+
+\subsubsection{Relação entre as covariáveis e a variável resposta}
 
 % boxplot
 \begin{figure}[H]
@@ -78,7 +99,7 @@ concentrando a maioria desses empréstimos na categoria "Empréstimo individual"
   \subImagem{imagens/exploratoria/regiao.pdf}{Região que o tomador do empréstimo vive}
   \vspace{.5cm}
   \subImagem{imagens/exploratoria/propriedade_casa.pdf}{Tipo de propriedade do tomador do empréstimo}
- \subImagem{imagens/exploratoria/prazo.pdf}{Duração do empréstimo em meses (36 ou 60 meses)}
+  \subImagem{imagens/exploratoria/prazo.pdf}{Duração do empréstimo em meses (36 ou 60 meses)}
   \subImagemSemLegenda{imagens/exploratoria/legenda.pdf}
 
   \label{fig:exp_bar2}
@@ -105,11 +126,18 @@ de empréstimos ruins quando estes tendem a demorar mais para serem pagos.
     Valor bruto pago & -0.04 \\ 
     Valor liquido pago & -0.10 \\ 
     Parcela & -0.01 \\ 
+    Duração do empréstimo &  0.01 \\
     \hline
   \end{tabular}
   \caption{Valores do coeficiente de Pearson entre as covariáveis e a variável resposta}
   \label{tab:coef_corr}
   \end{table}
+
+A partir da análise da Tabela \ref{tab:coef_corr}, nota-se que as correlações entre as 
+variáveis explicativas e a variável resposta são de baixa magnitude. Os coeficientes 
+calculados indicam uma relação linear fraca ou inexistente entre essas variáveis. 
+Esses resultados sugerem que outros fatores ou relações não lineares podem estar desempenhando 
+um papel mais significativo na explicação da variabilidade na variável resposta.
   
 \begin{table}[H]
   \centering
@@ -123,13 +151,23 @@ de empréstimos ruins quando estes tendem a demorar mais para serem pagos.
     Tipo de juros & 0.14 \\ 
     Risco & 0.15 \\ 
     Região & 0.01 \\ 
+    Prazo & 0.04 \\
+    Renda &  0.04 \\
      \hline
   \end{tabular}
   \caption{Valores do coeficiente de contingência entre as covariáveis e a variável resposta}
   \label{tab:coef_cont}
 \end{table}
 
-\subsection*{Modelagem da regressão logística}
+Ao analisar a Tabela \ref{tab:coef_cont}, nota-se que a maioria dos coeficientes de contingência entre as 
+covariáveis e a variável resposta são próximos de zero. Destaca-se que a variável "Risco"
+exibe o maior valor de associação, atingindo 0.15. Entretanto, é importante ressaltar que esse valor
+ainda é relativamente baixo. Os coeficientes sugerem, em geral, uma falta de associação significativa 
+entre as covariáveis mencionadas e a variável resposta.
+
+
+\subsection{Regressão logística}
+
 Falar do modelo utilizado, a normalização dos dados, os resultados
 métricas de avaliação e interpretação dos coeficientes
 
@@ -150,10 +188,10 @@ métricas de avaliação e interpretação dos coeficientes
         Prazo & -0.203 &  0.028 \\
         Renda anual & -0.195 &  0.010 \\
         DTI & -0.151 &  0.011 \\
-        Categoria renda & -0.111 &  0.015 \\
-        Duração do empréstimo & -0.061 &  0.009 \\
+        Renda categorizada & -0.111 &  0.015 \\
+        Tempo de trabalho & -0.061 &  0.009 \\
         Região &  0.038 &  0.003\\
-        Duração do empréstimo em dias &  0.033 &  0.009 \\
+        Duração do empréstimo &  0.033 &  0.009 \\
         Tipo de residência &  0.019 &  0.003 \\
         Finalidade &  0.019 &  0.002  \\
         Parcela &  0.005 &  0.000  \\
@@ -162,6 +200,26 @@ métricas de avaliação e interpretação dos coeficientes
 \caption{Estimativa dos coeficientes do modelo logístico e o erro padrão associado}
 \label{tab:result_model_logist}
 \end{table}
+
+Ao analisar os resultados apresentados na Tabela \ref{tab:result_model_logist}, fica evidente
+que as variáveis "Valor líquido pago" e "Valor bruto pago" exercem uma influência significativa no valor final de $P(Y=1)$.
+Essas duas variáveis estão diretamente associadas à quantia do empréstimo que o cliente já quitou, 
+indicando sua relevância na predição do resultado. Ao calcular a Razão de chances dessas duas variáveis, temos que:
+
+
+\begin{itemize}
+  \item "Valor líquido pago": apresenta um RC de 0.008, o que sugere que, mantendo todas as outras variáveis constantes, a chance de o empréstimo ser classificado como bom é 125 vezes maior do que ser classificado como ruim.
+  \item "Valor bruto pago": exibe um RC de 27.68, indicando que, ao manter todas as outras variáveis constantes, a chance de o empréstimo ser classificado como ruim é 27 vezes maior do que ser classificado como bom.
+\end{itemize}
+
+
+\imagem{imagens/resultados/report_model_logistico.png}{Matrix de confusão do modelo logístico}
+
+Visualizando os dados da Figura \ref{fig:imagens/resultados/report_model_logistico.png} é possível analisar 
+os resultados do modelo logístico no conjunto de teste. O conjunto de teste apresenta uma distribuição da variável 
+resposta de com mais de 92\% dos casos como um empréstimo bom, e o restante como o empréstimo ruim.
+%TODO: falar dos falsos positivos e falsos negativos
+
 
 \begin{table}[H]
 \centering
@@ -182,10 +240,46 @@ métricas de avaliação e interpretação dos coeficientes
 \caption{Report do modelo logístico}
 \end{table}
 
-\imagem{imagens/resultados/report_model_logistico.png}{Matrix de confusão do modelo logístico}
+
+Com base nos dados apresentados na Tabela \ref{tab:report_logist_model}
+e na Figura \ref{imagens/resultados/report_model_logistico.png},
+observamos que o modelo exibe uma acurácia elevada. Ele é capaz de fazer 
+previsões precisas na maioria dos casos, alcançando uma taxa de 92,46\% 
+de classificações corretas no conjunto de teste. No entanto, 
+é crucial destacar que essa elevada acurácia é influenciada pela proporção
+significativa de casos onde o empréstimo é rotulado como "bom", presente 
+em mais de 92\% dos dados de teste. Como resultado, o modelo tende a
+classificar uma parte considerável dos dados como "0", refletindo a
+influência dessa distribuição desigual na estimação dos parâmetros do modelo logístico. 
 
 
-\subsection*{Modelagem da rede neural}
+Ao examinarmos a precisão do modelo, observamos uma taxa de acerto de 73\%
+nas previsões em comparação com as rótulos reais do conjunto de teste. 
+É importante ressaltar a notável precisão na categoria "Empréstimo bom", atingindo quase 92\%. 
+No entanto, vale destacar que esse valor elevado está correlacionado ao desequilíbrio nos dados,
+onde a classe "Empréstimo bom" é predominante.
+
+Ao avaliar o recall do modelo logístico, observamos, em média,
+valores mais baixos em comparação com a precisão. O recall médio é de 52,8\%, 
+indicando que, ao analisar as porcentagens das rótulos reais, o modelo conseguiu 
+acertar um pouco mais da metade delas. Esse desempenho é atribuído ao alto número 
+de falsos negativos no modelo, visto que, ao considerar o total de "Empréstimos ruins" (13.486),
+ o modelo acertou apenas 834 desses casos.
+
+O F1-score acaba refletindo a real situação do modelo, pois ele balanceia os bons resultados
+apresentados pela precisão com os resultados ruins do recall. O F1-score médio apresentado foi
+de 52,57\%.
+
+A avaliação global do modelo logístico revela um viés significativo, amplificado pelo desequilíbrio nos dados.
+Embora o modelo tenha alcançado uma taxa geral de acerto de 92\%, sua incapacidade de distinguir
+adequadamente entre "Empréstimos bons" e "Empréstimos ruins" é evidente. 
+Este desempenho inferior sugere limitações na capacidade do modelo de generalizar e
+discriminar efetivamente entre as categorias, indicando a necessidade de refinamentos ou 
+
+considerações adicionais para melhorar sua robustez.
+
+
+\subsection{Modelagem da rede neural}
 Falar sobre Arquitetura inicial, suas variações junto com os 
 resultados avaliativos e por fim falar qual modelo foi utilizado
 e porque

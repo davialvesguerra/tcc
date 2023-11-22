@@ -65,6 +65,32 @@ Portanto, a utilidade de se analisar o log-odds é justamente uma ponte entre ol
 pois um coeficiente positivo indica que o aumento na variável está associado a um aumento nas log-odds 
 (e, portanto, na probabilidade), enquanto um coeficiente negativo está associado a uma diminuição nas log-odds (e na probabilidade).
 
+\subsection{Medidas de associação}
+
+\subsubsection{Coeficiente de pearson}
+
+O coeficiente de Pearson, também conhecido como correlação de Pearson, é uma medida estatística 
+que avalia a relação linear entre duas variáveis contínuas.
+
+\begin{equation}
+    \rho = \frac{cov(X, Y)}{\sqrt{var(X)var(Y)}}
+\end{equation}
+
+Este coeficiente varia de -1 a 1, onde -1 indica uma relação linear negativa perfeita, 
+1 indica uma relação linear positiva perfeita, e 0 indica ausência de relação linear.
+
+\subsubsection{Coeficiente de contingência}
+
+O coeficiente de contingência é uma medida estatística utilizada para avaliar a associação
+entre duas variáveis categóricas em uma tabela de contingência. Ele é especialmente útil 
+quando se trabalha com dados categóricos, fornecendo uma indicação da força e direção da associação entre as variáveis.
+
+\begin{equation}
+  C = \sqrt{\frac{\chi^2}{N + \chi^2}}
+\end{equation}
+
+O coeficiente de contingência varia de 0 a 1, onde 0 indica nenhuma associação e 1 indica uma associação perfeita. 
+Valores mais próximos de 1 indicam uma forte relação entre as variáveis, enquanto valores mais próximos de 0 sugerem independência.
 
 \subsection{Métricas de avaliação}
 
@@ -442,11 +468,11 @@ $$[2,4,3,1]$$
 
 Calculando a contribuição de \{3\}, nessa permutação temos: 
 
-$$\nu(coligação \hspace{1mm} de \hspace{1mm} [2,4,3]) - coligação \hspace{1mm} de \hspace{1mm} [2,4]) $$
+$$\nu(\text{coligação} \hspace{1mm} de \hspace{1mm} [2,4,3]) - \text{coligação} \hspace{1mm} de \hspace{1mm} [2,4]) $$
 
 Uma observação deve ser feita: a função $\nu$ considera a coligação como argumento, não a permutação. A coligação é um conjunto, com isso a ordem dos elementos não importa, mas a permutação é uma coleção ordenada de elementos. Na permutação do tipo [3,1,2,4], 3 é a primeira variável adicionada e 4 é a última. Por isso, para cada permutação a ordem dos elementos pode mudar a contribuição do total ganho, contudo o total ganho da permutação somente depende dos elementos, não da ordem. Logo:
 
-\[\nu(coligação \hspace{1mm} de \hspace{1mm} [3,1,2,4]) = \nu(\{1,4,2,3\})\]
+\[\nu(\text{coligação} \hspace{1mm} de \hspace{1mm} [3,1,2,4]) = \nu(\{1,4,2,3\})\]
 
 Sendo assim, para cada permutação \textbf{P}, é preciso primeiro calcular o ganho da coligação das variáveis que foram adicionadas antes de \{i\}, e esse conjunto pode ser chamado de coligação \textbf{S}. Feito isso, agora é preciso calcular o ganho das coligações que são formadas ao adicionar \{i\} em \textbf{S}, e podemos chamar isso de $\textbf{S} \cup \{i\}$. Com isso, a contribuição da variável \{i\}, denotada por $\phi_{i}$, é:
 

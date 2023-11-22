@@ -1,0 +1,10 @@
+\babel@toc {brazilian}{}\relax 
+\contentsline {section}{\numberline {1}\textbf {Resultados}}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Análise descritiva}{4}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Condição do empréstimo}{4}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Relação entre as covariáveis e a variável resposta}{5}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2}Regressão logística}{10}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Modelagem da rede neural}{12}{subsection.1.3}%
+\contentsline {section}{\numberline {2}\textbf {Conclusão}}{16}{section.2}%
+\contentsline {section}{\numberline {3}\textbf {Anexo}}{17}{section.3}%
+\contentsfinish 

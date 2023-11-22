@@ -10,9 +10,9 @@
 \usepackage{titletoc,titlesec}
 \usepackage{setspace}
 \usepackage{indentfirst}
-%\usepackage{natbib}
+\usepackage{natbib}
 \usepackage[colorlinks=true, allcolors=black]{hyperref}
-%\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[brazilian,hyperpageref]{backref}
 \usepackage[alf]{abntex2cite}
 \usepackage{multirow} % https://www.ctan.org/pkg/multirow
 \usepackage{float} % https://www.ctan.org/pkg/float
@@ -35,7 +35,7 @@
     justification=Justified,%
 }
 \usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
-%\usepackage[style=abnt]{biblatex}
+\usepackage[style=abnt]{biblatex}
 %\bibliographystyle{plainnat}
 
 % 
@@ -68,7 +68,7 @@
 \titlecontents{subsection}[0.75cm]{}{\thecontentslabel\ }{}{\titlerule*[.75pc]{.}\contentspage}
 
 \setcounter{secnumdepth}{3}
-%\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{3}
 
 \DeclareCaptionFormat{myformat}{ \centering \fontsize{10}{12}\selectfont#1#2#3}
 \captionsetup{format=myformat}
@@ -146,9 +146,12 @@
 % \input{estrutura/metodologia}
 % \newpage
 
+
 \section{\textbf{Resultados}}
 \input{estrutura/resultados}
 \newpage
+
+
 
 % \section*{\textbf{Referências}}
 % \input{ref.tex}
@@ -156,8 +159,8 @@
 \section{\textbf{Conclusão}}
 \newpage
 
-\bibliography{ref.bib}
-\bibliographystyle{abntex2-alf}
+% \bibliography{ref.bib}
+% \bibliographystyle{abntex2-alf}
 
 \section{\textbf{Anexo}}
 \newpage

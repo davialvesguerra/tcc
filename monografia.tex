@@ -10,9 +10,8 @@
 \usepackage{titletoc,titlesec}
 \usepackage{setspace}
 \usepackage{indentfirst}
-\usepackage{natbib}
 \usepackage[colorlinks=true, allcolors=black]{hyperref}
-\usepackage[brazilian,hyperpageref]{backref}
+% \usepackage[brazilian,hyperpageref]{backref}
 \usepackage[alf]{abntex2cite}
 \usepackage{multirow} % https://www.ctan.org/pkg/multirow
 \usepackage{float} % https://www.ctan.org/pkg/float
@@ -24,7 +23,7 @@
 \usepackage{caption}
 \usepackage{adjustbox}
 \usepackage{bm}
-\usepackage{natbib}
+% \usepackage{natbib}
 \usepackage{tikz}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -35,7 +34,7 @@
     justification=Justified,%
 }
 \usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
-\usepackage[style=abnt]{biblatex}
+% \usepackage[style=abnt]{biblatex}
 %\bibliographystyle{plainnat}
 
 % 
@@ -68,7 +67,7 @@
 \titlecontents{subsection}[0.75cm]{}{\thecontentslabel\ }{}{\titlerule*[.75pc]{.}\contentspage}
 
 \setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
+% \setcounter{tocdepth}{3}
 
 \DeclareCaptionFormat{myformat}{ \centering \fontsize{10}{12}\selectfont#1#2#3}
 \captionsetup{format=myformat}
@@ -133,18 +132,18 @@
 % \section{\textbf{Lista de quadros}}
 % \newpage
 
-% \section{\textbf{Introdução}}
-% \input{estrutura/introducao}
-% \newpage
+\section{\textbf{Introdução}}
+\input{estrutura/introducao}
+\newpage
 
 
-% \section{\textbf{Referencial teórico}}
-% \input{estrutura/ref_teorico}
-% \newpage
+\section{\textbf{Referencial teórico}}
+\input{estrutura/ref_teorico}
+\newpage
 
-% \section{\textbf{Metodologia}}
-% \input{estrutura/metodologia}
-% \newpage
+\section{\textbf{Metodologia}}
+\input{estrutura/metodologia}
+\newpage
 
 
 \section{\textbf{Resultados}}
@@ -159,7 +158,7 @@
 \section{\textbf{Conclusão}}
 \newpage
 
-% \bibliography{ref.bib}
+\bibliography{estrutura/ref}
 % \bibliographystyle{abntex2-alf}
 
 \section{\textbf{Anexo}}

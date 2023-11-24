@@ -1,0 +1,32 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Bishop 2006]{bishop2006pattern}
+\abntrefinfo{Bishop}{BISHOP}{2006}
+{BISHOP, C.~M. \emph{Pattern Recognition and Machine Learning}. [S.l.]: Springer, 2006.}
+
+\bibitem[Izbicki e Santos 2020]{izbicki_mendonca2020}
+\abntrefinfo{Izbicki e Santos}{IZBICKI; SANTOS}{2020}
+{IZBICKI, R.; SANTOS, T.~M. dos. \emph{Aprendizado de m\'aquina: uma abordagem estat\'istica}. [S.l.: s.n.], 2020.
+ISBN 978-65-00-02410-4.}
+
+\bibitem[James et al. 2013]{james2013introduction}
+\abntrefinfo{James et al.}{JAMES et al.}{2013}
+{JAMES, G. et al. \emph{An Introduction to Statistical Learning with Applications in R}. New York: Springer, 2013.}
+
+\bibitem[Shapley 1953]{shapley1953value}
+\abntrefinfo{Shapley}{SHAPLEY}{1953}
+{SHAPLEY, L.~S. A value for n-person games.
+\emph{Contributions to the Theory of Games}, v.~2, p. 307--317, 1953.}
+
+\bibitem[Werbos 1974]{werbos1974beyond}
+\abntrefinfo{Werbos}{WERBOS}{1974}
+{WERBOS, P.~J.
+\emph{Beyond regression: New tools for prediction and analysis in the behavioral sciences}.
+Tese (Doutorado) --- Harvard University, 1974.}
+
+\end{thebibliography}

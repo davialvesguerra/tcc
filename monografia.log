@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.9)  22 NOV 2023 11:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.9)  24 NOV 2023 10:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/materias/tcc/relatorio/monografia.tex
+**d:/materias/tcc/relatorio/monografia
 (d:/materias/tcc/relatorio/monografia.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -203,12 +203,6 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 Package: setspace 2022/12/04 v6.7b set line spacing
 ) (c:/texlive/2023/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
-) (c:/texlive/2023/texmf-dist/tex/latex/natbib/natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip67
-\bibsep=\skip68
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count277
 ) (c:/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2023-07-08 v7.01b Hypertext links for LaTeX
  (c:/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
@@ -242,14 +236,14 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (c:/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count278
+\c@section@level=\count277
 ) (c:/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count279
+\etb@tempcnta=\count278
 )
 \@linkdim=\dimen169
-\Hy@linkcounter=\count280
-\Hy@pagecounter=\count281
+\Hy@linkcounter=\count279
+\Hy@pagecounter=\count280
  (c:/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2023-07-08 v7.01b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -257,7 +251,7 @@ Now handling font encoding PD1 ...
 ) (c:/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count282
+\Hy@SavedSpaceFactor=\count281
  (c:/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-07-08 v7.01b Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -271,7 +265,7 @@ Package hyperref Info: Plain pages OFF on input line 4182.
 Package hyperref Info: Backreferencing OFF on input line 4187.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4434.
-\c@Hy@tempcnt=\count283
+\c@Hy@tempcnt=\count282
  (c:/texlive/2023/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -283,7 +277,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (c:/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count284
+\Fld@menulength=\count283
 \Field@Width=\dimen171
 \Fld@charsize=\dimen172
 Package hyperref Info: Hyper figures OFF on input line 6051.
@@ -297,9 +291,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6081.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count285
-\c@Item=\count286
-\c@Hfootnote=\count287
+\Hy@abspage=\count284
+\c@Item=\count285
+\c@Hfootnote=\count286
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (c:/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -308,8 +302,8 @@ File: hpdftex.def 2023-07-08 v7.01b Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count288
-\c@bookmark@seq@number=\count289
+\Fld@listcount=\count287
+\c@bookmark@seq@number=\count288
  (c:/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (c:/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -317,30 +311,28 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip69
-) (c:/texlive/2023/texmf-dist/tex/latex/hyperref/backref.sty
-Package: backref 2023/04/20 v1.42 Bibliographical back referencing
+\Hy@SectionHShift=\skip67
 ) (c:/texlive/2023/texmf-dist/tex/latex/abntex2/abntex2cite.sty
 Package: abntex2cite 2018/11/24 v-1.9.7 abnTeX2
  (c:/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 ) (c:/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count290
-\calc@Bcount=\count291
+\calc@Acount=\count289
+\calc@Bcount=\count290
 \calc@Adimen=\dimen173
 \calc@Bdimen=\dimen174
-\calc@Askip=\skip70
-\calc@Bskip=\skip71
+\calc@Askip=\skip68
+\calc@Bskip=\skip69
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count292
-\calc@Cskip=\skip72
+\calc@Ccount=\count291
+\calc@Cskip=\skip70
 ) (c:/texlive/2023/texmf-dist/tex/latex/abntex2/abntex2abrev.sty)
-\minimumbiblabelwidth=\skip73
-\ABCIauxlen=\skip74
-\c@ABCIaux=\count293
-\c@ABCImax=\count294
+\minimumbiblabelwidth=\skip71
+\ABCIauxlen=\skip72
+\c@ABCIaux=\count292
+\c@ABCImax=\count293
  (c:/texlive/2023/texmf-dist/tex/generic/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 ) (c:/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
@@ -348,22 +340,19 @@ Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 ) (c:/texlive/2023/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\biblabelsep=\skip75
+\biblabelsep=\skip73
 LaTeX Info: Redefining \newblock on input line 591.
 LaTeX Info: Redefining \cite on input line 618.
-LaTeX Info: Redefining \citeyear on input line 927.
-LaTeX Info: Redefining \citeauthor on input line 975.
-LaTeX Info: Redefining \citetext on input line 1064.
 \ABCItoken=\toks29
 ) (c:/texlive/2023/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip76
-\multirow@cntb=\count295
-\multirow@dima=\skip77
+\multirow@colwidth=\skip74
+\multirow@cntb=\count294
+\multirow@dima=\skip75
 \bigstrutjot=\dimen175
 ) (c:/texlive/2023/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count296
+\c@float@type=\count295
 \float@exts=\toks30
 \float@box=\box56
 \@float@everytoks=\toks31
@@ -380,33 +369,33 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen183
 \cmidrulekern=\dimen184
 \defaultaddspace=\dimen185
-\@cmidla=\count297
-\@cmidlb=\count298
+\@cmidla=\count296
+\@cmidlb=\count297
 \@aboverulesep=\dimen186
 \@belowrulesep=\dimen187
-\@thisruleclass=\count299
-\@lastruleclass=\count300
+\@thisruleclass=\count298
+\@lastruleclass=\count299
 \@thisrulewidth=\dimen188
 ) (c:/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip78
+\labelindent=\skip76
 \enit@outerparindent=\dimen189
 \enit@toks=\toks32
 \enit@inbox=\box58
-\enit@count@id=\count301
-\enitdp@description=\count302
+\enit@count@id=\count300
+\enitdp@description=\count301
 ) (c:/texlive/2023/texmf-dist/tex/latex/quoting/quoting.sty
 Package: quoting 2014/01/28 v0.1c Consolidated environment for displayed text
-\quo@toppartop=\skip79
+\quo@toppartop=\skip77
 ) (c:/texlive/2023/texmf-dist/tex/latex/epigraph/epigraph.sty
 Package: epigraph 2020/01/02 v1.5e typesetting epigraphs
  (c:/texlive/2023/texmf-dist/tex/latex/nextpage/nextpage.sty
 Package: nextpage 2009/09/03 v1.1a additional page commands
 )
-\beforeepigraphskip=\skip80
-\afterepigraphskip=\skip81
-\epigraphwidth=\skip82
-\epigraphrule=\skip83
+\beforeepigraphskip=\skip78
+\afterepigraphskip=\skip79
+\epigraphwidth=\skip80
+\epigraphrule=\skip81
 ) (c:/texlive/2023/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty
 Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
 ) (c:/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
@@ -423,8 +412,8 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@hangindent=\dimen197
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count303
-\c@continuedfloat=\count304
+\c@caption@flags=\count302
+\c@continuedfloat=\count303
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 ) (c:/texlive/2023/texmf-dist/tex/latex/adjustbox/adjustbox.sty
@@ -435,7 +424,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks33
 \XKV@tempa@toks=\toks34
 )
-\XKV@depth=\count305
+\XKV@depth=\count304
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (c:/texlive/2023/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
@@ -463,11 +452,11 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@ptotalheight=\dimen265
  (c:/texlive/2023/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count306
+\c@checkoddpage=\count305
 ) (c:/texlive/2023/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box60
-\sift@deathcycles=\count307
+\sift@deathcycles=\count306
 \@vwid@loff=\dimen266
 \@vwid@roff=\dimen267
 )) (c:/texlive/2023/texmf-dist/tex/latex/tools/bm.sty
@@ -509,14 +498,14 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \pgf@yd=\dimen279
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count308
-\c@pgf@countb=\count309
-\c@pgf@countc=\count310
-\c@pgf@countd=\count311
+\c@pgf@counta=\count307
+\c@pgf@countb=\count308
+\c@pgf@countc=\count309
+\c@pgf@countd=\count310
 \t@pgf@toka=\toks39
 \t@pgf@tokb=\toks40
 \t@pgf@tokc=\toks41
-\pgf@sys@id@count=\count312
+\pgf@sys@id@count=\count311
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -527,8 +516,8 @@ File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 ))) (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count313
-\pgfsyssoftpath@bigbuffer@items=\count314
+\pgfsyssoftpath@smallbuffer@items=\count312
+\pgfsyssoftpath@bigbuffer@items=\count313
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (c:/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -552,13 +541,13 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen280
-\pgfmath@count=\count315
+\pgfmath@count=\count314
 \pgfmath@box=\box62
 \pgfmath@toks=\toks42
 \pgfmath@stack@operand=\toks43
 \pgfmath@stack@operation=\toks44
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count316
+\c@pgfmathroundto@lastzeros=\count315
 )) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@picminx=\dimen281
@@ -588,7 +577,7 @@ File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box63
 \pgf@hbox=\box64
 \pgf@layerbox@main=\box65
-\pgf@picture@serial@count=\count317
+\pgf@picture@serial@count=\count316
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgflinewidth=\dimen299
@@ -609,8 +598,8 @@ File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen304
-\pgf@sys@shading@range@num=\count318
-\pgf@shadingcount=\count319
+\pgf@sys@shading@range@num=\count317
+\pgf@shadingcount=\count318
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
@@ -645,7 +634,7 @@ Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count320
+\pgf@plot@mark@count=\count319
 \pgfplotmarksize=\dimen309
 )
 \tikz@lastx=\dimen310
@@ -660,45 +649,45 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@figbox@bg=\box69
 \tikz@tempbox=\box70
 \tikz@tempbox@bg=\box71
-\tikztreelevel=\count321
-\tikznumberofchildren=\count322
-\tikznumberofcurrentchild=\count323
-\tikz@fig@count=\count324
+\tikztreelevel=\count320
+\tikznumberofchildren=\count321
+\tikznumberofcurrentchild=\count322
+\tikz@fig@count=\count323
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count325
-\pgfmatrixcurrentcolumn=\count326
-\pgf@matrix@numberofcolumns=\count327
+\pgfmatrixcurrentrow=\count324
+\pgfmatrixcurrentcolumn=\count325
+\pgf@matrix@numberofcolumns=\count326
 )
-\tikz@expandcount=\count328
+\tikz@expandcount=\count327
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (c:/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count329
+\c@subfigure=\count328
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count330
+\c@subtable=\count329
 ) (c:/texlive/2023/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
-\CenteringLeftskip=\skip84
-\RaggedLeftLeftskip=\skip85
-\RaggedRightLeftskip=\skip86
-\CenteringRightskip=\skip87
-\RaggedLeftRightskip=\skip88
-\RaggedRightRightskip=\skip89
-\CenteringParfillskip=\skip90
-\RaggedLeftParfillskip=\skip91
-\RaggedRightParfillskip=\skip92
-\JustifyingParfillskip=\skip93
-\CenteringParindent=\skip94
-\RaggedLeftParindent=\skip95
-\RaggedRightParindent=\skip96
-\JustifyingParindent=\skip97
-)
-(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+\CenteringLeftskip=\skip82
+\RaggedLeftLeftskip=\skip83
+\RaggedRightLeftskip=\skip84
+\CenteringRightskip=\skip85
+\RaggedLeftRightskip=\skip86
+\RaggedRightRightskip=\skip87
+\CenteringParfillskip=\skip88
+\RaggedLeftParfillskip=\skip89
+\RaggedRightParfillskip=\skip90
+\JustifyingParfillskip=\skip91
+\CenteringParindent=\skip92
+\RaggedLeftParindent=\skip93
+\RaggedRightParindent=\skip94
+\JustifyingParindent=\skip95
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
 File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarychains.code.tex
+)
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarychains.code.tex
 File: tikzlibrarychains.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -708,7 +697,7 @@ File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfdecoratedinputsegmentcompleteddistance=\dimen320
 \pgfdecoratedinputsegmentremainingdistance=\dimen321
 \pgf@decorate@distancetomove=\dimen322
-\pgf@decorate@repeatstate=\count331
+\pgf@decorate@repeatstate=\count330
 \pgfdecorationsegmentamplitude=\dimen323
 \pgfdecorationsegmentlength=\dimen324
 )
@@ -718,381 +707,42 @@ File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \arrowsize=\dimen325
-)) (c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
- (c:/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty
-Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count332
- (c:/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def
-File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-
-c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty:212: Package biblatex Error: Incompatible package 'backref'.
-
-See the biblatex package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.212 \blx@packageincompatibility
-                                 
-The 'backref' package and biblatex are incompatible.
-
-
-c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty:212: Package biblatex Error: Incompatible package 'natbib'.
-
-See the biblatex package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.212 \blx@packageincompatibility
-                                 
-The 'natbib' package and biblatex are incompatible.
-
-\c@tabx@nest=\count333
-\c@listtotal=\count334
-\c@listcount=\count335
-\c@liststart=\count336
-\c@liststop=\count337
-\c@citecount=\count338
-\c@citetotal=\count339
-\c@multicitecount=\count340
-\c@multicitetotal=\count341
-\c@instcount=\count342
-\c@maxnames=\count343
-\c@minnames=\count344
-\c@maxitems=\count345
-\c@minitems=\count346
-\c@citecounter=\count347
-\c@maxcitecounter=\count348
-\c@savedcitecounter=\count349
-\c@uniquelist=\count350
-\c@uniquename=\count351
-\c@refsection=\count352
-\c@refsegment=\count353
-\c@maxextratitle=\count354
-\c@maxextratitleyear=\count355
-\c@maxextraname=\count356
-\c@maxextradate=\count357
-\c@maxextraalpha=\count358
-\c@abbrvpenalty=\count359
-\c@highnamepenalty=\count360
-\c@lownamepenalty=\count361
-\c@maxparens=\count362
-\c@parenlevel=\count363
-\blx@tempcnta=\count364
-\blx@tempcntb=\count365
-\blx@tempcntc=\count366
-\c@blx@maxsection=\count367
-\blx@maxsegment@0=\count368
-\blx@notetype=\count369
-\blx@parenlevel@text=\count370
-\blx@parenlevel@foot=\count371
-\blx@sectionciteorder@0=\count372
-\blx@sectionciteorderinternal@0=\count373
-\blx@entrysetcounter=\count374
-\blx@biblioinstance=\count375
-\labelnumberwidth=\skip98
-\labelalphawidth=\skip99
-
-c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty:901: LaTeX Error: Command \biblabelsep already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.901 \newlength{\biblabelsep}
-                              
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-\bibitemsep=\skip100
-\bibnamesep=\skip101
-\bibinitsep=\skip102
-\bibparsep=\skip103
-
-c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty:908: LaTeX Error: Command \bibhang already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.908 \newlength{\bibhang}
-                          
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-\blx@bcfin=\read4
-\blx@bcfout=\write4
-\blx@langwohyphens=\language88
-\c@mincomprange=\count376
-\c@maxcomprange=\count377
-\c@mincompwidth=\count378
-Package biblatex Info: Trying to load biblatex default data model...
-Package biblatex Info: ... file 'blx-dm.def' found.
-(c:/texlive/2023/texmf-dist/tex/latex/biblatex/blx-dm.def
-File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'abnt.dbx' not found.
-Package biblatex Info: Trying to load biblatex custom data model...
-Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count379
-\c@savedafterword=\count380
-\c@annotator=\count381
-\c@savedannotator=\count382
-\c@author=\count383
-\c@savedauthor=\count384
-\c@bookauthor=\count385
-\c@savedbookauthor=\count386
-\c@commentator=\count387
-\c@savedcommentator=\count388
-\c@editor=\count389
-\c@savededitor=\count390
-\c@editora=\count391
-\c@savededitora=\count392
-\c@editorb=\count393
-\c@savededitorb=\count394
-\c@editorc=\count395
-\c@savededitorc=\count396
-\c@foreword=\count397
-\c@savedforeword=\count398
-\c@holder=\count399
-\c@savedholder=\count400
-\c@introduction=\count401
-\c@savedintroduction=\count402
-\c@namea=\count403
-\c@savednamea=\count404
-\c@nameb=\count405
-\c@savednameb=\count406
-\c@namec=\count407
-\c@savednamec=\count408
-\c@translator=\count409
-\c@savedtranslator=\count410
-\c@shortauthor=\count411
-\c@savedshortauthor=\count412
-\c@shorteditor=\count413
-\c@savedshorteditor=\count414
-\c@labelname=\count415
-\c@savedlabelname=\count416
-\c@institution=\count417
-\c@savedinstitution=\count418
-\c@lista=\count419
-\c@savedlista=\count420
-\c@listb=\count421
-\c@savedlistb=\count422
-\c@listc=\count423
-\c@savedlistc=\count424
-\c@listd=\count425
-\c@savedlistd=\count426
-\c@liste=\count427
-\c@savedliste=\count428
-\c@listf=\count429
-\c@savedlistf=\count430
-\c@location=\count431
-\c@savedlocation=\count432
-\c@organization=\count433
-\c@savedorganization=\count434
-\c@origlocation=\count435
-\c@savedoriglocation=\count436
-\c@origpublisher=\count437
-\c@savedorigpublisher=\count438
-\c@publisher=\count439
-\c@savedpublisher=\count440
-\c@language=\count441
-\c@savedlanguage=\count442
-\c@origlanguage=\count443
-\c@savedoriglanguage=\count444
-\c@pageref=\count445
-\c@savedpageref=\count446
-\shorthandwidth=\skip104
-\shortjournalwidth=\skip105
-\shortserieswidth=\skip106
-\shorttitlewidth=\skip107
-\shortauthorwidth=\skip108
-\shorteditorwidth=\skip109
-\locallabelnumberwidth=\skip110
-\locallabelalphawidth=\skip111
-\localshorthandwidth=\skip112
-\localshortjournalwidth=\skip113
-\localshortserieswidth=\skip114
-\localshorttitlewidth=\skip115
-\localshortauthorwidth=\skip116
-\localshorteditorwidth=\skip117
-
-
-c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty:12630: LaTeX Error: Command \citename already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12630 ...*{\citename}{\blx@citexpunct{citename}}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-Package biblatex Info: Trying to load compatibility code...
-Package biblatex Info: ... file 'blx-compat.def' found.
-(c:/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-)
-Package biblatex Info: Trying to load generic definitions...
-Package biblatex Info: ... file 'biblatex.def' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count447
-\c@textcitetotal=\count448
-\c@textcitemaxnames=\count449
-\c@biburlbigbreakpenalty=\count450
-\c@biburlbreakpenalty=\count451
-\c@biburlnumpenalty=\count452
-\c@biburlucpenalty=\count453
-\c@biburllcpenalty=\count454
-\biburlbigskip=\muskip18
-\biburlnumskip=\muskip19
-\biburlucskip=\muskip20
-\biburllcskip=\muskip21
-
-
-c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def:339: LaTeX Error: Command \bibfont already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.339 ...ommand*{\bibfont}{\normalfont\normalsize}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-\c@smartand=\count455
-
-Package biblatex Warning: Redefining '\citeauthor'.
-
-
-Package biblatex Warning: Redefining '\citeyear'.
-
-
-c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def:2306: LaTeX Error: Command \Citeauthor already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2306 ...e\citeauthor*}{\bibsentence\citeauthor}}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
-Package biblatex Info: Trying to load bibliography style 'abnt'...
-Package biblatex Info: ... file 'abnt.bbx' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex-abnt/abnt.bbx
-File: abnt.bbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
- (c:/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2023-08-29 L3 programming layer (loader) 
+)) (./funcoes.sty)
+\c@teo=\count331
+\c@defi=\count332
+\c@exem=\count333
  (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count456
+\l__color_backend_stack_int=\count334
 \l__pdf_internal_box=\box73
-))
-Package: xparse 2023-08-29 L3 Experimental document command parser
-) (c:/texlive/2023/texmf-dist/tex/latex/xpatch/xpatch.sty
-Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
-)
-Package biblatex Info: Trying to load bibliography style 'standard'...
-Package biblatex Info: ... file 'standard.bbx' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count457
-\c@bbx:relatedtotal=\count458
-))
-Package biblatex Info: Trying to load citation style 'abnt'...
-Package biblatex Info: ... file 'abnt.cbx' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex-abnt/abnt.cbx
-File: abnt.cbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
-Package biblatex Info: Trying to load citation style 'authoryear-comp'...
-Package biblatex Info: ... file 'authoryear-comp.cbx' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/authoryear-comp.cbx
-File: authoryear-comp.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
-Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\parencite'.
-Package biblatex Info: Redefining '\footcite'.
-Package biblatex Info: Redefining '\footcitetext'.
-Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\textcite'.
-Package biblatex Info: Redefining '\textcites'.
-Package biblatex Info: Redefining '\cites'.
-Package biblatex Info: Redefining '\parencites'.
-Package biblatex Info: Redefining '\footcites'.
-Package biblatex Info: Redefining '\footcitetexts'.
-Package biblatex Info: Redefining '\smartcites'.
-)
-Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\cites'.
-Package biblatex Info: Redefining '\footcite'.
-Package biblatex Info: Redefining '\footcites'.
-Package biblatex Info: Redefining '\citetitle'.
-Package biblatex Info: Redefining '\apud'.
-Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\citeauthor'.
-Package biblatex Info: Redefining '\citeyear'.
-)
-Package biblatex Info: Trying to load configuration file...
-Package biblatex Info: ... file 'biblatex.cfg' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg
-File: biblatex.cfg 
-)
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Document encoding is UTF8 ....
-Package biblatex Info: ... and expl3
-(biblatex)             2023-08-29 L3 programming layer (loader) 
-(biblatex)             is new enough (at least 2020/04/06),
-(biblatex)             setting 'casechanger=expl3'.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
-Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
-)) (./funcoes.sty)
-\c@teo=\count459
-\c@defi=\count460
-\c@exem=\count461
+) (./monografia.aux (./estrutura/capa.aux) (./estrutura/rosto.aux)
+
+LaTeX Warning: Label `fig::3.9c' multiply defined.
 
 
-Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
-(biblatex)                Loading 'csquotes' recommended.
+LaTeX Warning: Label `sub@fig::3.9c' multiply defined.
 
-\@quotelevel=\count462
-\@quotereset=\count463
-(./monografia.aux)
+)
 \openout1 = `monografia.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1130,16 +780,16 @@ LaTeX Font Info:    ... okay on input line 76.
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count464
+\scratchcounter=\count335
 \scratchdimen=\dimen326
 \scratchbox=\box74
-\nofMPsegments=\count465
-\nofMParguments=\count466
+\nofMPsegments=\count336
+\nofMParguments=\count337
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count467
+\MPscratchCnt=\count338
 \MPscratchDim=\dimen327
-\MPnumerator=\count468
-\makeMPintoPDFobject=\count469
+\MPnumerator=\count339
+\makeMPintoPDFobject=\count340
 \everyMPtoPDFconversion=\toks48
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1147,68 +797,17 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 76.
-\@outlinefile=\write5
-\openout5 = `monografia.out'.
+Package hyperref Info: Link coloring ON on input line 75.
+ (./monografia.out) (./monografia.out)
+\@outlinefile=\write4
+\openout4 = `monografia.out'.
 
-Package backref Info: ** backref set up for natbib ** on input line 76.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-Package biblatex Info: Trying to load language 'brazilian' -> 'brazilian-abnt'...
-Package biblatex Info: ... file 'brazilian-abnt.lbx' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex-abnt/brazilian-abnt.lbx
-File: brazilian-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
-Package biblatex Info: Trying to load language 'brazilian'...
-Package biblatex Info: ... file 'brazilian.lbx' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/brazilian.lbx
-File: brazilian.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load language 'brazilian'...
-Package biblatex Info: ... file 'brazilian.lbx' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/brazilian.lbx
-File: brazilian.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load language 'brazil' -> 'brazil-abnt'...
-Package biblatex Info: ... file 'brazil-abnt.lbx' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex-abnt/brazil-abnt.lbx
-File: brazil-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
-
-
-Package biblatex Warning: File 'brazilian-abnt-abnt.lbx' not found!
-(biblatex)                Ignoring mapping 'brazilian-abnt' -> 'brazilian-abnt-abnt'.
-
-Package biblatex Info: Trying to load language 'brazilian-abnt'...
-Package biblatex Info: ... file 'brazilian-abnt.lbx' found.
-(c:/texlive/2023/texmf-dist/tex/latex/biblatex-abnt/brazilian-abnt.lbx
-File: brazilian-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
-Package biblatex Info: Trying to load language 'brazilian'...
-Package biblatex Info: ... file 'brazilian.lbx' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/brazilian.lbx
-File: brazilian.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load language 'brazil'...
-Package biblatex Info: ... file 'brazil.lbx' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/brazil.lbx
-File: brazil.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-Package biblatex Info: Trying to load language 'brazilian'...
-Package biblatex Info: ... file 'brazilian.lbx' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/brazilian.lbx
-File: brazilian.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-)))))
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `monografia.bcf'.
-
-Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'monografia.bbl' found.
- (./monografia.bbl)
-Package biblatex Info: Reference section=0 on input line 76.
-Package biblatex Info: Reference segment=0 on input line 76.
 \openout2 = `estrutura/capa.aux'.
 
  (./estrutura/capa.tex
-<imagens/unb.png, id=7, 99.37125pt x 52.195pt>
+<imagens/unb.png, id=167, 99.37125pt x 52.195pt>
 File: imagens/unb.png Graphic file (type png)
 <use imagens/unb.png>
 Package pdftex.def Info: imagens/unb.png  used on input line 5.
@@ -1340,323 +939,744 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
 
 
-]
-No file monografia.toc.
-\tf@toc=\write6
-\openout6 = `monografia.toc'.
-
-[3
+] (./monografia.toc [3
 
 
-] (./estrutura/resultados.tex
-Underfull \hbox (badness 2600) in paragraph at lines 16--16
- []\OT1/cmr/m/n/10 Tabela 1: |N^^Sumero de ob-serva^^Xc~ao em cada ca-te-go-ria da vari^^Savel res-posta| 
+])
+\tf@toc=\write5
+\openout5 = `monografia.toc'.
+
+ [4] (./estrutura/introducao.tex
+Overfull \hbox (35.62173pt too wide) in paragraph at lines 13--17
+\OT1/cmr/m/n/12 SHAP (Sha-pley Ad-di-tive Ex-pla-na-ti-ons), que foi in-tro-du-zido em 2017 "ci-te-plund-berg2017unified".
+ []
+
+) [5] (./estrutura/ref_teorico.tex [6{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+ []\OT1/cmr/m/n/10 Figura 1: |Neur^onio da Rede Neu-ral| 
  []
 
 
-LaTeX Warning: Reference `tab:freq_var_res' on page 4 undefined on input line 20.
+Underfull \hbox (badness 2229) in paragraph at lines 131--132
+ [][] 
+ []
 
-<imagens/exploratoria/quantidade_emprestimo.jpg, id=26, 1872.9975pt x 1255.69125pt>
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.137 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.137 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.137 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.137 \begin{equation}
+                      
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+ []\OT1/cmr/m/n/10 Figura 2: |Ti-pos de Fun^^Xc~ao de Ativa^^Xc~ao.| 
+ []
+
+<imagens/activation-functions3.jpg, id=278, 791.95876pt x 530.98375pt>
+File: imagens/activation-functions3.jpg Graphic file (type jpg)
+<use imagens/activation-functions3.jpg>
+Package pdftex.def Info: imagens/activation-functions3.jpg  used on input line 148.
+(pdftex.def)             Requested size: 316.7779pt x 212.38972pt.
+
+Underfull \hbox (badness 2556) in paragraph at lines 148--149
+ [][] 
+ []
+
+
+Underfull \hbox (badness 2229) in paragraph at lines 149--149
+ []|\OT1/cmr/m/n/10 Fonte: https://machine-learning.paperspace.com/wiki/activation-function| 
+ []
+
+[8]
+Overfull \hbox (9.05563pt too wide) in paragraph at lines 162--163
+[]\OT1/cmr/m/n/12 Uma rede neu-ral ^^Se es-tru-tu-rada em ca-ma-das for-ma-das por um con-junto de neur^onios.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--166
+ []\OT1/cmr/m/n/10 Figura 3: |Rede Neu-ral com uma ca-mada oculta| 
+ []
+
+
+Overfull \hbox (5.44145pt too wide) in paragraph at lines 187--187
+ []\OT1/cmr/m/n/12 Camada 
+ []
+
+
+Overfull \hbox (4.62341pt too wide) in paragraph at lines 187--187
+ \OT1/cmr/m/n/12 Entrada 
+ []
+
+
+Overfull \hbox (5.44145pt too wide) in paragraph at lines 187--187
+ []\OT1/cmr/m/n/12 Camada 
+ []
+
+
+Overfull \hbox (5.44145pt too wide) in paragraph at lines 187--187
+ []\OT1/cmr/m/n/12 Camada 
+ []
+
+[9 <./imagens/activation-functions3.jpg>]
+<imagens/arquitetura_redeneural.png, id=295, 421.575pt x 201.75375pt>
+File: imagens/arquitetura_redeneural.png Graphic file (type png)
+<use imagens/arquitetura_redeneural.png>
+Package pdftex.def Info: imagens/arquitetura_redeneural.png  used on input line 213.
+(pdftex.def)             Requested size: 337.26045pt x 161.40321pt.
+
+Underfull \hbox (badness 1577) in paragraph at lines 213--214
+ [][] 
+ []
+
+[10 <./imagens/arquitetura_redeneural.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \begin{equation}
+                       [11]
+<imagens/pesos_loss_func.png, id=315, 155.83218pt x 158.84344pt>
+File: imagens/pesos_loss_func.png Graphic file (type png)
+<use imagens/pesos_loss_func.png>
+Package pdftex.def Info: imagens/pesos_loss_func.png  used on input line 262.
+(pdftex.def)             Requested size: 155.8318pt x 158.84305pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
+ [][] 
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.272 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.272 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.272 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.272 \begin{equation}
+                       [12 <./imagens/pesos_loss_func.png>]
+<imagens/gradient_descent.png, id=332, 319.94531pt x 299.61937pt>
+File: imagens/gradient_descent.png Graphic file (type png)
+<use imagens/gradient_descent.png>
+Package pdftex.def Info: imagens/gradient_descent.png  used on input line 297.
+(pdftex.def)             Requested size: 223.96017pt x 209.73212pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
+ [][] 
+ []
+
+
+Underfull \hbox (badness 2302) in paragraph at lines 298--298
+ []|\OT1/cmr/m/n/10 Fonte: https://www.javatpoint.com/gradient-descent-in-machine-learning| 
+ []
+
+[13 <./imagens/gradient_descent.png>]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 333.
+ (c:/texlive/2023/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 333.
+ [14] [15]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.362 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.362 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.362 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.362 \begin{equation}
+                      
+Underfull \hbox (badness 1210) in paragraph at lines 371--371
+ []\OT1/cmr/m/n/10 Figura 7: |Ga-nho do jo-ga-dor 3 em rela^^Xc~ao ^^Ra to-das as per-muta^^Xc~oes de jo-ga-do-res.| 
+ []
+
+<imagens/shap.png, id=356, 722.7pt x 414.54875pt>
+File: imagens/shap.png Graphic file (type png)
+<use imagens/shap.png>
+Package pdftex.def Info: imagens/shap.png  used on input line 372.
+(pdftex.def)             Requested size: 361.3491pt x 207.27386pt.
+
+Underfull \hbox (badness 6236) in paragraph at lines 373--373
+ []|\OT1/cmr/m/n/10 Fonte: https://towardsdatascience.com/introduction-to-shap- 
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 373--373
+ \OT1/cmr/m/n/10 values-and-their-application-in-machine-learning-8003718e6827| 
+ []
+
+[16 <./imagens/shap.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
+ []\OT1/cmr/m/n/10 Figura 8: |Rela^^Xc~ao en-tre per-muta^^Xc~oes e co-a-liz~oes.| 
+ []
+
+<imagens/shap1.png, id=364, 722.7pt x 433.62pt>
+File: imagens/shap1.png Graphic file (type png)
+<use imagens/shap1.png>
+Package pdftex.def Info: imagens/shap1.png  used on input line 394.
+(pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
+
+Underfull \hbox (badness 6236) in paragraph at lines 395--395
+ []|\OT1/cmr/m/n/10 Fonte: https://towardsdatascience.com/introduction-to-shap- 
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 395--395
+ \OT1/cmr/m/n/10 values-and-their-application-in-machine-learning-8003718e6827| 
+ []
+
+[17 <./imagens/shap1.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.424 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.424 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.424 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.424 \begin{equation}
+                      
+Underfull \hbox (badness 10000) in paragraph at lines 434--434
+ []\OT1/cmr/m/n/10 Figura 9: |C^^Salculo de $\OML/cmm/m/it/10 f[]$\OT1/cmr/m/n/10 , sendo S o con-junto de vari^^Saveis 
+ []
+
+
+Underfull \hbox (badness 6825) in paragraph at lines 434--434
+ \OML/cmm/m/it/10 X[]; X[]; X[]$\OT1/cmr/m/n/10 , den-tre as ob-serva^^Xc~oes de um con-junto de da-dos.| 
+ []
+
+<imagens/shap_explicado.png, id=372, 722.7pt x 387.4475pt>
+File: imagens/shap_explicado.png Graphic file (type png)
+<use imagens/shap_explicado.png>
+Package pdftex.def Info: imagens/shap_explicado.png  used on input line 435.
+(pdftex.def)             Requested size: 361.3491pt x 193.72327pt.
+
+Underfull \hbox (badness 6236) in paragraph at lines 436--436
+ []|\OT1/cmr/m/n/10 Fonte: https://towardsdatascience.com/introduction-to-shap- 
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 436--436
+ \OT1/cmr/m/n/10 values-and-their-application-in-machine-learning-8003718e6827| 
+ []
+
+[18 <./imagens/shap_explicado.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.451 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.451 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.451 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.451 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.464 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.464 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.464 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.464 \begin{equation}
+                       [19]
+Underfull \hbox (badness 10000) in paragraph at lines 504--504
+ []\OT1/cmr/m/n/10 Tabela 1: |Ma-triz de Con-fus~ao| 
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.512 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.512 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.512 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.512 \begin{equation}
+                       [20]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.525 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.525 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.525 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.525 \begin{equation}
+                      
+Overfull \hbox (2.20024pt too wide) in paragraph at lines 529--533
+[]\OT1/cmr/m/n/12 A pre-cis~ao ^^Se par-ti-cu-lar-mente ^^Sutil quando os fal-sos po-si-ti-vos s~ao mais pro-blem^^Saticos
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.540 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.540 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.540 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.540 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.554 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.554 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.554 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.554 \begin{equation}
+                      ) [21] [22] (./estrutura/metodologia.tex [23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 79--85
+ [][] 
+ []
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 85--85
+ []\OT1/cmr/m/n/10 Tabela 2: |N^^Sumero de co-lu-nas an-tes e de-pois da pre-para^^Xc~ao dos da-dos| 
+ []
+
+
+Overfull \hbox (1.06128pt too wide) in paragraph at lines 100--102
+[]\OT1/cmr/m/n/12 Detalhar o porqu^e de se in-ter-pre-tar os mo-de-los e as ma-nei-ras que ^^Se feito isso(testes,
+ []
+
+) [25] [26] (./estrutura/resultados.tex
+Underfull \hbox (badness 2600) in paragraph at lines 16--16
+ []\OT1/cmr/m/n/10 Tabela 3: |N^^Sumero de ob-serva^^Xc~ao em cada ca-te-go-ria da vari^^Savel res-posta| 
+ []
+
+<imagens/exploratoria/quantidade_emprestimo.jpg, id=438, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/quantidade_emprestimo.jpg Graphic file (type jpg)
 <use imagens/exploratoria/quantidade_emprestimo.jpg>
 Package pdftex.def Info: imagens/exploratoria/quantidade_emprestimo.jpg  used on input line 29.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/duracao_emprestimo.jpg, id=27, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/duracao_emprestimo.jpg, id=439, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/duracao_emprestimo.jpg Graphic file (type jpg)
 <use imagens/exploratoria/duracao_emprestimo.jpg>
 Package pdftex.def Info: imagens/exploratoria/duracao_emprestimo.jpg  used on input line 31.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/parcela.jpg, id=28, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/parcela.jpg, id=440, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/parcela.jpg Graphic file (type jpg)
 <use imagens/exploratoria/parcela.jpg>
 Package pdftex.def Info: imagens/exploratoria/parcela.jpg  used on input line 33.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/renda_anual.jpg, id=29, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/renda_anual.jpg, id=441, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/renda_anual.jpg Graphic file (type jpg)
 <use imagens/exploratoria/renda_anual.jpg>
 Package pdftex.def Info: imagens/exploratoria/renda_anual.jpg  used on input line 34.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
 
-Underfull \hbox (badness 3250) in paragraph at lines 37--37
- []\OT1/cmr/m/n/10 Figura 1: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
+Underfull \hbox (badness 2941) in paragraph at lines 37--37
+ []\OT1/cmr/m/n/10 Figura 10: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
  []
 
-[4]
-<imagens/exploratoria/taxa_juros.jpg, id=39, 1872.9975pt x 1255.69125pt>
+[27]
+<imagens/exploratoria/taxa_juros.jpg, id=451, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/taxa_juros.jpg Graphic file (type jpg)
 <use imagens/exploratoria/taxa_juros.jpg>
-Package pdftex.def Info: imagens/exploratoria/taxa_juros.jpg  used on input line 51.
+Package pdftex.def Info: imagens/exploratoria/taxa_juros.jpg  used on input line 54.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/dti.jpg, id=40, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/dti.jpg, id=452, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/dti.jpg Graphic file (type jpg)
 <use imagens/exploratoria/dti.jpg>
-Package pdftex.def Info: imagens/exploratoria/dti.jpg  used on input line 53.
+Package pdftex.def Info: imagens/exploratoria/dti.jpg  used on input line 56.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/pagamento_bruto.jpg, id=41, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/pagamento_bruto.jpg, id=453, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/pagamento_bruto.jpg Graphic file (type jpg)
 <use imagens/exploratoria/pagamento_bruto.jpg>
-Package pdftex.def Info: imagens/exploratoria/pagamento_bruto.jpg  used on input line 55.
+Package pdftex.def Info: imagens/exploratoria/pagamento_bruto.jpg  used on input line 58.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/pagamento_liquido.jpg, id=42, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/pagamento_liquido.jpg, id=454, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/pagamento_liquido.jpg Graphic file (type jpg)
 <use imagens/exploratoria/pagamento_liquido.jpg>
-Package pdftex.def Info: imagens/exploratoria/pagamento_liquido.jpg  used on input line 56.
+Package pdftex.def Info: imagens/exploratoria/pagamento_liquido.jpg  used on input line 59.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
 
-Underfull \hbox (badness 3250) in paragraph at lines 57--57
- []\OT1/cmr/m/n/10 Figura 2: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
+Underfull \hbox (badness 2941) in paragraph at lines 60--60
+ []\OT1/cmr/m/n/10 Figura 11: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
  []
 
-[5 <./imagens/exploratoria/quantidade_emprestimo.jpg> <./imagens/exploratoria/duracao_emprestimo.jpg> <./imagens/exploratoria/parcela.jpg> <./imagens/exploratoria/renda_anual.jpg>]
-<imagens/exploratoria/finalidade.pdf, id=49, 448.67625pt x 301.125pt>
+[28 <./imagens/exploratoria/quantidade_emprestimo.jpg> <./imagens/exploratoria/duracao_emprestimo.jpg> <./imagens/exploratoria/parcela.jpg> <./imagens/exploratoria/renda_anual.jpg>]
+<imagens/exploratoria/finalidade.pdf, id=466, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/finalidade.pdf Graphic file (type pdf)
 <use imagens/exploratoria/finalidade.pdf>
-Package pdftex.def Info: imagens/exploratoria/finalidade.pdf  used on input line 72.
+Package pdftex.def Info: imagens/exploratoria/finalidade.pdf  used on input line 77.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/categoria_renda.pdf, id=50, 448.67625pt x 301.125pt>
+<imagens/exploratoria/categoria_renda.pdf, id=467, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/categoria_renda.pdf Graphic file (type pdf)
 <use imagens/exploratoria/categoria_renda.pdf>
-Package pdftex.def Info: imagens/exploratoria/categoria_renda.pdf  used on input line 74.
+Package pdftex.def Info: imagens/exploratoria/categoria_renda.pdf  used on input line 79.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/grau.pdf, id=51, 448.67625pt x 301.125pt>
+<imagens/exploratoria/grau.pdf, id=468, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/grau.pdf Graphic file (type pdf)
 <use imagens/exploratoria/grau.pdf>
-Package pdftex.def Info: imagens/exploratoria/grau.pdf  used on input line 76.
+Package pdftex.def Info: imagens/exploratoria/grau.pdf  used on input line 81.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/tipo_aplicacao.pdf, id=52, 448.67625pt x 301.125pt>
+<imagens/exploratoria/tipo_aplicacao.pdf, id=469, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/tipo_aplicacao.pdf Graphic file (type pdf)
 <use imagens/exploratoria/tipo_aplicacao.pdf>
-Package pdftex.def Info: imagens/exploratoria/tipo_aplicacao.pdf  used on input line 77.
+Package pdftex.def Info: imagens/exploratoria/tipo_aplicacao.pdf  used on input line 82.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/legenda.pdf, id=53, 312.16624pt x 38.1425pt>
+<imagens/exploratoria/legenda.pdf, id=470, 312.16624pt x 38.1425pt>
 File: imagens/exploratoria/legenda.pdf Graphic file (type pdf)
 <use imagens/exploratoria/legenda.pdf>
-Package pdftex.def Info: imagens/exploratoria/legenda.pdf  used on input line 79.
+Package pdftex.def Info: imagens/exploratoria/legenda.pdf  used on input line 84.
 (pdftex.def)             Requested size: 250.38564pt x 30.59435pt.
 
-Underfull \hbox (badness 7796) in paragraph at lines 72--81
+Underfull \hbox (badness 7796) in paragraph at lines 77--86
  []$ [] 
  []
 
 
-Underfull \hbox (badness 3250) in paragraph at lines 81--81
- []\OT1/cmr/m/n/10 Figura 3: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
+Underfull \hbox (badness 2941) in paragraph at lines 86--86
+ []\OT1/cmr/m/n/10 Figura 12: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
  []
 
-[6 <./imagens/exploratoria/taxa_juros.jpg> <./imagens/exploratoria/dti.jpg> <./imagens/exploratoria/pagamento_bruto.jpg> <./imagens/exploratoria/pagamento_liquido.jpg>]
-<imagens/exploratoria/pagamentos_juros.pdf, id=59, 448.67625pt x 301.125pt>
+[29 <./imagens/exploratoria/taxa_juros.jpg> <./imagens/exploratoria/dti.jpg> <./imagens/exploratoria/pagamento_bruto.jpg> <./imagens/exploratoria/pagamento_liquido.jpg>]
+<imagens/exploratoria/pagamentos_juros.pdf, id=480, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/pagamentos_juros.pdf Graphic file (type pdf)
 <use imagens/exploratoria/pagamentos_juros.pdf>
-Package pdftex.def Info: imagens/exploratoria/pagamentos_juros.pdf  used on input line 97.
+Package pdftex.def Info: imagens/exploratoria/pagamentos_juros.pdf  used on input line 105.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/regiao.pdf, id=60, 448.67625pt x 301.125pt>
+<imagens/exploratoria/regiao.pdf, id=481, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/regiao.pdf Graphic file (type pdf)
 <use imagens/exploratoria/regiao.pdf>
-Package pdftex.def Info: imagens/exploratoria/regiao.pdf  used on input line 99.
+Package pdftex.def Info: imagens/exploratoria/regiao.pdf  used on input line 107.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/propriedade_casa.pdf, id=61, 448.67625pt x 301.125pt>
+<imagens/exploratoria/propriedade_casa.pdf, id=482, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/propriedade_casa.pdf Graphic file (type pdf)
 <use imagens/exploratoria/propriedade_casa.pdf>
-Package pdftex.def Info: imagens/exploratoria/propriedade_casa.pdf  used on input line 101.
+Package pdftex.def Info: imagens/exploratoria/propriedade_casa.pdf  used on input line 109.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/prazo.pdf, id=62, 448.67625pt x 301.125pt>
+<imagens/exploratoria/prazo.pdf, id=483, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/prazo.pdf Graphic file (type pdf)
 <use imagens/exploratoria/prazo.pdf>
-Package pdftex.def Info: imagens/exploratoria/prazo.pdf  used on input line 102.
+Package pdftex.def Info: imagens/exploratoria/prazo.pdf  used on input line 110.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
 File: imagens/exploratoria/legenda.pdf Graphic file (type pdf)
 <use imagens/exploratoria/legenda.pdf>
-Package pdftex.def Info: imagens/exploratoria/legenda.pdf  used on input line 104.
+Package pdftex.def Info: imagens/exploratoria/legenda.pdf  used on input line 112.
 (pdftex.def)             Requested size: 250.38564pt x 30.59435pt.
 
-Underfull \hbox (badness 7796) in paragraph at lines 97--106
- []$ [] 
+Underfull \hbox (badness 10000) in paragraph at lines 105--113
+ []$ 
  []
 
 
-Underfull \hbox (badness 3250) in paragraph at lines 106--106
- []\OT1/cmr/m/n/10 Figura 4: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
+Underfull \hbox (badness 2941) in paragraph at lines 113--113
+ []\OT1/cmr/m/n/10 Figura 13: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
  []
 
-[7 <./imagens/exploratoria/finalidade.pdf> <./imagens/exploratoria/categoria_renda.pdf> <./imagens/exploratoria/grau.pdf> <./imagens/exploratoria/tipo_aplicacao.pdf> <./imagens/exploratoria/legenda.pdf>]
-Underfull \hbox (badness 4048) in paragraph at lines 117--132
+[30 <./imagens/exploratoria/finalidade.pdf> <./imagens/exploratoria/categoria_renda.pdf> <./imagens/exploratoria/grau.pdf> <./imagens/exploratoria/tipo_aplicacao.pdf> <./imagens/exploratoria/legenda.pdf>]
+Underfull \hbox (badness 4048) in paragraph at lines 128--143
  [][] 
  []
 
-[8 <./imagens/exploratoria/pagamentos_juros.pdf> <./imagens/exploratoria/regiao.pdf> <./imagens/exploratoria/propriedade_casa.pdf> <./imagens/exploratoria/prazo.pdf>]
-
-LaTeX Warning: Reference `tab:coef_corr' on page 9 undefined on input line 136.
-
-
-Underfull \hbox (badness 5260) in paragraph at lines 144--158
+[31 <./imagens/exploratoria/pagamentos_juros.pdf> <./imagens/exploratoria/regiao.pdf> <./imagens/exploratoria/propriedade_casa.pdf> <./imagens/exploratoria/prazo.pdf>]
+Underfull \hbox (badness 5260) in paragraph at lines 155--169
  [][] 
  []
 
 
-LaTeX Warning: Reference `tab:coef_cont' on page 9 undefined on input line 162.
-
-
-Underfull \hbox (badness 3568) in paragraph at lines 177--200
+Underfull \hbox (badness 3568) in paragraph at lines 188--211
  [][] 
  []
 
-[9]
-
-LaTeX Warning: Reference `tab:result_model_logist' on page 10 undefined on input line 204.
-
-<imagens/resultados/report_model_logistico.png, id=125, 462.528pt x 346.896pt>
+[32]
+<imagens/resultados/report_model_logistico.png, id=555, 462.528pt x 346.896pt>
 File: imagens/resultados/report_model_logistico.png Graphic file (type png)
 <use imagens/resultados/report_model_logistico.png>
-Package pdftex.def Info: imagens/resultados/report_model_logistico.png  used on input line 216.
+Package pdftex.def Info: imagens/resultados/report_model_logistico.png  used on input line 227.
 (pdftex.def)             Requested size: 364.19667pt x 273.16086pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--216
- []\OT1/cmr/m/n/10 Figura 5: |Ma-trix de con-fus~ao do mo-delo log^^S^^Pstico| 
+Underfull \hbox (badness 10000) in paragraph at lines 227--227
+ []\OT1/cmr/m/n/10 Figura 14: |Ma-trix de con-fus~ao do mo-delo log^^S^^Pstico| 
  []
 
-[10{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-
-LaTeX Warning: Reference `fig:imagens/resultados/report_model_logistico.png' on page 11 undefined on input line 218.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 240--240
- []\OT1/cmr/m/n/10 Tabela 5: |Re-port do mo-delo log^^S^^Pstico| 
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 250--250
+ []\OT1/cmr/m/n/10 Tabela 7: |Re-port do mo-delo log^^S^^Pstico| 
  []
 
+[34 <./imagens/resultados/report_model_logistico.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
+ []\OT1/cmr/m/n/10 Tabela 8: |Re-port da rede neu-ral| 
+ []
 
-LaTeX Warning: Reference `tab:report_logist_model' on page 11 undefined on input line 244.
+<imagens/resultados/report_model_neural_ganhador.png, id=572, 462.528pt x 346.896pt>
+File: imagens/resultados/report_model_neural_ganhador.png Graphic file (type png)
+<use imagens/resultados/report_model_neural_ganhador.png>
+Package pdftex.def Info: imagens/resultados/report_model_neural_ganhador.png  used on input line 311.
+(pdftex.def)             Requested size: 364.19667pt x 273.16086pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
+ []\OT1/cmr/m/n/10 Figura 15: |Ma-trix de con-fus~ao da rede neu-ral| 
+ []
 
-LaTeX Warning: Reference `imagens/resultados/report_model_logistico.png' on page 11 undefined on input line 245.
-
-[11 <./imagens/resultados/report_model_logistico.png>]
-<imagens/shap/media_shap.png, id=142, 640.3122pt x 410.4936pt>
+[35]
+<imagens/shap/media_shap.png, id=578, 626.5809pt x 410.4936pt>
 File: imagens/shap/media_shap.png Graphic file (type png)
 <use imagens/shap/media_shap.png>
-Package pdftex.def Info: imagens/shap/media_shap.png  used on input line 290.
-(pdftex.def)             Requested size: 364.19667pt x 233.48895pt.
+Package pdftex.def Info: imagens/shap/media_shap.png  used on input line 316.
+(pdftex.def)             Requested size: 364.19667pt x 238.60007pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--290
- []\OT1/cmr/m/n/10 Figura 6: |M^^Sedia ab-so-luta dos va-lo-res de shap| 
+Underfull \hbox (badness 10000) in paragraph at lines 316--316
+ []\OT1/cmr/m/n/10 Figura 16: |M^^Sedia ab-so-luta dos va-lo-res de shap| 
  []
 
-[12]
-<imagens/shap/depend_var_res_shap.png, id=148, 430.7292pt x 331.7193pt>
-File: imagens/shap/depend_var_res_shap.png Graphic file (type png)
-<use imagens/shap/depend_var_res_shap.png>
-Package pdftex.def Info: imagens/shap/depend_var_res_shap.png  used on input line 293.
-(pdftex.def)             Requested size: 364.19667pt x 280.48473pt.
-<imagens/shap/shap_plot_0.png, id=149, 688.7331pt x 433.62pt>
-File: imagens/shap/shap_plot_0.png Graphic file (type png)
-<use imagens/shap/shap_plot_0.png>
-Package pdftex.def Info: imagens/shap/shap_plot_0.png  used on input line 298.
-(pdftex.def)             Requested size: 204.85846pt x 128.97543pt.
-<imagens/shap/shap_plot_1.png, id=150, 684.3969pt x 433.62pt>
-File: imagens/shap/shap_plot_1.png Graphic file (type png)
-<use imagens/shap/shap_plot_1.png>
-Package pdftex.def Info: imagens/shap/shap_plot_1.png  used on input line 300.
-(pdftex.def)             Requested size: 204.85846pt x 129.78926pt.
+<imagens/shap/shap_plot_verdadeiro_positivo.png, id=579, 675.7245pt x 433.62pt>
+File: imagens/shap/shap_plot_verdadeiro_positivo.png Graphic file (type png)
+<use imagens/shap/shap_plot_verdadeiro_positivo.png>
+Package pdftex.def Info: imagens/shap/shap_plot_verdadeiro_positivo.png  used on input line 324.
+(pdftex.def)             Requested size: 204.85846pt x 131.45662pt.
+<imagens/shap/shap_plot_falso_positivo.png, id=580, 670.6656pt x 433.62pt>
+File: imagens/shap/shap_plot_falso_positivo.png Graphic file (type png)
+<use imagens/shap/shap_plot_falso_positivo.png>
+Package pdftex.def Info: imagens/shap/shap_plot_falso_positivo.png  used on input line 326.
+(pdftex.def)             Requested size: 204.85846pt x 132.44908pt.
 
-Underfull \hbox (badness 1412) in paragraph at lines 300--300
+Underfull \hbox (badness 1412) in paragraph at lines 326--326
  [] \OT1/cmr/m/n/10 (b) |WSIR re-si-du-als.| 
  []
 
-<imagens/shap/shap_plot_2.png, id=151, 684.3969pt x 433.62pt>
-File: imagens/shap/shap_plot_2.png Graphic file (type png)
-<use imagens/shap/shap_plot_2.png>
-Package pdftex.def Info: imagens/shap/shap_plot_2.png  used on input line 302.
-(pdftex.def)             Requested size: 204.85846pt x 129.78926pt.
-<imagens/shap/shap_plot_3.png, id=152, 675.7245pt x 433.62pt>
-File: imagens/shap/shap_plot_3.png Graphic file (type png)
-<use imagens/shap/shap_plot_3.png>
-Package pdftex.def Info: imagens/shap/shap_plot_3.png  used on input line 303.
-(pdftex.def)             Requested size: 204.85846pt x 131.45662pt.
+<imagens/shap/shap_plot_falso_negativo.png, id=581, 670.6656pt x 433.62pt>
+File: imagens/shap/shap_plot_falso_negativo.png Graphic file (type png)
+<use imagens/shap/shap_plot_falso_negativo.png>
+Package pdftex.def Info: imagens/shap/shap_plot_falso_negativo.png  used on input line 328.
+(pdftex.def)             Requested size: 204.85846pt x 132.44908pt.
+<imagens/shap/shap_plot_verdadeiro_negativo.png, id=582, 665.6067pt x 433.62pt>
+File: imagens/shap/shap_plot_verdadeiro_negativo.png Graphic file (type png)
+<use imagens/shap/shap_plot_verdadeiro_negativo.png>
+Package pdftex.def Info: imagens/shap/shap_plot_verdadeiro_negativo.png  used on input line 329.
+(pdftex.def)             Requested size: 204.85846pt x 133.4548pt.
 
-Underfull \hbox (badness 1521) in paragraph at lines 303--303
+Underfull \hbox (badness 1521) in paragraph at lines 329--329
  [] \OT1/cmr/m/n/10 (d) |WSIR re-si-du-als| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
- []\OT1/cmr/m/n/10 Figura 8: |alo-alo| 
+Underfull \hbox (badness 10000) in paragraph at lines 332--332
+ []\OT1/cmr/m/n/10 Figura 17: |alo-alo| 
  []
 
-[13 <./imagens/shap/media_shap.png> <./imagens/shap/depend_var_res_shap.png>]
-<imagens/shap/shap_geral.png, id=162, 635.2533pt x 359.1819pt>
+[36 <./imagens/resultados/report_model_neural_ganhador.png> <./imagens/shap/media_shap.png>]
+<imagens/shap/shap_geral.png, id=592, 622.2447pt x 359.1819pt>
 File: imagens/shap/shap_geral.png Graphic file (type png)
 <use imagens/shap/shap_geral.png>
-Package pdftex.def Info: imagens/shap/shap_geral.png  used on input line 310.
-(pdftex.def)             Requested size: 364.19667pt x 205.91963pt.
+Package pdftex.def Info: imagens/shap/shap_geral.png  used on input line 336.
+(pdftex.def)             Requested size: 364.19667pt x 210.23291pt.
 
-Underfull \hbox (badness 7151) in paragraph at lines 310--310
- []\OT1/cmr/m/n/10 Figura 9: |Va-lo-res de shap para as 80 ob-serva^^Xc~oes uti-li-za-das| 
+Underfull \hbox (badness 6625) in paragraph at lines 336--336
+ []\OT1/cmr/m/n/10 Figura 18: |Va-lo-res de shap para as 80 ob-serva^^Xc~oes uti-li-za-das| 
  []
 
-<imagens/shap/force_plot.png, id=163, 1445.4pt x 216.81pt>
+<imagens/shap/force_plot.png, id=593, 1144.0341pt x 261.6174pt>
 File: imagens/shap/force_plot.png Graphic file (type png)
 <use imagens/shap/force_plot.png>
-Package pdftex.def Info: imagens/shap/force_plot.png  used on input line 314.
-(pdftex.def)             Requested size: 364.19667pt x 54.62912pt.
+Package pdftex.def Info: imagens/shap/force_plot.png  used on input line 340.
+(pdftex.def)             Requested size: 364.19667pt x 83.28415pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
- []\OT1/cmr/m/n/10 Figura 10: |Gr^^Safico de for^^Xca em uma ob-serva^^Xc~ao| 
+Underfull \hbox (badness 10000) in paragraph at lines 340--340
+ []\OT1/cmr/m/n/10 Figura 19: |Gr^^Safico de for^^Xca em uma ob-serva^^Xc~ao| 
  []
 
-[14 <./imagens/shap/shap_plot_0.png> <./imagens/shap/shap_plot_1.png> <./imagens/shap/shap_plot_2.png> <./imagens/shap/shap_plot_3.png> <./imagens/shap/shap_geral.png>] [15 <./imagens/shap/force_plot.png>]) [16] [17]
+[37 <./imagens/shap/shap_plot_verdadeiro_positivo.png> <./imagens/shap/shap_plot_falso_positivo.png> <./imagens/shap/shap_plot_falso_negativo.png> <./imagens/shap/shap_plot_verdadeiro_negativo.png> <./imagens/shap/shap_geral.png>]
+<imagens/shap/force_plot_multiples_vars.png, id=606, 766.36313pt x 201.75375pt>
+File: imagens/shap/force_plot_multiples_vars.png Graphic file (type png)
+<use imagens/shap/force_plot_multiples_vars.png>
+Package pdftex.def Info: imagens/shap/force_plot_multiples_vars.png  used on input line 343.
+(pdftex.def)             Requested size: 364.19667pt x 95.88019pt.
 
-d:/materias/tcc/relatorio/monografia.tex:168: Package biblatex Error: '\bibliographystyle' invalid for 'biblatex'.
+Underfull \hbox (badness 10000) in paragraph at lines 343--343
+ []\OT1/cmr/m/n/10 Figura 20: |Gr^^Safico de for^^Xca para m^^Sultiplas ob-serva^^Xc~oes| 
+ []
 
-See the biblatex package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.168 \end{document}
-                    
-Use the package option 'style' instead.
-I'm ignoring this command.
 
-(./monografia.aux (./estrutura/capa.aux) (./estrutura/rosto.aux))
+Underfull \hbox (badness 7030) in paragraph at lines 356--362
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--362
+ []\OT1/cmr/m/n/10 Tabela 9: |N^^Sumero de par^ametros nos mo-de-los| 
+ []
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 375--383
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 383--383
+ []\OT1/cmr/m/n/10 Tabela 10: |Com-para^^Xc~ao dos re-sul-ta-dos de Fal-sos Po-si-ti-vos e Fal-sos Ne-ga-ti-vos| 
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 390--403
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1783) in paragraph at lines 403--403
+ []\OT1/cmr/m/n/10 Tabela 11: |Com-para^^Xc~ao dos re-sul-ta-dos da Re-gress~ao log^^S^^Pstica e Rede neu-ral| 
+ []
+
+[38 <./imagens/shap/force_plot.png> <./imagens/shap/force_plot_multiples_vars.png>]
+Underfull \hbox (badness 4205) in paragraph at lines 411--425
+ [][] 
+ []
+
+[39]) [40] (./monografia.bbl) [41] (./monografia.aux (./estrutura/capa.aux) (./estrutura/rosto.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2020/03/25>
+L3 programming layer <2023-08-29>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `monografia.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `monografia.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  FB387FE1DFD44757A3D10269A56AB70F;1294.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                monografia
-(biblatex)                and rerun LaTeX afterwards.
-
-Package logreq Info: Writing requests to 'monografia.run.xml'.
-\openout1 = `monografia.run.xml'.
-
+Package rerunfilecheck Info: File `monografia.out' has not changed.
+(rerunfilecheck)             Checksum: A5DE09613C1D7159FFD33D3AD060D119;6261.
  ) 
 Here is how much of TeX's memory you used:
- 35780 strings out of 474934
- 684235 string characters out of 5763815
- 1934801 words of memory out of 5000000
- 56672 multiletter control sequences out of 15000+600000
- 568037 words of font info for 71 fonts, out of 8000000 for 9000
+ 28782 strings out of 474934
+ 545279 string characters out of 5763815
+ 1938801 words of memory out of 5000000
+ 49620 multiletter control sequences out of 15000+600000
+ 579631 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,112p,709b,4100s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on monografia.pdf (17 pages, 2647388 bytes).
+ 84i,16n,89p,1098b,1064s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on monografia.pdf (41 pages, 3197859 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 148 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 757 PDF objects out of 1000 (max. 8388607)
+ 587 compressed objects within 6 object streams
+ 143 named destinations out of 1000 (max. 500000)
+ 508 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -11,10 +11,10 @@ O cálculo da regressão logística é baseado na probabilidade da variável ale
 uma variável aleatória com distribuição Bernouli, com parâmetro p de sucesso, cuja fórmula é dada por:
 
 \begin{equation}
-  P(Y=1| X_1, X_2, ..., X_k) = \frac{1}{1 + e^{-(\beta_0 + X_{1}\beta_1 + X_{2}\beta_2 + \ldots +X_{k}\beta_k)}}
+  P(Y=1| x_1, x_2, ..., x_k) = \frac{1}{1 + e^{-(\beta_0 + x_{1}\beta_1 + x_{2}\beta_2 + \ldots + x_{k}\beta_k)}}
 \end{equation}
 
-\noindent onde cada variável explicativa $(X_1, X_2, ..., X_k)$ tem um parâmetro $\beta$ correspondente, influenciando o resultado de $Y$.
+\noindent onde cada variável explicativa $(x_1, x_2, ..., x_k)$ tem um parâmetro $\beta$ correspondente, influenciando o resultado de $Y$.
 
 A estimação dos coeficientes $(b_0, b_1, b_2, ..., b_k)$  na regressão logística é geralmente realizada por meio 
 do método da máxima verossimilhança. O objetivo é encontrar os valores dos coeficientes que maximizam a função de
@@ -40,7 +40,11 @@ A log-verossimilhança para a regressão logística é:
 A ideia é encontrar os valores de $(b_0, b_1, b_2, ..., b_k)$ que maximizam essa função. Isso geralmente é feito usando métodos computacionais, 
 como o algoritmo de otimização Newton-Raphson ou o Gradiente Descendente.
 
-Para se interpretar o modelo logístico é utilizado o método da Razão de Chances, que calcula a razão da
+\subsubsection{Interpretação}
+
+% definição de chance
+
+Para se interpretar o modelo logístico é utilizado a Razão de Chances, que calcula a razão da
 probabilidade de um evento ocorrer em um grupo em relação à probabilidade de não ocorrer. 
 
 Esse resultado pode ser obtido quando se calcula a exponencial dos coeficientes do modelo logístico.
@@ -59,132 +63,11 @@ razão do evento acontecer e dele não acontecer, cuja formulação é dada por:
   \text{logit}(P(Y=1)) = \log \left( \frac{P(Y=1)}{1 - P(Y=1)} \right)
 \end{equation}
 
-Onde esse resultado nada mais é do que $\beta_0 + X_{1}\beta_1 + X_{2}\beta_2 + \ldots +X_{k}\beta_k$. 
+\noindent onde esse resultado nada mais é do que $\beta_0 + X_{1}\beta_1 + X_{2}\beta_2 + \ldots +X_{k}\beta_k$. 
 
 Portanto, a utilidade de se analisar o log-odds é justamente uma ponte entre olhar coeficiente e a probabilidade final, 
 pois um coeficiente positivo indica que o aumento na variável está associado a um aumento nas log-odds 
 (e, portanto, na probabilidade), enquanto um coeficiente negativo está associado a uma diminuição nas log-odds (e na probabilidade).
-
-\subsection{Medidas de associação}
-
-\subsubsection{Coeficiente de pearson}
-
-O coeficiente de Pearson, também conhecido como correlação de Pearson, é uma medida estatística 
-que avalia a relação linear entre duas variáveis contínuas.
-
-\begin{equation}
-    \rho = \frac{cov(X, Y)}{\sqrt{var(X)var(Y)}}
-\end{equation}
-
-Este coeficiente varia de -1 a 1, onde -1 indica uma relação linear negativa perfeita, 
-1 indica uma relação linear positiva perfeita, e 0 indica ausência de relação linear.
-
-\subsubsection{Coeficiente de contingência}
-
-O coeficiente de contingência é uma medida estatística utilizada para avaliar a associação
-entre duas variáveis categóricas em uma tabela de contingência. Ele é especialmente útil 
-quando se trabalha com dados categóricos, fornecendo uma indicação da força e direção da associação entre as variáveis.
-
-\begin{equation}
-  C = \sqrt{\frac{\chi^2}{N + \chi^2}}
-\end{equation}
-
-O coeficiente de contingência varia de 0 a 1, onde 0 indica nenhuma associação e 1 indica uma associação perfeita. 
-Valores mais próximos de 1 indicam uma forte relação entre as variáveis, enquanto valores mais próximos de 0 sugerem independência.
-
-\subsection{Métricas de avaliação}
-
-A avaliação do desempenho dos modelos é fundamental para obter insights sobre sua eficácia nas predições ou classificações. 
-A utilização de estratégias que resumem o desempenho por meio de métricas específicas é crucial nesse processo.
-A análise dessas métricas proporciona uma compreensão mais aprofundada do modelo, permitindo identificar pontos 
-fortes e áreas de melhoria. Essa avaliação não apenas valida a qualidade das previsões, mas também orienta os próximos
-passos na pesquisa, direcionando ajustes necessários no modelo ou indicando caminhos para refinamento. 
-Dessa forma, a escolha e interpretação adequadas das métricas são passos essenciais para uma avaliação informada 
-e um progresso significativo na pesquisa.
-
-\subsubsection{Matriz de confusão}
-
-Uma matriz de confusão é uma tabela usada para avaliar o desempenho de um modelo de classificação.
-Seu papel é de expor os resultados das predições do modelo quando comparadas com os valores reais.
-
-A matriz de confusão organiza as previsões do modelo em quatro categorias, comumente chamadas de Verdadeiro Positivo (VP), 
-Falso Positivo (FP), Verdadeiro Negativo (VN) e Falso Negativo (FN). Essas categorias são definidas da seguinte maneira:
-
-\begin{itemize}
-  \item Verdadeiro Positivo (VP): Exemplos que foram corretamente classificadas como pertencentes à classe positiva.
-  \item Falso Positivo (FP): Exemplos que foram erroneamente classificadas como pertencentes à classe positiva, quando na verdade pertencem à classe negativa.
-  \item Verdadeiro Negativo (VN): Exemplos que foram corretamente classificadas como pertencentes à classe negativa. 
-  \item Falso Negativo (FN): Exemplos que foram erroneamente classificadas como pertencentes à classe negativa, quando na verdade pertencem à classe positiva.
-\end{itemize}
-
-\begin{table}[h]
-  \centering
-  \begin{tabular}{c|c|c|c|}
-  & & \multicolumn{2}{c|}{\textbf{Previsão}} \\ \cline{3-4}
-  & & \textbf{Positivo} & \textbf{Negativo} \\ \hline
-  \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Real}}} & \textbf{Positivo} & Verdadeiro Positivo (VP) & Falso Negativo (FN) \\ \cline{2-4}
-  \multicolumn{1}{|c|}{} & \textbf{Negativo} & Falso Positivo (FP) & Verdadeiro Negativo (VN) \\ \hline
-  \end{tabular}
-  \caption{Matriz de Confusão}
-  \label{table:confusion_matrix}
-\end{table}
-
-\subsubsection{Acurácia}
-A acurácia é a proporção de predições corretas feitas por um modelo em relação ao número total de predições. 
-A fórmula básica para calcular a acurácia é dada por:
-
-\begin{equation}
-  \text{Acurácia} = \frac{\text{Número de predições corretas}}{\text{Número total de predições}} = \frac{VP+VN}{VP+VN+FP+FN}
-\end{equation}
-
-Essa métrica fornece uma visão geral do desempenho do modelo, indicando a porcentagem de instâncias corretamente classificadas.
-No entanto, a acurácia pode ser enganosa em casos onde as classes não estão balanceadas. 
-Em situações desse tipo, um modelo que prevê sempre a classe majoritária pode ter uma acurácia alta, mesmo que não seja eficaz.
-
-\subsubsection{Precisão}
-
-A precisão é definida como a proporção de exemplos classificados corretamente como positivos em 
-relação ao total de exemplos classificadas como positivas (verdadeiras positivas mais falsos positivos).
-
-\begin{equation}
-  \text{Precisão} = \frac{VP}{VP + FP}
-\end{equation}
-
-A precisão é particularmente útil quando os falsos positivos são mais problemáticos ou custosos
-em comparação com os falsos negativos. Por exemplo, em um sistema de detecção de spam, classificar 
-erroneamente um e-mail legítimo como spam (falso positivo) pode ser mais prejudicial do que deixar
-passar um e-mail de spam (falso negativo).
-
-\subsubsection{Recall}
-
-O recall, também conhecido como sensibilidade, é outra métrica utilizada no contexto de classificação, 
-focada em capturar a proporção de exemplos positivos que foram corretamente identificadas pelo modelo
-em relação ao total de exemplos positivos existentes.
-
-\begin{equation}
-  \text{Recall} = \frac{VP}{VP + FN}
-\end{equation}
-
-O recall é especialmente útil quando os falsos negativos (exemplos positivos não identificadas pelo modelo) 
-são mais críticos ou custosos do que os falsos positivos. Por exemplo, em um sistema de detecção de fraudes,
-é crucial identificar todas as transações fraudulentas, mesmo que isso signifique aceitar algumas transações 
-normais erroneamente classificadas como fraudulentas.
-
-
-\subsubsection{F1-score}
-
-O F1-score é uma métrica de avaliação que combina as métricas de precisão e recall em um único valor. 
-
-\begin{equation}
-  F1 = 2 \cdot \frac{\text{Precisão} \cdot \text{Recall}}{\text{Precisão} + \text{Recall}}
-\end{equation}
-
-O F1-score é a média harmônica entre a precisão e o recall. A média harmônica é utilizada porque penaliza extremos, 
-sendo particularmente sensível a baixos valores em qualquer uma das métricas.
-
-O F1-score varia de 0 a 1, onde 1 indica o melhor desempenho possível, equilibrando tanto a precisão quanto o recall.
-Essa métrica é particularmente útil quando há um desequilíbrio significativo entre as classes, 
-pois é menos sensível a grandes quantidades de verdadeiros negativos.
 
 
 \subsection{Redes neurais artificiais}
@@ -450,7 +333,7 @@ Para calcular o ganho ao adicionar uma variável $i$ ou a importância do jogado
 No exemplo acima, caso queiramos calcular o efeito da coligação \{3\}, poderíamos fazer:
 
 \[
-Contribuição \hspace{1mm} de \hspace{1mm} \{3\} = \nu(\{1,2,3\}) - \nu(\{1,2\})  
+\text{Contribuição} \hspace{1mm} de \hspace{1mm} \{3\} = \nu(\{1,2,3\}) - \nu(\{1,2\})  
 \]
 
 Mas suponha que as variáveis (ou jogadores) \{2\} e \{3\} sejam extremamente semelhantes. Quando é calculado o ganho após inserir \{2\} na coligação \{1,2\}, é possível notar um aumento substancial, mas quando é adicionado \{3\} na coligação \{1,2,3\}, o ganho obtido é muito pouco. Como as variáveis exercem um papel parecido, o ganho maior ficou sujeito à variável que foi adicionada primeiro na coligação, não necessariamente porque uma é mais importante que a outra. 
@@ -496,7 +379,7 @@ O número total de permutações de \textbf{F} é $|\textbf{F}|!$. Logo, podemos
 $\textbf{S}\cup\{i\}$ e \textbf{S} sejam as mesmas. Com isso, para reduzir o processo do cálculo de contribuição de cada permutação, pode-se identificar quantas vezes a permutação gerada vai resultar em uma contribuição que seja igual a outra.
 
 
-Para fazer isso, é necessário descobrir quantas permutações podem ser formadas de cada coligação. Podemos definir $\textbf{F} - \{i\}$ como o conjunto de todas as variáveis excluindo a variável \{i\}, e \textbf{S} como uma das coligações de $\textbf{F} - \{i\}$ (\textbf{S} \subseteq  $\textbf{F} - \{i\}$ ).
+Para fazer isso, é necessário descobrir quantas permutações podem ser formadas de cada coligação. Podemos definir $\textbf{F} - \{i\}$ como o conjunto de todas as variáveis excluindo a variável \{i\}, e \textbf{S} como uma das coligações de $\textbf{F} - \{i\} (\textbf{S} \subseteq  \textbf{F} - \{i\}$ ).
 
 Logo, para cada coligação \textbf{S} temos $|\textbf{S}|!$ possíveis permutações, que corresponde às possibilidades  de variáveis e suas respectivas ordens antes de adicionar a variável \{i\}.
 
@@ -556,3 +439,125 @@ f(\textbf{x}_{\bar{S}}^{(i)}, \textbf{x}_S)
     
 \end{figure}
 A Figura \ref{fig:calculo_esforço} representa, para cada observação do conjunto de dados, a Equação \ref{eq:SHAP_detalhado}. Neste caso, as variáveis $X_1, X_3$ e $ X_4$ representam o conjunto $\textbf{S}$, e escolhendo um valor $x_1, x_3$ e $ x_4$ dessas variáveis, respectivamente, calcula-se $f$ para cada observação do conjunto de dados, travando $x_1, x_3$ e $ x_4$ na função e utilizando o valor das variáveis complementares, que neste caso são os valores de $X_2$ e $X_5$, em suas respectivas observações. Feito isso, é calculada média desses valores que corresponde justamente com o resultado da função $f_{\textbf{S}}(x_{\textbf{S}})$.
+
+
+\subsection{Medidas de associação}
+
+\subsubsection{Coeficiente de Pearson}
+
+O coeficiente de Pearson, também conhecido como correlação de Pearson, é uma medida estatística 
+que avalia a relação linear entre duas variáveis contínuas.
+
+\begin{equation}
+    \rho = \frac{cov(X, Y)}{\sqrt{var(X)var(Y)}}
+\end{equation}
+
+Este coeficiente varia de -1 a 1, onde -1 indica uma relação linear negativa perfeita, 
+1 indica uma relação linear positiva perfeita, e 0 indica ausência de relação linear.
+
+\subsubsection{Coeficiente de contingência}
+
+O coeficiente de contingência é uma medida estatística utilizada para avaliar a associação
+entre duas variáveis categóricas em uma tabela de contingência. Ele é especialmente útil 
+quando se trabalha com dados categóricos, fornecendo uma indicação da força e direção da associação entre as variáveis.
+
+\begin{equation}
+  C = \sqrt{\frac{\chi^2}{N + \chi^2}}
+\end{equation}
+
+O coeficiente de contingência varia de 0 a 1, onde 0 indica nenhuma associação e 1 indica uma associação perfeita. 
+Valores mais próximos de 1 indicam uma forte relação entre as variáveis, enquanto valores mais próximos de 0 sugerem independência.
+
+\subsection{Métricas de avaliação}
+
+A avaliação do desempenho dos modelos é fundamental para obter insights sobre sua eficácia nas predições ou classificações. 
+A utilização de estratégias que resumem o desempenho por meio de métricas específicas é crucial nesse processo.
+A análise dessas métricas proporciona uma compreensão mais aprofundada do modelo, permitindo identificar pontos 
+fortes e áreas de melhoria. Essa avaliação não apenas valida a qualidade das previsões, mas também orienta os próximos
+passos na pesquisa, direcionando ajustes necessários no modelo ou indicando caminhos para refinamento. 
+Dessa forma, a escolha e interpretação adequadas das métricas são passos essenciais para uma avaliação informada 
+e um progresso significativo na pesquisa.
+
+\subsubsection{Matriz de confusão}
+
+Uma matriz de confusão é uma tabela usada para avaliar o desempenho de um modelo de classificação.
+Seu papel é de expor os resultados das predições do modelo quando comparadas com os valores reais.
+
+A matriz de confusão organiza as previsões do modelo em quatro categorias, comumente chamadas de Verdadeiro Positivo (VP), 
+Falso Positivo (FP), Verdadeiro Negativo (VN) e Falso Negativo (FN). Essas categorias são definidas da seguinte maneira:
+
+\begin{itemize}
+  \item Verdadeiro Positivo (VP): Exemplos que foram corretamente classificadas como pertencentes à classe positiva.
+  \item Falso Positivo (FP): Exemplos que foram erroneamente classificadas como pertencentes à classe positiva, quando na verdade pertencem à classe negativa.
+  \item Verdadeiro Negativo (VN): Exemplos que foram corretamente classificadas como pertencentes à classe negativa. 
+  \item Falso Negativo (FN): Exemplos que foram erroneamente classificadas como pertencentes à classe negativa, quando na verdade pertencem à classe positiva.
+\end{itemize}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{c|c|c|c|}
+  & & \multicolumn{2}{c|}{\textbf{Previsão}} \\ \cline{3-4}
+  & & \textbf{Positivo} & \textbf{Negativo} \\ \hline
+  \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Real}}} & \textbf{Positivo} & Verdadeiro Positivo (VP) & Falso Negativo (FN) \\ \cline{2-4}
+  \multicolumn{1}{|c|}{} & \textbf{Negativo} & Falso Positivo (FP) & Verdadeiro Negativo (VN) \\ \hline
+  \end{tabular}
+  \caption{Matriz de Confusão}
+  \label{table:confusion_matrix}
+\end{table}
+
+\subsubsection{Acurácia}
+A acurácia é a proporção de predições corretas feitas por um modelo em relação ao número total de predições. 
+A fórmula básica para calcular a acurácia é dada por:
+
+\begin{equation}
+  \text{Acurácia} = \frac{\text{Número de predições corretas}}{\text{Número total de predições}} = \frac{VP+VN}{VP+VN+FP+FN}
+\end{equation}
+
+Essa métrica fornece uma visão geral do desempenho do modelo, indicando a porcentagem de instâncias corretamente classificadas.
+No entanto, a acurácia pode ser enganosa em casos onde as classes não estão balanceadas. 
+Em situações desse tipo, um modelo que prevê sempre a classe majoritária pode ter uma acurácia alta, mesmo que não seja eficaz.
+
+\subsubsection{Precisão}
+
+A precisão é definida como a proporção de exemplos classificados corretamente como positivos em 
+relação ao total de exemplos classificadas como positivas (verdadeiras positivas mais falsos positivos).
+
+\begin{equation}
+  \text{Precisão} = \frac{VP}{VP + FP}
+\end{equation}
+
+A precisão é particularmente útil quando os falsos positivos são mais problemáticos ou custosos
+em comparação com os falsos negativos. Por exemplo, em um sistema de detecção de spam, classificar 
+erroneamente um e-mail legítimo como spam (falso positivo) pode ser mais prejudicial do que deixar
+passar um e-mail de spam (falso negativo).
+
+\subsubsection{Recall}
+
+O recall, também conhecido como sensibilidade, é outra métrica utilizada no contexto de classificação, 
+focada em capturar a proporção de exemplos positivos que foram corretamente identificadas pelo modelo
+em relação ao total de exemplos positivos existentes.
+
+\begin{equation}
+  \text{Recall} = \frac{VP}{VP + FN}
+\end{equation}
+
+O recall é especialmente útil quando os falsos negativos (exemplos positivos não identificadas pelo modelo) 
+são mais críticos ou custosos do que os falsos positivos. Por exemplo, em um sistema de detecção de fraudes,
+é crucial identificar todas as transações fraudulentas, mesmo que isso signifique aceitar algumas transações 
+normais erroneamente classificadas como fraudulentas.
+
+
+\subsubsection{F1-score}
+
+O F1-score é uma métrica de avaliação que combina as métricas de precisão e recall em um único valor. 
+
+\begin{equation}
+  F1 = 2 \cdot \frac{\text{Precisão} \cdot \text{Recall}}{\text{Precisão} + \text{Recall}}
+\end{equation}
+
+O F1-score é a média harmônica entre a precisão e o recall. A média harmônica é utilizada porque penaliza extremos, 
+sendo particularmente sensível a baixos valores em qualquer uma das métricas.
+
+O F1-score varia de 0 a 1, onde 1 indica o melhor desempenho possível, equilibrando tanto a precisão quanto o recall.
+Essa métrica é particularmente útil quando há um desequilíbrio significativo entre as classes, 
+pois é menos sensível a grandes quantidades de verdadeiros negativos.

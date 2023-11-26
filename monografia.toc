@@ -6,10 +6,10 @@
 \contentsline {subsection}{\numberline {1.2}Regressão logística}{10}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Rede neural}{12}{subsection.1.3}%
 \contentsline {subsection}{\numberline {1.4}Interpretação da rede neural}{14}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Benchmark entre regressão logística e redes neurais }{17}{subsection.1.5}%
-\contentsline {subsubsection}{\numberline {1.5.1}Complexidade da arquitetura}{17}{subsubsection.1.5.1}%
-\contentsline {subsubsection}{\numberline {1.5.2}Resultado dos modelos}{17}{subsubsection.1.5.2}%
-\contentsline {subsubsection}{\numberline {1.5.3}Tempo de execução}{19}{subsubsection.1.5.3}%
-\contentsline {section}{\numberline {2}\textbf {Conclusão}}{20}{section.2}%
-\contentsline {section}{\numberline {3}\textbf {Anexo}}{21}{section.3}%
+\contentsline {subsection}{\numberline {1.5}Benchmark entre regressão logística e redes neurais }{19}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Complexidade da arquitetura}{19}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Resultado dos modelos}{20}{subsubsection.1.5.2}%
+\contentsline {subsubsection}{\numberline {1.5.3}Tempo de execução}{21}{subsubsection.1.5.3}%
+\contentsline {section}{\numberline {2}\textbf {Conclusão}}{22}{section.2}%
+\contentsline {section}{\numberline {3}\textbf {Anexo}}{23}{section.3}%
 \contentsfinish 

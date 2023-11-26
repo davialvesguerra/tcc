@@ -365,42 +365,92 @@ contribuem para o resultado final do modelo. O gráfico enfatiza a relevância d
 o restante devido à sua baixa contribuição. Ao observar as variáveis omitidas, percebe-se que, somadas, 
 suas contribuições aproximam-se de 0.01, evidenciando a sua baixa influência no resultado final do modelo de rede neural.
 
-
-\begin{figure}[H]
-  \centering
-  \subImagem{imagens/shap/shap_plot_verdadeiro_positivo.png}{Valor de SHAP para uma observação do tipo Verdadeiro Positivo}
-  \vspace{.5cm}
-  \subImagem{imagens/shap/shap_plot_falso_positivo.png}{Valor de SHAP para uma observação do tipo Falso Positivo}
-  \vspace{.5cm}
-  \subImagem{imagens/shap/shap_plot_verdadeiro_negativo.png}{Valor de SHAP para uma observação do tipo Verdadeiro Negativo}
-  \subImagem{imagens/shap/shap_plot_falso_negativo.png}{Valor de SHAP para uma observação do tipo Falso Negativo}
-  
-  \label{fig:shap_cada_obs}
-  \caption{Representação do valor de SHAP para cada observação}
-\end{figure}
-
-A Figura \ref{fig:shap_cada_obs} proporciona a visualização dos valores SHAP para cada variável em observações individuais.
+Os próximos graficos proporcionam a visualização dos valores SHAP para cada variável em observações individuais.
 O gráfico também revela os valores específicos utilizados em cada variável. A apresentação de quatro figuras distintas tem
 como objetivo compreender como o valor SHAP é atribuído em quatro cenários distintos que surgem em problemas de classificação binária.
 
-Ao examinar os gráficos \ref{imagens/shap/shap_plot_verdadeiro_positivo.png} e \ref{imagens/shap/shap_plot_falso_positivo.png},
-é possível seguir os casos em que o modelo acertou suas previsões. No cenário em que o modelo acertou a classificação de 
+Os 2 primeiros gráficos mostram casos onde o modelo acertou suas predições, tanto para casos de "Empréstimos ruins" quanto para 
+"Empréstimos bons".
+
+\imagem{imagens/shap/shap_plot_verdadeiro_positivo.png}{Valor de SHAP para uma observação do tipo Verdadeiro Positivo}
+
+Na Figura \ref{fig:imagens/shap/shap_plot_verdadeiro_positivo.png}, cenário em que o modelo acertou a classificação de 
 um empréstimo como ruim, observa-se que as variáveis que mais contribuíram foram as mesmas observadas na Figura \ref{fig:imagens/shap/media_shap.png}, 
 comportamento esse que vai prevalecer nos demais casos.
 Ao analisar os valores dessas duas variáveis, nota-se que, para esse cliente específico, ainda resta um montante significativo do empréstimo a ser pago, 
-totalizando quase 90\% do valor líquido pendente e aproximadamente 80\% do valor bruto pendente.
+totalizando quase 90\% do valor líquido pendente e quase 50\% do valor bruto pendente. Uma diferença muito grande
+entre o valor do empréstimo e o que falta a ser pago pode ser um dos fatores que está ocasionando a rotulação de observações
+como "Empréstimos ruins". 
+
+\imagem{imagens/shap/shap_plot_verdadeiro_negativo.png}{Valor de SHAP para uma observação do tipo Verdadeiro Negativo}
+
+Ao analisar a Figura \ref{fig:imagens/shap/shap_plot_verdadeiro_negativo.png}, que representa o cenário em que o modelo
+acertou a rotulação de um empréstimo bom, nota-se um valor final bem próximo de  0. Indícios 
+de que o modelo teve mais confiança ao realizar essa predição. 
+Ao analisar os valores de cada variável, é possível perceber que o cliente já está finalizando ou finalizou o empréstimo,
+dado que as variáveis de pagamento do empréstimo chegaram no valor real do empréstimo.
 
 
-- mostrar o gráfico com todos as amostras de shap(shap.plots.beeswarm)
+Analisando as Figuras \ref{fig:imagens/shap/shap_plot_verdadeiro_positivo.png} e \ref{fig:imagens/shap/shap_plot_verdadeiro_negativo.png},
+é possível observar a 
+flexibilidade do modelo em lidar com diferentes valores da mesma variável. Quando o modelo encontra valores que indicam um 
+empréstimo ruim, atribui valores positivos para a contribuição das variáveis, aproximando-as de 1. Da mesma forma, para 
+empréstimos bons, o modelo adiciona uma contribuição negativa, direcionando o resultado para 0. Isso demonstra como o modelo 
+responde de forma dinâmica às variações nos valores das variáveis.
+
+
+\imagem{imagens/shap/shap_plot_falso_positivo.png}{Valor de SHAP para uma observação do tipo Falso Positivo}
+
+
+Ao analisar um exemplo em que o modelo erroneamente classifica um "Empréstimo ruim", conforme ilustrado na Figura
+ \ref{fig:imagens/shap/shap_plot_falso_positivo.png}, destacam-se as características já discutidas nas interpretações
+  anteriores. O resultado do modelo foi muito próximo do limiar de decisão, que é 0,5, indicando que o modelo teve 
+  alguma indecisão ao realizar a predição desse caso.
+
+
+\imagem{imagens/shap/shap_plot_falso_negativo.png}{Valor de SHAP para uma observação do tipo Falso Negativo}
+
+Observando a Figura \ref{fig:imagens/shap/shap_plot_falso_negativo.png}, que retrata um cenário em que o modelo
+ classifica de forma equivocada um "Empréstimo bom", é possível perceber um comportamento de divergência entre 
+ as variáveis que mais contribuem com o resultado do modelo. Esse padrão de divergência não foi observado nos
+  casos anteriores, e pode ter influenciado o modelo a realizar uma predição incorreta.
+
+
 \imagem{imagens/shap/shap_geral.png}{Valores de shap para as 80 observações utilizadas}
 
 
-- mostrar o gráfico de força pra apenas uma observaçã
+A Figura \ref{fig:imagens/shap/shap_geral.png} apresenta o comportamento do valor de SHAP para cada variável
+entre as 80 observações utilizadas no experimento. No gráfico, o eixo x refere-se à distribuição do valor de SHAP,
+enquanto o eixo y representa cada variável. O eixo das cores ilustra a distribuição dos valores da variável, 
+sendo que cores mais quentes indicam valores maiores e cores mais frias indicam valores menores.
+
+Ao analisar as variáveis que mais influenciam o resultado do modelo, observa-se uma distribuição mais dispersa no eixo x.
+ Ao focar nas duas variáveis de maior contribuição, nota-se um comportamento heterogêneo dos valores em comparação com 
+ os valores de SHAP. Para a primeira variável, elevados valores tendem a impactar negativamente no resultado do modelo, 
+ enquanto a segunda variável apresenta o comportamento oposto, com valores mais baixos contribuindo negativamente no
+  resultado do modelo.
+
+
 \imagem{imagens/shap/force_plot.png}{Gráfico de força em uma observação}
 
-- mostrar o gráfico de força para todas as observações
+
+A Figura \ref{fig:imagens/shap/force_plot.png} ilustra a "força" de contribuição de cada variável no modelo.
+ Este gráfico proporciona uma visão clara das variáveis que tiveram impacto positivo e negativo no resultado final.
+  Cada barra representa a intensidade da contribuição de uma variável específica, sendo que aquelas com maior 
+  influência concentram-se no centro, enquanto as de menor influência ficam nas extremidades. 
+  A figura é centrada no valor final predito pelo modelo, que, neste caso, é observado como 0.3, 
+  indicando um empréstimo classificado como bom.
+
 \imagem{imagens/shap/force_plot_multiples_vars.png}{Gráfico de força para múltiplas observações}
 
+
+A Figura \ref{fig:imagens/shap/force_plot_multiples_vars.png} é uma generalização da Figura \ref{fig:imagens/shap/force_plot.png},
+considerando as 80 observações. Este gráfico é um recorte obtido de uma visualização dinâmica gerada pelo pacote SHAP.
+ Devido à natureza dinâmica do gráfico original, ao transformá-lo em uma imagem estática, parte de sua capacidade de 
+ representação é limitada. No entanto, é possível observar alguns padrões nesse recorte. Por exemplo, cores mais 
+ quentes indicam contribuições positivas quando o modelo faz predições próximas de 1, com tons de vermelho 
+ representando adições das variáveis ao resultado. Da mesma forma, cores mais frias indicam contribuições 
+ negativas quando o modelo faz predições próximas de 0.
 
 
 \subsection{Benchmark entre regressão logística e redes neurais }
@@ -410,7 +460,7 @@ entre os modelos de regressão logística e redes neurais no âmbito interpretat
 essa capacidade de interpretação estava exclusivamente associada ao modelo logístico em comparação com o modelo de redes neurais.
 Essa análise comparativa se soma às comparações já realizadas entre os modelos, englobando aspectos como arquitetura,
 tempo de treinamento,
-tempo de predição e os resultados gerados por ambos os modelos.
+tempo de predição e os resultados gerados por ambos os modelos. Os resultados abaixo evidenciam essas comparações.
 
 \subsubsection{Complexidade da arquitetura}
 
@@ -437,7 +487,7 @@ sendo esses distribuídos nos neurônios e camadas da rede.
   \centering
   \begin{tabular}{lcc}
     \hline
-    \textbf{Métricas} & \textbf{Regressão logística} & \textbf{rede neural} \\
+    \textbf{Métricas} & \textbf{Regressão logística} & \textbf{Rede neural} \\
     \hline
     Falsos Positivos   & 721                     & 15703 \\
     Falsos Negativos   & 12652                   & 7039 \\
@@ -463,7 +513,7 @@ sendo esses distribuídos nos neurônios e camadas da rede.
     Acurácia            & \cellcolor{green!25}0.924649   & 0.872 \\
     \hline
   \end{tabular}
-  \caption{Comparação dos resultados da Regressão logística e Rede neural}
+  \caption{Comparação dos resultados da Regressão logística e Rede neural. Em verde, o modelo que obteve o melhor resultado na respectiva métrica.}
   \label{tab:comparison_results}
 \end{table}
 
@@ -512,7 +562,7 @@ sendo esses distribuídos nos neurônios e camadas da rede.
   Desvio padrão & 0.5327801 & 7.681726 \\
   \hline
 \end{tabular}
-\caption{Tempo de predição (em ms) de cada modelo, em uma amostra com 50 observações. Em verde, o modelo que obteve o melhor resultado na respectiva métrica.}
+\caption{Tempo de predição (em ms) de cada modelo, em uma amostra com 50 observações. }
 \label{tab:bench_models}
 \end{table}
 

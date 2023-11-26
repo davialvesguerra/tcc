@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.9)  24 NOV 2023 10:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.9)  26 NOV 2023 10:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -807,7 +807,7 @@ Package caption Info: End \AtBeginDocument code.
 \openout2 = `estrutura/capa.aux'.
 
  (./estrutura/capa.tex
-<imagens/unb.png, id=167, 99.37125pt x 52.195pt>
+<imagens/unb.png, id=59, 99.37125pt x 52.195pt>
 File: imagens/unb.png Graphic file (type png)
 <use imagens/unb.png>
 Package pdftex.def Info: imagens/unb.png  used on input line 5.
@@ -939,511 +939,91 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
 
 
-] (./monografia.toc [3
-
-
-])
+] (./monografia.toc)
 \tf@toc=\write5
 \openout5 = `monografia.toc'.
 
- [4] (./estrutura/introducao.tex
-Overfull \hbox (35.62173pt too wide) in paragraph at lines 13--17
-\OT1/cmr/m/n/12 SHAP (Sha-pley Ad-di-tive Ex-pla-na-ti-ons), que foi in-tro-du-zido em 2017 "ci-te-plund-berg2017unified".
- []
-
-) [5] (./estrutura/ref_teorico.tex [6{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 84--84
- []\OT1/cmr/m/n/10 Figura 1: |Neur^onio da Rede Neu-ral| 
- []
+ [3
 
 
-Underfull \hbox (badness 2229) in paragraph at lines 131--132
- [][] 
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.137 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.137 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.137 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.137 \begin{equation}
-                      
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
- []\OT1/cmr/m/n/10 Figura 2: |Ti-pos de Fun^^Xc~ao de Ativa^^Xc~ao.| 
- []
-
-<imagens/activation-functions3.jpg, id=278, 791.95876pt x 530.98375pt>
-File: imagens/activation-functions3.jpg Graphic file (type jpg)
-<use imagens/activation-functions3.jpg>
-Package pdftex.def Info: imagens/activation-functions3.jpg  used on input line 148.
-(pdftex.def)             Requested size: 316.7779pt x 212.38972pt.
-
-Underfull \hbox (badness 2556) in paragraph at lines 148--149
- [][] 
- []
-
-
-Underfull \hbox (badness 2229) in paragraph at lines 149--149
- []|\OT1/cmr/m/n/10 Fonte: https://machine-learning.paperspace.com/wiki/activation-function| 
- []
-
-[8]
-Overfull \hbox (9.05563pt too wide) in paragraph at lines 162--163
-[]\OT1/cmr/m/n/12 Uma rede neu-ral ^^Se es-tru-tu-rada em ca-ma-das for-ma-das por um con-junto de neur^onios.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--166
- []\OT1/cmr/m/n/10 Figura 3: |Rede Neu-ral com uma ca-mada oculta| 
- []
-
-
-Overfull \hbox (5.44145pt too wide) in paragraph at lines 187--187
- []\OT1/cmr/m/n/12 Camada 
- []
-
-
-Overfull \hbox (4.62341pt too wide) in paragraph at lines 187--187
- \OT1/cmr/m/n/12 Entrada 
- []
-
-
-Overfull \hbox (5.44145pt too wide) in paragraph at lines 187--187
- []\OT1/cmr/m/n/12 Camada 
- []
-
-
-Overfull \hbox (5.44145pt too wide) in paragraph at lines 187--187
- []\OT1/cmr/m/n/12 Camada 
- []
-
-[9 <./imagens/activation-functions3.jpg>]
-<imagens/arquitetura_redeneural.png, id=295, 421.575pt x 201.75375pt>
-File: imagens/arquitetura_redeneural.png Graphic file (type png)
-<use imagens/arquitetura_redeneural.png>
-Package pdftex.def Info: imagens/arquitetura_redeneural.png  used on input line 213.
-(pdftex.def)             Requested size: 337.26045pt x 161.40321pt.
-
-Underfull \hbox (badness 1577) in paragraph at lines 213--214
- [][] 
- []
-
-[10 <./imagens/arquitetura_redeneural.png>]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.244 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.244 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.244 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.244 \begin{equation}
-                       [11]
-<imagens/pesos_loss_func.png, id=315, 155.83218pt x 158.84344pt>
-File: imagens/pesos_loss_func.png Graphic file (type png)
-<use imagens/pesos_loss_func.png>
-Package pdftex.def Info: imagens/pesos_loss_func.png  used on input line 262.
-(pdftex.def)             Requested size: 155.8318pt x 158.84305pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 262--263
- [][] 
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.272 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.272 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.272 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.272 \begin{equation}
-                       [12 <./imagens/pesos_loss_func.png>]
-<imagens/gradient_descent.png, id=332, 319.94531pt x 299.61937pt>
-File: imagens/gradient_descent.png Graphic file (type png)
-<use imagens/gradient_descent.png>
-Package pdftex.def Info: imagens/gradient_descent.png  used on input line 297.
-(pdftex.def)             Requested size: 223.96017pt x 209.73212pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
- [][] 
- []
-
-
-Underfull \hbox (badness 2302) in paragraph at lines 298--298
- []|\OT1/cmr/m/n/10 Fonte: https://www.javatpoint.com/gradient-descent-in-machine-learning| 
- []
-
-[13 <./imagens/gradient_descent.png>]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 333.
- (c:/texlive/2023/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 333.
- [14] [15]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.362 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.362 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.362 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.362 \begin{equation}
-                      
-Underfull \hbox (badness 1210) in paragraph at lines 371--371
- []\OT1/cmr/m/n/10 Figura 7: |Ga-nho do jo-ga-dor 3 em rela^^Xc~ao ^^Ra to-das as per-muta^^Xc~oes de jo-ga-do-res.| 
- []
-
-<imagens/shap.png, id=356, 722.7pt x 414.54875pt>
-File: imagens/shap.png Graphic file (type png)
-<use imagens/shap.png>
-Package pdftex.def Info: imagens/shap.png  used on input line 372.
-(pdftex.def)             Requested size: 361.3491pt x 207.27386pt.
-
-Underfull \hbox (badness 6236) in paragraph at lines 373--373
- []|\OT1/cmr/m/n/10 Fonte: https://towardsdatascience.com/introduction-to-shap- 
- []
-
-
-Underfull \hbox (badness 5771) in paragraph at lines 373--373
- \OT1/cmr/m/n/10 values-and-their-application-in-machine-learning-8003718e6827| 
- []
-
-[16 <./imagens/shap.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 393--393
- []\OT1/cmr/m/n/10 Figura 8: |Rela^^Xc~ao en-tre per-muta^^Xc~oes e co-a-liz~oes.| 
- []
-
-<imagens/shap1.png, id=364, 722.7pt x 433.62pt>
-File: imagens/shap1.png Graphic file (type png)
-<use imagens/shap1.png>
-Package pdftex.def Info: imagens/shap1.png  used on input line 394.
-(pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
-
-Underfull \hbox (badness 6236) in paragraph at lines 395--395
- []|\OT1/cmr/m/n/10 Fonte: https://towardsdatascience.com/introduction-to-shap- 
- []
-
-
-Underfull \hbox (badness 5771) in paragraph at lines 395--395
- \OT1/cmr/m/n/10 values-and-their-application-in-machine-learning-8003718e6827| 
- []
-
-[17 <./imagens/shap1.png>]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.424 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.424 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.424 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.424 \begin{equation}
-                      
-Underfull \hbox (badness 10000) in paragraph at lines 434--434
- []\OT1/cmr/m/n/10 Figura 9: |C^^Salculo de $\OML/cmm/m/it/10 f[]$\OT1/cmr/m/n/10 , sendo S o con-junto de vari^^Saveis 
- []
-
-
-Underfull \hbox (badness 6825) in paragraph at lines 434--434
- \OML/cmm/m/it/10 X[]; X[]; X[]$\OT1/cmr/m/n/10 , den-tre as ob-serva^^Xc~oes de um con-junto de da-dos.| 
- []
-
-<imagens/shap_explicado.png, id=372, 722.7pt x 387.4475pt>
-File: imagens/shap_explicado.png Graphic file (type png)
-<use imagens/shap_explicado.png>
-Package pdftex.def Info: imagens/shap_explicado.png  used on input line 435.
-(pdftex.def)             Requested size: 361.3491pt x 193.72327pt.
-
-Underfull \hbox (badness 6236) in paragraph at lines 436--436
- []|\OT1/cmr/m/n/10 Fonte: https://towardsdatascience.com/introduction-to-shap- 
- []
-
-
-Underfull \hbox (badness 5771) in paragraph at lines 436--436
- \OT1/cmr/m/n/10 values-and-their-application-in-machine-learning-8003718e6827| 
- []
-
-[18 <./imagens/shap_explicado.png>]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.451 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.451 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.451 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.451 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.464 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.464 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.464 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.464 \begin{equation}
-                       [19]
-Underfull \hbox (badness 10000) in paragraph at lines 504--504
- []\OT1/cmr/m/n/10 Tabela 1: |Ma-triz de Con-fus~ao| 
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.512 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.512 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.512 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.512 \begin{equation}
-                       [20]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.525 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.525 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.525 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.525 \begin{equation}
-                      
-Overfull \hbox (2.20024pt too wide) in paragraph at lines 529--533
-[]\OT1/cmr/m/n/12 A pre-cis~ao ^^Se par-ti-cu-lar-mente ^^Sutil quando os fal-sos po-si-ti-vos s~ao mais pro-blem^^Saticos
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.540 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.540 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.540 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.540 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.554 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.554 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.554 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.554 \begin{equation}
-                      ) [21] [22] (./estrutura/metodologia.tex [23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 79--85
- [][] 
- []
-
-
-Underfull \hbox (badness 3291) in paragraph at lines 85--85
- []\OT1/cmr/m/n/10 Tabela 2: |N^^Sumero de co-lu-nas an-tes e de-pois da pre-para^^Xc~ao dos da-dos| 
- []
-
-
-Overfull \hbox (1.06128pt too wide) in paragraph at lines 100--102
-[]\OT1/cmr/m/n/12 Detalhar o porqu^e de se in-ter-pre-tar os mo-de-los e as ma-nei-ras que ^^Se feito isso(testes,
- []
-
-) [25] [26] (./estrutura/resultados.tex
+] (./estrutura/resultados.tex
 Underfull \hbox (badness 2600) in paragraph at lines 16--16
- []\OT1/cmr/m/n/10 Tabela 3: |N^^Sumero de ob-serva^^Xc~ao em cada ca-te-go-ria da vari^^Savel res-posta| 
+ []\OT1/cmr/m/n/10 Tabela 1: |N^^Sumero de ob-serva^^Xc~ao em cada ca-te-go-ria da vari^^Savel res-posta| 
  []
 
-<imagens/exploratoria/quantidade_emprestimo.jpg, id=438, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/quantidade_emprestimo.jpg, id=100, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/quantidade_emprestimo.jpg Graphic file (type jpg)
 <use imagens/exploratoria/quantidade_emprestimo.jpg>
 Package pdftex.def Info: imagens/exploratoria/quantidade_emprestimo.jpg  used on input line 29.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/duracao_emprestimo.jpg, id=439, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/duracao_emprestimo.jpg, id=101, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/duracao_emprestimo.jpg Graphic file (type jpg)
 <use imagens/exploratoria/duracao_emprestimo.jpg>
 Package pdftex.def Info: imagens/exploratoria/duracao_emprestimo.jpg  used on input line 31.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/parcela.jpg, id=440, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/parcela.jpg, id=102, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/parcela.jpg Graphic file (type jpg)
 <use imagens/exploratoria/parcela.jpg>
 Package pdftex.def Info: imagens/exploratoria/parcela.jpg  used on input line 33.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/renda_anual.jpg, id=441, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/renda_anual.jpg, id=103, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/renda_anual.jpg Graphic file (type jpg)
 <use imagens/exploratoria/renda_anual.jpg>
 Package pdftex.def Info: imagens/exploratoria/renda_anual.jpg  used on input line 34.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
 
-Underfull \hbox (badness 2941) in paragraph at lines 37--37
- []\OT1/cmr/m/n/10 Figura 10: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
+Underfull \hbox (badness 3250) in paragraph at lines 37--37
+ []\OT1/cmr/m/n/10 Figura 1: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
  []
 
-[27]
-<imagens/exploratoria/taxa_juros.jpg, id=451, 1872.9975pt x 1255.69125pt>
+[4]
+<imagens/exploratoria/taxa_juros.jpg, id=114, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/taxa_juros.jpg Graphic file (type jpg)
 <use imagens/exploratoria/taxa_juros.jpg>
 Package pdftex.def Info: imagens/exploratoria/taxa_juros.jpg  used on input line 54.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/dti.jpg, id=452, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/dti.jpg, id=115, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/dti.jpg Graphic file (type jpg)
 <use imagens/exploratoria/dti.jpg>
 Package pdftex.def Info: imagens/exploratoria/dti.jpg  used on input line 56.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/pagamento_bruto.jpg, id=453, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/pagamento_bruto.jpg, id=116, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/pagamento_bruto.jpg Graphic file (type jpg)
 <use imagens/exploratoria/pagamento_bruto.jpg>
 Package pdftex.def Info: imagens/exploratoria/pagamento_bruto.jpg  used on input line 58.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
-<imagens/exploratoria/pagamento_liquido.jpg, id=454, 1872.9975pt x 1255.69125pt>
+<imagens/exploratoria/pagamento_liquido.jpg, id=117, 1872.9975pt x 1255.69125pt>
 File: imagens/exploratoria/pagamento_liquido.jpg Graphic file (type jpg)
 <use imagens/exploratoria/pagamento_liquido.jpg>
 Package pdftex.def Info: imagens/exploratoria/pagamento_liquido.jpg  used on input line 59.
 (pdftex.def)             Requested size: 204.85846pt x 137.3409pt.
 
-Underfull \hbox (badness 2941) in paragraph at lines 60--60
- []\OT1/cmr/m/n/10 Figura 11: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
+Underfull \hbox (badness 3250) in paragraph at lines 60--60
+ []\OT1/cmr/m/n/10 Figura 2: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
  []
 
-[28 <./imagens/exploratoria/quantidade_emprestimo.jpg> <./imagens/exploratoria/duracao_emprestimo.jpg> <./imagens/exploratoria/parcela.jpg> <./imagens/exploratoria/renda_anual.jpg>]
-<imagens/exploratoria/finalidade.pdf, id=466, 448.67625pt x 301.125pt>
+[5 <./imagens/exploratoria/quantidade_emprestimo.jpg> <./imagens/exploratoria/duracao_emprestimo.jpg> <./imagens/exploratoria/parcela.jpg> <./imagens/exploratoria/renda_anual.jpg>]
+<imagens/exploratoria/finalidade.pdf, id=128, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/finalidade.pdf Graphic file (type pdf)
 <use imagens/exploratoria/finalidade.pdf>
 Package pdftex.def Info: imagens/exploratoria/finalidade.pdf  used on input line 77.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/categoria_renda.pdf, id=467, 448.67625pt x 301.125pt>
+<imagens/exploratoria/categoria_renda.pdf, id=129, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/categoria_renda.pdf Graphic file (type pdf)
 <use imagens/exploratoria/categoria_renda.pdf>
 Package pdftex.def Info: imagens/exploratoria/categoria_renda.pdf  used on input line 79.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/grau.pdf, id=468, 448.67625pt x 301.125pt>
+<imagens/exploratoria/grau.pdf, id=130, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/grau.pdf Graphic file (type pdf)
 <use imagens/exploratoria/grau.pdf>
 Package pdftex.def Info: imagens/exploratoria/grau.pdf  used on input line 81.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/tipo_aplicacao.pdf, id=469, 448.67625pt x 301.125pt>
+<imagens/exploratoria/tipo_aplicacao.pdf, id=131, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/tipo_aplicacao.pdf Graphic file (type pdf)
 <use imagens/exploratoria/tipo_aplicacao.pdf>
 Package pdftex.def Info: imagens/exploratoria/tipo_aplicacao.pdf  used on input line 82.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/legenda.pdf, id=470, 312.16624pt x 38.1425pt>
+<imagens/exploratoria/legenda.pdf, id=132, 312.16624pt x 38.1425pt>
 File: imagens/exploratoria/legenda.pdf Graphic file (type pdf)
 <use imagens/exploratoria/legenda.pdf>
 Package pdftex.def Info: imagens/exploratoria/legenda.pdf  used on input line 84.
@@ -1454,27 +1034,27 @@ Underfull \hbox (badness 7796) in paragraph at lines 77--86
  []
 
 
-Underfull \hbox (badness 2941) in paragraph at lines 86--86
- []\OT1/cmr/m/n/10 Figura 12: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
+Underfull \hbox (badness 3250) in paragraph at lines 86--86
+ []\OT1/cmr/m/n/10 Figura 3: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
  []
 
-[29 <./imagens/exploratoria/taxa_juros.jpg> <./imagens/exploratoria/dti.jpg> <./imagens/exploratoria/pagamento_bruto.jpg> <./imagens/exploratoria/pagamento_liquido.jpg>]
-<imagens/exploratoria/pagamentos_juros.pdf, id=480, 448.67625pt x 301.125pt>
+[6 <./imagens/exploratoria/taxa_juros.jpg> <./imagens/exploratoria/dti.jpg> <./imagens/exploratoria/pagamento_bruto.jpg> <./imagens/exploratoria/pagamento_liquido.jpg>]
+<imagens/exploratoria/pagamentos_juros.pdf, id=142, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/pagamentos_juros.pdf Graphic file (type pdf)
 <use imagens/exploratoria/pagamentos_juros.pdf>
 Package pdftex.def Info: imagens/exploratoria/pagamentos_juros.pdf  used on input line 105.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/regiao.pdf, id=481, 448.67625pt x 301.125pt>
+<imagens/exploratoria/regiao.pdf, id=143, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/regiao.pdf Graphic file (type pdf)
 <use imagens/exploratoria/regiao.pdf>
 Package pdftex.def Info: imagens/exploratoria/regiao.pdf  used on input line 107.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/propriedade_casa.pdf, id=482, 448.67625pt x 301.125pt>
+<imagens/exploratoria/propriedade_casa.pdf, id=144, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/propriedade_casa.pdf Graphic file (type pdf)
 <use imagens/exploratoria/propriedade_casa.pdf>
 Package pdftex.def Info: imagens/exploratoria/propriedade_casa.pdf  used on input line 109.
 (pdftex.def)             Requested size: 204.85846pt x 137.48534pt.
-<imagens/exploratoria/prazo.pdf, id=483, 448.67625pt x 301.125pt>
+<imagens/exploratoria/prazo.pdf, id=145, 448.67625pt x 301.125pt>
 File: imagens/exploratoria/prazo.pdf Graphic file (type pdf)
 <use imagens/exploratoria/prazo.pdf>
 Package pdftex.def Info: imagens/exploratoria/prazo.pdf  used on input line 110.
@@ -1489,16 +1069,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--113
  []
 
 
-Underfull \hbox (badness 2941) in paragraph at lines 113--113
- []\OT1/cmr/m/n/10 Figura 13: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
+Underfull \hbox (badness 3250) in paragraph at lines 113--113
+ []\OT1/cmr/m/n/10 Figura 4: |Vari^^Saveis ex-pli-ca-ti-vas em rela^^Xc~ao ^^Ra condi^^Xc~ao do empr^^Sestimo| 
  []
 
-[30 <./imagens/exploratoria/finalidade.pdf> <./imagens/exploratoria/categoria_renda.pdf> <./imagens/exploratoria/grau.pdf> <./imagens/exploratoria/tipo_aplicacao.pdf> <./imagens/exploratoria/legenda.pdf>]
+[7 <./imagens/exploratoria/finalidade.pdf> <./imagens/exploratoria/categoria_renda.pdf> <./imagens/exploratoria/grau.pdf> <./imagens/exploratoria/tipo_aplicacao.pdf> <./imagens/exploratoria/legenda.pdf>]
 Underfull \hbox (badness 4048) in paragraph at lines 128--143
  [][] 
  []
 
-[31 <./imagens/exploratoria/pagamentos_juros.pdf> <./imagens/exploratoria/regiao.pdf> <./imagens/exploratoria/propriedade_casa.pdf> <./imagens/exploratoria/prazo.pdf>]
+[8 <./imagens/exploratoria/pagamentos_juros.pdf> <./imagens/exploratoria/regiao.pdf> <./imagens/exploratoria/propriedade_casa.pdf> <./imagens/exploratoria/prazo.pdf>]
 Underfull \hbox (badness 5260) in paragraph at lines 155--169
  [][] 
  []
@@ -1508,175 +1088,195 @@ Underfull \hbox (badness 3568) in paragraph at lines 188--211
  [][] 
  []
 
-[32]
-<imagens/resultados/report_model_logistico.png, id=555, 462.528pt x 346.896pt>
+[9]
+<imagens/resultados/report_model_logistico.png, id=218, 462.528pt x 346.896pt>
 File: imagens/resultados/report_model_logistico.png Graphic file (type png)
 <use imagens/resultados/report_model_logistico.png>
 Package pdftex.def Info: imagens/resultados/report_model_logistico.png  used on input line 227.
 (pdftex.def)             Requested size: 364.19667pt x 273.16086pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 227--227
- []\OT1/cmr/m/n/10 Figura 14: |Ma-trix de con-fus~ao do mo-delo log^^S^^Pstico| 
+ []\OT1/cmr/m/n/10 Figura 5: |Ma-trix de con-fus~ao do mo-delo log^^S^^Pstico| 
  []
 
-[33]
+[10{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 Underfull \hbox (badness 10000) in paragraph at lines 250--250
- []\OT1/cmr/m/n/10 Tabela 7: |Re-port do mo-delo log^^S^^Pstico| 
+ []\OT1/cmr/m/n/10 Tabela 5: |Re-port do mo-delo log^^S^^Pstico| 
  []
 
-[34 <./imagens/resultados/report_model_logistico.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
- []\OT1/cmr/m/n/10 Tabela 8: |Re-port da rede neu-ral| 
- []
-
-<imagens/resultados/report_model_neural_ganhador.png, id=572, 462.528pt x 346.896pt>
+[11 <./imagens/resultados/report_model_logistico.png>]
+<imagens/resultados/report_model_neural_ganhador.png, id=237, 462.528pt x 346.896pt>
 File: imagens/resultados/report_model_neural_ganhador.png Graphic file (type png)
 <use imagens/resultados/report_model_neural_ganhador.png>
-Package pdftex.def Info: imagens/resultados/report_model_neural_ganhador.png  used on input line 311.
+Package pdftex.def Info: imagens/resultados/report_model_neural_ganhador.png  used on input line 298.
 (pdftex.def)             Requested size: 364.19667pt x 273.16086pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--311
- []\OT1/cmr/m/n/10 Figura 15: |Ma-trix de con-fus~ao da rede neu-ral| 
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
+ []\OT1/cmr/m/n/10 Figura 6: |Ma-trix de con-fus~ao da rede neu-ral| 
  []
 
-[35]
-<imagens/shap/media_shap.png, id=578, 626.5809pt x 410.4936pt>
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 324--324
+ []\OT1/cmr/m/n/10 Tabela 6: |Re-port da rede neu-ral| 
+ []
+
+[13 <./imagens/resultados/report_model_neural_ganhador.png>]
+<imagens/shap/media_shap.png, id=254, 626.5809pt x 410.4936pt>
 File: imagens/shap/media_shap.png Graphic file (type png)
 <use imagens/shap/media_shap.png>
-Package pdftex.def Info: imagens/shap/media_shap.png  used on input line 316.
+Package pdftex.def Info: imagens/shap/media_shap.png  used on input line 353.
 (pdftex.def)             Requested size: 364.19667pt x 238.60007pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
- []\OT1/cmr/m/n/10 Figura 16: |M^^Sedia ab-so-luta dos va-lo-res de shap| 
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+ []\OT1/cmr/m/n/10 Figura 7: |M^^Sedia ab-so-luta dos va-lo-res de shap| 
  []
 
-<imagens/shap/shap_plot_verdadeiro_positivo.png, id=579, 675.7245pt x 433.62pt>
+[14 <./imagens/shap/media_shap.png>]
+<imagens/shap/shap_plot_verdadeiro_positivo.png, id=262, 675.7245pt x 433.62pt>
 File: imagens/shap/shap_plot_verdadeiro_positivo.png Graphic file (type png)
 <use imagens/shap/shap_plot_verdadeiro_positivo.png>
-Package pdftex.def Info: imagens/shap/shap_plot_verdadeiro_positivo.png  used on input line 324.
+Package pdftex.def Info: imagens/shap/shap_plot_verdadeiro_positivo.png  used on input line 371.
 (pdftex.def)             Requested size: 204.85846pt x 131.45662pt.
-<imagens/shap/shap_plot_falso_positivo.png, id=580, 670.6656pt x 433.62pt>
+<imagens/shap/shap_plot_falso_positivo.png, id=263, 670.6656pt x 433.62pt>
 File: imagens/shap/shap_plot_falso_positivo.png Graphic file (type png)
 <use imagens/shap/shap_plot_falso_positivo.png>
-Package pdftex.def Info: imagens/shap/shap_plot_falso_positivo.png  used on input line 326.
+Package pdftex.def Info: imagens/shap/shap_plot_falso_positivo.png  used on input line 373.
 (pdftex.def)             Requested size: 204.85846pt x 132.44908pt.
-
-Underfull \hbox (badness 1412) in paragraph at lines 326--326
- [] \OT1/cmr/m/n/10 (b) |WSIR re-si-du-als.| 
- []
-
-<imagens/shap/shap_plot_falso_negativo.png, id=581, 670.6656pt x 433.62pt>
-File: imagens/shap/shap_plot_falso_negativo.png Graphic file (type png)
-<use imagens/shap/shap_plot_falso_negativo.png>
-Package pdftex.def Info: imagens/shap/shap_plot_falso_negativo.png  used on input line 328.
-(pdftex.def)             Requested size: 204.85846pt x 132.44908pt.
-<imagens/shap/shap_plot_verdadeiro_negativo.png, id=582, 665.6067pt x 433.62pt>
+<imagens/shap/shap_plot_verdadeiro_negativo.png, id=264, 665.6067pt x 433.62pt>
 File: imagens/shap/shap_plot_verdadeiro_negativo.png Graphic file (type png)
 <use imagens/shap/shap_plot_verdadeiro_negativo.png>
-Package pdftex.def Info: imagens/shap/shap_plot_verdadeiro_negativo.png  used on input line 329.
+Package pdftex.def Info: imagens/shap/shap_plot_verdadeiro_negativo.png  used on input line 375.
 (pdftex.def)             Requested size: 204.85846pt x 133.4548pt.
+<imagens/shap/shap_plot_falso_negativo.png, id=265, 670.6656pt x 433.62pt>
+File: imagens/shap/shap_plot_falso_negativo.png Graphic file (type png)
+<use imagens/shap/shap_plot_falso_negativo.png>
+Package pdftex.def Info: imagens/shap/shap_plot_falso_negativo.png  used on input line 376.
+(pdftex.def)             Requested size: 204.85846pt x 132.44908pt.
 
-Underfull \hbox (badness 1521) in paragraph at lines 329--329
- [] \OT1/cmr/m/n/10 (d) |WSIR re-si-du-als| 
+Underfull \hbox (badness 4647) in paragraph at lines 379--379
+ []\OT1/cmr/m/n/10 Figura 8: |Re-pre-senta^^Xc~ao do va-lor de SHAP para cada ob-serva^^Xc~ao| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--332
- []\OT1/cmr/m/n/10 Figura 17: |alo-alo| 
- []
+Package caption Warning: \label without proper reference on input line 378.
+See the caption package documentation for explanation.
 
-[36 <./imagens/resultados/report_model_neural_ganhador.png> <./imagens/shap/media_shap.png>]
-<imagens/shap/shap_geral.png, id=592, 622.2447pt x 359.1819pt>
+
+LaTeX Warning: Reference `fig:shap_cada_obs' on page 15 undefined on input line 382.
+
+[15 <./imagens/shap/shap_plot_verdadeiro_positivo.png> <./imagens/shap/shap_plot_falso_positivo.png> <./imagens/shap/shap_plot_verdadeiro_negativo.png> <./imagens/shap/shap_plot_falso_negativo.png>]
+<imagens/shap/shap_geral.png, id=279, 622.2447pt x 359.1819pt>
 File: imagens/shap/shap_geral.png Graphic file (type png)
 <use imagens/shap/shap_geral.png>
-Package pdftex.def Info: imagens/shap/shap_geral.png  used on input line 336.
+Package pdftex.def Info: imagens/shap/shap_geral.png  used on input line 395.
 (pdftex.def)             Requested size: 364.19667pt x 210.23291pt.
 
-Underfull \hbox (badness 6625) in paragraph at lines 336--336
- []\OT1/cmr/m/n/10 Figura 18: |Va-lo-res de shap para as 80 ob-serva^^Xc~oes uti-li-za-das| 
+Underfull \hbox (badness 7151) in paragraph at lines 395--395
+ []\OT1/cmr/m/n/10 Figura 9: |Va-lo-res de shap para as 80 ob-serva^^Xc~oes uti-li-za-das| 
  []
 
-<imagens/shap/force_plot.png, id=593, 1144.0341pt x 261.6174pt>
+<imagens/shap/force_plot.png, id=280, 1144.0341pt x 261.6174pt>
 File: imagens/shap/force_plot.png Graphic file (type png)
 <use imagens/shap/force_plot.png>
-Package pdftex.def Info: imagens/shap/force_plot.png  used on input line 340.
+Package pdftex.def Info: imagens/shap/force_plot.png  used on input line 399.
 (pdftex.def)             Requested size: 364.19667pt x 83.28415pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
- []\OT1/cmr/m/n/10 Figura 19: |Gr^^Safico de for^^Xca em uma ob-serva^^Xc~ao| 
+Underfull \hbox (badness 10000) in paragraph at lines 399--399
+ []\OT1/cmr/m/n/10 Figura 10: |Gr^^Safico de for^^Xca em uma ob-serva^^Xc~ao| 
  []
 
-[37 <./imagens/shap/shap_plot_verdadeiro_positivo.png> <./imagens/shap/shap_plot_falso_positivo.png> <./imagens/shap/shap_plot_falso_negativo.png> <./imagens/shap/shap_plot_verdadeiro_negativo.png> <./imagens/shap/shap_geral.png>]
-<imagens/shap/force_plot_multiples_vars.png, id=606, 766.36313pt x 201.75375pt>
+<imagens/shap/force_plot_multiples_vars.png, id=281, 766.36313pt x 201.75375pt>
 File: imagens/shap/force_plot_multiples_vars.png Graphic file (type png)
 <use imagens/shap/force_plot_multiples_vars.png>
-Package pdftex.def Info: imagens/shap/force_plot_multiples_vars.png  used on input line 343.
+Package pdftex.def Info: imagens/shap/force_plot_multiples_vars.png  used on input line 402.
 (pdftex.def)             Requested size: 364.19667pt x 95.88019pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--343
- []\OT1/cmr/m/n/10 Figura 20: |Gr^^Safico de for^^Xca para m^^Sultiplas ob-serva^^Xc~oes| 
+Underfull \hbox (badness 10000) in paragraph at lines 402--402
+ []\OT1/cmr/m/n/10 Figura 11: |Gr^^Safico de for^^Xca para m^^Sultiplas ob-serva^^Xc~oes| 
  []
 
-
-Underfull \hbox (badness 7030) in paragraph at lines 356--362
+[16 <./imagens/shap/shap_geral.png> <./imagens/shap/force_plot.png>]
+Underfull \hbox (badness 7030) in paragraph at lines 419--425
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--362
- []\OT1/cmr/m/n/10 Tabela 9: |N^^Sumero de par^ametros nos mo-de-los| 
+Underfull \hbox (badness 10000) in paragraph at lines 425--425
+ []\OT1/cmr/m/n/10 Tabela 7: |N^^Sumero de par^ametros nos mo-de-los| 
  []
 
 
-Underfull \hbox (badness 3690) in paragraph at lines 375--383
+Underfull \hbox (badness 3690) in paragraph at lines 438--446
  [][] 
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 383--383
- []\OT1/cmr/m/n/10 Tabela 10: |Com-para^^Xc~ao dos re-sul-ta-dos de Fal-sos Po-si-ti-vos e Fal-sos Ne-ga-ti-vos| 
+Underfull \hbox (badness 1742) in paragraph at lines 446--446
+ []\OT1/cmr/m/n/10 Tabela 8: |Com-para^^Xc~ao dos re-sul-ta-dos de Fal-sos Po-si-ti-vos e Fal-sos Ne-ga-ti-vos| 
  []
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 390--403
+Underfull \hbox (badness 2469) in paragraph at lines 453--466
  [][] 
  []
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 403--403
- []\OT1/cmr/m/n/10 Tabela 11: |Com-para^^Xc~ao dos re-sul-ta-dos da Re-gress~ao log^^S^^Pstica e Rede neu-ral| 
+Underfull \hbox (badness 2012) in paragraph at lines 466--466
+ []\OT1/cmr/m/n/10 Tabela 9: |Com-para^^Xc~ao dos re-sul-ta-dos da Re-gress~ao log^^S^^Pstica e Rede neu-ral| 
  []
 
-[38 <./imagens/shap/force_plot.png> <./imagens/shap/force_plot_multiples_vars.png>]
-Underfull \hbox (badness 4205) in paragraph at lines 411--425
+[17 <./imagens/shap/force_plot_multiples_vars.png>]
+Underfull \hbox (badness 5954) in paragraph at lines 472--495
  [][] 
  []
 
-[39]) [40] (./monografia.bbl) [41] (./monografia.aux (./estrutura/capa.aux) (./estrutura/rosto.aux))
+
+Underfull \hbox (badness 4205) in paragraph at lines 501--515
+ [][] 
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 523--531
+ [][] 
+ []
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 531--531
+ []\OT1/cmr/m/n/10 Tabela 11: |Tempo de execu^^Xc~ao para re-a-li-zar a in-ter-preta^^Xc~ao das vari^^Saveis| 
+ []
+
+[19]) [20] (./monografia.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 8.
+
+) [21] (./monografia.aux (./estrutura/capa.aux) (./estrutura/rosto.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: A5DE09613C1D7159FFD33D3AD060D119;6261.
+(rerunfilecheck)             Checksum: 35F1BCDCD81FA863C456261B2C7BB283;2333.
  ) 
 Here is how much of TeX's memory you used:
- 28782 strings out of 474934
- 545279 string characters out of 5763815
- 1938801 words of memory out of 5000000
- 49620 multiletter control sequences out of 15000+600000
- 579631 words of font info for 114 fonts, out of 8000000 for 9000
+ 27907 strings out of 474934
+ 528049 string characters out of 5763815
+ 1934801 words of memory out of 5000000
+ 48851 multiletter control sequences out of 15000+600000
+ 568037 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,16n,89p,1098b,1064s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on monografia.pdf (41 pages, 3197859 bytes).
+ 84i,12n,89p,433b,678s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on monografia.pdf (21 pages, 2773410 bytes).
 PDF statistics:
- 757 PDF objects out of 1000 (max. 8388607)
- 587 compressed objects within 6 object streams
- 143 named destinations out of 1000 (max. 500000)
- 508 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 368 PDF objects out of 1000 (max. 8388607)
+ 273 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 257 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -289,8 +289,24 @@ discriminar efetivamente entre as categorias, indicando a necessidade de refinam
 considerações adicionais para melhorar sua robustez.
 
 
-\subsection{Modelagem da rede neural}
-% TODO: explicar os resultados da rede neural igual o do modelo logístico
+\subsection{Rede neural}
+Dado o modelo de rede neural escolhido(ver metodologia), o mesmo teve os seguintes resultados nos dados
+de validação nos dados de teste:
+
+% TODO: por gráficos de validação e teste
+
+\imagem{imagens/resultados/report_model_neural_ganhador.png}{Matrix de confusão da rede neural}
+
+
+A Figura \ref{fig:imagens/resultados/report_model_neural_ganhador.png} estima que aproximadamente 
+12\% da amostra de teste estimada pelo modelo consiste em empréstimos ruins, uma estimativa ligeiramente distante 
+da distribuição real apresentada na Tabela \ref{tab:freq_var_res}. No entanto, esse resultado 
+sugere que o modelo conseguiu generalizar seus resultados, quando comparado com o modelo logístico. 
+Por outro lado, o número de empréstimos
+classificados como "0" diminuiu, representando mais de 84\% da amostra de teste. Esse ajuste 
+parece ter aumentado o número de Falsos Positivos, provavelmente devido à tentativa do modelo
+em variabilizar os resultados.
+
 
 \begin{table}[H]
   \centering
@@ -308,29 +324,72 @@ considerações adicionais para melhorar sua robustez.
 \caption{Report da rede neural}
 \label{tab:report_model_neural_ganhador}
 \end{table}
-\imagem{imagens/resultados/report_model_neural_ganhador.png}{Matrix de confusão da rede neural}
+
+
+Os resultados apresentados na Tabela \ref{tab:report_model_neural_ganhador} indicam um desempenho satisfatório
+do modelo, especialmente em termos de acurácia e métricas avaliadas para a classe "0". 
+Contudo, ao comparar esses resultados com as métricas da classe "1", percebe-se que o modelo ainda
+é influenciado pelo elevado número de observações na classe "0". Entretanto, uma análise mais detalhada 
+do Recall da classe "1" revela que o modelo conseguiu reduzir significativamente o número de Falsos Negativos,
+identificando corretamente quase metade dos empréstimos considerados ruins na base original. Essa melhoria 
+no Recall da classe "1" resultou em uma precisão inferior para essa classe, refletindo que menos de 30\% 
+das previsões do modelo foram corretas nesse contexto, como evidenciado na Tabela \ref{tab:report_model_neural_ganhador}.
+
+
+Em termos gerais, as decisões relacionadas à arquitetura do modelo, seus hiperparâmetros, 
+estratégia de treinamento e outros fatores contribuíram para que o modelo de redes neurais realizasse previsões
+de alta qualidade, não se limitando apenas ao desbalanceamento dos dados. Os resultados obtidos pelo modelo de redes
+neurais foram satisfatórios devido à eficácia da arquitetura da rede. Portanto, buscar aprimorar ainda mais essa 
+arquitetura pode ser uma abordagem promissora na busca por resultados ainda melhores.
 
 \subsection{Interpretação da rede neural}
 
-- mostrar gráfico da média dos shap vs regressao logistica
+
+Após definir o modelo de rede neural e examinar seus resultados, esta seção aborda a interpretação do modelo. 
+Para isso, foram construídos gráficos com base nos resultados do SHAP, destacando as variáveis de maior importância
+ no resultado final. Utilizando uma amostra de 80 observações, o valor de SHAP foi calculado para cada observação, 
+ permitindo uma análise tanto individual quanto conjunta dessa amostra.
+
 \imagem{imagens/shap/media_shap.png}{Média absoluta dos valores de shap}
 
-% - mostrar o grafico de dependencia entre valor da variável com resultado do modelo variando ela
-% \imagem{imagens/shap/depend_var_res_shap.png}{Relação entre a variável X com o resultado modelo quando a mesma varia}
 
-- mostrar 2 gráficos de shap especificos de 2 observações(pra mau pagador e pra bom pagador)
+O Gráfico \ref{fig:imagens/shap/media_shap.png} exibe a média absoluta dos valores de SHAP para cada variável nas
+80 observações consideradas. Essa representação oferece insights sobre quais variáveis o modelo considerou mais
+relevantes durante as predições, destacando a magnitude da contribuição de cada variável. Vale notar que, por 
+se tratar de valores absolutos, o gráfico não proporciona informações sobre se a contribuição de cada variável
+é positiva ou negativa. Entretanto, os próximos gráficos irão elucidar essa questão ao detalhar a contribuição 
+específica de cada variável.
+
+Ao analisar cada variável no gráfico, destaca-se que "Total líquido pago" e "Total bruto pago" são as que mais
+contribuem para o resultado final do modelo. O gráfico enfatiza a relevância de nove variáveis, omitindo 
+o restante devido à sua baixa contribuição. Ao observar as variáveis omitidas, percebe-se que, somadas, 
+suas contribuições aproximam-se de 0.01, evidenciando a sua baixa influência no resultado final do modelo de rede neural.
+
+
 \begin{figure}[H]
   \centering
-  \subImagem{imagens/shap/shap_plot_verdadeiro_positivo.png}{Valor e classificação do emprestimo}
+  \subImagem{imagens/shap/shap_plot_verdadeiro_positivo.png}{Valor de SHAP para uma observação do tipo Verdadeiro Positivo}
   \vspace{.5cm}
-  \subImagem{imagens/shap/shap_plot_falso_positivo.png}{WSIR residuals.}
+  \subImagem{imagens/shap/shap_plot_falso_positivo.png}{Valor de SHAP para uma observação do tipo Falso Positivo}
   \vspace{.5cm}
-  \subImagem{imagens/shap/shap_plot_falso_negativo.png}{WSIR predictions in the covariate space.}
- \subImagem{imagens/shap/shap_plot_verdadeiro_negativo.png}{WSIR residuals}
+  \subImagem{imagens/shap/shap_plot_verdadeiro_negativo.png}{Valor de SHAP para uma observação do tipo Verdadeiro Negativo}
+  \subImagem{imagens/shap/shap_plot_falso_negativo.png}{Valor de SHAP para uma observação do tipo Falso Negativo}
   
-  \label{fig:enter-label}
-  \caption{aloalo}
+  \label{fig:shap_cada_obs}
+  \caption{Representação do valor de SHAP para cada observação}
 \end{figure}
+
+A Figura \ref{fig:shap_cada_obs} proporciona a visualização dos valores SHAP para cada variável em observações individuais.
+O gráfico também revela os valores específicos utilizados em cada variável. A apresentação de quatro figuras distintas tem
+como objetivo compreender como o valor SHAP é atribuído em quatro cenários distintos que surgem em problemas de classificação binária.
+
+Ao examinar os gráficos \ref{imagens/shap/shap_plot_verdadeiro_positivo.png} e \ref{imagens/shap/shap_plot_falso_positivo.png},
+é possível seguir os casos em que o modelo acertou suas previsões. No cenário em que o modelo acertou a classificação de 
+um empréstimo como ruim, observa-se que as variáveis que mais contribuíram foram as mesmas observadas na Figura \ref{fig:imagens/shap/media_shap.png}, 
+comportamento esse que vai prevalecer nos demais casos.
+Ao analisar os valores dessas duas variáveis, nota-se que, para esse cliente específico, ainda resta um montante significativo do empréstimo a ser pago, 
+totalizando quase 90\% do valor líquido pendente e aproximadamente 80\% do valor bruto pendente.
+
 
 - mostrar o gráfico com todos as amostras de shap(shap.plots.beeswarm)
 \imagem{imagens/shap/shap_geral.png}{Valores de shap para as 80 observações utilizadas}
@@ -344,10 +403,14 @@ considerações adicionais para melhorar sua robustez.
 
 
 
-
-
 \subsection{Benchmark entre regressão logística e redes neurais }
 
+Ao obter interpretações do modelo de redes neurais, abre-se a possibilidade de realizar comparações 
+entre os modelos de regressão logística e redes neurais no âmbito interpretativo. Até recentemente, 
+essa capacidade de interpretação estava exclusivamente associada ao modelo logístico em comparação com o modelo de redes neurais.
+Essa análise comparativa se soma às comparações já realizadas entre os modelos, englobando aspectos como arquitetura,
+tempo de treinamento,
+tempo de predição e os resultados gerados por ambos os modelos.
 
 \subsubsection{Complexidade da arquitetura}
 
@@ -363,10 +426,10 @@ considerações adicionais para melhorar sua robustez.
   \label{table:model_parameters}
 \end{table}
 
-% TODO: tabela com as métricas comparadas
-% pode-se falar dos resultados em geral, acc, recall e f1-score etc
-% e na hora de falar delas em específico falar apenas dos casos
-% positivos, já que é onde o modelo está errando mais
+Ao examinar a Tabela \ref{table:model_parameters}, destaca-se a significativa disparidade na
+complexidade entre os modelos. Enquanto o modelo logístico possui apenas um parâmetro para cada covariável,
+a rede neural apresenta mais de 8400 parâmetros para cada parâmetro do modelo logístico,  
+sendo esses distribuídos nos neurônios e camadas da rede.
 
 \subsubsection{Resultado dos modelos}
 
@@ -393,8 +456,8 @@ considerações adicionais para melhorar sua robustez.
     \hline
     Precisão (Classe 0) & 0.928081                     & \cellcolor{green!25}0.954 \\
     Precisão (Classe 1) & \cellcolor{green!25}0.536334 & 0.291 \\
-    Recall (Classe 0)   & \cellcolor{green!25}0.995603 & 0.904 \\
-    Recall (Classe 1)   & 0.0618419                    & \cellcolor{green!25}0.478 \\
+    Recall   (Classe 0) & \cellcolor{green!25}0.995603 & 0.904 \\
+    Recall   (Classe 1) & 0.0618419                    & \cellcolor{green!25}0.478 \\
     F1-Score (Classe 0) & \cellcolor{green!25} 0.960657  & 0.929 \\
     F1-Score (Classe 1) & 0.110897                     & \cellcolor{green!25}0.362 \\
     Acurácia            & \cellcolor{green!25}0.924649   & 0.872 \\
@@ -402,6 +465,33 @@ considerações adicionais para melhorar sua robustez.
   \end{tabular}
   \caption{Comparação dos resultados da Regressão logística e Rede neural}
   \label{tab:comparison_results}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrr}
+  \hline
+  Covariáveis               &   Média &   Desvio Padrão \\
+  \hline
+   Total líquido pago    & 0.24363 &         0.14333 \\
+   Total bruto pago      & 0.23619 &         0.13483 \\
+   Valor do empréstimo   & 0.06298 &         0.03885 \\
+   Renda anual           & 0.05132 &         0.04181 \\
+   Duração do empréstimo & 0.03105 &         0.03172 \\
+   Parcela               & 0.02586 &         0.0215  \\
+   DTI                   & 0.00242 &         0.00422 \\
+   Taxa de juros         & 0.00232 &         0.00355 \\
+   Grau                  & 0.00169 &         0.00249 \\
+   Duração do empréstimo & 0.00166 &         0.00224 \\
+   Tipo de moradia       & 0.00117 &         0.00187 \\
+   Finalidade            & 0.00094 &         0.00183 \\
+   Total de juros        & 0.00077 &         0.00166 \\
+   Região                & 0.00071 &         0.00132 \\
+   Prazo                 & 0.00068 &         0.00124 \\
+   Renda categorizada    & 0.00058 &         0.00143 \\
+   Tipo da aplicação     & 0       &         0       \\
+  \hline
+  \end{tabular}
 \end{table}
 
 \subsubsection{Tempo de execução}
@@ -422,17 +512,25 @@ considerações adicionais para melhorar sua robustez.
   Desvio padrão & 0.5327801 & 7.681726 \\
   \hline
 \end{tabular}
-\caption{Tempo de predição (em ms) de cada modelo, em uma amostra com 50 observações}
+\caption{Tempo de predição (em ms) de cada modelo, em uma amostra com 50 observações. Em verde, o modelo que obteve o melhor resultado na respectiva métrica.}
 \label{tab:bench_models}
 \end{table}
 
-%TODO: Tempo de interpretação
-%quando montar essas informações, esclarecer que para o shap fazer as interpretações
-% foi necessário primeiro definir o conjunto de treinamento 
-% e depois para cada observação que vc queira interpretar
-% tem o tempo gasto para se fazer isso
 
 
+\begin{table}[H]
+\centering
+\begin{tabular}{lc}
+\hline
+\textbf{Observações} & \textbf{Tempo de execução} \\
+\hline
+1  & 317s \\
+80 & 7.07hrs \\
+\hline
+\end{tabular}
+\caption{Tempo de execução para realizar a interpretação das variáveis}
+\label{tab:tempo_execucao_shap}
+\end{table}
 \newpage
 
 % \centering

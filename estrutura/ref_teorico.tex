@@ -5,14 +5,13 @@
 dependente categórica. É comumente utilizada para problemas de classificação binária, onde a variável
 dependente possui apenas duas categorias, como sim/não, positivo/negativo, 0/1.
 
-% TODO: melhorar isso
-% falar direto da equação 8.1.2,
 
 O cálculo da regressão logística é baseado na probabilidade da variável aleatória $Y$ ser igual a 1, onde Y é 
 uma variável aleatória com distribuição Bernouli, com parâmetro p de sucesso, cuja fórmula é dada por:
 
 \begin{equation}
   P(Y=1| x_1, x_2, ..., x_k) = \frac{1}{1 + e^{-(\beta_0 + x_{1}\beta_1 + x_{2}\beta_2 + \ldots + x_{k}\beta_k)}}
+  \label{eq:model_logistic}
 \end{equation}
 
 \noindent onde cada variável explicativa $(x_1, x_2, ..., x_k)$ tem um parâmetro $\beta$ correspondente, influenciando o resultado de $Y$.
@@ -45,14 +44,30 @@ como o algoritmo de otimização Newton-Raphson ou o Gradiente Descendente.
 
 % definição de chance
 
-Para se interpretar o modelo logístico é utilizado a Razão de Chances, que calcula a razão da
-probabilidade de um evento ocorrer em um grupo em relação à probabilidade de não ocorrer. 
+Para se interpretar o modelo logístico é utilizado a Razão de Chances, que calcula a razão entre duas chances, sendo a chance
+de evento definida como a probabilidade do sucesso do evento sobre a probabilidade do fracasso. (Hosmer e Lemeshow)
 
-Esse resultado pode ser obtido quando se calcula a exponencial dos coeficientes do modelo logístico.
+\begin{equation}
+  \text{Chance} =  \frac{P(Y=1|X=x)}{P(Y=0|X=x)}
+\end{equation}
+
+Para calcular a Razão de Chances, inicialmente, é determinada a chance de ocorrência de um evento específico,
+designada como "Chance de X". Em seguida, é calculada a chance desse mesmo evento ocorrer quando a variável 
+correspondente é incrementada em uma unidade, referida como "Chance de X + 1". 
+Dessa forma, a fórmula para a Razão de Chances é expressa por:
+
+\begin{equation}
+  \text{Razão de Chances} =  \frac{\text{Chance de } X + 1}{\text{Chance de } X}
+\end{equation}
+
+
+Esse mesmo resultado pode ser obtido quando se calcula a exponencial dos coeficientes do modelo logístico.
 
 \begin{equation}
   RC = \exp{(\beta_k)}
 \end{equation}
+
+Logo, para o crescimento de 1 unidade em $X$, a chance do evento ocorrer aumento em $\beta_k$ unidades.
 
 Um RC igual a 1 indica que a variável independente não tem efeito no resultado de Y(nenhuma associação).
 Um RC maior que 1 sugere uma associação positiva, enquanto um RC menor que 1 sugere uma associação negativa.
@@ -496,11 +511,12 @@ Falso Positivo (FP), Verdadeiro Negativo (VN) e Falso Negativo (FN). Essas categ
 
 \begin{table}[h]
   \centering
-  \begin{tabular}{c|c|c|c|}
+  \begin{tabular}{cc|cc|}
+    \cline{3-4}
   & & \multicolumn{2}{c|}{\textbf{Previsão}} \\ \cline{3-4}
-  & & \textbf{Positivo} & \textbf{Negativo} \\ \hline
-  \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Real}}} & \textbf{Positivo} & Verdadeiro Positivo (VP) & Falso Negativo (FN) \\ \cline{2-4}
-  \multicolumn{1}{|c|}{} & \textbf{Negativo} & Falso Positivo (FP) & Verdadeiro Negativo (VN) \\ \hline
+  & & \textbf{Negativo} & \textbf{Positivo} \\ \hline
+  \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Real}}} & \textbf{Negativo} & Verdadeiro Negativo (VN) & Falso Positivo (FP) \\  
+  \multicolumn{1}{|c|}{} & \textbf{Positivo} & Falso Negativo (FN) & Verdadeiro Positivo (VP) \\ \hline
   \end{tabular}
   \caption{Matriz de Confusão}
   \label{table:confusion_matrix}

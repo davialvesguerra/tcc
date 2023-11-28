@@ -86,18 +86,157 @@ Com isso a base de dados ficou da seguinte maneira:
   \label{table:columns_before_after}
 \end{table}
 
-% TODO: fazer fluxograma para o modelo logístico
-% TODO: fazer fluxograma para a rede neural
+Com o tratamento dos dados realizado, foi feita a separação dos dados para a modelagem dos dois modelos.
 
 
-\subsection{Métodos}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l|c}
+  \hline
+  \textbf{Tipo de dado} & \textbf{\% dos dados originais} \\ \hline
+  Treino & 70\% \\ 
+  Validação & 10\% \\
+  Teste & 20\% \\ \hline
+  \end{tabular}
+  \caption{Divisão dos dados para a modelagem dos modelos de regressão logística e redes neurais}
+  \label{table:divisao_dados}
+\end{table}
 
-Falar da regressão logística aplicada na base de dados,
-como será feito a preparação do modelo, normalização etc
 
-Falar do modelo de redes neurais utilizado, arquitetura base
 
-Detalhar o porquê de se interpretar os modelos e as maneiras
-que é feito isso(testes, coefs, shap)
+\subsection{Modelagem dos dados}
 
-O intuito é ser a ponte entre referencial teório e resultados
+\subsubsection{Regressão logística}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{imagens/flugrama_logistico.png}
+  \caption{Fluxograma da implementação do modelo logístico}
+  \label{fig:imagens/flugrama_logistico.png}
+\end{figure}
+
+A metodologia para a implementação da regressão logística incluiu várias etapas essenciais para 
+garantir a robustez e eficácia do modelo. Inicialmente, foi realizada uma cuidadosa etapa de pré-processamento, 
+que envolveu a limpeza e tratamento das variáveis. Durante essa fase, foram identificados e tratados 
+possíveis valores ausentes, outliers e erros nos dados, contribuindo para a qualidade do conjunto de dados.
+
+Outro aspecto crítico foi a categorização adequada das variáveis, quando aplicável. Isso incluiu a transformação
+de variáveis categóricas em formatos adequados para análise estatística, garantindo que todas as variáveis 
+estivessem em uma forma consistente para o modelo de regressão logística.
+
+Para garantir que as variáveis contribuíssem igualmente 
+para o modelo, os dados foram normalizados, usando uma padronização com uma escala com média zero e
+desvio padrão unitário.
+
+Dada a natureza desbalanceada do conjunto de dados, onde as classes "Empréstimo bom" e "Empréstimo ruim" têm
+proporções significativamente diferentes, foi aplicada a ponderação das classes. Isso foi realizado durante 
+a fase de treinamento do modelo, atribuindo pesos diferentes às classes para compensar o desequilíbrio e garantir
+que o modelo não fosse enviesado em direção à classe majoritária.
+
+Tendo o modelo definido, foi feita uma avaliação das predições do modelo no conjunto de teste, usando métricas
+apropriadas para problemas de classificação, como precisão, recall, F1-score e matriz de confusão. 
+Essas métricas permitiram uma compreensão abrangente do desempenho do modelo, especialmente no que diz respeito à
+capacidade de prever corretamente os casos de "Empréstimo ruim" e "Empréstimo bom".
+
+
+\subsubsection{Rede neural}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{imagens/flugrama_rede_neural.png}
+  \caption{Fluxograma da implementação do modelo logístico}
+  \label{fig:imagens/flugrama_rede_neural.png}
+\end{figure}
+
+
+
+A implementação da metodologia para a construção e ajuste de redes neurais envolveu diversas etapas cruciais 
+para garantir a eficácia do modelo. Inicialmente, foi realizada uma fase de pré-processamento, que consistiu
+na limpeza e tratamento das variáveis. Durante esse estágio, foram tratados valores ausentes, outliers e possíveis
+erros nos dados, contribuindo para a qualidade do conjunto de dados. Essa etapa foi a mesma apresentada pelo
+modelo logístico.
+
+A escolha da arquitetura inicial foi um passo significativo. Foi necessário definir o número de camadas ocultas,
+a quantidade de neurônios em cada camada e a função de ativação a ser utilizada. Essas escolhas iniciais foram 
+baseadas tanto em conhecimentos prévios do problema quanto em experimentações para encontrar a configuração que 
+melhor se adequava aos dados. 
+E para isso foi utilizado uma rede neural com a seguinte arquitetura:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{imagens/arc_rede_neural.png}
+  \caption{Arquitetura de rede neural inicial}
+  \label{fig:imagens/arc_rede_neural.png}
+\end{figure}
+
+
+Diversos modelos de redes neurais foram desenvolvidos e treinados em contextos variados, considerando abordagens distintas, tais como:
+
+\begin{itemize}
+  \item Utilização de dados equilibrados para realizar os treinamentos;
+  \item Modelagem dos modelos baseadas em métricas de treinamento específicas;
+  \item Ponderação das classes da variável resposta.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{imagens/fluxograma_selecao_modelo_neural.png}
+  \caption{Fluxograma dos modelos de redes neurais estimados}
+  \label{fig:imagens/fluxograma_selecao_modelo_neural.png}
+\end{figure}
+
+
+
+Para realizar o treinamento dos modelos com dados equilibrados, foram empregados dois processos distintos: 
+\textit{upsampling} e \textit{oversampling}. No âmbito da modelagem, em que se priorizaram métricas específicas
+de treinamento, além da acurácia, métrica padrão, foram incorporados o Recall do modelo no conjunto de validação
+e o número de Falsos Negativos. Este último é particularmente crucial em cenários de empréstimos, sendo considerado
+o erro mais relevante. Por fim, foi utilizada também um modelo que aplicasse ponderação nas classes, buscando assim equilibrar 
+a classe majoritária. Essas abordagens visaram explorar diferentes aspectos do treinamento para encontrar a 
+configuração mais eficaz, adaptada às situações do problema em análise.
+
+% TODO: colocar ref do que é over e undersampling no rodape
+
+Cada modelo foi treinado utilizando 
+o conjunto de treinamento e validado para avaliar seu desempenho. A métrica de desempenho, geralmente relacionada
+à precisão, recall e F1-score, foi usada para comparar e selecionar os melhores modelos.
+
+O modelo mais promissor foi então submetido a uma etapa de tunagem de hiperparâmetros. Ajustes finos nos 
+hiperparâmetros, como taxa de aprendizado, número de épocas de treinamento e tamanho do lote, 
+foram realizados para otimizar o desempenho do modelo.
+A arquitetura final do modelo ficou como:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{imagens/arquitetura_redeneural_vencedor.png}
+  \caption{Arquitetura da rede neural depois do processo de tunelagem}
+  \label{fig:imagens/arquitetura_redeneural_vencedor.png}
+\end{figure}
+
+Sendo o modelo final escolhido aquele treinado com as classes ponderadas e baseado na métrica da 
+acurácia.
+
+A avaliação final do modelo ocorreu no conjunto de validação e teste. Essa etapa foi crucial 
+para garantir que o modelo não apenas se ajustasse bem aos dados de treinamento, mas também 
+generalizasse de maneira eficaz para novos dados. As métricas de desempenho foram novamente
+utilizadas para avaliar a capacidade do modelo de fazer previsões precisas e úteis.
+
+\subsection{Interpretação dos modelos}
+
+
+Definindo os modelos logístico e o de redes neurais, foi feita a interpretação de ambos.
+E realizar a interpretações dos modelos é uma etapa crucial na análise de dados, mostrando
+ o funcionamento e as relações das variáveis no contexto do problema em questão. 
+
+No caso do modelo logístico, a interpretação se concentrou nos parâmetros estimados para cada variável. 
+Esses coeficientes fornecem uma medida da magnitude e direção da influência de cada variável na predição da
+ variável resposta. Além disso, a interpretação envolveu a análise da Razão de Chances (RC), que expressa 
+ como a chance de o evento ocorrer se torna multiplicativamente maior ou menor com a mudança em uma unidade 
+ na variável explicativa.
+
+Para a interpretação da rede neural, utilizou-se a técnica SHAP (\textit{SHapley Additive exPlanations}). 
+Essa abordagem proporciona uma compreensão mais profunda ao atribuir a contribuição de cada variável para a saída do 
+modelo em nível individual. Com o auxílio de gráficos SHAP, pôde-se observar como cada variável influencia as predições 
+e identificar padrões de comportamento em diferentes cenários.
+
+

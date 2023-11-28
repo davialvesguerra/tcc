@@ -1,0 +1,3 @@
+(Hosmer e Lemeshow)
+fonte para as medidas de associação
+fonte para as métricas de avaliação

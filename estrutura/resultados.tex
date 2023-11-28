@@ -179,8 +179,13 @@ entre as covariáveis mencionadas e a variável resposta.
 
 \subsection{Regressão logística}
 
-Falar do modelo utilizado, a normalização dos dados, os resultados
-métricas de avaliação e interpretação dos coeficientes
+Como visto na Equação \ref{eq:model_logistic}, a fórmula do modelo logístico é dada por:
+
+\begin{equation}
+  P(Y=1| x_1, x_2, ..., x_k) = \frac{1}{1 + e^{-(\beta_0 + x_{1}\beta_1 + x_{2}\beta_2 + \ldots + x_{k}\beta_k)}}
+\end{equation}
+
+E com base nela os seguintes resultados foram encontrados:
 
 
 \begin{table}[H]
@@ -243,7 +248,7 @@ resposta de com mais de 92\% dos casos como um empréstimo bom, e o restante com
    Média macro     &    0.732 & 0.528  &   0.535 & 177476        \\
    Média ponderada &    0.898 & 0.925  &   0.896 & 177476        \\
    \hline
-   Acurácia     &             &           &    &  0.924649\\
+   Acurácia     &             &           &    &  0.925\\
 
   \hline
 \end{tabular}
@@ -290,10 +295,9 @@ considerações adicionais para melhorar sua robustez.
 
 
 \subsection{Rede neural}
-Dado o modelo de rede neural escolhido(ver metodologia), o mesmo teve os seguintes resultados nos dados
-de validação nos dados de teste:
 
-% TODO: por gráficos de validação e teste
+Esse seção vai abordar os resultados obtidos pelo modelo de rede neural.
+
 
 \imagem{imagens/resultados/report_model_neural_ganhador.png}{Matrix de confusão da rede neural}
 
@@ -497,6 +501,14 @@ sendo esses distribuídos nos neurônios e camadas da rede.
   \label{tab:false_positives_negatives}
 \end{table}
 
+Ao analisar os casos em que os modelos cometeram erros, conforme apresentado na Tabela \ref{tab:false_positives_negatives}, 
+é evidente que, em geral, o modelo logístico cometeu menos erros do que a rede neural. O modelo logístico registrou um total 
+de pouco mais de 13 mil classificações incorretas, enquanto a rede neural teve mais de 18 mil erros.
+ No entanto, é importante destacar que a rede neural cometeu menos erros nos casos de Falsos Negativos.
+  Esse cenário é significativo no contexto de empréstimos, pois rotular erroneamente um possível cliente
+   inadimplente como alguém que cumprirá com o empréstimo pode ter implicações mais graves.
+
+Os resultados a seguir vão identificar melhor como foi o processo preditivo dos dois modelos no conjunto de teste.
 
 \begin{table}[H]
   \centering
@@ -517,34 +529,68 @@ sendo esses distribuídos nos neurônios e camadas da rede.
   \label{tab:comparison_results}
 \end{table}
 
+
+
+Ao examinar a Tabela \ref{tab:comparison_results}, fica claro que a regressão logística superou a
+rede neural em quatro categorias. No entanto, é crucial compreender que esse desempenho destacado
+da regressão logística decorre da sua falta de generalização. Este modelo, ao ser treinado
+com dados desbalanceados, enfrenta limitações devido à sua arquitetura menos complexa.
+Isso ressalta a necessidade de equilibrar a simplicidade do modelo com a capacidade de
+generalização para obter resultados mais confiáveis.
+
+
+Ao avaliar as métricas críticas no contexto de empréstimos, como o Recall da classe 1 e, consequentemente, 
+o F1-score dessa classe, destaca-se que a rede neural supera a regressão logística. Notavelmente, 
+o recall na rede neural é 40\% superior, evidenciando uma performance mais robusta no que diz respeito 
+à identificação de empréstimos ruins.
+
+
+
 \begin{table}[H]
 \centering
-\begin{tabular}{lrr}
+\begin{tabular}{lcc}
   \hline
-  Covariáveis               &   Média &   Desvio Padrão \\
+  \textbf{Covariáveis}               &   \parbox{4cm}{\centering\textbf{Coeficientes da \\ regressão logística}} &  
+  \parbox{5cm}{ \centering\textbf{Médias absoluta \\ dos valores de SHAP}} \\
   \hline
-   Total líquido pago    & 0.24363 &         0.14333 \\
-   Total bruto pago      & 0.23619 &         0.13483 \\
-   Valor do empréstimo   & 0.06298 &         0.03885 \\
-   Renda anual           & 0.05132 &         0.04181 \\
-   Duração do empréstimo & 0.03105 &         0.03172 \\
-   Parcela               & 0.02586 &         0.0215  \\
-   DTI                   & 0.00242 &         0.00422 \\
-   Taxa de juros         & 0.00232 &         0.00355 \\
-   Grau                  & 0.00169 &         0.00249 \\
-   Duração do empréstimo & 0.00166 &         0.00224 \\
-   Tipo de moradia       & 0.00117 &         0.00187 \\
-   Finalidade            & 0.00094 &         0.00183 \\
-   Total de juros        & 0.00077 &         0.00166 \\
-   Região                & 0.00071 &         0.00132 \\
-   Prazo                 & 0.00068 &         0.00124 \\
-   Renda categorizada    & 0.00058 &         0.00143 \\
-   Tipo da aplicação     & 0       &         0       \\
+   Total líquido pago    &         -4.733 & 0.23363 \\
+   Total bruto pago      &          3.321 & 0.22619 \\
+   Valor do empréstimo   &         -1.406 & 0.06298 \\
+   Renda anual           &         -0.195 & 0.06132 \\
+   Tempo de trabalho &         -0.061 & 0.03105 \\
+   Parcela               &         0.005 & 0.02586 \\
+   DTI                   &         -0.151 & 0.00242 \\
+   Taxa de juros         &          1.412 & 0.00232 \\
+   Risco                  &         -1.049 & 0.00169 \\
+   Duração do empréstimo &          0.033 & 0.00166 \\
+   Tipo de moradia       &         0.019 & 0.00117 \\
+   Finalidade            &         0.019 & 0.00094 \\
+   Tipo de juros        &         -0.462 & 0.00077 \\
+   Região                &          0.038 & 0.00071 \\
+   Prazo                 &         -0.203 & 0.00068 \\
+   Renda categorizada    &         -0.111 & 0.00058 \\
+   Tipo da aplicação     &         1.848 & 0       \\
   \hline
   \end{tabular}
+  \caption{Relação entre os coeficientes da regressão logística com os valores absolutos de shap}
+  \label{tab:coef_vs_shap}
 \end{table}
 
+A Tabela \ref{tab:coef_vs_shap} realiza uma comparação entre os coeficientes do modelo logístico
+ e a média dos valores absolutos de SHAP, sendo esse último calculado com base em uma amostra composta por 80 observações. 
+ A média dos valores de SHAP proporciona uma medida da magnitude das contribuições das variáveis, apresentando, de certa forma, uma analogia com os coeficientes da regressão logística.
+
+
+ Ambos os modelos exibiram semelhança nas duas variáveis que mais impactam o resultado final.
+  No entanto, ao classificar as demais variáveis em ordem de importância,
+  observa-se uma divergência significativa no grau de influência que esses valores exercem.
+
 \subsubsection{Tempo de execução}
+
+
+Examinar o tempo de predição é crucial para alcançar resultados mais rápidos, 
+sendo em alguns contextos um fator de extrema relevância, quase tão significativo
+ quanto as métricas de desempenho do modelo.
 
 \begin{table}[H]
 \centering
@@ -566,7 +612,11 @@ sendo esses distribuídos nos neurônios e camadas da rede.
 \label{tab:bench_models}
 \end{table}
 
-
+A Tabela \ref{tab:bench_models} destaca a extrema eficiência do modelo logístico
+ em comparação com o modelo de redes neurais. O modelo logístico demonstrou um tempo 
+ de predição mais curto, com a predição mais demorada levando apenas 1,5 milissegundos,
+  sendo mais de 60 vezes mais rápido do que a predição mais demorada do modelo de redes neurais.
+   Essa tendência é consistente em relação às outras métricas de desempenho.
 
 \begin{table}[H]
 \centering
@@ -582,6 +632,13 @@ sendo esses distribuídos nos neurônios e camadas da rede.
 \label{tab:tempo_execucao_shap}
 \end{table}
 \newpage
+
+
+Ao contrário do modelo logístico, onde não há um tempo de execução associado à interpretação, 
+pois a interpretação é derivada dos coeficientes estimados, a situação é diferente no modelo de redes neurais. 
+A interpretação de uma única observação demandou mais de 5 minutos, e o cálculo das interpretações para as 80
+observações utilizadas nos resultados anteriores exigiu mais de 7 horas. Essa diferença substancial de tempo
+destaca a complexidade computacional envolvida na interpretação de modelos mais intricados, como redes neurais.
 
 % \centering
 % \begin{tabular}{lcccccc}

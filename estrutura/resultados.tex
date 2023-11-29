@@ -1,4 +1,9 @@
-\subsection{Análise descritiva}
+Esta seção inicia explorando a relação entre as variáveis explicativas e a variável resposta. 
+Os resultados derivados tanto do modelo logístico quanto da rede neural serão detalhadamente apresentados, 
+destacando a ênfase na interpretação de ambos os modelos. Além disso, será conduzido um benchmark comparativo
+ entre as duas abordagens, proporcionando uma análise crítica de suas performances.
+
+ \subsection{Análise descritiva}
 
 \subsubsection{Condição do empréstimo}
 
@@ -38,13 +43,13 @@ que a cada 12 empréstimos rotulados como "bons", existe 1 rotulado como "ruim".
   
 \end{figure}
 
-O comportamento da variável resposta nas Figuras \ref{imagens/exploratoria/quantidade_emprestimo.jpg} 
-e \ref{imagens/exploratoria/parcela.jpg} demonstrou semelhanças, onde, em ambos os casos,
+O comportamento da variável resposta nas Figuras \ref{fig:imagens/exploratoria/quantidade_emprestimo.jpg} 
+e \ref{fig:imagens/exploratoria/parcela.jpg} demonstrou semelhanças, onde, em ambos os casos,
 não foi evidenciada uma clara diferença entre o valor do empréstimo e o valor da parcela em relação às
-categorias da variável resposta. A Figura \ref{imagens/exploratoria/duracao_emprestimo.jpg} 
+categorias da variável resposta. A Figura \ref{fig:imagens/exploratoria/duracao_emprestimo.jpg} 
 também apresenta um comportamento semelhante entre as classes
 "Empréstimo ruim" e "Empréstimo bom", mas com um detalhe: a mediana do tempo de trabalho dos clientes rotulados 
-como "Empréstimo ruim" foi inferior em comparação ao outro caso. Por fim, a Figura \ref{imagens/exploratoria/renda_anual.jpg} 
+como "Empréstimo ruim" foi inferior em comparação ao outro caso. Por fim, a Figura \ref{fig:imagens/exploratoria/renda_anual.jpg} 
 indica que clientes 
 com uma renda anual elevada tendem a ser categorizados como "Empréstimo bom".
 
@@ -62,11 +67,11 @@ com uma renda anual elevada tendem a ser categorizados como "Empréstimo bom".
  \label{fig:exp_boxplot2}
 \end{figure}
 
-A Figura \ref{imagens/exploratoria/taxa_juros.jpg} evidencia uma relação significativa entre taxas de juros elevadas e empréstimos 
-considerados ruins. A Figura \ref{imagens/exploratoria/dti.jpg} complementa a informação fornecida pela 
-Figura \ref{imagens/exploratoria/renda_anual.jpg},
+A Figura \ref{fig:imagens/exploratoria/taxa_juros.jpg} evidencia uma relação significativa entre taxas de juros elevadas e empréstimos 
+considerados ruins. A Figura \ref{fig:imagens/exploratoria/dti.jpg} complementa a informação fornecida pela 
+Figura \ref{fig:imagens/exploratoria/renda_anual.jpg},
 indicando que clientes com renda mais elevada tendem a cumprir adequadamente com seus pagamentos.
-As Figuras \ref{imagens/exploratoria/pagamento_bruto.jpg} e  \ref{imagens/exploratoria/pagamento_liquido.jpg} 
+As Figuras \ref{fig:imagens/exploratoria/pagamento_bruto.jpg} e  \ref{fig:imagens/exploratoria/pagamento_liquido.jpg} 
 seguem padrões semelhantes, sugerindo que clientes que quitaram a 
 maior parte do empréstimo são frequentemente rotulados como bons pagadores.
 
@@ -87,15 +92,15 @@ maior parte do empréstimo são frequentemente rotulados como bons pagadores.
 \end{figure}
 
 
-A Figura \ref{imagens/exploratoria/finalidade.pdf} ilustra que as categorias da variável "Finalidade" 
+A Figura \ref{fig:imagens/exploratoria/finalidade.pdf} ilustra que as categorias da variável "Finalidade" 
 seguem a proporção natural da condição do empréstimo,
-conforme indicado na Tabela de Condição do Empréstimo. Na Figura \ref{imagens/exploratoria/categoria_renda.pdf}, 
+conforme indicado na Tabela de Condição do Empréstimo. Na Figura \ref{fig:imagens/exploratoria/categoria_renda.pdf}, 
 as categorias "Alta" e "Média"
 exibem proporções menores de empréstimos ruins em comparação com a categoria "Baixa", que apresenta uma proporção de quase 10\% 
-de empréstimos ruins. A Figura \ref{imagens/exploratoria/grau.pdf} revela um padrão de "cascata", indicando que à medida que o risco do 
+de empréstimos ruins. A Figura \ref{fig:imagens/exploratoria/grau.pdf} revela um padrão de "cascata", indicando que à medida que o risco do 
 empréstimo aumenta, a proporção de empréstimos ruins nas últimas categorias também aumenta, 
 sendo a categoria G a mais afetada, com quase 25\% de empréstimos classificados como ruins. 
-Na Figura \ref{imagens/exploratoria/tipo_aplicacao.pdf}, a categoria "Empréstimo conjunto" 
+Na Figura \ref{fig:imagens/exploratoria/tipo_aplicacao.pdf}, a categoria "Empréstimo conjunto" 
 não registrou observações de empréstimos ruins, 
 concentrando a maioria desses empréstimos na categoria "Empréstimo individual".
 
@@ -114,12 +119,12 @@ concentrando a maioria desses empréstimos na categoria "Empréstimo individual"
   \label{fig:exp_bar2}
 \end{figure}
 
-Na Figura \ref{fig:exp_bar2}, o gráfico \ref{imagens/exploratoria/pagamentos_juros.pdf} 
+Na Figura \ref{fig:exp_bar2}, o gráfico \ref{fig:imagens/exploratoria/pagamentos_juros.pdf} 
 evidencia que empréstimos obtidos sob juros compostos possuem uma proporção 
-mais elevada de rotulações ruins em comparação com empréstimos sob juros simples. As Figuras \ref{imagens/exploratoria/regiao.pdf} 
-e \ref{imagens/exploratoria/propriedade_casa.pdf}
+mais elevada de rotulações ruins em comparação com empréstimos sob juros simples. As Figuras \ref{fig:imagens/exploratoria/regiao.pdf} 
+e \ref{fig:imagens/exploratoria/propriedade_casa.pdf}
 destacam uma proporção natural refletida pela distribuição das categorias da variável resposta, 
-conforme apresentado na Tabela \ref{tab:freq_var_res}. Já a Figura \ref{imagens/exploratoria/prazo.pdf} 
+conforme apresentado na Tabela \ref{tab:freq_var_res}. Já a Figura \ref{fig:imagens/exploratoria/prazo.pdf} 
 revela uma proporção mais significativa
 de empréstimos ruins quando estes tendem a demorar mais para serem pagos.
 

@@ -3,7 +3,7 @@
 %  chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://bdm.unb.br/bitstream/10483/34269/1/2022_JessicaArrudaArcanjo_tcc.pdf
  A regressão logística é um método estatístico utilizado para modelar a probabilidade de uma variável 
 dependente categórica. É comumente utilizada para problemas de classificação binária, onde a variável
-dependente possui apenas duas categorias, como sim/não, positivo/negativo, 0/1.
+dependente possui apenas duas categorias, como sim/não, positivo/negativo, 0/1 \cite{hosmer}.
 
 
 O cálculo da regressão logística é baseado na probabilidade da variável aleatória $Y$ ser igual a 1, onde Y é 
@@ -45,7 +45,7 @@ como o algoritmo de otimização Newton-Raphson ou o Gradiente Descendente.
 % definição de chance
 
 Para se interpretar o modelo logístico é utilizado a Razão de Chances, que calcula a razão entre duas chances, sendo a chance
-de evento definida como a probabilidade do sucesso do evento sobre a probabilidade do fracasso. (Hosmer e Lemeshow)
+de evento definida como a probabilidade do sucesso do evento sobre a probabilidade do fracasso.
 
 \begin{equation}
   \text{Chance} =  \frac{P(Y=1|X=x)}{P(Y=0|X=x)}
@@ -67,7 +67,8 @@ Esse mesmo resultado pode ser obtido quando se calcula a exponencial dos coefici
   RC = \exp{(\beta_k)}
 \end{equation}
 
-Logo, para o crescimento de 1 unidade em $X$, a chance do evento ocorrer aumento em $\beta_k$ unidades.
+Logo, para o crescimento de 1 unidade em $X_k$, variável associada ao $\beta_K$, a chance do evento ocorrer aumento em $\beta_k$ unidades,
+considerando as demais variáveis constantes.
 
 Um RC igual a 1 indica que a variável independente não tem efeito no resultado de Y(nenhuma associação).
 Um RC maior que 1 sugere uma associação positiva, enquanto um RC menor que 1 sugere uma associação negativa.
@@ -226,8 +227,9 @@ net/.style={
 
 \begin{figure}[H]
     \centering
+    \caption{Arquitetura padrão de um rede neural \textit{feedforward} }
     \includegraphics[scale=0.8]{imagens/arquitetura_redeneural.png}
-    \caption{Arquitetura padrão de um rede neural \textit{feedforward} \cite{izbicki_mendonca2020}}
+    \subcaption*{Fonte: \cite{izbicki_mendonca2020}}
     \label{fig:arc_cpx_rnp}
     
 \end{figure}
@@ -275,8 +277,9 @@ Essa função é uma indicadora do quão longe, em média, os valores preditos e
 
 \begin{figure}[H]
     \centering
+    \caption{Comportamentos dos pesos em relação à função de perda. O ponto $w_A$ representa um ponto local mínimo e $w_B$ representa um ponto global mínimo.}
     \includegraphics[scale=1]{imagens/pesos_loss_func.png}
-    \caption{Comportamentos dos pesos em relação à função de perda. O ponto $w_A$ representa um ponto local mínimo e $w_B$ representa um ponto global mínimo. \cite{bishop2006pattern}}
+    \caption*{Fonte: \cite{bishop2006pattern}}
     \label{fig:pesos_lossfunc}
     
 \end{figure}
@@ -324,35 +327,54 @@ Todo esse processo é realizado em cada parâmetro que existe na rede neural. As
 
 \subsection{SHAP}
 
-A estrutura de uma rede neural, por mais que proporcione bons resultados, mostra uma deficiência na parte interpretativa. Conhecida por ser uma "caixa-preta" pelo fato de sua estrutura ser muito complexa, existe a necessidade de se entender as predições feitas.
-Para isso, existem técnicas que abordam o tema de interpretação de modelos de redes neurais e dentro delas existe a técnica SHAP, que através dela é possível entender como as variáveis de entrada influenciam as previsões do modelo, fornecendo \textit{insights} sobre sua lógica e permitindo uma explicação clara e confiável. Isso contribui para a transparência, confiabilidade e aceitação dos modelos, além de auxiliar na detecção de viéses e discriminação. 
+A estrutura de uma rede neural, por mais que proporcione bons resultados, mostra uma deficiência na parte interpretativa. 
+Conhecida por ser uma "caixa-preta" pelo fato de sua estrutura ser muito complexa, existe a necessidade de se entender 
+as predições feitas.
+Para isso, existem técnicas que abordam o tema de interpretação de modelos de redes neurais e dentro delas existe a
+ técnica SHAP, que através dela é possível entender como as variáveis de entrada influenciam as previsões do modelo, 
+ fornecendo resultados sobre sua lógica e permitindo uma explicação clara e confiável. Isso contribui para a 
+ transparência, confiabilidade e aceitação dos modelos, além de auxiliar na detecção de viéses e discriminação. 
 
 \subsubsection{Valores de Shapley}
 
-Os valores de Shapley foram
-desenvolvidos por Lloyd Shapley \cite{shapley1953value} no contexto da teoria de jogos, e essa técnica ganhou   força na área de inteligência artificial pela sua capacidade de conseguir interpretar modelos preditivos tidos como "caixa-preta". No método criado por Shapley, existiam uma quantidade de jogadores que exerciam juntos determinada atividade, e o intuito era observar o ganho que um jogador (ou um conjunto de jogadores), obtinha ao ser adicionado para realizar a mesma tarefa, sem a presença do restante do grupo. 
+Os valores de Shapley foram desenvolvidos por Lloyd Shapley \cite{shapley1953value} no contexto da teoria de jogos, 
+e essa técnica ganhou   força na área de inteligência artificial pela sua capacidade de conseguir interpretar modelos
+ preditivos tidos como "caixa-preta". 
+ 
+ No método criado por Shapley, existiam uma quantidade de jogadores que exerciam
+  juntos determinada atividade, e o intuito era observar o ganho que um jogador (ou um conjunto de jogadores), obtinha 
+  ao ser adicionado para realizar a mesma tarefa, sem a presença do restante do grupo. 
 
-Podemos definir \textbf{F} como o conjunto de jogadores (ou as variáveis explicativas) presentes na atividade, logo $\textbf{F} = \{1,2,..., \textbf{M}\}$, onde \textbf{M} é o número de variáveis.
+Podemos definir \textbf{F} como o conjunto dos jogadores disponíveis para se realizar a tarega, 
+logo $\textbf{F} = \{1,2,..., \textbf{M}\}$, onde \textbf{M} é o número total de jogadores.
 Definindo \textbf{S} como uma coligação do conjunto \textbf{F} $(\textbf{S} \subseteq \textbf{F})$, temos, por exemplo, as seguintes possibilidades de \textbf{S}, quando \textbf{M} é igual a 3:
 
 $$ \{\{\emptyset\},\{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\}\}$$
 
-Podemos definir também $\nu$ como uma função que vai mapear um conjunto de valores e retornar um número real. Com isso, o retorno de $\nu(\textbf{S})$ é um número real que pode ser definido como 
-o "trabalho da coligação \textbf{S} ". Esse valor é equivalente ao total ganho que os jogadores podem obter caso trabalhem juntos em uma determinada coligação.
+Existe também uma função que vai mapear um conjunto de valores e retornar um número real, chamada de $\nu$. Com isso, o retorno de $\nu(\textbf{S})$ é um número real que pode ser definido como 
+o "trabalho da coligação \textbf{S}" ou o "trabalho dos jogadores presentes no conjunto \textbf{S}". Esse valor é equivalente ao total ganho que os jogadores podem obter caso trabalhem juntos em uma determinada coligação.
 
-Para calcular o ganho ao adicionar uma variável $i$ ou a importância do jogador em específico, pode-se calcular o ganho quando é adicionada aquela variável na coligação menos a coligação sem a adição daquela variável, ficando da seguinte maneira:
+Para calcular o ganho ao adicionar $i$-ésimo jogador em uma tarefa, 
+pode-se calcular o ganho quando é adicionada aquela jogador na coligação menos a coligação sem 
+a adição daquele jogador, ficando da seguinte maneira:
 
-\[
-\nu({\textbf{S} \cup \{i\})} - \nu({\textbf{S})}  
-\]
+\begin{equation}
+  \nu({\textbf{S} \cup \{i\})} - \nu({\textbf{S})}    
+\end{equation}
 
-No exemplo acima, caso queiramos calcular o efeito da coligação \{3\}, poderíamos fazer:
+
+No exemplo acima, para calcular o efeito da coligação \{3\}, pode-se realizar o seguinte processo:
 
 \[
 \text{Contribuição} \hspace{1mm} de \hspace{1mm} \{3\} = \nu(\{1,2,3\}) - \nu(\{1,2\})  
 \]
 
-Mas suponha que as variáveis (ou jogadores) \{2\} e \{3\} sejam extremamente semelhantes. Quando é calculado o ganho após inserir \{2\} na coligação \{1,2\}, é possível notar um aumento substancial, mas quando é adicionado \{3\} na coligação \{1,2,3\}, o ganho obtido é muito pouco. Como as variáveis exercem um papel parecido, o ganho maior ficou sujeito à variável que foi adicionada primeiro na coligação, não necessariamente porque uma é mais importante que a outra. 
+Mas suponha que as variáveis (ou jogadores) \{2\} e \{3\} sejam extremamente semelhantes. Quando é calculado o 
+ganho após inserir \{2\} na coligação \{1,2\}, é possível notar um aumento substancial, mas quando é adicionado 
+\{3\} na coligação \{1,2,3\}, o ganho obtido é muito pouco. Como as variáveis exercem um papel parecido,
+ o ganho maior ficou sujeito à variável que foi adicionada primeiro na coligação, não necessariamente 
+ porque uma é mais importante que a outra. 
+
 Por isso, para calcular o real ganho da variável \{i\}, é necessário testar todas as permutações de \textbf{F} (conjunto de jogadores) e obter a contribuição de \{i\} em cada uma delas, para então fazer a média dessas contribuições. Por exemplo, definindo \textbf{F} = \{1,2,3,4\}, suponha que estamos interessados em calcular a contribuição de \{3\}, logo, podemos obter a seguinte permutação de  \textbf{F}:
 
 $$[3,1,2,4]$$
@@ -421,28 +443,36 @@ Com isso, podemos reescrever a Equação \ref{eq:value_shap_ini} da seguinte man
 \frac{|\textbf{S}|!(|\textbf{F}| - |\textbf{S}| - 1)!}{|\textbf{F}|!}
 [\nu(\textbf{S}\cup\{i\}) - \nu(\textbf{\textbf{S}})],
 \]
-\hspace{1.5cm} onde $\phi_i$ é o valor de shapley para a variável \{i\}.
+\noindent\hspace{1.5cm} onde $\phi_i$ é o valor de shapley para a variável \{i\}.
 
-\subsubsection{Shapley Additive Explanations}
+\subsubsection{\textit{Shapley Additive Explanations}}
 
-Fazendo a relação do valor de Shapley para o SHAP (Shapley Additive Explanations), temos que a função característica $\nu$ é equivalente à função $f(x)$ responsável por fazer as predições. E os valores de SHAP são calculados a partir das observações que entram no modelo. Com isso, a fórmula do valor de SHAP, para cada conjunto de observação e variável especificada, se dá por:
+Fazendo a relação do valor de Shapley para o SHAP (\textit{Shapley Additive Explanations}), 
+temos que a função característica $\nu$ é equivalente à função $f(x)$ responsável por fazer as predições.
+ E os valores de SHAP são calculados a partir das observações que entram no modelo. Com isso, a fórmula do valor
+  de SHAP, para cada conjunto de observação e variável especificada, se dá por:
 
-\[
+\begin{equation}
 \phi_i(f,\textbf{x})= 
 \sum_{\textbf{S} \subseteq  \textbf{F} - \{i\}}
 \frac{|\textbf{S}|!(|\textbf{F}| - |\textbf{S}| - 1)!}{|\textbf{F}|!}
 [f_{\textbf{S}\cup\{i\}}(\textbf{x}_{\textbf{S}\cup\{i\}}) - f_{\textbf{S}}(\textbf{x}_{\textbf{S}})
 ]
-\]
+\label{eq:SHAP}
+\end{equation}
 
 Perceba que $f_\textbf{S}(\textbf{x}_S)$ representa o resultado do modelo com somente as variáveis que estão na coligação $\textbf{S}$, algo que na realidade não é permitido na maioria dos modelos. Por isso, uma aproximação desse resultado é a seguinte:
 
 \begin{equation}    
-f_S(\textbf{x}_S)) \approx E[f(\textbf{x}|\textbf{x}_S)] \approx 
+f_S(\textbf{x}_S) \approx E[f(\textbf{x}|\textbf{x}_S)] \approx 
 \frac{1}{k} \sum_{i=1}^{k}
 f(\textbf{x}_{\bar{S}}^{(i)}, \textbf{x}_S)
 \label{eq:SHAP_detalhado}
 \end{equation}
+
+Para determinar os valores das variáveis que não pertencem ao conjunto $\textbf{x}_S$, a Equação
+\ref{eq:SHAP_detalhado} esclarece que para isso o valor esperado dessas variáveis é calculado. Isso resulta na criação de uma
+estimativa para $f(\textbf{x})$, levando em consideração apenas as variáveis presentes em $\textbf{S}$.
 
 
 \begin{figure}[H]
@@ -450,14 +480,29 @@ f(\textbf{x}_{\bar{S}}^{(i)}, \textbf{x}_S)
     \caption{Cálculo de $f_{\textbf{S}}$, sendo S o conjunto de variáveis $X_1, X_3, X_4$, dentre as observações de um conjunto de dados.}
     \includegraphics[scale=0.5]{imagens/shap_explicado.png}
     \caption*{Fonte: https://towardsdatascience.com/introduction-to-shap-values-and-their-application-in-machine-learning-8003718e6827}
-    \label{fig:calculo_esforço}
-
-    
+    \label{fig:calculo_esforço}   
 \end{figure}
-A Figura \ref{fig:calculo_esforço} representa, para cada observação do conjunto de dados, a Equação \ref{eq:SHAP_detalhado}. Neste caso, as variáveis $X_1, X_3$ e $ X_4$ representam o conjunto $\textbf{S}$, e escolhendo um valor $x_1, x_3$ e $ x_4$ dessas variáveis, respectivamente, calcula-se $f$ para cada observação do conjunto de dados, travando $x_1, x_3$ e $ x_4$ na função e utilizando o valor das variáveis complementares, que neste caso são os valores de $X_2$ e $X_5$, em suas respectivas observações. Feito isso, é calculada média desses valores que corresponde justamente com o resultado da função $f_{\textbf{S}}(x_{\textbf{S}})$.
+
+Ao analisar a Figura \ref{fig:calculo_esforço}, tem-se que as variáveis $X_1, X_3$ e $ X_4$ representam o conjunto $\textbf{S}$. 
+E escolhendo um valor $x_1, x_3$ e $ x_4$ dessas variáveis, respectivamente, é definido o conjunto $\textbf{x}_S$. 
+Para obter $f_{\textbf{S}}(x_{\textbf{S}})$, que é calcular o resultado do modelo somente com as variáveis presentes 
+em $\textbf{x}_S$, calcula-se $f$ para cada observação do conjunto de dados,
+travando $x_1, x_3$ e $ x_4$ na função e utilizando o valor das variáveis complementares, que neste caso são os
+valores de $X_2$ e $X_5$, em suas respectivas observações. Feito isso, é calculada média desses valores que
+corresponde justamente com o resultado da função $f_{\textbf{S}}(x_{\textbf{S}})$.
+
+Com $f_{\textbf{S}}(x_{\textbf{S}})$ estimado, é possível calcular a Equação \ref{eq:SHAP}. Os dados que a técnica SHAP 
+utiliza são divididos em 2 tipos: as observações necessárias para a estimação de $f_{\textbf{S}}(x_{\textbf{S}})$
+e as observações em que se deseja calcular o valor de SHAP. 
 
 
 \subsection{Medidas de associação}
+
+
+A utilização de medidas associativas, como o coeficiente de Pearson para variáveis contínuas e o coeficiente de
+contingência para variáveis categóricas, desempenha um papel crucial na análise estatística, proporcionando a
+visualização das relações entre diferentes variáveis. Essas medidas quantificam a força e a natureza das associações, 
+permitindo a identificação de padrões e tendências nos dados \cite{witte_statistics}. 
 
 \subsubsection{Coeficiente de Pearson}
 
@@ -492,7 +537,7 @@ A análise dessas métricas proporciona uma compreensão mais aprofundada do mod
 fortes e áreas de melhoria. Essa avaliação não apenas valida a qualidade das previsões, mas também orienta os próximos
 passos na pesquisa, direcionando ajustes necessários no modelo ou indicando caminhos para refinamento. 
 Dessa forma, a escolha e interpretação adequadas das métricas são passos essenciais para uma avaliação informada 
-e um progresso significativo na pesquisa.
+e um progresso significativo na pesquisa \cite{geron2019hands}.
 
 \subsubsection{Matriz de confusão}
 
@@ -518,7 +563,7 @@ Falso Positivo (FP), Verdadeiro Negativo (VN) e Falso Negativo (FN). Essas categ
   \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Real}}} & \textbf{Negativo} & Verdadeiro Negativo (VN) & Falso Positivo (FP) \\  
   \multicolumn{1}{|c|}{} & \textbf{Positivo} & Falso Negativo (FN) & Verdadeiro Positivo (VP) \\ \hline
   \end{tabular}
-  \caption{Matriz de Confusão}
+  \caption{Matriz de confusão}
   \label{table:confusion_matrix}
 \end{table}
 

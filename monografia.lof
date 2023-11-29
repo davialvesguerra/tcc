@@ -1,0 +1,31 @@
+\babel@toc {brazilian}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Neurônio da Rede Neural}}{12}{figure.caption.2}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Tipos de Função de Ativação.}}{13}{figure.caption.3}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Rede Neural com uma camada oculta}}{14}{figure.caption.4}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Arquitetura padrão de um rede neural \textit {feedforward} }}{14}{figure.caption.5}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Comportamentos dos pesos em relação à função de perda. O ponto $w_A$ representa um ponto local mínimo e $w_B$ representa um ponto global mínimo.}}{16}{figure.caption.6}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Representação do método do gradiente descendente para a estimação de um parâmetro.}}{17}{figure.caption.7}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Ganho do jogador 3 em relação à todas as permutações de jogadores.}}{20}{figure.caption.8}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Relação entre permutações e coalizões.}}{21}{figure.caption.9}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Cálculo de $f_{\textbf {S}}$, sendo S o conjunto de variáveis $X_1, X_3, X_4$, dentre as observações de um conjunto de dados.}}{23}{figure.caption.10}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Fluxograma da implementação do modelo logístico}}{31}{figure.caption.14}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Fluxograma da implementação da rede neural}}{32}{figure.caption.15}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Arquitetura de rede neural inicial}}{33}{figure.caption.16}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Fluxograma da escolha dos modelos de redes neurais estimados}}{33}{figure.caption.17}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Arquitetura da rede neural depois do processo de tunelagem}}{34}{figure.caption.18}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Variáveis explicativas em relação à condição do empréstimo}}{37}{figure.caption.20}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Variáveis explicativas em relação à condição do empréstimo}}{38}{figure.caption.21}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Variáveis explicativas em relação à condição do empréstimo}}{39}{figure.caption.22}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Variáveis explicativas em relação à condição do empréstimo}}{40}{figure.caption.23}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Matrix de confusão do modelo logístico}}{43}{figure.caption.27}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Matrix de confusão da rede neural}}{45}{figure.caption.29}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Média absoluta dos valores de shap}}{46}{figure.caption.31}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Valor de SHAP para uma observação do tipo Verdadeiro Positivo}}{47}{figure.caption.32}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Valor de SHAP para uma observação do tipo Verdadeiro Negativo}}{48}{figure.caption.33}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Valor de SHAP para uma observação do tipo Falso Positivo}}{49}{figure.caption.34}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Valor de SHAP para uma observação do tipo Falso Negativo}}{49}{figure.caption.35}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Valores de shap para as 80 observações utilizadas}}{50}{figure.caption.36}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Gráfico de força em uma observação}}{50}{figure.caption.37}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Gráfico de força para múltiplas observações}}{51}{figure.caption.38}%
+\contentsfinish 
+\contentsfinish 

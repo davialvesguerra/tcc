@@ -35,7 +35,7 @@
 }
 \usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
 % \usepackage[style=abnt]{biblatex}
-%\bibliographystyle{plainnat}
+% \bibliographystyle{plainnat}
 
 % 
 % \bibliography{ref.bib}
@@ -106,7 +106,7 @@
 
 \fancyhead[RE, LO]{\nouppercase{\emph\leftmark}}
 %\fancyfoot[C]{Departamento de Estatística}
-% \listoftables
+
 
 % \newpage
 % \section{\textbf{Dedicatória}}
@@ -143,18 +143,17 @@ na classe majoritária.
 \newpage
 
 
+\listoftables
+\newpage
+
+
+\listoffigures
+\newpage
+
+
 % Sumário
 \tableofcontents
 \newpage
-
-% \section{\textbf{Lista de figuras}}
-% \newpage
-
-% \section{\textbf{Lista de tabelas}}
-% \newpage
-
-% \section{\textbf{Lista de quadros}}
-% \newpage
 
 \section{\textbf{Introdução}}
 \input{estrutura/introducao}
@@ -184,8 +183,9 @@ na classe majoritária.
 \newpage
 
 \bibliography{estrutura/ref}
-% \bibliographystyle{abntex2-alf}
+\bibliographystyle{abntex2-alf}
 
+\newpage
 \section{\textbf{Anexo}}
 \newpage
 

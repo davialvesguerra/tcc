@@ -9,6 +9,15 @@
 \abntrefinfo{Bishop}{BISHOP}{2006}
 {BISHOP, C.~M. \emph{Pattern Recognition and Machine Learning}. [S.l.]: Springer, 2006.}
 
+\bibitem[Geron 2019]{geron2019hands}
+\abntrefinfo{Geron}{GERON}{2019}
+{GERON, A. \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow}. [S.l.]: O'Reilly Media, 2019.
+ISBN 978-1492032649.}
+
+\bibitem[Hosmer 2013]{hosmer}
+\abntrefinfo{Hosmer}{HOSMER}{2013}
+{HOSMER, D.~W. \emph{Applied Logistic Regression}. [S.l.]: John Wiley, 2013.}
+
 \bibitem[Izbicki e Santos 2020]{izbicki_mendonca2020}
 \abntrefinfo{Izbicki e Santos}{IZBICKI; SANTOS}{2020}
 {IZBICKI, R.; SANTOS, T.~M. dos. \emph{Aprendizado de m\'aquina: uma abordagem estat\'istica}. [S.l.: s.n.], 2020.
@@ -17,6 +26,10 @@ ISBN 978-65-00-02410-4.}
 \bibitem[James et al. 2013]{james2013introduction}
 \abntrefinfo{James et al.}{JAMES et al.}{2013}
 {JAMES, G. et al. \emph{An Introduction to Statistical Learning with Applications in R}. New York: Springer, 2013.}
+
+\bibitem[Lundberg e Lee 2017]{lundberg2017unified}
+\abntrefinfo{Lundberg e Lee}{LUNDBERG; LEE}{2017}
+{LUNDBERG, S.; LEE, S.-I. A unified approach to interpreting model predictions. In:  \emph{Advances in neural information processing systems}. [S.l.: s.n.], 2017. v.~30, p. 4765--4774.}
 
 \bibitem[Shapley 1953]{shapley1953value}
 \abntrefinfo{Shapley}{SHAPLEY}{1953}
@@ -28,5 +41,10 @@ ISBN 978-65-00-02410-4.}
 {WERBOS, P.~J.
 \emph{Beyond regression: New tools for prediction and analysis in the behavioral sciences}.
 Tese (Doutorado) --- Harvard University, 1974.}
+
+\bibitem[Witte e Witte 2017]{witte_statistics}
+\abntrefinfo{Witte e Witte}{WITTE; WITTE}{2017}
+{WITTE, R.~S.; WITTE, J.~S. \emph{Statistics}. 11th. ed. New York: Wiley, 2017.
+ISBN 978-0471557613.}
 
 \end{thebibliography}

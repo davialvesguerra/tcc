@@ -15,6 +15,8 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: estrutura/ref.bib
+Warning--entry type for "mitnews_neuralnetworks" isn't style-file defined
+--line 138 of file estrutura/ref.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -24,44 +26,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 10 entries,
+You've used 16 entries,
             6714 wiz_defined-function locations,
-            1248 strings with 10453 characters,
-and the built_in function-call counts, 7591 in all, are:
-= -- 704
-> -- 215
-< -- 7
-+ -- 126
-- -- 67
-* -- 481
-:= -- 1081
-add.period$ -- 33
-call.type$ -- 10
-change.case$ -- 79
-chr.to.int$ -- 19
-cite$ -- 9
-duplicate$ -- 366
-empty$ -- 607
-format.name$ -- 317
-if$ -- 1812
+            1292 strings with 11263 characters,
+and the built_in function-call counts, 12195 in all, are:
+= -- 1124
+> -- 289
+< -- 19
++ -- 172
+- -- 90
+* -- 767
+:= -- 1681
+add.period$ -- 62
+call.type$ -- 16
+change.case$ -- 120
+chr.to.int$ -- 37
+cite$ -- 15
+duplicate$ -- 609
+empty$ -- 1017
+format.name$ -- 430
+if$ -- 2966
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 180
-newline$ -- 50
-num.names$ -- 45
-pop$ -- 246
+missing$ -- 285
+newline$ -- 79
+num.names$ -- 71
+pop$ -- 356
 preamble$ -- 1
-purify$ -- 35
+purify$ -- 52
 quote$ -- 0
-skip$ -- 445
+skip$ -- 775
 stack$ -- 1
-substring$ -- 280
-swap$ -- 162
-text.length$ -- 4
+substring$ -- 496
+swap$ -- 289
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 3
+type$ -- 16
 warning$ -- 0
-while$ -- 62
+while$ -- 104
 width$ -- 0
-write$ -- 144
+write$ -- 244
+(There was 1 warning)

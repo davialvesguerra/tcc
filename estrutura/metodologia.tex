@@ -1,4 +1,4 @@
-A metodologia adotada nesta pesquisa se fundamenta na análise do conjunto de dados \textit{"Loan Data for Dummy"},
+A metodologia adotada nesta pesquisa se envolve a modelagem do conjunto de dados \textit{``Loan Data for Dummy"},
 retirado da plataforma \textit{Kaggle},
 visando a compreensão e modelagem de padrões associados a operações de empréstimos. Dois métodos distintos, 
 Regressão Logística e Redes Neurais, serão empregados para investigar as relações existentes nos dados e aprimorar as previsões.
@@ -10,41 +10,39 @@ uma interpretação aprofundada do modelo de redes neurais, ampliando a transpar
 
 \subsection{Conjunto de dados}
 
-O banco de dados \textit{"Loan Data for Dummy"} é uma base de dados do Kaggle, projetada para simular informações relacionadas 
+O banco de dados \textit{``Loan Data for Dummy"} é uma base de dados do Kaggle, projetada para simular informações relacionadas 
 a operações de empréstimos. Desenvolvido para fins educacionais e de pesquisa, esse conjunto tem sua origem de um modelo de 
-banco \textit{"peer to peer"} sediado na Irlanda, no qual o banco disponibiliza recursos a potenciais clientes, 
+banco \textit{``peer to peer"} sediado na Irlanda, no qual o banco disponibiliza recursos a potenciais clientes, 
 obtendo lucros com base no risco que assume. 
 Os dados disponíveis no Kaggle representam uma versão fictícia de uma situação real, com a maior parte dos dados manipulados
 ou criados sinteticamente para preservar as informações dos clientes originais.
 
-A variável que será foco do estudo é a "Condição do empréstimo". Através dessa variável, é 
-possível discernir se um empréstimo foi classificado como "bom" ou "ruim", proporcionando uma avaliação da qualidade e 
-risco associados a cada transação. No contexto deste conjunto de dados, presume-se que a "Condição do empréstimo" seja uma variável binária,
-onde, por exemplo, "0" poderia indicar um empréstimo em boas condições e "1" indicaria o contrário.
-A compreensão aprofundada dessa variável é essencial para a construção e interpretação adequada dos modelos subsequentes, 
-como a regressão logística e redes neurais, permitindo uma análise mais precisa e informada do risco associado aos empréstimos.
+A variável resposta que desejamos modelar é a ``Condição do empréstimo". Através dessa variável, é 
+possível discernir se um empréstimo foi classificado como ``bom" ou ``ruim", proporcionando uma avaliação da qualidade e 
+risco associados a cada transação. No contexto deste conjunto de dados, a ``Condição do empréstimo" é uma variável binária,
+onde ``0" indica um empréstimo em boas condições e ``1" indica o contrário.
 
 \subsubsection{Variáveis}
 
 A base de dados é composta por 30 variáveis, incluindo a variável resposta, e existem 887379 observações.
-Para se avaliar a variável "Condição do empréstimo" foi utilizada algumas variáveis presentes na base de dados, como:
+A fim de estudar ``Condição do empréstimo" foram utilizadas algumas variáveis presentes na base de dados, como:
 
 \begin{enumerate}
-  \item \textbf{Tempo de emprego}: Representa o tempo de emprego do solicitante expresso numericamente. Um valor de 5 indicaria que o indivíduo está empregado há 5 anos.
-  \item \textbf{Tipo de residência}: Indica o status de moradia do solicitante, como proprietário, inquilino ou outra forma de ocupação residencial.
-  \item \textbf{Renda anual}: Reflete a renda anual do solicitante, uma medida crucial para avaliar a capacidade de pagamento do empréstimo. Pode ser expressa numericamente, por exemplo, 50,000.
-  \item \textbf{Valor do empréstimo}: Representa o valor do empréstimo solicitado pelo requerente, geralmente expresso em termos monetários, como 10,000.
-  \item \textbf{Prazo}: Indica o prazo do empréstimo, especificando o período de tempo durante o qual o empréstimo deve ser reembolsado. Pode ser, por exemplo, 36 meses.
+  \item \textbf{Tempo de emprego}: Representa o tempo (em anos) de emprego do solicitante expresso numericamente. 
+  \item \textbf{Tipo de residência}: Indica o status de moradia do solicitante(por exemplo: proprietário, inquilino ou outra forma de ocupação residencial). 
+  \item \textbf{Renda anual}: Indica a renda anual do solicitante, uma medida crucial para avaliar a capacidade de pagamento do empréstimo. 
+  \item \textbf{Valor do empréstimo}: Representa o valor do empréstimo solicitado pelo requerente.
+  \item \textbf{Prazo}: Indica o prazo do empréstimo, especificando o período de tempo durante o qual o empréstimo deve ser reembolsado (por exemplo: 36 meses).
   \item \textbf{Tipo de aplicação}: Refere-se ao tipo de aplicação, indicando se é uma aplicação individual ou conjunta.
-  \item \textbf{Finalidade}: Descreve a finalidade do empréstimo, como consolidação de dívidas, compra de casa, educação, entre outros.
-  \item \textbf{Tipo do juros}: Indica a natureza dos pagamentos de juros, se são fixos ou variáveis.
-  \item \textbf{Taxa de juros}: Representa a taxa de juros associada ao empréstimo, geralmente expressa como uma porcentagem, como 10.
-  \item \textbf{Grau}: Refere-se à classificação de risco do tomador de empréstimo atribuída pela instituição financeira, como A, B, C, etc.
-  \item \textbf{DTI}: Significa "Debt-to-Income" (Dívida-para-Renda) e representa a proporção entre as dívidas mensais e a renda mensal do requerente, proporcionando uma medida da capacidade de pagamento.
+  \item \textbf{Finalidade}: Descreve a finalidade do empréstimo(por exemplo: como consolidação de dívidas, compra de casa, educação, entre outros).
+  \item \textbf{Tipo do juros}: Indica a natureza dos pagamentos de juros(por exemplo: se são fixos ou variáveis). 
+  \item \textbf{Taxa de juros}: Representa a taxa de juros associada ao empréstimo.
+  \item \textbf{Grau}: Refere-se à classificação de risco do tomador de empréstimo atribuída pela instituição financeira (por exemplo: A, B, C, etc).
+  \item \textbf{DTI}: Significa ``Debt-to-Income" (Dívida-para-Renda) e representa a proporção entre as dívidas mensais e a renda mensal do requerente, proporcionando uma medida da capacidade de pagamento.
   \item \textbf{Valor bruto pago}: Representa o valor total pago, incluindo o principal e os juros, ao final do empréstimo.
   \item \textbf{Valor líquido pago}: Indica o total de principal (quantia inicial do empréstimo) recuperado até o momento.
   \item \textbf{Valor recuperado}: Representa o valor recuperado em caso de inadimplência ou perda.
-  \item \textbf{Parcelas}: Refere-se à parcela mensal que o requerente do empréstimo deve pagar, incluindo tanto o principal quanto os juros.
+  \item \textbf{Parcelas}: Indica o valor da parcela mensal que o requerente do empréstimo deve pagar, incluindo tanto o principal quanto os juros.
   \item \textbf{Região}: Indica a região geográfica associada ao requerente do empréstimo.
 \end{enumerate}
 
@@ -56,22 +54,22 @@ Para diminuir a complexidade da base de dados, as variáveis passaram por 3 crit
 nos modelos:
 
 \begin{enumerate}
-  \item Identificação de variáveis que não impactariam o resultado do modelo;
-  \item Comparação de variáveis que gerem a mesma informação;
+  \item Remoção de variáveis irrelevantes para o estudo;
+  \item Exclusão de variáveis que geram a mesma informação;
   \item Extração de variáveis presentes em apenas uma das categorias da variável resposta.
 \end{enumerate}
 
-O item 1. destaca-se a variável "ID" como independente da variável resposta, 
+No item 1. destaca-se a variável ``ID" como independente da variável resposta, 
 atuando unicamente como identificador do cliente, sem exercer influência no resultado final do modelo.
 
 O item 2. se refere à situação da base de dados em que o autor realizou uma rotulação numérica de variáveis 
 já categorizadas, como por exemplo: 
-"Tipo de juros" e "Tipo de juros Cat", onde na primeira variável tem as opções "Juros simples" e "Juro compostos" e na segunda variável
-o autor associa os números "1" e "2" respectivamente a essas variáveis.
+``Tipo de juros" e ``Tipo de juros Cat", onde na primeira variável tem as opções ``Juros simples" e ``Juro compostos" e na segunda variável
+o autor associa os números ``1" e ``2", respectivamente, a essas variáveis.
 
-O item 3. esclarece variáveis que desempenham funções em apenas uma das categorias da variável resposta. Como é o caso da 
-variável "Recuperações totais" onde a mesma é presente apenas no caso do cliente ter sido inadimplente, se relacionando
-com a categoria "Empréstimo ruim" da variável resposta. Para o caso de "Empréstimo bom" os valores da variável estão zerados.
+O item 3. exclui variáveis que desempenham funções em apenas uma das categorias da variável resposta. Como é o caso da 
+variável ``Recuperações totais", visto que esta mesma é presente apenas no caso do cliente ter sido inadimplente, se relacionando
+com a categoria ``Empréstimo ruim" da variável resposta. Para o caso de ``Empréstimo bom" os valores da variável são sempre zero.
 
 Com isso a base de dados ficou da seguinte maneira:
 
@@ -80,8 +78,8 @@ Com isso a base de dados ficou da seguinte maneira:
   \begin{tabular}{l|c}
   \hline
   \textbf{Base de dados} & \textbf{Número de Colunas} \\ \hline
-  Antes da extração & 30 \\ 
-  Depois da extração & 18 \\ \hline
+  Antes da limpeza & 30 \\ 
+  Depois da limpeza & 18 \\ \hline
   \end{tabular}
   \caption{Número de colunas antes e depois da preparação dos dados}
   \label{table:columns_before_after}
@@ -126,19 +124,19 @@ Outro aspecto crítico foi a categorização adequada das variáveis, quando apl
 de variáveis categóricas em formatos adequados para análise estatística, garantindo que todas as variáveis 
 estivessem em uma forma consistente para o modelo de regressão logística.
 
-Para garantir que as variáveis contribuíssem igualmente 
-para o modelo, os dados foram normalizados, usando uma padronização com uma escala com média zero e
+Para facilitar a interpretação do modelo, os valores das variáveis
+ normalizados, usando uma padronização que retorna dados em uma escala com média zero e
 desvio padrão unitário.
 
-Dada a natureza desbalanceada do conjunto de dados, onde as classes "Empréstimo bom" e "Empréstimo ruim" têm
-proporções significativamente diferentes, foi aplicada a ponderação das classes. Isso foi realizado durante 
-a fase de treinamento do modelo, atribuindo pesos diferentes às classes para compensar o desequilíbrio e garantir
-que o modelo não fosse enviesado em direção à classe majoritária.
+Dada a natureza desbalanceada do conjunto de dados, onde as classes ``Empréstimo bom" e ``Empréstimo ruim" têm
+proporções significativamente diferentes, foi aplicado um corte diferente de 0.5 no momento de dividir as predições
+do modelo. Foi utilizada a proporção da categoria minoritária em relação à classe majoritária como ponto de corte
+\cite{agresti2002}.
 
 Tendo o modelo definido, foi feita uma avaliação das predições do modelo no conjunto de teste, usando métricas
 apropriadas para problemas de classificação, como precisão, recall, F1-score e matriz de confusão. 
 Essas métricas permitiram uma compreensão abrangente do desempenho do modelo, especialmente no que diz respeito à
-capacidade de prever corretamente os casos de "Empréstimo ruim" e "Empréstimo bom".
+capacidade de prever corretamente os casos de ``Empréstimo ruim" e ``Empréstimo bom".
 
 
 \subsubsection{Rede neural}
@@ -153,17 +151,17 @@ capacidade de prever corretamente os casos de "Empréstimo ruim" e "Empréstimo 
 
 
 
-A implementação da metodologia para a construção e ajuste de redes neurais envolveu diversas etapas cruciais 
+A  construção e ajuste das redes neurais envolveu diversas etapas cruciais 
 para garantir a eficácia do modelo. Inicialmente, foi realizada uma fase de pré-processamento, que consistiu
 na limpeza e tratamento das variáveis. Durante esse estágio, foram tratados valores ausentes, outliers e possíveis
 erros nos dados, contribuindo para a qualidade do conjunto de dados. Essa etapa foi a mesma apresentada pelo
 modelo logístico.
 
-A escolha da arquitetura inicial foi um passo significativo. Foi necessário definir o número de camadas ocultas,
+A escolha da arquitetura inicial foi um passo importante. Foi necessário definir o número de camadas ocultas,
 a quantidade de neurônios em cada camada e a função de ativação a ser utilizada. Essas escolhas iniciais foram 
 baseadas tanto em conhecimentos prévios do problema quanto em experimentações para encontrar a configuração que 
 melhor se adequava aos dados. 
-E para isso foi utilizado uma rede neural com a seguinte arquitetura:
+E para isso foi utilizado uma rede neural baseada na Figura \ref{fig:imagens/arc_rede_neural.png}:
 
 \begin{figure}[H]
   \centering
@@ -173,11 +171,12 @@ E para isso foi utilizado uma rede neural com a seguinte arquitetura:
 \end{figure}
 
 
-Diversos modelos de redes neurais foram desenvolvidos e treinados em contextos variados, considerando abordagens distintas, tais como:
+Diversos modelos de redes neurais foram desenvolvidos e treinados em contextos variados,
+ considerando abordagens distintas, tais como:
 
 \begin{itemize}
-  \item Utilização de dados equilibrados para realizar os treinamentos;
-  \item Modelagem dos modelos baseadas em métricas de treinamento específicas;
+  \item Tratamento para dados desbalanceados;
+  \item Ajuste dos modelos otimizando métricas de treinamento variadas;
   \item Ponderação das classes da variável resposta.
 \end{itemize}
 
@@ -191,39 +190,38 @@ Diversos modelos de redes neurais foram desenvolvidos e treinados em contextos v
 
 
 
-Para realizar o treinamento dos modelos com dados equilibrados, foram empregados dois processos distintos: 
+Conforme ilustrado na Figura \ref{fig:imagens/fluxograma_selecao_modelo_neural.png}, o treinamento dos modelos com dados equilibrados, foram empregados dois processos distintos: 
 \textit{upsampling} e \textit{oversampling}. No âmbito da modelagem, em que se priorizaram métricas específicas
-de treinamento, além da acurácia, métrica padrão, foram incorporados o Recall do modelo no conjunto de validação
+de treinamento, além da acurácia, métrica padrão, foram considerados o Recall 
 e o número de Falsos Negativos. Este último é particularmente crucial em cenários de empréstimos, sendo considerado
-o erro mais relevante. Por fim, foi utilizada também um modelo que aplicasse ponderação nas classes, buscando assim equilibrar 
+o erro mais relevante. Por fim, foi utilizado também um modelo com ponderação nas classes, buscando assim equilibrar 
 a classe majoritária. Essas abordagens visaram explorar diferentes aspectos do treinamento para encontrar a 
 configuração mais eficaz, adaptada às situações do problema em análise.
 
-% TODO: colocar ref do que é over e undersampling no rodape
-
 Cada modelo foi treinado utilizando 
-o conjunto de treinamento e validado para avaliar seu desempenho. A métrica de desempenho, geralmente relacionada
+o conjunto de treinamento e validado para avaliar seu desempenho, no conjunto de validação. 
+As métrica de desempenho, geralmente relacionadas
 à precisão, recall e F1-score, foi usada para comparar e selecionar os melhores modelos.
 
-O modelo mais promissor foi então submetido a uma etapa de tunagem de hiperparâmetros. Ajustes finos nos 
+O modelo mais promissor foi então submetido a uma etapa de ajuste de hiperparâmetros. Ajustes finos nos 
 hiperparâmetros, como taxa de aprendizado, número de épocas de treinamento e tamanho do lote, 
-foram realizados para otimizar o desempenho do modelo.
-A arquitetura final do modelo ficou como:
+foram realizados para otimizar o desempenho do modelo, utilizando o conjunto de validação.
+A arquitetura final do modelo está ilustrada na Figura \ref{fig:imagens/arquitetura_redeneural_vencedor.png}.
+
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{imagens/arquitetura_redeneural_vencedor.png}
-  \caption{Arquitetura da rede neural depois do processo de tunelagem}
+  \caption{Arquitetura final da rede neural}
   \label{fig:imagens/arquitetura_redeneural_vencedor.png}
 \end{figure}
 
-Sendo o modelo final escolhido aquele treinado com as classes ponderadas e baseado na métrica da 
-acurácia.
+O modelo que apresentou a melhor performance foi utilizando as classes ponderadas e a acurácia como métrica de desempenho.
 
 A avaliação final do modelo ocorreu no conjunto de validação e teste. Essa etapa foi crucial 
 para garantir que o modelo não apenas se ajustasse bem aos dados de treinamento, mas também 
 generalizasse de maneira eficaz para novos dados. As métricas de desempenho foram novamente
-utilizadas para avaliar a capacidade do modelo de fazer previsões precisas e úteis.
+utilizadas para avaliar a capacidade do modelo de fazer previsões precisas e úteis, no conjunto de teste.
 
 \subsection{Interpretação dos modelos}
 

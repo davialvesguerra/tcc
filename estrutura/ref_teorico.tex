@@ -1,104 +1,120 @@
 
  \subsection{Regressão logística}
 %  chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://bdm.unb.br/bitstream/10483/34269/1/2022_JessicaArrudaArcanjo_tcc.pdf
- A regressão logística é um método estatístico utilizado para modelar a probabilidade de uma variável 
-dependente categórica. É comumente utilizada para problemas de classificação binária, onde a variável
+ A regressão logística é um método estatístico utilizado para modelar a probabilidade condicional de uma variável,
+ dado um conjunto de covariáveis. É comumente utilizada para problemas de classificação binária, onde a variável
 dependente possui apenas duas categorias, como sim/não, positivo/negativo, 0/1 \cite{hosmer}.
 
 
-O cálculo da regressão logística é baseado na probabilidade da variável aleatória $Y$ ser igual a 1, onde Y é 
-uma variável aleatória com distribuição Bernouli, com parâmetro p de sucesso, cuja fórmula é dada por:
+O modelo de regressão logística é construído considerando a probabilidade da variável aleatória $Y$ ser igual a 1, onde Y é 
+uma variável aleatória com distribuição Bernoulli, com probabilidade p de sucesso, cuja fórmula é dada por:
 
 \begin{equation}
-  P(Y=1| x_1, x_2, ..., x_k) = \frac{1}{1 + e^{-(\beta_0 + x_{1}\beta_1 + x_{2}\beta_2 + \ldots + x_{k}\beta_k)}}
+  P(Y=1| x_1, x_2, ..., x_k) = \frac{1}{1 + e^{-(\beta_0 + x_{1}\beta_1 + x_{2}\beta_2 + \ldots + x_{k}\beta_k)}},
   \label{eq:model_logistic}
 \end{equation}
 
 \noindent onde cada variável explicativa $(x_1, x_2, ..., x_k)$ tem um parâmetro $\beta$ correspondente, influenciando o resultado de $Y$.
 
-A estimação dos coeficientes $(b_0, b_1, b_2, ..., b_k)$  na regressão logística é geralmente realizada por meio 
+A estimação dos parâmetros $(b_0, b_1, b_2, ..., b_k)$  na regressão logística é geralmente realizada por meio 
 do método da máxima verossimilhança. O objetivo é encontrar os valores dos coeficientes que maximizam a função de
 verossimilhança, representando a probabilidade de observar os dados observados dado o modelo.
  
-A função de verossimilhança $(L)$ para a regressão logística é dada pelo produto das probabilidades condicionais
-de observar os eventos(valores da variável dependente) dados os valores das variáveis independentes. Para facilitar o cálculo, 
-geralmente trabalhamos com o logaritmo natural da função de verossimilhança, conhecido como log-verossimilhança($l$).
+A função de verossimilhança $L(\beta)$ para a regressão logística é dada pelo produto das probabilidades condicionais
+de observar os eventos (valores da variável dependente) dados os valores das variáveis independentes. Para facilitar o cálculo, 
+geralmente trabalhamos com o logaritmo natural da função de verossimilhança, conhecido como log-verossimilhança $l(\beta)$.
 
 A log-verossimilhança para a regressão logística é:
 
 \begin{equation}
-  l(\beta) = \sum_{i=1}^{N} [y_i \beta^T x_i - \log(1 + e^{\beta^T x_i})]
+  l(\beta) = \sum_{i=1}^{N} [y_i \beta^T x_i - \log(1 + e^{\beta^T x_i})], 
 \end{equation}
 
-
+\noindent onde,
 \begin{itemize}
-  \item  $N$é o número total de observações.
-  \item  $y_i$ é a variável dependente binária da i-ésima observação (0 ou 1).
-  \item $p_i$ é a probabilidade predita de $Y=1$ para a i-ésima observação, dada pela função logística.
+  \item  $N$é o número total de observações;
+  \item  $y_i$ é a variável dependente binária da i-ésima observação (0 ou 1);
+  \item $x_i$ é o vetor de covariáveis da $i$-ésima observação;
+  \item \textbf{$\beta$} é o vetor de parâmetros do modelo modelo logístico.
 \end{itemize}
 
 A ideia é encontrar os valores de $(b_0, b_1, b_2, ..., b_k)$ que maximizam essa função. Isso geralmente é feito usando métodos computacionais, 
-como o algoritmo de otimização Newton-Raphson ou o Gradiente Descendente.
+como o algoritmo de otimização Newton-Raphson ou o Gradiente Descendente \cite{curry1944}.
 
 \subsubsection{Interpretação}
 
 % definição de chance
 
-Para se interpretar o modelo logístico é utilizado a Razão de Chances, que calcula a razão entre duas chances, sendo a chance
-de evento definida como a probabilidade do sucesso do evento sobre a probabilidade do fracasso.
+Para a interpretação do modelo logístico é utilizada a Razão de Chances, que calcula a razão entre duas chances, sendo a chance 
+(ou, do inglês, \textit{odds})
+de um evento definida como a probabilidade do sucesso do evento sobre a probabilidade do fracasso \cite{szumilas2010explaining}.
 
 \begin{equation}
-  \text{Chance} =  \frac{P(Y=1|X=x)}{P(Y=0|X=x)}
+  \text{Chance} =  \frac{P(Y=1|X=x)}{P(Y=0|X=x)}.
 \end{equation}
 
-Para calcular a Razão de Chances, inicialmente, é determinada a chance de ocorrência de um evento específico,
-designada como "Chance de X". Em seguida, é calculada a chance desse mesmo evento ocorrer quando a variável 
-correspondente é incrementada em uma unidade, referida como "Chance de X + 1". 
-Dessa forma, a fórmula para a Razão de Chances é expressa por:
+Para calcular a Razão de Chances, inicialmente, é determinada a chance de ocorrência de um
+$Y$ dado um conjunto de covariáveis x
+Em seguida, é calculada a chance desse mesmo evento ocorrer quando, por exemplo,
+a k-ésima covariável 
+correspondente é incrementada em uma unidade. 
+Dessa forma, a fórmula para a Razão de Chances (RC) é expressa por:
 
 \begin{equation}
-  \text{Razão de Chances} =  \frac{\text{Chance de } X + 1}{\text{Chance de } X}
+  \text{Razão de Chances} =  \frac{\frac{P(Y=1 | X` \text{ e } X_j = x_j + 1)}{P(Y=0 | X` \text{ e } X_j = x_j + 1)}}{\frac{P(Y=1 | X` \text{ e } X_j = x_j)}{P(Y=0 | X` \text{ e } X_j = x_j)}}, 
 \end{equation}
 
+\noindent onde, $X`$ é um vetor com todas as covariáveis exceto a covariável $X_j$.
 
-Esse mesmo resultado pode ser obtido quando se calcula a exponencial dos coeficientes do modelo logístico.
+Considerando a Equação \ref{eq:model_logistic}, temos que a Razão de Chances pode ser calculada como:
 
 \begin{equation}
-  RC = \exp{(\beta_k)}
+  RC = \exp{(\beta_j)}.
 \end{equation}
 
-Logo, para o crescimento de 1 unidade em $X_k$, variável associada ao $\beta_K$, a chance do evento ocorrer aumento em $\beta_k$ unidades,
-considerando as demais variáveis constantes.
+Logo, para o crescimento de 1 unidade em $X_k$, variável associada ao $\beta_j$, a chance do evento ocorrer 
+é multiplicada por $\exp{(\beta_j)}$ unidades, considerando as demais variáveis constantes. 
+Ou seja, uma RC igual a 1 indica que a variável independente não tem efeito no resultado de $Y$ (nenhuma associação).
+Uma RC maior que 1 sugere uma associação positiva, enquanto uma RC menor que 1 sugere uma associação negativa.
 
-Um RC igual a 1 indica que a variável independente não tem efeito no resultado de Y(nenhuma associação).
-Um RC maior que 1 sugere uma associação positiva, enquanto um RC menor que 1 sugere uma associação negativa.
-
-Outra medida interpretativa é a função log odds ou logíto. Ela é uma função que calcula o log da 
-razão do evento acontecer e dele não acontecer, cuja formulação é dada por:
+Outra medida interpretativa é a função log odds ou logíto. Ela é uma função que calcula o log da chance, ou seja, o 
+log da razão das probabilidades do evento acontecer e dele não acontecer, cuja formulação é dada por:
 
 \begin{equation}
-  \text{logit}(P(Y=1)) = \log \left( \frac{P(Y=1)}{1 - P(Y=1)} \right)
+  \text{logit}(P(Y=1)) = \log \left( \frac{P(Y=1)}{1 - P(Y=1)} \right),
 \end{equation}
 
-\noindent onde esse resultado nada mais é do que $\beta_0 + X_{1}\beta_1 + X_{2}\beta_2 + \ldots +X_{k}\beta_k$. 
+\noindent onde esse resultado nada mais é do que o preditor linear $\beta_0 + X_{1}\beta_1 + X_{2}\beta_2 + \ldots +X_{k}\beta_k$. 
 
-Portanto, a utilidade de se analisar o log-odds é justamente uma ponte entre olhar coeficiente e a probabilidade final, 
-pois um coeficiente positivo indica que o aumento na variável está associado a um aumento nas log-odds 
-(e, portanto, na probabilidade), enquanto um coeficiente negativo está associado a uma diminuição nas log-odds (e na probabilidade).
+Portanto, um coeficiente $\beta_j$ positivo indica que o aumento na respectiva covariável está associado a um aumento na log-odds 
+(e, portanto, na probabilidade de sucesso), enquanto um coeficiente negativo está associado a uma diminuição nas log-odds (e na probabilidade de
+sucesso).
 
 
 \subsection{Redes neurais artificiais}
 
-Redes Neurais Artificiais (ou \textit{Deep Learning}) é uma técnica preditiva presente no campo de Inteligência Artificial. As redes neurais tem sido amplamente utilizadas devido ao seu alto poder preditivo e também à flexibilidade de se aplicar esse método em diversos contextos, permitindo ser um modelo com menos restrições que os modelos tradicionais estatísticos.
+Redes Neurais Artificiais (ou \textit{Deep Learning}) é uma técnica de modelagem de dados
+ presente no campo de Inteligência Artificial. As redes neurais tem sido amplamente utilizadas devido ao seu alto
+  poder preditivo e também à flexibilidade de se aplicar esse método em diversos contextos, permitindo
+   ser um modelo com menos restrições que os modelos tradicionais estatísticos \cite{mitnews_neuralnetworks}.
 
 
 \subsubsection{Neurônio}
 
-Uma rede neural tem esse nome devido à tentativa de se reproduzir o comportamento do cérebro humano. Sua arquitetura é composta por um conjunto de unidades denominadas neurônios, e cada neurônio é responsável por receber informações, fazer o tratamento do que foi recebido, e repassar o resultado disso para frente. A Figura \ref{neuronio} ilustra a estrutura de 1 neurônio. Quando as informações $x_i$ entram no neurônio, acontece primeiramente um processo onde é ponderada cada informação que foi recebida, os chamados \textbf{pesos}. Logo em seguida ocorre a soma dessa ponderação. Feito isso, é realizado mais um processo de soma, agora adicionando uma informação própria daquele neurônio nesse resultado. Essa informação é chamada de \textbf{bias} (ou Viés). Antes desse resultado ser repassado para outro neurônio, ele passa por uma função que vai definir a natureza daquela informação, chamada de \textbf{função de ativação}, retornando assim uma saída $y$.
-
+Uma rede neural tem esse nome devido à tentativa de se reproduzir o comportamento do cérebro humano.
+ Sua arquitetura é composta por um conjunto de unidades denominadas neurônios, e cada neurônio é 
+ responsável por receber informações, fazer o tratamento do que foi recebido, e repassar o resultado 
+ para frente \cite{ai_3rd_edition}. A Figura \ref{fig:neuronio} ilustra a estrutura de 1 neurônio.
+  Quando as informações $x_i$ entram no neurônio, acontece primeiramente um processo 
+  onde é ponderada cada informação que foi recebida, pelos chamados \textbf{pesos}. Logo
+   em seguida ocorre a soma dessa combinação linear. Feito isso, é realizado mais um processo 
+   de soma, agora adicionando uma informação própria daquele neurônio nesse resultado. 
+   Essa informação é chamada de \textbf{bias} (ou Viés). Antes desse resultado ser repassado 
+   para outro neurônio, ele passa por uma função que vai definir a natureza daquela informação, 
+   chamada de \textbf{função de ativação}, retornando assim uma saída $y$.
  \begin{figure}[H]
     \centering
-     \caption{Neurônio da Rede Neural}
+     \caption{Neurônio da Rede neural}
     \begin{tikzpicture}[
 init/.style={
   draw,
@@ -147,16 +163,16 @@ scale = 0.6
 \draw[decorate,decoration={brace,mirror}] (x1.north west) -- node[left=10pt] {Entradas} (x3.south west);
 \end{tikzpicture}
    
-    \label{fig:my_label}
+    \label{fig:neuronio}
 \end{figure} 
 
-A Figura \ref{fig:my_label} pode ser representada matematicamente da seguinte maneira:
+A Figura \ref{fig:neuronio} pode ser representada matematicamente da seguinte maneira:
 \begin{equation}
-    y = f (\beta + \sum_{i=1}^{d_x} w_ix_{i} ) 
+    y = f (\beta + \sum_{i=1}^{d_x} w_ix_{i} ) ,
     \label{neuronio}
 \end{equation}
  
- onde $d_x$ é o número de entradas.
+\noindent onde, $d_x$ é o número de entradas.
 
 
 \begin{figure}[H]
@@ -168,15 +184,23 @@ A Figura \ref{fig:my_label} pode ser representada matematicamente da seguinte ma
     
 \end{figure}
 
-A Figura \ref{fig:func_ativac} mostra alguns tipos de funções de ativação que um neurônio pode ser atribuído. Note como a maioria dessas funções restringe o valor de x (nesse caso o valor calculado no neurônio), no caso da função Sigmoide e da Tangente hiperbólica (tanh) limitando o valor do neurônio em um intervalo, a ReLU, que é bastante utilizada, desconsidera os valores negativos e existe a função Linear que basicamente só vai repassar a informação do neurônio para frente.
+A Figura \ref{fig:func_ativac} mostra alguns tipos de funções de ativação que um neurônio pode ser utilizado.
+Note como a maioria dessas funções restringe o valor de sua entrada. No caso 
+da função Sigmoide e da Tangente hiperbólica (tanh), o valor da saída é limitado em um intervalo. Já a ReLU,
+ desconsidera os valores negativos, e por fim existe a função Linear que apenas repassa a mesma informação para
+ frente.
 
 \vspace{1cm}
 
-
-
 \subsubsection{Arquitetura}
 
-Uma rede neural é estruturada em camadas formadas por um conjunto de neurônios. Conforme ilustrado na Figura \ref{fig:arc_smp_rnp}, temos as camadas de entrada, as camadas ocultas e a camada de saída. A camada de entrada é o ponto de partida da rede neural, pois é onde as informações das variáveis entram. Logo em seguida encontram-se as camadas ocultas, que são as principais responsáveis por criar redes mais complexas, pois o número de camadas e o número de neurônio dentro dessas camadas podem ser moldados ou adicionados dependendo do objetivo empregado pela rede, conforme ilustrado na Figura \ref{fig:arc_cpx_rnp}. E por fim existe a camada de saída que contém o(s) valor(es) predito(s) pela rede.
+Uma rede neural é estruturada em camadas formadas por um conjunto de neurônios. Conforme ilustrado
+ na Figura \ref{fig:arc_smp_rnp}, temos as camadas de entrada, as camadas ocultas e a camada de saída. 
+ A camada de entrada é o ponto de partida da rede neural, pois é onde as informações das variáveis entram. 
+ Logo em seguida encontram-se as camadas ocultas, que são as principais responsáveis por criar redes mais complexas,
+  pois o número de camadas e o número de neurônios dentro dessas camadas podem ser moldados ou adicionados dependendo 
+  do objetivo empregado pela rede, conforme ilustrado na Figura \ref{fig:arc_cpx_rnp}. E por fim existe a camada de 
+  saída, contendo o(s) valor(es) predito(s) pela rede \cite{zell_1994}.
 
 \begin{figure}[H]
 \centering
@@ -234,46 +258,58 @@ net/.style={
     
 \end{figure}
 
-Note que as Figuras \ref{fig:arc_smp_rnp} e \ref{fig:arc_cpx_rnp} evidenciam um potencial muito grande de crescimento da rede e naturalmente esse aumento pode acabar gerando um custo computacional elevado quando a rede estiver em treinamento.
+Note que as Figuras \ref{fig:arc_smp_rnp} e \ref{fig:arc_cpx_rnp} evidenciam um potencial muito grande de crescimento 
+da rede e, naturalmente, esse aumento pode gerar um custo computacional elevado quando a rede estiver em treinamento.
 
 \vspace{1cm}
 
 \subsubsection{\textit{Forward propagation}}
 
-O processo \textit{Forward propagation} (ou propagação direta) é o responsável por transmitir as informações, desde a camada de entrada, passando pelas camadas ocultas, até chegar na camada de saída. O \textit{Forward propagation} utiliza da generalização a Equação \ref{neuronio} para cada neurônio presente nas camadas internas da rede neural. Por isso temos que, para cada j-ésimo neurônio, da camada $l$:
+O processo \textit{Forward propagation} (ou propagação direta) é o responsável por transmitir as informações,
+ desde a camada de entrada, passando pelas camadas ocultas, até chegar na camada de saída. O \textit{Forward propagation}
+  aplica a Equação \ref{neuronio} para cada neurônio presente nas camadas internas da rede neural. 
+  Por isso temos, para cada j-ésimo neurônio, da camada $l$, a seguinte combinação linear:
 
 \[
-z_{j}^{(l)} = b_{j}^{(l)} + \sum_{i=1}^{d_{(l-1)}} w_{ij}a_{i}^{(l-1)} 
+z_{j}^{(l)} = b_{j}^{(l)} + \sum_{i=1}^{d_{(l-1)}} w_{ij}a_{i}^{(l-1)} ,
 \]
 
-\hspace{-1cm}onde:
+\noindent onde:
 \begin{itemize}
-    \item $w_{ij}$ é o peso associado à conexão entre o neurônio $i$ na camada $l-1$ e o neurônio $i$ na camada $l$;
+    \item $w_{ij}$ é o peso associado à conexão entre o neurônio $i$ na camada $l-1$ e o neurônio $j$ na camada $l$;
     \item $a_{(i)}^{(l-1)}$ é a saída do neurônio i na camada anterior $(l-1)$;
     \item $b_{j}^{(l)}$ é o viés (bias) associado ao neurônio j na camada $l$.
 \end{itemize}
 
-Logo em seguida é aplicada uma função de ativação $g$ em $z_{i}^{(l)}$ que vai ser a responsável por gerar o resultado final $a_{i}^{(l)}$, do o i-ésimo neurônio na l-ésima camada.
+Logo em seguida é aplicada uma função de ativação $g$ em $z_{j}^{(l)}$, sendo esta responsável por gerar o
+ resultado final $a_{j}^{(l)}$, do o j-ésimo neurônio na l-ésima camada.
 
 \[a_{i}^{(l)} = g(z_{i}^{(l)})\]
 
-Esse processo vai ser realizado camada a camada, sequencialmente. Logo, supondo que uma rede neural tenha $l$ camadas ocultas e, cada camada contendo $d_l$ neurônios, considerando também $w_{ij}$ como o peso presente no i-ésimo neurônio com a j-ésima saída na camada seguinte ($l+1$), onde $l=0,...,H$. Temos que o resultado final da propagação é igual a:
+Esse processo vai ser realizado camada a camada, sequencialmente. Logo, considerando uma rede com H camadas
+ocultas, o resultado da camada de saída $H+1$ é dado por:
 
 \begin{equation}
-    f(\textbf{x}) = \textbf{a}^{H+1} = g(b_{j}^{(H+1)} + \sum_{i=1}^{d_{H}} w_{ij}a_{i}^{H}) 
+    f(\textbf{x}) = \textbf{a}^{H+1} = g(b_{j}^{(H+1)} + \sum_{i=1}^{d_{H}} w_{ij}a_{i}^{H}).
 \end{equation}
 
 
-Note que a previsão da rede vem diretamente do resultado obtido da última camada oculta, e esse depende da camada que o antecede e assim sucessivamente até chegar na camada de entrada.
+Note que a previsão da rede vem diretamente do resultado obtido da camada de saída, e esse depende da camada 
+que o antecede e assim sucessivamente até chegar na camada de entrada.
 
 
 \subsubsection{Função de perda}
 
-Para se obter informações sobre o desempenho do modelo, é escolhida uma função de perda. Uma função bastante utilizada é a do erro do quadrático médio:
+Para otimizar o desempenho do modelo, é escolhida uma função de perda. Uma função bastante utilizada
+para estimação de médias é a do erro do quadrático médio:
 
 \[EQM(f) = \frac{1}{n} \sum_{k=1}^{n} (f(\textbf{x}_k) - y_k)^2\]
 
-Essa função é uma indicadora do quão longe, em média, os valores preditos estão distantes dos valores reais. Note que o resultado da função $f$ depende exclusivamente dos parâmetros da rede (viés e pesos), por isso, se essa função de perda tende a 0, significa que  os parâmetros dessa rede alcançaram um ponto mínimo global. Entretanto, devido a complexidade desse modelo, acabam-se escolhidos pontos locais mínimos, que, dependendo do contexto, acabam satisfazendo o objetivo. A Figura \ref{fig:pesos_lossfunc} ilustra esse comportamento:
+Essa função é uma indicadora do quão longe, em média, os valores preditos $f(x_k)$ estão distantes dos valores reais $y_k$. 
+Note que o resultado da função $f$ depende exclusivamente dos parâmetros da rede (viés e pesos), por isso, 
+a derivada da função de perda é 0, significa que  os parâmetros dessa rede minimizaram a perda. Entretanto,
+ devido à complexidade desse modelo, é possível parar em pontos locais mínimos, que, dependendo do contexto, são
+ suficiente ótimos. A Figura \ref{fig:pesos_lossfunc} ilustra esse comportamento:
 
 \begin{figure}[H]
     \centering
@@ -286,23 +322,28 @@ Essa função é uma indicadora do quão longe, em média, os valores preditos e
 
 \subsubsection{\textit{Backpropagation}}
 
-Como a função de perda está relacionada com os parâmetros (\textbf{$\theta$}) da rede, para se minimizar a função de perda R(\textbf{$\theta$}), é necessário encontrar os valores de \textbf{$\theta$} que resolvam esse problema de otimização. Para fazer isso, é necessário calcular o gradiente de  R(\textbf{$\theta$}) em relação à \textbf{$\theta$} \cite{james2013introduction}, 
+Como a função de perda $R(\theta)$ depende dos parâmetros (\textbf{$\theta$}) da rede, para se minimizar
+ a função de perda, é necessário encontrar os valores de \textbf{$\theta$} que resolvam 
+ esse problema de otimização. Para fazer isso, é necessário calcular o gradiente de  R(\textbf{$\theta$}) em 
+ relação à \textbf{$\theta$} \cite{james2013introduction}, 
 
 \begin{equation}
-\nabla R(\theta) = \frac{\partial R(\theta)}{\partial \theta}     
+\nabla R(\theta) = \frac{\partial R(\theta)}{\partial \theta},     
 \label{gradiente}
 \end{equation}
 
 
-A rede neural, durante todo o treinamento, aplica esse processo do cálculo do gradiente de R(\textbf{$\theta$}) em relação à \textbf{$\theta$}. Esse é um processo iterativo, com o objetivo de mudar o valor de $\theta$ afim de conseguir minimizar a função de perda. Com isso a Equação \ref{gradiente} pode ser descrita nesse processo iterativo como:
+A rede neural, durante todo o treinamento, aplica esse processo do cálculo do gradiente de R(\textbf{$\theta$}) 
+em relação à \textbf{$\theta$}. Esse é um processo iterativo, que provoca alterações no valor de $\theta$ afim de 
+conseguir minimizar a função de perda. Com isso a Equação \ref{gradiente} pode ser descrita nesse processo iterativo como:
 
 \[
 \nabla R(\theta^m) = \frac{\partial R(\theta)}{\partial \theta} \bigg\rvert_{\theta = \theta^m},
 \]
 
-\hspace{-1.5cm}onde $\theta = \theta_m$ significa que o cálculo do gradiente está sendo realizado na iteração $m$.
+\hspace{-1.5cm}onde $\theta = \theta^m$ significa que o cálculo do gradiente está sendo realizado na iteração $m$.
 
-E, para conseguir atualizar esse $\theta$, conforme é calculado o gradiente durante as iterações, é utilizada a técnica de gradiente descendente, que pode ser descrita como: 
+Para conseguir atualizar esse $\theta$, conforme é calculado o gradiente durante as iterações, é utilizada a técnica de gradiente descendente, que pode ser descrita como: 
 
 \[
 \theta^{m+1} \leftarrow \theta^{m} - \lambda\frac{\partial R(\theta^m)}{\partial \theta^m}
@@ -319,10 +360,17 @@ E, para conseguir atualizar esse $\theta$, conforme é calculado o gradiente dur
     
 \end{figure}
 
-A Figura \ref{fig:gradient_descent} demonstra o processo do gradiente descendente. Os parâmetros são iniciados com algum valor e, conforme ocorre os processos iterativos de aprendizado, o parâmetro converge para um mínimo da função de perda. Note que a distância entre cada ponto é definida pelo $\lambda$ ou taxa de aprendizado.
+A Figura \ref{fig:gradient_descent} demonstra o processo do gradiente descendente. Os parâmetros são iniciados
+ com algum valor e, conforme ocorre os processos iterativos de aprendizado, o parâmetro converge para um mínimo
+  da função de perda. Note que a distância entre cada ponto é definida pelo $\lambda$ ou taxa de aprendizado.
 
 
-Todo esse processo é realizado em cada parâmetro que existe na rede neural. Assim como as informações das variáveis são passadas camada a camada, saindo da camada de entrada, passando pelas camadas ocultas e chegando na camada de saída, visto anteriormente como \textit{Forward propagation}, a informação do resultado da rede na função de perda é passada de forma contrária. O gradiente de cada parâmetro é calculado primeiro nas camadas mais próximas da saída, e essa informação é repassada para trás, chegando até os parâmetros próximos aos da camada de entrada. Esse processo é chamado de \textit{Backpropagation} \cite{werbos1974beyond}.
+Todo esse processo é realizado em cada parâmetro que existe na rede neural. Assim como as informações das variáveis
+ são passadas camada a camada, iniciando na camada de entrada, passando pelas camadas ocultas e chegando na camada de 
+ saída (\textit{Forward propagation}), a informação do resultado da rede na função de perda 
+ é passada de forma contrária. Ou seja, o gradiente de cada parâmetro é calculado primeiro nas camadas mais próximas da saída,
+  e essa informação é repassada para trás, chegando até os parâmetros da camada de entrada. Esse processo
+   é chamado de \textit{Backpropagation} \cite{werbos1974beyond}.
 
 
 \subsection{SHAP}
@@ -330,22 +378,22 @@ Todo esse processo é realizado em cada parâmetro que existe na rede neural. As
 A estrutura de uma rede neural, por mais que proporcione bons resultados, mostra uma deficiência na parte interpretativa. 
 Conhecida por ser uma "caixa-preta" pelo fato de sua estrutura ser muito complexa, existe a necessidade de se entender 
 as predições feitas.
-Para isso, existem técnicas que abordam o tema de interpretação de modelos de redes neurais e dentro delas existe a
- técnica SHAP, que através dela é possível entender como as variáveis de entrada influenciam as previsões do modelo, 
- fornecendo resultados sobre sua lógica e permitindo uma explicação clara e confiável. Isso contribui para a 
+Para isso, existem técnicas que visam a interpretação de modelos de redes neurais, como por exemplo a
+ técnica SHAP. Através dela é possível entender como as variáveis de entrada influenciam as previsões do modelo, 
+ fornecendo explicações sobre sua lógica. Isso contribui para a 
  transparência, confiabilidade e aceitação dos modelos, além de auxiliar na detecção de viéses e discriminação. 
 
 \subsubsection{Valores de Shapley}
 
-Os valores de Shapley foram desenvolvidos por Lloyd Shapley \cite{shapley1953value} no contexto da teoria de jogos, 
+Os valores de Shapley foram prpostos por Lloyd Shapley \cite{shapley1953value} no contexto da teoria de jogos, 
 e essa técnica ganhou   força na área de inteligência artificial pela sua capacidade de conseguir interpretar modelos
  preditivos tidos como "caixa-preta". 
  
- No método criado por Shapley, existiam uma quantidade de jogadores que exerciam
+ No método criado por Shapley, havia uma quantidade de jogadores que exerciam
   juntos determinada atividade, e o intuito era observar o ganho que um jogador (ou um conjunto de jogadores), obtinha 
-  ao ser adicionado para realizar a mesma tarefa, sem a presença do restante do grupo. 
+  ao ser adicionado para realizar a mesma tarefa, sem a presença do restante do grupo \cite{hart_1989}. 
 
-Podemos definir \textbf{F} como o conjunto dos jogadores disponíveis para se realizar a tarega, 
+Podemos definir \textbf{F} como o conjunto dos jogadores disponíveis para a realização da tarefa, 
 logo $\textbf{F} = \{1,2,..., \textbf{M}\}$, onde \textbf{M} é o número total de jogadores.
 Definindo \textbf{S} como uma coligação do conjunto \textbf{F} $(\textbf{S} \subseteq \textbf{F})$, temos, por exemplo, as seguintes possibilidades de \textbf{S}, quando \textbf{M} é igual a 3:
 
@@ -355,7 +403,7 @@ Existe também uma função que vai mapear um conjunto de valores e retornar um 
 o "trabalho da coligação \textbf{S}" ou o "trabalho dos jogadores presentes no conjunto \textbf{S}". Esse valor é equivalente ao total ganho que os jogadores podem obter caso trabalhem juntos em uma determinada coligação.
 
 Para calcular o ganho ao adicionar $i$-ésimo jogador em uma tarefa, 
-pode-se calcular o ganho quando é adicionada aquela jogador na coligação menos a coligação sem 
+pode-se calcular o ganho quando é adicionado aquelo jogador na coligação menos o ganho da coligação sem 
 a adição daquele jogador, ficando da seguinte maneira:
 
 \begin{equation}
@@ -369,13 +417,17 @@ No exemplo acima, para calcular o efeito da coligação \{3\}, pode-se realizar 
 \text{Contribuição} \hspace{1mm} de \hspace{1mm} \{3\} = \nu(\{1,2,3\}) - \nu(\{1,2\})  
 \]
 
-Mas suponha que as variáveis (ou jogadores) \{2\} e \{3\} sejam extremamente semelhantes. Quando é calculado o 
-ganho após inserir \{2\} na coligação \{1,2\}, é possível notar um aumento substancial, mas quando é adicionado 
-\{3\} na coligação \{1,2,3\}, o ganho obtido é muito pouco. Como as variáveis exercem um papel parecido,
- o ganho maior ficou sujeito à variável que foi adicionada primeiro na coligação, não necessariamente 
- porque uma é mais importante que a outra. 
 
-Por isso, para calcular o real ganho da variável \{i\}, é necessário testar todas as permutações de \textbf{F} (conjunto de jogadores) e obter a contribuição de \{i\} em cada uma delas, para então fazer a média dessas contribuições. Por exemplo, definindo \textbf{F} = \{1,2,3,4\}, suponha que estamos interessados em calcular a contribuição de \{3\}, logo, podemos obter a seguinte permutação de  \textbf{F}:
+Entretanto, considere que as variáveis (ou jogadores) \{2\} e \{3\} apresentam uma semelhança extraordinária.
+ Ao calcular o ganho ao inserir \{2\} na coligação \{1,2\}, observamos um aumento substancial. No entanto,
+  ao adicionar \{3\} à coligação \{1,2,3\}, o ganho é significativamente menor. Devido à semelhança no papel 
+  desempenhado por essas variáveis, o maior ganho está vinculado à variável adicionada primeiro à coligação, 
+  não necessariamente indicando que uma seja mais importante que a outra.
+
+Por isso, para calcular o real ganho da variável \{i\}, é necessário testar todas as permutações de \textbf{F} 
+(conjunto de jogadores) e obter a contribuição de \{i\} em cada uma delas, para então fazer a média dessas 
+contribuições. Por exemplo, considerando 4 jogadores, \textbf{F} = \{1,2,3,4\}, suponha que estamos interessados em calcular
+ a contribuição de \{3\}, logo, podemos obter a seguinte permutação de  \textbf{F}:
 
 $$[3,1,2,4]$$
 
@@ -389,46 +441,71 @@ $$[2,4,3,1]$$
 
 Calculando a contribuição de \{3\}, nessa permutação temos: 
 
-$$\nu(\text{coligação} \hspace{1mm} de \hspace{1mm} [2,4,3]) - \text{coligação} \hspace{1mm} de \hspace{1mm} [2,4]) $$
+$$\nu(\text{coligação} \hspace{1mm} de \hspace{1mm} [2,4,3]) - \nu(\text{coligação} \hspace{1mm} de \hspace{1mm} [2,4]) $$
 
-Uma observação deve ser feita: a função $\nu$ considera a coligação como argumento, não a permutação. A coligação é um conjunto, com isso a ordem dos elementos não importa, mas a permutação é uma coleção ordenada de elementos. Na permutação do tipo [3,1,2,4], 3 é a primeira variável adicionada e 4 é a última. Por isso, para cada permutação a ordem dos elementos pode mudar a contribuição do total ganho, contudo o total ganho da permutação somente depende dos elementos, não da ordem. Logo:
+
+É importante ressaltar que a função $\nu$ aceita a coligação como argumento, não a permutação. 
+Uma coligação é um conjunto, onde a ordem dos elementos não tem importância, ao passo que uma permutação é uma 
+coleção ordenada de elementos. Na permutação [3,1,2,4], por exemplo, 3 é a primeira variável adicionada, enquanto 
+4 é a última. Portanto, para cada permutação, a ordem dos elementos pode influenciar na contribuição total, mas o
+ ganho total da permutação depende apenas dos elementos, não da ordem. Assim:
 
 \[\nu(\text{coligação} \hspace{1mm} de \hspace{1mm} [3,1,2,4]) = \nu(\{1,4,2,3\})\]
 
-Sendo assim, para cada permutação \textbf{P}, é preciso primeiro calcular o ganho da coligação das variáveis que foram adicionadas antes de \{i\}, e esse conjunto pode ser chamado de coligação \textbf{S}. Feito isso, agora é preciso calcular o ganho das coligações que são formadas ao adicionar \{i\} em \textbf{S}, e podemos chamar isso de $\textbf{S} \cup \{i\}$. Com isso, a contribuição da variável \{i\}, denotada por $\phi_{i}$, é:
+Sendo assim, para cada permutação \textbf{P}, é preciso primeiro calcular o ganho da coligação das variáveis que 
+foram adicionadas antes de \{i\}, e esse conjunto pode ser chamado de coligação \textbf{S}. Feito isso, agora é 
+preciso calcular o ganho das coligações que são formadas ao adicionar \{i\} em \textbf{S}, e podemos chamar
+ isso de $\textbf{S} \cup \{i\}$. Com isso, a contribuição da variável \{i\}, denotada por $\phi_{i}$, é:
+
+ Portanto, para cada permutação \textbf{P}, é necessário inicialmente calcular o ganho da coligação das variáveis
+  que foram adicionadas antes de {i}, e esse conjunto pode ser referido como coligação \textbf{S}. Em seguida, é
+   necessário calcular o ganho das coligações formadas ao adicionar {i} a \textbf{S}, e podemos representar isso 
+   como $\textbf{S} \cup {i}$. Dessa forma, a contribuição da variável {i}, denotada por $\phi_{i}$, é:
 
 \begin{equation}
  \phi_i = \frac{1}{|\textbf{F}|!}\sum_{\textbf{P}} [\nu(\textbf{S}\cup\{i\}) - \nu(\textbf{S})]
  \label{eq:value_shap_ini}
 \end{equation}
 
-O número total de permutações de \textbf{F} é $|\textbf{F}|!$. Logo, podemos dividir a soma das contribuições por $|\textbf{F}|!$ para encontrar o valor esperado de contribuição de \{i\}. A Figura \ref{fig:total_permuts_shap} mostra como é feito esse calculo para um determinado jogador $\{i\}$.
+O número total de permutações de \textbf{F} é $|\textbf{F}|!$. Logo, podemos dividir a soma das contribuições por $|\textbf{F}|!$ 
+para encontrar o valor esperado de contribuição de \{i\}. A Figura \ref{fig:total_permuts_shap} mostra como é feito esse calculo
+ para um determinado jogador $\{i\}$.
 
 \begin{figure}[H]
     \centering
-    \caption{Ganho do jogador 3 em relação à todas as permutações de jogadores.}
+    \caption{Ganho do jogador 3 em relação a todas as permutações de jogadores.}
     \includegraphics[scale=0.5]{imagens/shap.png}
     \caption*{Fonte: https://towardsdatascience.com/introduction-to-shap-values-and-their-application-in-machine-learning-8003718e6827}
     \label{fig:total_permuts_shap}
     
 \end{figure}
 
-É possível perceber que algumas permutações possuem a mesma contribuição, desde que suas coligações 
-$\textbf{S}\cup\{i\}$ e \textbf{S} sejam as mesmas. Com isso, para reduzir o processo do cálculo de contribuição de cada permutação, pode-se identificar quantas vezes a permutação gerada vai resultar em uma contribuição que seja igual a outra.
+
+É evidente que algumas permutações apresentam a mesma contribuição, contanto que suas coligações $\textbf{S}\cup{i}$ e \textbf{S}
+ sejam idênticas. Para otimizar o cálculo da contribuição de cada permutação, é possível identificar quantas vezes a geração de
+  permutações resultará em uma contribuição igual a outra.
 
 
-Para fazer isso, é necessário descobrir quantas permutações podem ser formadas de cada coligação. Podemos definir $\textbf{F} - \{i\}$ como o conjunto de todas as variáveis excluindo a variável \{i\}, e \textbf{S} como uma das coligações de $\textbf{F} - \{i\} (\textbf{S} \subseteq  \textbf{F} - \{i\}$ ).
-
-Logo, para cada coligação \textbf{S} temos $|\textbf{S}|!$ possíveis permutações, que corresponde às possibilidades  de variáveis e suas respectivas ordens antes de adicionar a variável \{i\}.
-
-Tendo os conjuntos $\textbf{S}\cup\{i\}$ e \textbf{S} definidos, resta agora achar as possíveis permutações das variáveis restantes. E para saber o valor restante é preciso calcular o tamanho do conjunto gerado por: \textbf{F} - ($\textbf{S}\cup\{i\}$ + 1)
+Para fazer isso, é necessário descobrir quantas permutações podem ser formadas de cada coligação. Podemos definir
+$\textbf{F} - \{i\}$ como o conjunto de todas as variáveis excluindo a variável \{i\}, e \textbf{S} como uma das
+coligações de $\textbf{F} - \{i\} (\textbf{S} \subseteq  \textbf{F} - \{i\}$ ). 
+Logo, para cada coligação \textbf{S} temos $|\textbf{S}|!$ possíveis permutações, que corresponde às possibilidades
+de variáveis e suas respectivas ordens antes de adicionar a variável \{i\}.
+Tendo os conjuntos $\textbf{S}\cup\{i\}$ e \textbf{S} definidos, resta agora achar as possíveis permutações
+das variáveis restantes. E para saber o valor restante é preciso calcular o tamanho do conjunto gerado por:
+\textbf{F} - ($\textbf{S}\cup\{i\}$ + 1)
 que basicamente é o que resta das variáveis para completar o conjunto \textbf{F}.
 
-A Figura \ref{fig:permut_e_colig}  mostra o que acontece quando se escolhe o jogador $i$, nesse caso $i=3$. Note que, na linha das coligações, é definido as possíveis coligações de \textbf{S}, que seria as permutações dos jogadores 1 e 2, temos a coligação de um único elemento na coluna $\{i\}$, que sempre vai ser o próprio elemento, em seguida a coligação dos jogadores restantes. Na linha das permutações é definida todas as possíveis permutações para \textbf{S}, para $\{i\}$ e para $\textbf{F}-\textbf{S}-\{i\}$. E na última linha é representado o tamanho do conjunto formado pela permutação/coligação descrita anteriormente.
+ A Figura \ref{fig:permut_e_colig} ilustra o procedimento ao escolher o jogador $i=3$.
+Na linha das coligações, são especificadas as possíveis coligações de \textbf{S}, que consistem nas
+permutações dos jogadores 1 e 2, e a coligação $\{i\}$ cujo único elemento na coluna ${i}$, onde
+o único elemento será o próprio $i$. Em seguida, são listadas as coligações dos jogadores restantes $\{4, 5\}$. 
+Na linha das permutações, são apresentadas todas as permutações possíveis para \textbf{S}, $\{i\}$ e $\textbf{F}-\textbf{S}-\{i\}$. 
+A última linha representa o tamanho do conjunto formado pela permutação/coligação descrita anteriormente.
 
 \begin{figure}[H]
     \centering
-    \caption{Relação entre permutações e coalizões.}
+    \caption{Relação entre permutações e coalisões.}
     \includegraphics[scale=0.5]{imagens/shap1.png}
     \caption*{Fonte: https://towardsdatascience.com/introduction-to-shap-values-and-their-application-in-machine-learning-8003718e6827}
     \label{fig:permut_e_colig}
@@ -447,10 +524,11 @@ Com isso, podemos reescrever a Equação \ref{eq:value_shap_ini} da seguinte man
 
 \subsubsection{\textit{Shapley Additive Explanations}}
 
-Fazendo a relação do valor de Shapley para o SHAP (\textit{Shapley Additive Explanations}), 
-temos que a função característica $\nu$ é equivalente à função $f(x)$ responsável por fazer as predições.
- E os valores de SHAP são calculados a partir das observações que entram no modelo. Com isso, a fórmula do valor
-  de SHAP, para cada conjunto de observação e variável especificada, se dá por:
+Fazendo o paralelo do valor de Shapley para o SHAP (\textit{Shapley Additive Explanations}), 
+temos que os jogadores são as covariáveis do modelo e a função característica $\nu$ é equivalente à função $f(x)$
+ responsável por fazer as predições.
+ Assim, valores de SHAP são calculados para cada observação. Com isso, a fórmula do valor
+  de SHAP, para cada a i-ésima covariável de determinada observação x é dada por:
 
 \begin{equation}
 \phi_i(f,\textbf{x})= 
@@ -461,7 +539,9 @@ temos que a função característica $\nu$ é equivalente à função $f(x)$ res
 \label{eq:SHAP}
 \end{equation}
 
-Perceba que $f_\textbf{S}(\textbf{x}_S)$ representa o resultado do modelo com somente as variáveis que estão na coligação $\textbf{S}$, algo que na realidade não é permitido na maioria dos modelos. Por isso, uma aproximação desse resultado é a seguinte:
+Perceba que $f_\textbf{S}(\textbf{x}_S)$ representa o resultado do modelo com somente as covariáveis
+ que estão na coligação $\textbf{S}$, algo que na realidade não é permitido na maioria dos modelos. 
+ Por isso, uma aproximação desse resultado é a seguinte:
 
 \begin{equation}    
 f_S(\textbf{x}_S) \approx E[f(\textbf{x}|\textbf{x}_S)] \approx 
@@ -470,9 +550,12 @@ f(\textbf{x}_{\bar{S}}^{(i)}, \textbf{x}_S)
 \label{eq:SHAP_detalhado}
 \end{equation}
 
-Para determinar os valores das variáveis que não pertencem ao conjunto $\textbf{x}_S$, a Equação
-\ref{eq:SHAP_detalhado} esclarece que para isso o valor esperado dessas variáveis é calculado. Isso resulta na criação de uma
+Ou seja, para $x_s$ fixo, toma-se variações do conjunto de variáveis que não pertencem ao conjunto $\textbf{x}_S$,
+e calcula-se a média, conforme a Equação
+\ref{eq:SHAP_detalhado}. Isso resulta na criação de uma
 estimativa para $f(\textbf{x})$, levando em consideração apenas as variáveis presentes em $\textbf{S}$.
+A Figura \ref{fig:calculo_esforço} ilustra o cálculo de 2, 3, 4, considerando $x = \{ x_1, x_2, x_3, x_4, x_5\}$,
+$x_S = \{x_1, x_3, x_4\}$ e $x_{\bar{S}} = \{x_2, x_5\}$.
 
 
 \begin{figure}[H]
@@ -483,55 +566,22 @@ estimativa para $f(\textbf{x})$, levando em consideração apenas as variáveis 
     \label{fig:calculo_esforço}   
 \end{figure}
 
-Ao analisar a Figura \ref{fig:calculo_esforço}, tem-se que as variáveis $X_1, X_3$ e $ X_4$ representam o conjunto $\textbf{S}$. 
-E escolhendo um valor $x_1, x_3$ e $ x_4$ dessas variáveis, respectivamente, é definido o conjunto $\textbf{x}_S$. 
-Para obter $f_{\textbf{S}}(x_{\textbf{S}})$, que é calcular o resultado do modelo somente com as variáveis presentes 
+Ao analisar a Figura \ref{fig:calculo_esforço}, tem-se que as covariáveis $X_1, X_3$ e $ X_4$ representam o conjunto $\textbf{S}$. 
+Ao fixar $x_1, x_3$ e $ x_4$ dessas variáveis, respectivamente, é definido o conjunto $\textbf{x}_S$. 
+Para obter $f_{\textbf{S}}(x_{\textbf{S}})$, que seria resultado do modelo somente com as covariáveis presentes 
 em $\textbf{x}_S$, calcula-se $f$ para cada observação do conjunto de dados,
-travando $x_1, x_3$ e $ x_4$ na função e utilizando o valor das variáveis complementares, que neste caso são os
-valores de $X_2$ e $X_5$, em suas respectivas observações. Feito isso, é calculada média desses valores que
-corresponde justamente com o resultado da função $f_{\textbf{S}}(x_{\textbf{S}})$.
+fixando $x_1, x_3$ e $ x_4$ na função e utilizando o valor das variáveis complementares, que neste caso são os
+valores de $X_2$ e $X_5$, em suas respectivas observações. Feito isso, a média
+desses valores é a estimativa
+$f_{\textbf{S}}(x_{\textbf{S}})$.
 
 Com $f_{\textbf{S}}(x_{\textbf{S}})$ estimado, é possível calcular a Equação \ref{eq:SHAP}. Os dados que a técnica SHAP 
 utiliza são divididos em 2 tipos: as observações necessárias para a estimação de $f_{\textbf{S}}(x_{\textbf{S}})$
 e as observações em que se deseja calcular o valor de SHAP. 
 
 
-\subsection{Medidas de associação}
 
-
-A utilização de medidas associativas, como o coeficiente de Pearson para variáveis contínuas e o coeficiente de
-contingência para variáveis categóricas, desempenha um papel crucial na análise estatística, proporcionando a
-visualização das relações entre diferentes variáveis. Essas medidas quantificam a força e a natureza das associações, 
-permitindo a identificação de padrões e tendências nos dados \cite{witte_statistics}. 
-
-\subsubsection{Coeficiente de Pearson}
-
-O coeficiente de Pearson, também conhecido como correlação de Pearson, é uma medida estatística 
-que avalia a relação linear entre duas variáveis contínuas.
-
-\begin{equation}
-    \rho = \frac{cov(X, Y)}{\sqrt{var(X)var(Y)}}
-\end{equation}
-
-Este coeficiente varia de -1 a 1, onde -1 indica uma relação linear negativa perfeita, 
-1 indica uma relação linear positiva perfeita, e 0 indica ausência de relação linear.
-
-\subsubsection{Coeficiente de contingência}
-
-O coeficiente de contingência é uma medida estatística utilizada para avaliar a associação
-entre duas variáveis categóricas em uma tabela de contingência. Ele é especialmente útil 
-quando se trabalha com dados categóricos, fornecendo uma indicação da força e direção da associação entre as variáveis.
-
-\begin{equation}
-  C = \sqrt{\frac{\chi^2}{N + \chi^2}}
-\end{equation}
-
-O coeficiente de contingência varia de 0 a 1, onde 0 indica nenhuma associação e 1 indica uma associação perfeita. 
-Valores mais próximos de 1 indicam uma forte relação entre as variáveis, enquanto valores mais próximos de 0 sugerem independência.
-
-\subsection{Métricas de avaliação}
-
-A avaliação do desempenho dos modelos é fundamental para obter insights sobre sua eficácia nas predições ou classificações. 
+A avaliação do desempenho dos modelos é fundamental para mensurar sua eficácia nas predições ou classificações. 
 A utilização de estratégias que resumem o desempenho por meio de métricas específicas é crucial nesse processo.
 A análise dessas métricas proporciona uma compreensão mais aprofundada do modelo, permitindo identificar pontos 
 fortes e áreas de melhoria. Essa avaliação não apenas valida a qualidade das previsões, mas também orienta os próximos
@@ -541,7 +591,7 @@ e um progresso significativo na pesquisa \cite{geron2019hands}.
 
 \subsubsection{Matriz de confusão}
 
-Uma matriz de confusão é uma tabela usada para avaliar o desempenho de um modelo de classificação.
+A matriz de confusão é uma tabela usada para avaliar o desempenho de um modelo de classificação.
 Seu papel é de expor os resultados das predições do modelo quando comparadas com os valores reais.
 
 A matriz de confusão organiza as previsões do modelo em quatro categorias, comumente chamadas de Verdadeiro Positivo (VP), 
@@ -576,13 +626,13 @@ A fórmula básica para calcular a acurácia é dada por:
 \end{equation}
 
 Essa métrica fornece uma visão geral do desempenho do modelo, indicando a porcentagem de instâncias corretamente classificadas.
-No entanto, a acurácia pode ser enganosa em casos onde as classes não estão balanceadas. 
+No entanto, a acurácia pode ser uma medida inacurada em casos onde as classes não estão balanceadas. 
 Em situações desse tipo, um modelo que prevê sempre a classe majoritária pode ter uma acurácia alta, mesmo que não seja eficaz.
 
 \subsubsection{Precisão}
 
-A precisão é definida como a proporção de exemplos classificados corretamente como positivos em 
-relação ao total de exemplos classificadas como positivas (verdadeiras positivas mais falsos positivos).
+A precisão é definida como a proporção de exemplos classificados corretamente como positivos, em 
+relação ao total de exemplos classificados como positivos (verdadeiros positivos mais falsos positivos).
 
 \begin{equation}
   \text{Precisão} = \frac{VP}{VP + FP}
@@ -596,7 +646,7 @@ passar um e-mail de spam (falso negativo).
 \subsubsection{Recall}
 
 O recall, também conhecido como sensibilidade, é outra métrica utilizada no contexto de classificação, 
-focada em capturar a proporção de exemplos positivos que foram corretamente identificadas pelo modelo
+focada em capturar a proporção de exemplos positivos que foram corretamente identificados pelo modelo,
 em relação ao total de exemplos positivos existentes.
 
 \begin{equation}

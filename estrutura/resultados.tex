@@ -1,5 +1,5 @@
 Esta seção inicia explorando a relação entre as variáveis explicativas e a variável resposta. 
-Os resultados derivados tanto do modelo logístico quanto da rede neural serão detalhadamente apresentados, 
+Em seguida, resultados derivados tanto do modelo logístico quanto da rede neural serão detalhadamente apresentados, 
 destacando a ênfase na interpretação de ambos os modelos. Além disso, será conduzido um benchmark comparativo
  entre as duas abordagens, proporcionando uma análise crítica de suas performances.
 
@@ -7,7 +7,7 @@ destacando a ênfase na interpretação de ambos os modelos. Além disso, será 
 
 \subsubsection{Condição do empréstimo}
 
-A variável "Condição do empréstimo" é a variável reposta desse estudo, como foi definido anteriormente.
+A variável ``Condição do empréstimo" é a variável reposta desse estudo, como foi definido anteriormente.
 Com isso temos o seguinte comportamento dessa variável:
 
 \begin{table}[H]
@@ -18,13 +18,13 @@ Com isso temos o seguinte comportamento dessa variável:
     Empréstimo bom  & 819950 & 92,4\% \\
     Empréstimo ruim & 67429  & 7,59\% \\ \hline
   \end{tabular}
-  \caption{Número de observação em cada categoria da variável resposta}
+  \caption{Descrição da variável resposta}
   \label{tab:freq_var_res}
 \end{table}
 
-A Tabela \ref{tab:freq_var_res} mostra a distribuição da variável "Condição do empréstimo". Uma variável composta majoritariamente 
-por observações do tipo "Empréstimo bom", onde a mesma está presente em mais de 90\% das observações na base de dados, mostrando
-que a cada 12 empréstimos rotulados como "bons", existe 1 rotulado como "ruim". 
+A Tabela \ref{tab:freq_var_res} mostra a distribuição da variável ``Condição do empréstimo". Uma variável composta majoritariamente 
+por observações do tipo ``Empréstimo bom", presente em mais de 90\% das observações na base de dados, mostrando
+que a cada 12 empréstimos rotulados como ``bons", existe 1 rotulado como ``ruim". 
 
 \subsubsection{Relação entre as covariáveis e a variável resposta}
 
@@ -39,19 +39,19 @@ que a cada 12 empréstimos rotulados como "bons", existe 1 rotulado como "ruim".
  \subImagem{imagens/exploratoria/renda_anual.jpg}{Renda anual (em dólar)}
   
   \label{fig:exp_boxplot1}
-  \caption{Variáveis explicativas em relação à condição do empréstimo}
+  \caption{Boxplot das covariáveis com relação a condição do empréstimo - Parte 1}
   
 \end{figure}
 
 O comportamento da variável resposta nas Figuras \ref{fig:imagens/exploratoria/quantidade_emprestimo.jpg} 
-e \ref{fig:imagens/exploratoria/parcela.jpg} demonstrou semelhanças, onde, em ambos os casos,
+e \ref{fig:imagens/exploratoria/parcela.jpg} demonstrou semelhanças, visto que, em ambos os casos,
 não foi evidenciada uma clara diferença entre o valor do empréstimo e o valor da parcela em relação às
 categorias da variável resposta. A Figura \ref{fig:imagens/exploratoria/duracao_emprestimo.jpg} 
 também apresenta um comportamento semelhante entre as classes
-"Empréstimo ruim" e "Empréstimo bom", mas com um detalhe: a mediana do tempo de trabalho dos clientes rotulados 
-como "Empréstimo ruim" foi inferior em comparação ao outro caso. Por fim, a Figura \ref{fig:imagens/exploratoria/renda_anual.jpg} 
+``Empréstimo ruim" e ``Empréstimo bom", sendo que a mediana do tempo de trabalho dos clientes rotulados 
+como ``Empréstimo ruim" foi inferior em comparação ao outro caso. Por fim, a Figura \ref{fig:imagens/exploratoria/renda_anual.jpg} 
 indica que clientes 
-com uma renda anual elevada tendem a ser categorizados como "Empréstimo bom".
+com uma renda anual maior tendem a ser categorizados como ``Empréstimo bom".
 
 
 \begin{figure}[H]
@@ -62,20 +62,19 @@ com uma renda anual elevada tendem a ser categorizados como "Empréstimo bom".
   \vspace{.5cm}
   \subImagem{imagens/exploratoria/pagamento_bruto.jpg}{Valor bruto do emprétimo pago}
  \subImagem{imagens/exploratoria/pagamento_liquido.jpg}{Valor líquido do emprétimo pago}
- \caption{Variáveis explicativas em relação à condição do empréstimo}
+ \caption{Boxplot das covariáveis com relação a condição do empréstimo - Parte 2}
   
  \label{fig:exp_boxplot2}
 \end{figure}
 
-A Figura \ref{fig:imagens/exploratoria/taxa_juros.jpg} evidencia uma relação significativa entre taxas de juros elevadas e empréstimos 
+A Figura \ref{fig:imagens/exploratoria/taxa_juros.jpg} evidencia uma relação entre taxas de juros elevadas e empréstimos 
 considerados ruins. A Figura \ref{fig:imagens/exploratoria/dti.jpg} complementa a informação fornecida pela 
 Figura \ref{fig:imagens/exploratoria/renda_anual.jpg},
-indicando que clientes com renda mais elevada tendem a cumprir adequadamente com seus pagamentos.
+indicando que clientes com renda mais elevada tem ligeira propensão a cumprir adequadamente com seus pagamentos.
 As Figuras \ref{fig:imagens/exploratoria/pagamento_bruto.jpg} e  \ref{fig:imagens/exploratoria/pagamento_liquido.jpg} 
-seguem padrões semelhantes, sugerindo que clientes que quitaram a 
-maior parte do empréstimo são frequentemente rotulados como bons pagadores.
+seguem padrões semelhantes, sugerindo que clientes que quitaram o empréstimo têm uma leve
+tendência de serem rotulados como bons pagadores.
 
-%TODO: tentar mostrar os valores absolutos no gráfico de barras
 % barras
 \begin{figure}[H]
     \centering
@@ -88,21 +87,22 @@ maior parte do empréstimo são frequentemente rotulados como bons pagadores.
     \subImagemSemLegenda{imagens/exploratoria/legenda.pdf}
     
     \label{fig:exp_bar1}
-    \caption{Variáveis explicativas em relação à condição do empréstimo}
+    \caption{Gráfico de barras das covariáveis com relação a condição do empréstimo - Parte 1}
 \end{figure}
 
 
-A Figura \ref{fig:imagens/exploratoria/finalidade.pdf} ilustra que as categorias da variável "Finalidade" 
+A Figura \ref{fig:imagens/exploratoria/finalidade.pdf} ilustra que as categorias da variável ``Finalidade" 
 seguem a proporção natural da condição do empréstimo,
-conforme indicado na Tabela de Condição do Empréstimo. Na Figura \ref{fig:imagens/exploratoria/categoria_renda.pdf}, 
-as categorias "Alta" e "Média"
-exibem proporções menores de empréstimos ruins em comparação com a categoria "Baixa", que apresenta uma proporção de quase 10\% 
-de empréstimos ruins. A Figura \ref{fig:imagens/exploratoria/grau.pdf} revela um padrão de "cascata", indicando que à medida que o risco do 
+indicado na Tabela \ref{tab:freq_var_res}. Na Figura \ref{fig:imagens/exploratoria/categoria_renda.pdf}, 
+as categorias de renda ``Alta" e ``Média"
+exibem proporções menores de empréstimos ruins em comparação com a categoria ``Baixa", que apresenta uma proporção de quase 10\% 
+de empréstimos ruins. A Figura \ref{fig:imagens/exploratoria/grau.pdf} revela um padrão de crescente na proporção
+dos empréstimos ruins, indicando que à medida que o risco do 
 empréstimo aumenta, a proporção de empréstimos ruins nas últimas categorias também aumenta, 
 sendo a categoria G a mais afetada, com quase 25\% de empréstimos classificados como ruins. 
-Na Figura \ref{fig:imagens/exploratoria/tipo_aplicacao.pdf}, a categoria "Empréstimo conjunto" 
+Na Figura \ref{fig:imagens/exploratoria/tipo_aplicacao.pdf}, a categoria ``Empréstimo conjunto" 
 não registrou observações de empréstimos ruins, 
-concentrando a maioria desses empréstimos na categoria "Empréstimo individual".
+concentrando a maioria desses empréstimos na categoria ``Empréstimo individual".
 
 
 \begin{figure}[H]
@@ -115,7 +115,7 @@ concentrando a maioria desses empréstimos na categoria "Empréstimo individual"
   \subImagem{imagens/exploratoria/prazo.pdf}{Duração do empréstimo em meses (36 ou 60 meses)}
   \subImagemSemLegenda{imagens/exploratoria/legenda.pdf}
 
-  \caption{Variáveis explicativas em relação à condição do empréstimo}
+  \caption{Gráfico de barras das covariáveis com relação a condição do empréstimo - Parte 2}
   \label{fig:exp_bar2}
 \end{figure}
 
@@ -123,63 +123,10 @@ Na Figura \ref{fig:exp_bar2}, o gráfico \ref{fig:imagens/exploratoria/pagamento
 evidencia que empréstimos obtidos sob juros compostos possuem uma proporção 
 mais elevada de rotulações ruins em comparação com empréstimos sob juros simples. As Figuras \ref{fig:imagens/exploratoria/regiao.pdf} 
 e \ref{fig:imagens/exploratoria/propriedade_casa.pdf}
-destacam uma proporção natural refletida pela distribuição das categorias da variável resposta, 
+apresentam uma proporção natural refletida pela distribuição das categorias da variável resposta, 
 conforme apresentado na Tabela \ref{tab:freq_var_res}. Já a Figura \ref{fig:imagens/exploratoria/prazo.pdf} 
-revela uma proporção mais significativa
-de empréstimos ruins quando estes tendem a demorar mais para serem pagos.
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{lc}
-    \hline
-    \textbf{Covariáveis} & \mbox{\textbf{Coeficiente de correlação}} \\ 
-    \hline
-    Tempo de trabalho & -0.02 \\ 
-    Renda anual & -0.03 \\ 
-    Valor do empréstimo & 0.00 \\ 
-    Taxa de juros & 0.18 \\ 
-    DTI & 0.01 \\ 
-    Valor bruto pago & -0.04 \\ 
-    Valor liquido pago & -0.10 \\ 
-    Parcela & -0.01 \\ 
-    Duração do empréstimo &  0.01 \\
-    \hline
-  \end{tabular}
-  \caption{Valores do coeficiente de Pearson entre as covariáveis e a variável resposta}
-  \label{tab:coef_corr}
-  \end{table}
-
-A partir da análise da Tabela \ref{tab:coef_corr}, nota-se que as correlações entre as 
-variáveis explicativas e a variável resposta são de baixa magnitude. Os coeficientes 
-calculados indicam uma relação linear fraca ou inexistente entre essas variáveis. 
-Esses resultados sugerem que outros fatores ou relações não lineares podem estar desempenhando 
-um papel mais significativo na explicação da variabilidade na variável resposta.
-  
-\begin{table}[H]
-  \centering
-  \begin{tabular}{lc}
-    \hline
-    \textbf{Covariáveis} & \mbox{\textbf{Coeficiente de contingência}} \\ 
-    \hline
-    Tipo de residência & 0.04 \\ 
-    Tipo de aplicação & 0.01 \\ 
-    Finalidade & 0.03 \\ 
-    Tipo de juros & 0.14 \\ 
-    Risco & 0.15 \\ 
-    Região & 0.01 \\ 
-    Prazo & 0.04 \\
-    Renda &  0.04 \\
-     \hline
-  \end{tabular}
-  \caption{Valores do coeficiente de contingência entre as covariáveis e a variável resposta}
-  \label{tab:coef_cont}
-\end{table}
-
-Ao analisar a Tabela \ref{tab:coef_cont}, nota-se que a maioria dos coeficientes de contingência entre as 
-covariáveis e a variável resposta são próximos de zero. Destaca-se que a variável "Risco"
-exibe o maior valor de associação, atingindo 0.15. Entretanto, é importante ressaltar que esse valor
-ainda é relativamente baixo. Os coeficientes sugerem, em geral, uma falta de associação significativa 
-entre as covariáveis mencionadas e a variável resposta.
+revela uma proporção ligeiramente maior
+de empréstimos ruins quando estes tem uma duração maior.
 
 
 \subsection{Regressão logística}
@@ -190,7 +137,8 @@ Como visto na Equação \ref{eq:model_logistic}, a fórmula do modelo logístico
   P(Y=1| x_1, x_2, ..., x_k) = \frac{1}{1 + e^{-(\beta_0 + x_{1}\beta_1 + x_{2}\beta_2 + \ldots + x_{k}\beta_k)}}
 \end{equation}
 
-E com base nela os seguintes resultados foram encontrados:
+Sendo Y=1 a classificação de clientes com ``Empréstimos ruins" e Y=0, os clientes com ``Empréstimos bons". 
+Dessa forma, os seguintes resultados foram encontrados:
 
 
 \begin{table}[H]
@@ -218,28 +166,34 @@ E com base nela os seguintes resultados foram encontrados:
         Parcela &  0.005 &  0.000  \\
   \bottomrule
 \end{tabular}
-\caption{Estimativa dos coeficientes do modelo logístico e o erro padrão associado}
+\caption{Estimativa dos coeficientes do modelo logístico e o erro padrão associado (todas as variáveis foram significativas ao nível de significância de 5\%)}
 \label{tab:result_model_logist}
 \end{table}
 
-Ao analisar os resultados apresentados na Tabela \ref{tab:result_model_logist}, fica evidente
-que as variáveis "Valor líquido pago" e "Valor bruto pago" exercem uma influência significativa no valor final de $P(Y=1)$.
+Considerando que a escala das covariáveis foi padronizada para ter média 0 e desvio padrão unitário, é possível perceber que,
+com os resultados apresentados na Tabela \ref{tab:result_model_logist}, fica evidente
+que as variáveis ``Valor líquido pago" e ``Valor bruto pago" exercem uma influência na maior probabilidade de $P(Y=1)$.
 Essas duas variáveis estão diretamente associadas à quantia do empréstimo que o cliente já quitou, 
 indicando sua relevância na predição do resultado. Ao calcular a Razão de chances dessas duas variáveis, temos que:
 
 
 \begin{itemize}
-  \item "Valor líquido pago": apresenta um RC de 0.008, o que sugere que, mantendo todas as outras variáveis constantes, a chance de o empréstimo ser classificado como bom é 125 vezes maior do que ser classificado como ruim.
-  \item "Valor bruto pago": exibe um RC de 27.68, indicando que, ao manter todas as outras variáveis constantes, a chance de o empréstimo ser classificado como ruim é 27 vezes maior do que ser classificado como bom.
+  \item ``Valor líquido pago": $\exp(-4.733) = 0.008$, o que sugere que, mantendo todas as outras variáveis constantes, aumentar em 1 desvio padrão o valor líquido pago, torna 125 maior a chance do empréstimo ser classificado como ruim.
+  \item ``Valor bruto pago": $\exp(3.321) = 0.008$, indicando que, ao manter todas as outras variáveis constantes, aumentar em 1 desvio padrão o valor bruto pago, torna 27 maior a chance do empréstimo ser classificado como bom.
 \end{itemize}
 
 
 \imagem{imagens/resultados/report_model_logistico.png}{Matrix de confusão do modelo logístico}
 
-Visualizando os dados da Figura \ref{fig:imagens/resultados/report_model_logistico.png} é possível analisar 
-os resultados do modelo logístico no conjunto de teste. O conjunto de teste apresenta uma distribuição da variável 
+ O conjunto de teste apresenta uma distribuição da variável 
 resposta de com mais de 92\% dos casos como um empréstimo bom, e o restante como o empréstimo ruim.
-%TODO: falar dos falsos positivos e falsos negativos
+
+
+O modelo logístico fez um pouco mais de 30\% de previsões da classe ``1". 
+Esse cenário resultou em um alto número de Falsos Positivos. 
+Em contrapartida, o número de Falsos Negativos ficou menor, resultando em menos de
+3\% das previsões da amostra de teste sendo incorretamente rotuladas como classe ``0".
+
 
 
 \begin{table}[H]
@@ -248,16 +202,16 @@ resposta de com mais de 92\% dos casos como um empréstimo bom, e o restante com
   \hline
                 &    \textbf{Precisão} & \textbf{Recall}    &   \textbf{F1-Score} &  \textbf{Tamanho da amostra} \\
   \hline
-   0               &    0.928 & 0.995  &   0.961 & 163990        \\
-   1               &    0.536 & 0.062 &   0.111 & 13486        \\
-   Média macro     &    0.732 & 0.528  &   0.535 & 177476        \\
-   Média ponderada &    0.898 & 0.925  &   0.896 & 177476        \\
+   0               &    0.928 & 0.716    &   0.823 & 163990        \\
+   1               &    0.170 & 0.708 &   0.274 & 13486        \\
+   Média macro     &    0.569 & 0.712  &   0.548 & 177476        \\
+   Média ponderada &    0.907 & 0.715  &   0.781 & 177476        \\
    \hline
-   Acurácia     &             &           &    &  0.925\\
+   Acurácia     &             &           &    &  0.715\\
 
   \hline
 \end{tabular}
-\caption{Report do modelo logístico}
+\caption{Métricas de avaliação do modelo logístico}
 \label{tab:report_logist_model}
 \end{table}
 
@@ -265,38 +219,31 @@ resposta de com mais de 92\% dos casos como um empréstimo bom, e o restante com
 Com base nos dados apresentados na Tabela \ref{tab:report_logist_model}
 e na Figura \ref{fig:imagens/resultados/report_model_logistico.png},
 observamos que o modelo exibe uma acurácia elevada. Ele é capaz de fazer 
-previsões precisas na maioria dos casos, alcançando uma taxa de 92,46\% 
-de classificações corretas no conjunto de teste. No entanto, 
-é crucial destacar que essa elevada acurácia é influenciada pela proporção
-significativa de casos onde o empréstimo é rotulado como "bom", presente 
-em mais de 92\% dos dados de teste. Como resultado, o modelo tende a
-classificar uma parte considerável dos dados como "0", refletindo a
-influência dessa distribuição desigual na estimação dos parâmetros do modelo logístico. 
+previsões precisas em um número considerável dos casos, alcançando uma taxa de 92,46\% 
+de classificações corretas no conjunto de teste. 
 
-
-Ao examinarmos a precisão do modelo, observamos uma taxa de acerto de 73\%
+Ao examinarmos a precisão do modelo, observamos uma taxa de acerto de 56,9\%
 nas previsões em comparação com as rótulos reais do conjunto de teste. 
-É importante ressaltar a notável precisão na categoria "Empréstimo bom", atingindo quase 92\%. 
+É importante ressaltar a notável precisão na categoria ``Empréstimo bom", atingindo quase 92\%. 
 No entanto, vale destacar que esse valor elevado está correlacionado ao desequilíbrio nos dados,
-onde a classe "Empréstimo bom" é predominante.
+onde a classe ``Empréstimo bom" é predominante, pois ao observarmos as precisão da classe 1, é possível notar um
+valor menor que 20\%.
 
-Ao avaliar o recall do modelo logístico, observamos, em média,
-valores mais baixos em comparação com a precisão. O recall médio é de 52,8\%, 
+Ao avaliar o Recall do modelo logístico, observamos, em média,
+valores maiores em comparação com a precisão. O recall médio é de 71,2\%, 
 indicando que, ao analisar as porcentagens das rótulos reais, o modelo conseguiu 
-acertar um pouco mais da metade delas. Esse desempenho é atribuído ao alto número 
-de falsos negativos no modelo, visto que, ao considerar o total de "Empréstimos ruins" (13.486),
- o modelo acertou apenas 834 desses casos.
+acertar um valor considerável. Esse desempenho é atribuído ao baixo número 
+de falsos negativos no modelo, visto que, ao considerar o total de ``Empréstimos ruins" (13.486),
+ o modelo acertou apenas 9554 desses casos.
 
-O F1-score acaba refletindo a real situação do modelo, pois ele balanceia os bons resultados
-apresentados pela precisão com os resultados ruins do recall. O F1-score médio apresentado foi
-de 52,57\%.
+O F1-score acaba refletindo a real situação do modelo, pois ele balanceia os resultados
+de ambas as métricas. O F1-score médio apresentado foi
+de 54,8\%.
 
-A avaliação global do modelo logístico revela um viés significativo, amplificado pelo desequilíbrio nos dados.
-Embora o modelo tenha alcançado uma taxa geral de acerto de 92\%, sua incapacidade de distinguir
-adequadamente entre "Empréstimos bons" e "Empréstimos ruins" é evidente. 
-Este desempenho inferior sugere limitações na capacidade do modelo de generalizar e
-discriminar efetivamente entre as categorias, indicando a necessidade de refinamentos ou 
-considerações adicionais para melhorar sua robustez.
+O modelo apresentou resultados interessantes, dado a sua arquitetura não tão robusta, uma taxa geral de acerto de 71,5\%.
+Na classe minoritária, a classe ``1", o modelo foi pouco preciso, acertando menos de 20\% dos casos.
+Este desempenho inferior sugere limitações na capacidade do modelo, indicando a necessidade de refinamentos ou 
+considerações adicionais para melhorar seu melhor desempenho preditivo.
 
 
 \subsection{Rede neural}
@@ -307,14 +254,11 @@ Esse seção vai abordar os resultados obtidos pelo modelo de rede neural.
 \imagem{imagens/resultados/report_model_neural_ganhador.png}{Matrix de confusão da rede neural}
 
 
-A Figura \ref{fig:imagens/resultados/report_model_neural_ganhador.png} estima que aproximadamente 
-12\% da amostra de teste estimada pelo modelo consiste em empréstimos ruins, uma estimativa ligeiramente distante 
-da distribuição real apresentada na Tabela \ref{tab:freq_var_res}. No entanto, esse resultado 
-sugere que o modelo conseguiu generalizar seus resultados, quando comparado com o modelo logístico. 
+A Figura \ref{fig:imagens/resultados/report_model_neural_ganhador.png} indica que aproximadamente 
+12\% das previsões do modelo na amostra de teste consistem em empréstimos ruins, uma estimativa ligeiramente distante 
+da distribuição real apresentada na Tabela \ref{tab:freq_var_res}.
 Por outro lado, o número de empréstimos
-classificados como "0" diminuiu, representando mais de 84\% da amostra de teste. Esse ajuste 
-parece ter aumentado o número de Falsos Positivos, provavelmente devido à tentativa do modelo
-em variabilizar os resultados.
+classificados como ``Empréstimos bons", diminuiu, representando mais de 84\% da amostra de teste. 
 
 
 \begin{table}[H]
@@ -330,25 +274,24 @@ em variabilizar os resultados.
    Acurácia         &          &       &         & 0.872      \\
   \hline
 \end{tabular}
-\caption{Report da rede neural}
+\caption{Métricas de avaliação da rede neural}
 \label{tab:report_model_neural_ganhador}
 \end{table}
 
 
 Os resultados apresentados na Tabela \ref{tab:report_model_neural_ganhador} indicam um desempenho satisfatório
-do modelo, especialmente em termos de acurácia e métricas avaliadas para a classe "0". 
-Contudo, ao comparar esses resultados com as métricas da classe "1", percebe-se que o modelo ainda
-é influenciado pelo elevado número de observações na classe "0". Entretanto, uma análise mais detalhada 
-do Recall da classe "1" revela que o modelo conseguiu reduzir significativamente o número de Falsos Negativos,
-identificando corretamente quase metade dos empréstimos considerados ruins na base original. Essa melhoria 
-no Recall da classe "1" resultou em uma precisão inferior para essa classe, refletindo que menos de 30\% 
+do modelo, especialmente em termos de acurácia e métricas avaliadas para a classe ``0". 
+Contudo, ao comparar esses resultados com as métricas da classe ``1", percebe-se que o modelo ainda
+é influenciado pelo elevado número de observações na classe ``0". Por outro lado, uma análise mais detalhada 
+do Recall da classe ``1" revela que o modelo conseguiu reduzir significativamente o número de Falsos Negativos,
+identificando corretamente quase metade dos empréstimos considerados ruins na base de dados. Por outro lado,
+a precisão da classe ``1" diminuiu, refletindo que menos de 30\% 
 das previsões do modelo foram corretas nesse contexto, como evidenciado na Tabela \ref{tab:report_model_neural_ganhador}.
 
 
 Em termos gerais, as decisões relacionadas à arquitetura do modelo, seus hiperparâmetros, 
 estratégia de treinamento e outros fatores contribuíram para que o modelo de redes neurais realizasse previsões
-de alta qualidade, não se limitando apenas ao desbalanceamento dos dados. Os resultados obtidos pelo modelo de redes
-neurais foram satisfatórios devido à eficácia da arquitetura da rede. Portanto, buscar aprimorar ainda mais essa 
+de boa qualidade, lidando melhor com o desbalanceamento dos dados.  Portanto, buscar aprimorar ainda mais essa 
 arquitetura pode ser uma abordagem promissora na busca por resultados ainda melhores.
 
 \subsection{Interpretação da rede neural}
@@ -359,42 +302,49 @@ Para isso, foram construídos gráficos com base nos resultados do SHAP, destaca
  no resultado final. Utilizando uma amostra de 80 observações, o valor de SHAP foi calculado para cada observação, 
  permitindo uma análise tanto individual quanto conjunta dessa amostra.
 
-\imagem{imagens/shap/media_shap.png}{Média absoluta dos valores de shap}
+\imagem{imagens/shap/media_shap.png}{Média absoluta dos valores de SHAP de cada covariável}
 
 
-O Gráfico \ref{fig:imagens/shap/media_shap.png} exibe a média absoluta dos valores de SHAP para cada variável nas
-80 observações consideradas. Essa representação oferece insights sobre quais variáveis o modelo considerou mais
+O Gráfico \ref{fig:imagens/shap/media_shap.png} exibe a média absoluta dos valores de SHAP para cada covariável nas
+80 observações consideradas. Essa representação oferece uma visão sobre quais variáveis o modelo considerou mais
 relevantes durante as predições, destacando a magnitude da contribuição de cada variável. Vale notar que, por 
 se tratar de valores absolutos, o gráfico não proporciona informações sobre se a contribuição de cada variável
 é positiva ou negativa. Entretanto, os próximos gráficos irão elucidar essa questão ao detalhar a contribuição 
 específica de cada variável.
 
-Ao analisar cada variável no gráfico, destaca-se que "Total líquido pago" e "Total bruto pago" são as que mais
-contribuem para o resultado final do modelo. O gráfico enfatiza a relevância de nove variáveis, omitindo 
+Ao analisar cada variável no gráfico, destaca-se que ``Total líquido pago" e ``Total bruto pago" são as que mais
+contribuíram para o resultado final do modelo. O gráfico enfatiza a relevância de nove variáveis, omitindo 
 o restante devido à sua baixa contribuição. Ao observar as variáveis omitidas, percebe-se que, somadas, 
 suas contribuições aproximam-se de 0.01, evidenciando a sua baixa influência no resultado final do modelo de rede neural.
 
-Os próximos graficos proporcionam a visualização dos valores SHAP para cada variável em observações individuais.
-O gráfico também revela os valores específicos utilizados em cada variável. A apresentação de quatro figuras distintas tem
-como objetivo compreender como o valor SHAP é atribuído em quatro cenários distintos que surgem em problemas de classificação binária.
+Os próximos gráficos proporcionam a visualização dos valores SHAP para cada variável em observações individuais, ilustrando
+cenários distintos que podem aparecer nos problemas de classificação binária. Os gráficos também revelam os valores específicos
+observados para cada covariável de uma dada observação.
 
-Os 2 primeiros gráficos mostram casos onde o modelo acertou suas predições, tanto para casos de "Empréstimos ruins" quanto para 
-"Empréstimos bons".
+As Figuras \ref{fig:imagens/shap/shap_plot_verdadeiro_positivo.png} e \ref{fig:imagens/shap/shap_plot_verdadeiro_negativo.png} 
+mostram casos onde o modelo acertou suas predições, tanto para casos de ``Empréstimos ruins" (Figura \ref{fig:imagens/shap/shap_plot_verdadeiro_positivo.png})
+quanto para ``Empréstimos bons" (Figura \ref{fig:imagens/shap/shap_plot_verdadeiro_negativo.png}).
 
 \imagem{imagens/shap/shap_plot_verdadeiro_positivo.png}{Valor de SHAP para uma observação do tipo Verdadeiro Positivo}
 
-Na Figura \ref{fig:imagens/shap/shap_plot_verdadeiro_positivo.png}, cenário em que o modelo acertou a classificação de 
+Na Figura \ref{fig:imagens/shap/shap_plot_verdadeiro_positivo.png}, temos que, no eixo y, 
+os valores observados para as covariáveis dessa observação específica do banco de dados, enquanto que nas barras
+coloridas do gráfico, temos indicado o valor de SHAP para cada covariável (contribuições positivas, em vermelho,
+ e contribuições negativas, em azul). A soma de todos os valores SHAP retorna a predição dessa observação, nesse exemplo,
+ $f(x) = 0,909$, conforme indicado no eixo x.
+
+No cenário acima, em que o modelo acertou a classificação de 
 um empréstimo como ruim, observa-se que as variáveis que mais contribuíram foram as mesmas observadas na Figura \ref{fig:imagens/shap/media_shap.png}, 
 comportamento esse que vai prevalecer nos demais casos.
-Ao analisar os valores dessas duas variáveis, nota-se que, para esse cliente específico, ainda resta um montante significativo do empréstimo a ser pago, 
+Ao analisar os valores observados dessas duas covariáveis, nota-se que, para esse cliente específico, ainda resta um montante significativo do empréstimo a ser pago, 
 totalizando quase 90\% do valor líquido pendente e quase 50\% do valor bruto pendente. Uma diferença muito grande
-entre o valor do empréstimo e o que falta a ser pago pode ser um dos fatores que está ocasionando a rotulação de observações
-como "Empréstimos ruins". 
+entre o valor do empréstimo e o que falta a ser pago pode ser um dos fatores que está ocasionando a rotulação dessa observação
+como ``Empréstimos ruins". 
 
 \imagem{imagens/shap/shap_plot_verdadeiro_negativo.png}{Valor de SHAP para uma observação do tipo Verdadeiro Negativo}
 
 Ao analisar a Figura \ref{fig:imagens/shap/shap_plot_verdadeiro_negativo.png}, que representa o cenário em que o modelo
-acertou a rotulação de um empréstimo bom, nota-se um valor final bem próximo de  0. Indícios 
+acertou a rotulação de um empréstimo bom, nota-se um valor final bem próximo de  0 (f(x) = 0.003). Indícios 
 de que o modelo teve mais confiança ao realizar essa predição. 
 Ao analisar os valores de cada variável, é possível perceber que o cliente já está finalizando ou finalizou o empréstimo,
 dado que as variáveis de pagamento do empréstimo chegaram no valor real do empréstimo.
@@ -402,70 +352,71 @@ dado que as variáveis de pagamento do empréstimo chegaram no valor real do emp
 
 Analisando as Figuras \ref{fig:imagens/shap/shap_plot_verdadeiro_positivo.png} e \ref{fig:imagens/shap/shap_plot_verdadeiro_negativo.png},
 é possível observar a 
-flexibilidade do modelo em lidar com diferentes valores da mesma variável. Quando o modelo encontra valores que indicam um 
-empréstimo ruim, atribui valores positivos para a contribuição das variáveis, aproximando-as de 1. Da mesma forma, para 
+flexibilidade do modelo em lidar com diferentes valores da mesma covariável. Quando o modelo encontra valores que indicam um 
+empréstimo ruim, atribui valores positivos para a contribuição das variáveis ``Total líquido pago" e ``Total bruto pago", aproximando-as de 1. Da mesma forma, para 
 empréstimos bons, o modelo adiciona uma contribuição negativa, direcionando o resultado para 0. Isso demonstra como o modelo 
-responde de forma dinâmica às variações nos valores das variáveis.
+responde de forma dinâmica e não linear às variações nos valores das variáveis.
 
 
 \imagem{imagens/shap/shap_plot_falso_positivo.png}{Valor de SHAP para uma observação do tipo Falso Positivo}
 
 
-Ao analisar um exemplo em que o modelo erroneamente classifica um "Empréstimo ruim", conforme ilustrado na Figura
+Ao analisar um exemplo em que o modelo erroneamente classifica como ``Empréstimo ruim", conforme ilustrado na Figura
  \ref{fig:imagens/shap/shap_plot_falso_positivo.png}, destacam-se as características já discutidas nas interpretações
   anteriores. O resultado do modelo foi muito próximo do limiar de decisão, que é 0,5, indicando que o modelo teve 
-  alguma indecisão ao realizar a predição desse caso.
+  uma maior indecisão ao realizar a predição desse caso.
 
 
 \imagem{imagens/shap/shap_plot_falso_negativo.png}{Valor de SHAP para uma observação do tipo Falso Negativo}
 
 Observando a Figura \ref{fig:imagens/shap/shap_plot_falso_negativo.png}, que retrata um cenário em que o modelo
- classifica de forma equivocada um "Empréstimo bom", é possível perceber um comportamento de divergência entre 
- as variáveis que mais contribuem com o resultado do modelo. Esse padrão de divergência não foi observado nos
-  casos anteriores, e pode ter influenciado o modelo a realizar uma predição incorreta.
+ classifica de forma equivocada como ``Empréstimo bom", é possível perceber um comportamento de divergência entre 
+ as  duas covariáveis que mais contribuem com o resultado do modelo. Esse padrão de divergência não foi observado nos
+  casos anteriores, e pode indicar uma incerteza na predição.
 
 
-\imagem{imagens/shap/shap_geral.png}{Valores de shap para as 80 observações utilizadas}
+\imagem{imagens/shap/shap_geral.png}{Valores de SHAP para as 80 observações utilizadas}
 
 
-A Figura \ref{fig:imagens/shap/shap_geral.png} apresenta o comportamento do valor de SHAP para cada variável
+A Figura \ref{fig:imagens/shap/shap_geral.png} apresenta o comportamento do valor de SHAP para cada covariável
 entre as 80 observações utilizadas no experimento. No gráfico, o eixo x refere-se à distribuição do valor de SHAP,
-enquanto o eixo y representa cada variável. O eixo das cores ilustra a distribuição dos valores da variável, 
+enquanto o eixo y representa cada variável. O eixo das cores ilustra a distribuição dos valores observados da covariável, 
 sendo que cores mais quentes indicam valores maiores e cores mais frias indicam valores menores.
 
-Ao analisar as variáveis que mais influenciam o resultado do modelo, observa-se uma distribuição mais dispersa no eixo x.
- Ao focar nas duas variáveis de maior contribuição, nota-se um comportamento heterogêneo dos valores em comparação com 
- os valores de SHAP. Para a primeira variável, elevados valores tendem a impactar negativamente no resultado do modelo, 
- enquanto a segunda variável apresenta o comportamento oposto, com valores mais baixos contribuindo negativamente no
+Ao analisar as variáveis que mais influenciam o resultado do modelo, observa-se uma distribuição mais dispersa para o valor de SHAP.
+ Para a primeira variável, elevados valores da covariável ``Total líquido pago" tendem a impactar negativamente no resultado do modelo,
+ ou seja, diminuir a probabilidade de classificação como um ``Empréstimo Ruim"
+ enquanto a segunda variável apresenta o comportamento oposto, com valores mais baixos do ``Total bruto pago",
+  contribuindo negativamente no
   resultado do modelo.
 
 
-\imagem{imagens/shap/force_plot.png}{Gráfico de força em uma observação}
+\imagem{imagens/shap/force_plot.png}{Gráfico de força do SHAP para uma observação}
 
 
-A Figura \ref{fig:imagens/shap/force_plot.png} ilustra a "força" de contribuição de cada variável no modelo.
- Este gráfico proporciona uma visão clara das variáveis que tiveram impacto positivo e negativo no resultado final.
+A Figura \ref{fig:imagens/shap/force_plot.png} ilustra a ``força" de contribuição de cada variável no modelo.
+ Este gráfico proporciona uma visão clara das variáveis que tiveram impacto positivo e negativo no resultado dessa observação 
+ específica.
   Cada barra representa a intensidade da contribuição de uma variável específica, sendo que aquelas com maior 
   influência concentram-se no centro, enquanto as de menor influência ficam nas extremidades. 
-  A figura é centrada no valor final predito pelo modelo, que, neste caso, é observado como 0.3, 
+  A figura é centrada no valor final predito pelo modelo, que, neste caso, é observado como $f(x) = 0.3$, 
   indicando um empréstimo classificado como bom.
 
 \imagem{imagens/shap/force_plot_multiples_vars.png}{Gráfico de força para múltiplas observações}
 
 
 A Figura \ref{fig:imagens/shap/force_plot_multiples_vars.png} é uma generalização da Figura \ref{fig:imagens/shap/force_plot.png},
-considerando as 80 observações. Este gráfico é um recorte obtido de uma visualização dinâmica gerada pelo pacote SHAP.
+considerando 160 observações. Este gráfico é um recorte obtido de uma visualização dinâmica gerada pelo pacote SHAP.
  Devido à natureza dinâmica do gráfico original, ao transformá-lo em uma imagem estática, parte de sua capacidade de 
- representação é limitada. No entanto, é possível observar alguns padrões nesse recorte. Por exemplo, cores mais 
- quentes indicam contribuições positivas quando o modelo faz predições próximas de 1, com tons de vermelho 
- representando adições das variáveis ao resultado. Da mesma forma, cores mais frias indicam contribuições 
- negativas quando o modelo faz predições próximas de 0.
+ representação foi limitada. No entanto, é possível observar alguns padrões nesse recorte. Por exemplo, 
+ a predominância do vermelho em determinado recorte vertical, indica a previsão de um ``Empréstimo ruim".
+  Da mesma forma, que a predominância da cor azul indica predições próximas de 0.
 
 
 \subsection{Benchmark entre regressão logística e redes neurais }
 
 Ao obter interpretações do modelo de redes neurais, abre-se a possibilidade de realizar comparações 
-entre os modelos de regressão logística e redes neurais no âmbito interpretativo. Até recentemente, 
+entre esses modelos com os regressão logística no âmbito interpretativo. Até recentemente, 
 essa capacidade de interpretação estava exclusivamente associada ao modelo logístico em comparação com o modelo de redes neurais.
 Essa análise comparativa se soma às comparações já realizadas entre os modelos, englobando aspectos como arquitetura,
 tempo de treinamento,
@@ -481,7 +432,7 @@ tempo de predição e os resultados gerados por ambos os modelos. Os resultados 
   Regressão Logística & 18 \\ 
   Rede Neural & 151233 \\ \hline
   \end{tabular}
-  \caption{Número de parâmetros nos modelos}
+  \caption{Número de parâmetros}
   \label{table:model_parameters}
 \end{table}
 
@@ -498,8 +449,8 @@ sendo esses distribuídos nos neurônios e camadas da rede.
     \hline
     \textbf{Métricas} & \textbf{Regressão logística} & \textbf{Rede neural} \\
     \hline
-    Falsos Positivos   & 721                     & 15703 \\
-    Falsos Negativos   & 12652                   & 7039 \\
+    Falsos Positivos   & 46560                     & 15703 \\
+    Falsos Negativos   & 3930                   & 7039 \\
     \hline
   \end{tabular}
   \caption{Comparação dos resultados de Falsos Positivos e Falsos Negativos}
@@ -507,11 +458,8 @@ sendo esses distribuídos nos neurônios e camadas da rede.
 \end{table}
 
 Ao analisar os casos em que os modelos cometeram erros, conforme apresentado na Tabela \ref{tab:false_positives_negatives}, 
-é evidente que, em geral, o modelo logístico cometeu menos erros do que a rede neural. O modelo logístico registrou um total 
-de pouco mais de 13 mil classificações incorretas, enquanto a rede neural teve mais de 18 mil erros.
- No entanto, é importante destacar que a rede neural cometeu menos erros nos casos de Falsos Negativos.
-  Esse cenário é significativo no contexto de empréstimos, pois rotular erroneamente um possível cliente
-   inadimplente como alguém que cumprirá com o empréstimo pode ter implicações mais graves.
+é evidente que, em geral, o modelo logístico cometeu mais erros do que a rede neural. O modelo logístico registrou um total 
+de mais de 50 mil classificações incorretas, enquanto a rede neural teve pouco mais de 18 mil erros.
 
 Os resultados a seguir vão identificar melhor como foi o processo preditivo dos dois modelos no conjunto de teste.
 
@@ -521,13 +469,13 @@ Os resultados a seguir vão identificar melhor como foi o processo preditivo dos
     \hline
     \textbf{Métricas} & \textbf{Regressão logística} & \textbf{Rede neural} \\
     \hline
-    Precisão (Classe 0) & 0.928081                     & \cellcolor{green!25}0.954 \\
-    Precisão (Classe 1) & \cellcolor{green!25}0.536334 & 0.291 \\
-    Recall   (Classe 0) & \cellcolor{green!25}0.995603 & 0.904 \\
-    Recall   (Classe 1) & 0.0618419                    & \cellcolor{green!25}0.478 \\
-    F1-Score (Classe 0) & \cellcolor{green!25} 0.960657  & 0.929 \\
-    F1-Score (Classe 1) & 0.110897                     & \cellcolor{green!25}0.362 \\
-    Acurácia            & \cellcolor{green!25}0.924649   & 0.872 \\
+    Precisão (Classe 0) & 0.928                     & \cellcolor{green!25}0.954 \\
+    Precisão (Classe 1) & 0.170                     &\cellcolor{green!25}0.291 \\
+    Recall   (Classe 0) & 0.716                     & \cellcolor{green!25}0.904 \\
+    Recall   (Classe 1) & \cellcolor{green!25}0.708 & 0.478 \\
+    F1-Score (Classe 0) &  0.823                    & \cellcolor{green!25}0.929 \\
+    F1-Score (Classe 1) & 0.274                     & \cellcolor{green!25}0.362 \\
+    Acurácia            & 0.715                     & \cellcolor{green!25}0.872 \\
     \hline
   \end{tabular}
   \caption{Comparação dos resultados da Regressão logística e Rede neural. Em verde, o modelo que obteve o melhor resultado na respectiva métrica.}
@@ -536,18 +484,13 @@ Os resultados a seguir vão identificar melhor como foi o processo preditivo dos
 
 
 
-Ao examinar a Tabela \ref{tab:comparison_results}, fica claro que a regressão logística superou a
-rede neural em quatro categorias. No entanto, é crucial compreender que esse desempenho destacado
-da regressão logística decorre da sua falta de generalização. Este modelo, ao ser treinado
+Ao examinar a Tabela \ref{tab:comparison_results}, é possível observar que a rede neural apresentou melhores
+resultados em quase todas as métricas. Esse desempenho destacado
+da regressão logística pode ter ocorrido devido a sua arquitetura. Este modelo, ao ser treinado
 com dados desbalanceados, enfrenta limitações devido à sua arquitetura menos complexa.
-Isso ressalta a necessidade de equilibrar a simplicidade do modelo com a capacidade de
-generalização para obter resultados mais confiáveis.
 
-
-Ao avaliar as métricas críticas no contexto de empréstimos, como o Recall da classe 1 e, consequentemente, 
-o F1-score dessa classe, destaca-se que a rede neural supera a regressão logística. Notavelmente, 
-o recall na rede neural é 40\% superior, evidenciando uma performance mais robusta no que diz respeito 
-à identificação de empréstimos ruins.
+Contudo, ambos os modelo apresentaram um resultado ruim nos Falsos Positivos, métrica importante no contexto 
+financeiro, pois permite identificar os empréstimos ruins classificados de maneira errônea.
 
 
 
@@ -577,13 +520,14 @@ o recall na rede neural é 40\% superior, evidenciando uma performance mais robu
    Tipo da aplicação     &         1.848 & 0       \\
   \hline
   \end{tabular}
-  \caption{Relação entre os coeficientes da regressão logística com os valores absolutos de shap}
+  \caption{Relação entre os coeficientes da regressão logística com os valores absolutos de SHAP}
   \label{tab:coef_vs_shap}
 \end{table}
 
 A Tabela \ref{tab:coef_vs_shap} realiza uma comparação entre os coeficientes do modelo logístico
- e a média dos valores absolutos de SHAP, sendo esse último calculado com base em uma amostra composta por 80 observações. 
- A média dos valores de SHAP proporciona uma medida da magnitude das contribuições das variáveis, apresentando, de certa forma, uma analogia com os coeficientes da regressão logística.
+ e a média dos valores absolutos de SHAP, sendo esse último calculado com base em uma amostra composta por 169 observações. 
+ A média dos valores de SHAP proporciona uma medida da magnitude das contribuições das variáveis,
+  apresentando uma ordem de importância que pode ser comparada com a dos coeficientes da regressão logística.
 
 
  Ambos os modelos exibiram semelhança nas duas variáveis que mais impactam o resultado final.
@@ -593,8 +537,7 @@ A Tabela \ref{tab:coef_vs_shap} realiza uma comparação entre os coeficientes d
 \subsubsection{Tempo de execução}
 
 
-Examinar o tempo de predição é crucial para alcançar resultados mais rápidos, 
-sendo em alguns contextos um fator de extrema relevância, quase tão significativo
+Examinar o tempo de predição é importante na avaliação da utilidade prática do modelo, quase tão significativo
  quanto as métricas de desempenho do modelo.
 
 \begin{table}[H]
@@ -603,14 +546,13 @@ sendo em alguns contextos um fator de extrema relevância, quase tão significat
   \hline
   \textbf{Estatísticas} & \textbf{Regressão logística} & \textbf{Rede neural} \\
   \hline
-  Mínimo & 0.0 & 52.067995 \\
-  Quartil 25 & 0.0 & 53.327155 \\
-  Média & 0.3335619 & 59.446688 \\
-  Mediana & 0.0 & 56.855202 \\
-  Quartil 75 & 0.88143349 & 66.278052 \\
-  Máximo & 1.50370598 & 92.03124 \\
-  Variância & 0.28385463 & 59.008917 \\
-  Desvio padrão & 0.5327801 & 7.681726 \\
+  Mínimo & 0.0 & 52.06 \\
+  Quartil 25 & 0.0 & 53.32 \\
+  Média & 0.33 & 59.44 \\
+  Mediana & 0.0 & 56.85 \\
+  Quartil 75 & 0.88 & 66.27 \\
+  Máximo & 1.50 & 92.03 \\
+  Desvio padrão & 0.53 & 7.68 \\
   \hline
 \end{tabular}
 \caption{Tempo de predição (em ms) de cada modelo, em uma amostra com 50 observações. }
@@ -621,13 +563,12 @@ A Tabela \ref{tab:bench_models} destaca a extrema eficiência do modelo logísti
  em comparação com o modelo de redes neurais. O modelo logístico demonstrou um tempo 
  de predição mais curto, com a predição mais demorada levando apenas 1,5 milissegundos,
   sendo mais de 60 vezes mais rápido do que a predição mais demorada do modelo de redes neurais.
-   Essa tendência é consistente em relação às outras métricas de desempenho.
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lc}
+\begin{tabular}{cc}
 \hline
-\textbf{Observações} & \textbf{Tempo de execução} \\
+\textbf{Nº de observações} & \textbf{Tempo de execução} \\
 \hline
 1  & 317s \\
 80 & 7.07hrs \\
@@ -643,7 +584,7 @@ Ao contrário do modelo logístico, onde não há um tempo de execução associa
 pois a interpretação é derivada dos coeficientes estimados, a situação é diferente no modelo de redes neurais. 
 A interpretação de uma única observação demandou mais de 5 minutos, e o cálculo das interpretações para as 80
 observações utilizadas nos resultados anteriores exigiu mais de 7 horas. Essa diferença substancial de tempo
-destaca a complexidade computacional envolvida na interpretação de modelos mais intricados, como redes neurais.
+destaca a complexidade computacional envolvida na interpretação de modelos mais elaborados, como redes neurais.
 
 % \centering
 % \begin{tabular}{lcccccc}

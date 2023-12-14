@@ -108,13 +108,40 @@
 %\fancyfoot[C]{Departamento de Estatística}
 
 
-% \newpage
-% \section{\textbf{Dedicatória}}
-% \newpage
 
-% \section{\textbf{Agradecimentos}}
-% \newpage
+\begin{center}
+    \fontsize{20}{4}{\textbf{Dedicatória}}
+\end{center}
 
+\vspace{1cm}
+
+Dedico esse trabalho primeiramente à minha família. Aos meus pais e minha irmã, que com certeza, sem a luta a diária 
+que vivenciamos, hoje não eu teria chegado aonde cheguei. Aos meus professores do ensino médio, que sem os conselhos dos mesmos
+e orientação da existência de um curso chamado "Estatística", hoje não teria tomado uma das melhores decisões da minha vida.
+
+Aos amigos que fiz durante o curso. Aos que me acompanharam do início ao fim de toda a graduação, em especial a Laurinha, o Marcelo, o Lucas, 
+o Hermes e o Kevyn e também aqueles que fui encontrando pelo caminho, como a Jéssica, o João e o Gabriel (aqui representado todos da Tukey).
+Obrigado por todos os momentos vividos, nervosismos pré provas, alegrias de finais de semestre. Vocês foram responsáveis
+por enviesar a Estatística que eu amo tanto.
+
+E por fim, aos professores que passaram pelo meu caminho. Professor Guilherme, presente do começo ao fim da minha estadia no curso,
+com toda certeza um dos grandes responsáveis pelo caminho que trilho hoje no curso. Professora Thais, que aceitou a missão de 
+ser a orientadora do autor desse projeto, seus conselhos e orientações me tornaram um estatístico melhor. E a todos os outros professores
+no qual fui feliz no curso, Leandro, Ana Maria, Antônio, Juliana. Espero ser 10\% dos que vocês foram pra mim nesse curso.
+
+\newpage
+
+\begin{center}
+    \fontsize{20}{4}{\textbf{Agradecimentos}}    
+\end{center}
+\vspace{1cm}
+
+O presente trabalho foi financiado pelo Conselho Nacional de Desenvolvimento Científico e 
+Tecnológico(CNPq), baseado no Programa de Pesquisa em Tecnologia da Informação - CGCEX, 
+com bolsa na Iniciação Tecnológica em TICS - ITC-A.
+
+
+\newpage
 
 \begin{center}
     \fontsize{20}{4}{\textbf{Resumo}}    
@@ -122,16 +149,16 @@
 
 \vspace{1cm}
 
-O objetivo central deste trabalho foi de buscar métodos para interpretar um modelo de redes neurais. 
-Concomitantemente a essa interpretação, realizou-se uma comparação dos resultados desse modelo
- com um modelo estatístico convencional, a regressão logística. Utilizaram-se dados relacionados a empréstimos, 
- obtidos da plataforma \textit{Kaggle}. A variável de estudo analisada foi a "Condição do empréstimo", que 
- classifica os empréstimos dos clientes como "Bom" ou "Ruim".
+O objetivo central deste trabalho é buscar métodos para interpretar modelos de redes neurais. 
+Concomitantemente, realizou-se uma comparação dos resultados desse modelo
+ com um modelo estatístico convencional, a regressão logística. Foram utilizados dados relacionados a empréstimos, 
+ obtidos da plataforma \textit{Kaggle}. A variável de estudo analisada foi a ``Condição do empréstimo", que 
+ classifica os empréstimos dos clientes como ``Bom" ou ``Ruim".
 
-A técnica adotada para interpretar os modelos de redes neurais foi o SHAP.
-Os resultados comparativos entre os modelos revelam que o modelo de rede neural produziu predições mais heterogêneas,
-enquanto o modelo logístico ficou limitado pelo desbalanceamento dos dados, rotulando a maior parte dos casos baseado
-na classe majoritária.
+A técnica adotada para interpretar os modelos de redes neurais foi o SHAP(\textit{SHapley Additive exPlanations}).
+Os resultados comparativos entre os modelos revelam que o modelo de redes neurais produziu resultados melhores que
+o modelo logístico. 
+
 
 
 
@@ -186,7 +213,10 @@ na classe majoritária.
 \bibliographystyle{abntex2-alf}
 
 \newpage
-\section{\textbf{Anexo}}
-\newpage
+\section*{\textbf{Anexo}}
+
+\section*{\textbf{A \hspace{0.8cm} Repositório GitHub com os códigos utilizados}}
+
+https://github.com/davialvesguerra/tcc/tree/master
 
 \end{document}

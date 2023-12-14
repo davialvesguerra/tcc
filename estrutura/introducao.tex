@@ -1,8 +1,9 @@
 As redes neurais são modelos matemáticos que, unidos às técnicas computacionais, visam tentar reproduzir
- o funcionamento da estrutura neural presente no ser humano, buscando, assim, realizar tarefas complexas,
-  como o reconhecimento de padrões, identificação de imagens, processamento de linguagem natural, etc. 
+ o funcionamento da estrutura neural presente no ser humano.
+ O propósito desses modelos é executar tarefas complexas, tais como reconhecimento de padrões, identificação de imagens, 
+ processamento de linguagem natural, entre outras.
   No entanto, apesar de sua eficácia em muitas aplicações, as redes neurais podem ficar muito complexas
-   conforme sua arquitetura cresce, sendo consideradas como "caixas pretas", devido à sua complexidade 
+   conforme sua arquitetura cresce, sendo consideradas como ``caixas pretas", devido à sua complexidade 
    e falta de transparência. 
 
 Por isso, a interpretação de redes neurais é uma área cada vez mais essencial, pois busca entender como
@@ -10,7 +11,7 @@ Por isso, a interpretação de redes neurais é uma área cada vez mais essencia
  neural tomou tal decisão é importante em diversas áreas, como a área da saúde, em diagnósticos médicos, 
  e na área bancária, analisando um risco de crédito.
 
-Uma das técnicas mais promissoras para a interpretação de redes neurais é o SHAP (Shapley Additive Explanations), 
+Uma das técnicas mais promissoras para a interpretação de redes neurais é o SHAP (\textit{Shapley Additive Explanations}), 
 que foi introduzido em 2017 \cite{lundberg2017unified}. O SHAP é uma técnica de interpretação que fornece explicações
  locais e globais para as saídas da rede neural. Ele é baseado no conceito matemático de valor de Shapley \cite{shapley1953value},
   que atribui uma contribuição de importância para cada recurso de entrada na saída da rede neural.
@@ -20,8 +21,9 @@ e sua aplicação em diversas áreas, pois, ao compreender como as redes neurais
 recursos mais importantes para suas decisões, será possível tornar o método mais confiável e transparentes para os usuários. 
 
 
-Ao optar por empregar um modelo estatístico tradicional, como a regressão logística, que já possui um conjunto de ferramentas
-interpretativas consolidadas, este estudo também se concentra em uma análise comparativa entre o modelo de redes neurais e 
+Uma alternativa aos modelos de rede neurais é escolher modelos tradicionais da estatística, 
+como a regressão logística, que já possui um conjunto de ferramentas
+interpretativas consolidadas. Dessa forma, o estudo também se concentra em uma análise comparativa entre o modelo de redes neurais e 
 o modelo logístico. Essa abordagem visa avaliar tanto os resultados quanto as interpretações geradas por ambos os modelos,
 proporcionando uma compreensão mais profunda de como essas abordagens se comportam em um cenário comum. Essa comparação não
 apenas lança luz sobre as diferenças de desempenho, mas também destaca as diferenças interpretativas distintas entre os dois

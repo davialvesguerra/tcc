@@ -1,45 +1,40 @@
 \babel@toc {brazilian}{}\relax 
-\contentsline {section}{\numberline {1}\textbf {Introdução}}{9}{section.1}%
-\contentsline {section}{\numberline {2}\textbf {Referencial teórico}}{10}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Regressão logística}{10}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Interpretação}{11}{subsubsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.2}Redes neurais artificiais}{12}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Neurônio}{12}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Arquitetura}{13}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}\textit {Forward propagation}}{15}{subsubsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}Função de perda}{16}{subsubsection.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}\textit {Backpropagation}}{16}{subsubsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.3}SHAP}{18}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Valores de Shapley}{18}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}\textit {Shapley Additive Explanations}}{22}{subsubsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.4}Medidas de associação}{23}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Coeficiente de Pearson}{24}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Coeficiente de contingência}{24}{subsubsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.5}Métricas de avaliação}{24}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}Matriz de confusão}{25}{subsubsection.2.5.1}%
-\contentsline {subsubsection}{\numberline {2.5.2}Acurácia}{25}{subsubsection.2.5.2}%
-\contentsline {subsubsection}{\numberline {2.5.3}Precisão}{26}{subsubsection.2.5.3}%
-\contentsline {subsubsection}{\numberline {2.5.4}Recall}{26}{subsubsection.2.5.4}%
-\contentsline {subsubsection}{\numberline {2.5.5}F1-score}{26}{subsubsection.2.5.5}%
-\contentsline {section}{\numberline {3}\textbf {Metodologia}}{28}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Conjunto de dados}{28}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Variáveis}{28}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Limpeza dos dados}{30}{subsubsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.2}Modelagem dos dados}{31}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Regressão logística}{31}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Rede neural}{32}{subsubsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.3}Interpretação dos modelos}{34}{subsection.3.3}%
-\contentsline {section}{\numberline {4}\textbf {Resultados}}{36}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Análise descritiva}{36}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Condição do empréstimo}{36}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Relação entre as covariáveis e a variável resposta}{37}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Regressão logística}{42}{subsection.4.2}%
+\contentsline {section}{\numberline {1}\textbf {Introdução}}{11}{section.1}%
+\contentsline {section}{\numberline {2}\textbf {Referencial teórico}}{12}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Regressão logística}{12}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Interpretação}{13}{subsubsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.2}Redes neurais artificiais}{14}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Neurônio}{14}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Arquitetura}{16}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}\textit {Forward propagation}}{17}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Função de perda}{18}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}\textit {Backpropagation}}{19}{subsubsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.3}SHAP}{20}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Valores de Shapley}{21}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}\textit {Shapley Additive Explanations}}{24}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Matriz de confusão}{26}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Acurácia}{26}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}Precisão}{27}{subsubsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.6}Recall}{27}{subsubsection.2.3.6}%
+\contentsline {subsubsection}{\numberline {2.3.7}F1-score}{28}{subsubsection.2.3.7}%
+\contentsline {section}{\numberline {3}\textbf {Metodologia}}{29}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Conjunto de dados}{29}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Variáveis}{29}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Limpeza dos dados}{31}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Modelagem dos dados}{32}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Regressão logística}{32}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Rede neural}{33}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}Interpretação dos modelos}{35}{subsection.3.3}%
+\contentsline {section}{\numberline {4}\textbf {Resultados}}{37}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Análise descritiva}{37}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Condição do empréstimo}{37}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Relação entre as covariáveis e a variável resposta}{38}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Regressão logística}{41}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Rede neural}{44}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Interpretação da rede neural}{46}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Benchmark entre regressão logística e redes neurais }{51}{subsection.4.5}%
-\contentsline {subsubsection}{\numberline {4.5.1}Complexidade da arquitetura}{51}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.1}Complexidade da arquitetura}{52}{subsubsection.4.5.1}%
 \contentsline {subsubsection}{\numberline {4.5.2}Resultado dos modelos}{52}{subsubsection.4.5.2}%
 \contentsline {subsubsection}{\numberline {4.5.3}Tempo de execução}{54}{subsubsection.4.5.3}%
 \contentsline {section}{\numberline {5}\textbf {Conclusão}}{56}{section.5}%
-\contentsline {section}{\numberline {6}\textbf {Anexo}}{58}{section.6}%
 \contentsfinish 

@@ -5,14 +5,37 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
+\bibitem[Agresti 2002]{agresti2002}
+\abntrefinfo{Agresti}{AGRESTI}{2002}
+{AGRESTI, A. Summarizing predictive power: Classification tables. In:  \emph{An Introduction to Categorical Data Analysis}. 2. ed. [S.l.]: Wiley, 2002. cap. 5.1.6.}
+
+\bibitem[Artificial Intelligence 1992]{ai_3rd_edition}
+\abntrefinfo{Artificial\ldots}{ARTIFICIAL\ldots}{1992}
+{ARTIFICIAL Intelligence. 3rd. ed. [S.l.]: Addison-Wesley Pub. Co., 1992.
+ISBN 0-201-53377-4.}
+
 \bibitem[Bishop 2006]{bishop2006pattern}
 \abntrefinfo{Bishop}{BISHOP}{2006}
 {BISHOP, C.~M. \emph{Pattern Recognition and Machine Learning}. [S.l.]: Springer, 2006.}
+
+\bibitem[Curry 1944]{curry1944}
+\abntrefinfo{Curry}{CURRY}{1944}
+{CURRY, H.~B. The method of steepest descent for non-linear minimization problems.
+\emph{Quart. Appl. Math.}, v.~2, n.~3, p. 258--261, 1944.}
 
 \bibitem[Geron 2019]{geron2019hands}
 \abntrefinfo{Geron}{GERON}{2019}
 {GERON, A. \emph{Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow}. [S.l.]: O'Reilly Media, 2019.
 ISBN 978-1492032649.}
+
+\bibitem[Hardesty 2017]{mitnews_neuralnetworks}
+\abntrefinfo{Hardesty}{HARDESTY}{2017}
+{HARDESTY, L. \emph{Explained: Neural Networks}. 2017. \url{http://news.mit.edu/2017/explained-neural-networks-deep-learning-0414}.}
+
+\bibitem[Hart 1989]{hart_1989}
+\abntrefinfo{Hart}{HART}{1989}
+{HART, S. Shapley value. In:  EATWELL, J.; MILGATE, M.; NEWMAN, P. (Ed.). \emph{The New Palgrave: Game Theory}. [S.l.]: Norton, 1989. p. 210--216.
+ISBN 978-0-333-49537-7.}
 
 \bibitem[Hosmer 2013]{hosmer}
 \abntrefinfo{Hosmer}{HOSMER}{2013}
@@ -36,15 +59,21 @@ ISBN 978-65-00-02410-4.}
 {SHAPLEY, L.~S. A value for n-person games.
 \emph{Contributions to the Theory of Games}, v.~2, p. 307--317, 1953.}
 
+\bibitem[Szumilas 2010]{szumilas2010explaining}
+\abntrefinfo{Szumilas}{SZUMILAS}{2010}
+{SZUMILAS, M. Explaining odds ratios.
+\emph{Journal of the Canadian Academy of Child and Adolescent Psychiatry}, v.~19, n.~3, p. 227--229, August 2010.
+ISSN 1719-8429.}
+
 \bibitem[Werbos 1974]{werbos1974beyond}
 \abntrefinfo{Werbos}{WERBOS}{1974}
 {WERBOS, P.~J.
 \emph{Beyond regression: New tools for prediction and analysis in the behavioral sciences}.
 Tese (Doutorado) --- Harvard University, 1974.}
 
-\bibitem[Witte e Witte 2017]{witte_statistics}
-\abntrefinfo{Witte e Witte}{WITTE; WITTE}{2017}
-{WITTE, R.~S.; WITTE, J.~S. \emph{Statistics}. 11th. ed. New York: Wiley, 2017.
-ISBN 978-0471557613.}
+\bibitem[Zell 1994]{zell_1994}
+\abntrefinfo{Zell}{ZELL}{1994}
+{ZELL, A. \emph{Simulation Neuronaler Netze [Simulation of Neural Networks]}. 1st. ed. [S.l.]: Addison-Wesley, 1994. 73~p.
+ISBN 3-89319-554-8.}
 
 \end{thebibliography}
